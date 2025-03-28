@@ -1,0 +1,10 @@
+/* 메뉴 스크롤바 숨기기 */
+@layer components {
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hidden {
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+}
