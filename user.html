@@ -221,117 +221,115 @@
     </div>
 
     <!-- 컨텐츠 영역 -->
-    <div id="main-content" class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300">
+    <div id="main-content" class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300 bg-green-100 overflow-y-auto h-screen">
         <div class="w-full h-full px-6 py-4">
             <h1 class="text-3xl mt-[20px] font-normal paperlogy h-[80px] flex items-center bg-pink-100">회원관리</h1>
-            <div class="h-24 w-full flex items-center justify-between px-4">
+            <div class="pt-5 pb-5 w-full flex items-center justify-between max-lg:flex-col-reverse max-lg:pb-10 max-lg:pt-10 max-lg:justify-center max-lg:items-center max-lg:gap-4">
                 <!-- left-content (탭들) -->
-                <div class="flex bg-[#FEFEFE] space-x-8 rounded-2xl pl-5 pr-5 pt-1">
-                    <div class="tab-box">
-                        <button class="tab px-6 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
+                <div class="flex bg-[#FEFEFE] space-x-11 pl-10 pr-10 max-2xl:pl-5 max-2xl:pr-5 pt-1 text-center rounded-2xl max-xl:pl-5 max-xl:pr-5 max-xl:space-x-3 max-lg:rounded-none max-lg:w-full">
+                    <div class="tab-box max-lg:flex-1">
+                        <button class="tab px-4 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
                     </div>
-                    <div class="tab-box">
-                        <button class="tab px-6 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
+                    <div class="tab-box max-lg:flex-1">
+                        <button class="tab px-4 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
                     </div>
-                    <div class="tab-box">
-                        <button class="tab px-6 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
+                    <div class="tab-box max-lg:flex-1">
+                        <button class="tab px-4 py-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
                     </div>
                 </div>
             
                 <!-- right-content (추가 내용) -->
-                <div class="right-content flex justify-between space-x-4">
-                    <!-- 엑셀 다운로드 버튼 -->
-                    <button class="bg-[#117841] text-[#FEFEFE] px-6 py-2 rounded-lg hover:bg-[#359F66] focus:outline-none">
-                        img 엑셀다운로드
+                <!-- <div class="right-content flex justify-between space-x-3 max-xl:space-x-1 max-lg:w-full max-lg:space-x-3">
+                    <button class="bg-[#117841] text-[#FEFEFE] w-full px-7 max-xl:px-4 rounded-lg hover:bg-[#359F66] focus:outline-none flex items-center justify-center whitespace-nowrap max-lg:w-1/5 ">
+                        <img src="/img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 max-xl:hidden mr-1"> <span>엑셀 다운로드</span>
                     </button>
-                
-                    <!-- 회원등록하기 버튼 -->
-                    <button class="bg-[#EDF3FF] text-[#2B5BBB] px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none">
+                    <button class="bg-[#EDF3FF] text-[#2B5BBB] w-full px-3 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap max-lg:w-1/5 ">
                         회원등록하기
                     </button>
-                
-                    <!-- 검색창 -->
-                    <input type="text" placeholder="성명, 연락처, 아이디, 학교명"
-                        class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#B0B0B0] rounded-[8px] h-[50px] px-4 focus:outline-none" />
-                
-                    <!-- 검색 버튼 -->
-                    <button class="bg-[#2B5BBB] text-[#EDF3FF] px-6 py-2 rounded-lg hover:bg-[#648DDF] focus:outline-none">
-                        검색
+                    <input type="text" placeholder="성명, 연락처, 아이디, 학교명" 
+                        class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#B0B0B0] rounded-[8px] h-[50px] px-4 max-xl:w-[160px] w-72 focus:outline-none max-lg:w-2/5 " />
+                    <button class="bg-[#2B5BBB] text-[#EDF3FF] w-full px-4 rounded-lg hover:bg-[#648DDF] focus:outline-none max-lg:w-1/5 ">
+                        <img src="/img/search.png" alt="검색 아이콘" class="hidden max-sm:inline-block w-7 h-7">
+                        <span class="max-sm:hidden">검색</span>
                     </button>
+                </div>  -->
+                <div class="right-content flex justify-between max-lg:w-full ">
+                    <div class="flex justify-between space-x-3 max-xl:space-x-1 max-lg:space-x-3 mr-3  max-xl:mr-1 max-lg:mr-3 max-lg:w-1/3  max-lg:justify-start">
+                    <button class="bg-[#117841] text-[#FEFEFE] w-full px-7 max-xl:px-4 rounded-lg hover:bg-[#359F66] focus:outline-none flex items-center justify-center whitespace-nowrap max-lg:w-1/3 ">
+                        <img src="/img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 max-xl:hidden mr-1"> <span>엑셀 다운로드</span>
+                    </button>
+                    <button class="bg-[#EDF3FF] text-[#2B5BBB] w-full px-3 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap max-lg:w-1/3">
+                        회원등록하기
+                    </button>
+                    </div>
+                    <div class="flex justify-between space-x-3 max-xl:space-x-1 max-lg:space-x-3 max-lg:w-2/3">
+                    <input type="text" placeholder="성명, 연락처, 아이디, 학교명" 
+                        class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#B0B0B0] rounded-[8px] h-[50px] px-4 max-xl:w-[160px] w-72 focus:outline-none max-lg:w-4/5" />
+                    <button class="bg-[#2B5BBB] text-[#EDF3FF] w-full px-4 max-lg:px-2 rounded-lg hover:bg-[#648DDF] focus:outline-none max-lg:w-1/5 ">
+                        <img src="/img/search.png" alt="검색 아이콘" class="hidden max-sm:inline-block w-7 h-7">
+                        <span class="max-sm:hidden">검색</span>
+                    </button>
+                    </div>
                 </div>
+
+                
             </div>
+            <div class="overflow-x-auto min-w-[1600px] max-w-full ">
+            <!-- 테이블 헤더 부분 -->
             <table class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center">
                 <thead>
-                    <tr class="bg-gray-100 text-[#292929] text-[18px] font-bold border-b border-gray-300 h-[70px]">
-                        <th class="px-4 border-r border-gray-300">번호</th>
-                        <th class="px-4 border-r border-gray-300">아이디</th>
-                        <th class="px-4 border-r border-gray-300">성명</th>
-                        <th class="px-4 border-r border-gray-300">성별</th>
-                        <th class="px-4 border-r border-gray-300">생년월일</th>
-                        <th class="px-4 border-r border-gray-300">지역</th>
-                        <th class="px-4 border-r border-gray-300">소속명</th>
-                        <th class="px-4 border-r border-gray-300">학교명</th>
-                        <th class="px-4 border-r border-gray-300">설립별</th>
-                        <th class="px-4 border-r border-gray-300">직급</th>
-                        <th class="px-4 border-r border-gray-300">과목</th>
-                        <th class="px-4 border-r border-gray-300">연락처</th>
-                        <th class="px-4 border-r border-gray-300" colspan="2">관리</th>
+                    <tr class="bg-[#FEFEFE] text-[#292929] text-[18px] font-bold border-b border-gray-300 h-[70px]">
+                        <th class="px-4" style="width: 4%;">번호</th>
+                        <th class="px-4" style="width: 8%;">아이디</th>
+                        <th class="px-4" style="width: 7%;">성명</th>
+                        <th class="px-4" style="width: 4%;">성별</th>
+                        <th class="px-4" style="width: 12%;">생년월일</th>
+                        <th class="px-4" style="width: 4%;">지역</th>
+                        <th class="px-4" style="width: 8%;">소속명</th>
+                        <th class="px-4" style="width: 9%;">학교명</th>
+                        <th class="px-4" style="width: 5%;">설립별</th>
+                        <th class="px-4" style="width: 5%;">직급</th>
+                        <th class="px-4" style="width: 6%;">과목</th>
+                        <th class="px-4" style="width: 10%;">연락처</th>
+                        <th class="px-16" style="width: 16%">관리</th>
                     </tr>
-                    </thead>
-                    <tbody>
-                    <!-- 반복되는 행 -->
-                    <tr class="border-b border-gray-300 text-[#727272] text-[18px] font-normal h-[70px]">
-                        <td class="px-4 border-r border-gray-300">00</td>
-                        <td class="px-4 border-r border-gray-300">hong hong</td>
-                        <td class="px-4 border-r border-gray-300 font-bold text-[#292929]">가나다</td>
-                        <td class="px-4 border-r border-gray-300">남</td>
-                        <td class="px-4 border-r border-gray-300">0000-00-00</td>
-                        <td class="px-4 border-r border-gray-300">서울</td>
-                        <td class="px-4 border-r border-gray-300">남양주</td>
-                        <td class="px-4 border-r border-gray-300">다산가람초</td>
-                        <td class="px-4 border-r border-gray-300">공립</td>
-                        <td class="px-4 border-r border-gray-300">교원</td>
-                        <td class="px-4 border-r border-gray-300">영양</td>
-                        <td class="px-4 border-r border-gray-300">0000000000</td>
-                        <td class="px-4 border-r border-gray-300 text-[#f28909] font-bold cursor-pointer">✏ 수정</td>
-                        <td class="px-4 text-[#2b5bbb] font-bold cursor-pointer">📖 과목 신청</td>
+                </thead>
+            </table>
+            <!-- 테이블 본문 부분 -->
+            <table class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                <tbody>
+                    <tr class="border-gray-300 text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                        <td style="width: 4%;">00</td>
+                        <td style="width: 8%;">hong hong</td>
+                        <td class="font-bold text-[#2B5BBB]" style="width: 7%;">가나다</td>
+                        <td style="width: 4%;">남</td>
+                        <td style="width: 12%;">0000-00-00</td>
+                        <td style="width: 4%;">서울</td>
+                        <td style="width: 8%;">남양주</td>
+                        <td style="width: 9%;">다산가람초</td>
+                        <td style="width: 5%;">공립</td>
+                        <td style="width: 5%;">교원</td>
+                        <td style="width: 6%;">영양</td>
+                        <td class="font-bold text-[#2B5BBB]" style="width: 10%;">0000000000</td>
+                        <td class="px-2 text-[#f28909] font-bold cursor-pointer" style="width: 8%;">
+                            <span class="inline-block mr-1 align-middle">
+                                <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
+                            </span>
+                            <span>수정</span>
+                        </td>
+                        
+                        <td class="px-2 text-[#2b5bbb] font-bold cursor-pointer" style="width: 8%;">
+                            <span class="inline-block mr-1 align-middle">
+                                <img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5">
+                            </span>
+                            <span>과목 신청</span>
+                        </td>
+                        <!-- <td class="px-4 text-[#f28909] font-bold cursor-pointer flex items-center space-x-1" style="width: 8%;"><img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5" > <span>수정</span></td>
+                        <td class="px-4 text-[#2b5bbb] font-bold cursor-pointer flex items-center space-x-1" style="width: 8%;"><img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5"> 과목 신청</td> -->
                     </tr>
-                    <!-- 9개의 추가 행 -->
-                    <tr class="border-b border-gray-300 text-[#727272] text-[18px] font-normal h-[70px]">
-                        <td class="px-4 border-r border-gray-300">00</td>
-                        <td class="px-4 border-r border-gray-300">hong hong</td>
-                        <td class="px-4 border-r border-gray-300 font-bold text-[#292929]">가나다</td>
-                        <td class="px-4 border-r border-gray-300">남</td>
-                        <td class="px-4 border-r border-gray-300">0000-00-00</td>
-                        <td class="px-4 border-r border-gray-300">서울</td>
-                        <td class="px-4 border-r border-gray-300">남양주</td>
-                        <td class="px-4 border-r border-gray-300">다산가람초</td>
-                        <td class="px-4 border-r border-gray-300">공립</td>
-                        <td class="px-4 border-r border-gray-300">교원</td>
-                        <td class="px-4 border-r border-gray-300">영양</td>
-                        <td class="px-4 border-r border-gray-300">0000000000</td>
-                        <td class="px-4 border-r border-gray-300 text-[#f28909] font-bold cursor-pointer">✏ 수정</td>
-                        <td class="px-4 text-[#2b5bbb] font-bold cursor-pointer">📖 과목 신청</td>
-                    </tr>
-                    <!-- 마지막 행 -->
-                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] rounded-b-none">
-                        <td class="px-4 border-r border-gray-300">00</td>
-                        <td class="px-4 border-r border-gray-300">hong hong</td>
-                        <td class="px-4 border-r border-gray-300 font-bold text-[#292929]">가나다</td>
-                        <td class="px-4 border-r border-gray-300">남</td>
-                        <td class="px-4 border-r border-gray-300">0000-00-00</td>
-                        <td class="px-4 border-r border-gray-300">서울</td>
-                        <td class="px-4 border-r border-gray-300">남양주</td>
-                        <td class="px-4 border-r border-gray-300">다산가람초</td>
-                        <td class="px-4 border-r border-gray-300">공립</td>
-                        <td class="px-4 border-r border-gray-300">교원</td>
-                        <td class="px-4 border-r border-gray-300">영양</td>
-                        <td class="px-4 border-r border-gray-300">0000000000</td>
-                        <td class="px-4 border-r border-gray-300 text-[#f28909] font-bold cursor-pointer">✏ 수정</td>
-                        <td class="px-4 text-[#2b5bbb] font-bold cursor-pointer">📖 과목 신청</td>
-                    </tr>
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
+            </div>
         </div>
     </div>
     <script>
