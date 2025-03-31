@@ -55,3 +55,9 @@
     text-rendering: optimizeLegibility;
     font-weight: 100;
 }
+.h1-title {
+    font-size: clamp(26px, 3vw, 44px);
+}
+.sub-title {
+    font-size: clamp(20px, 2vw, 23px);
+}
