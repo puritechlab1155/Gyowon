@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교원관리자 | 회원등록</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
+
+</head>
+<body class="bg-[#F7F7F7] overflow-auto">
+<header>
+    <nav class="bg-white">
+        <div class="w-full mx-auto" >
+            <div class="flex justify-between max-sm:h-14 h-16 items-center">
+                <div class="flex items-center max-lg:space-x-2 max-sm:space-x-1  space-x-4">
+                <div class="w-64 max-lg:w-40 max-sm:w-36 flex justify-start h-16 items-center max-lg:gap-x-2 gap-x-4 pl-8 max-lg:pl-4">
+                    <ul>
+                        <li class="flex flex-col items-center">
+                            <div class="font-semibold text-xs text-center max-sm:text-[13px]">MENU</div>
+                            <!-- 스위치 -->
+                            <input id="s1" type="checkbox" class="hidden" />
+                            <span class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
+                                <span class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="#">
+                        <img src="img/logo.png" alt="logo" class="w-10 h-10 max-sm:w-9 max-sm:h-9 min-w-40px min-w-40px">
+                    </a>
+                <div class="w-[53px] h-[30px] leading-[30px] text-center text-[#2B5BBB] bg-[#EDF3FF] rounded-[10px] text-base max-sm:text-[15px] font-semibold max-sm:w-[40px] max-sm:h-[25px] max-sm:leading-[25px] ">
+                    cms
+                </div>
+                </div>
+                <div class="flex items-center max-lg:space-x-2 max-sm:space-x-0 space-x-5 justify-center max-lg:px-1">
+                    <span class="text-lg font-semibold hidden xl:inline-block ">최근 댄스화 주문</span>
+                    <span class="text-base text-gray-500 hidden xl:inline-block">2025-01-06 | 00:03:19</span>
+                    <span class="text-sm text-[#2B5BBB] hidden sm:inline-block font-semibold">연습화 240</span>
+                    <button class="text-sm font-semibold px-5 py-2.5 max-sm:text-[14px] max-sm:px-2 text-[#2B5BBB] bg-[#EDF3FF] rounded-lg hover:bg-[#B7D3FF] transition max-sm:py-2">
+                        <span class="text-sm xl:hidden max-sm:text-[14px] text-[#2B5BBB]">댄스화</span> 주문확인
+                    </button>
+                </div>
+                </div>
+                <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 max-sm:space-x-1">
+                    <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
+                        로그아웃
+                    </a>
+                    <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                        뒤로가기
+                    </a>
+                    <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                        홈페이지로 가기
+                    </a>
+                    <a href="#" class="md:hidden block">
+                        <img src="img/back.png" alt="로그아웃" class="w-7 h-7 max-sm:w-5 max-sm:h-5">
+                    </a>
+                    <a href="#" class="md:hidden block">
+                        <img src="img/home.png" alt="홈페이지" class="w-7 h-7 max-sm:w-5 max-sm:h-5">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 사이드 메뉴 -->
+    <div id="side-menu" class=" overflow-y-auto scrollbar-hidden fixed left-0 top-16 max-h-[calc(100vh-4rem)] bg-[#FEFEFE] w-64 max-lg:w-52 max-sm:top-12 transform -translate-x-full transition-transform duration-300">
+        <ul class="p-4">
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">대시보드</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">회원관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">연수관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">수강자 입금 관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">과정 출석부</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">수료자 등록</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">수료자 관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">수료자 보고서</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">수강 인원 통계</a>
+            </li>
+            <li class="py-1 relative group ">
+                <!-- 자격관리 항목 -->
+                <a href="#" 
+                    class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
+                    onclick="toggleSubMenu(event)">
+                        자격관리
+                        <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul class="pl-2 pr-2 bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
+                    id="qualification-submenu">
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격등록</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격입금관리</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격출석부</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">합격공지</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="py-1 relative group ">
+                <!-- 관리자 게시판 항목 -->
+                <a href="#" 
+                    class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
+                    onclick="toggleSubMenu(event)">
+                        관리자 게시판
+                        <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul class="pr-2 pl-2 pr-2 bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
+                    id="qualification-submenu">
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">개발자 게시판</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 게시판</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관 지정서</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수 공문</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수 자료실</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">환불 처리 등록</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/ 연기 /환불관리</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자유게시판</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">Q&A</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문 / 조회 관리</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업 관리</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상 관리</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">구인・구직</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">연수 관리(이전)</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">연수 기록</a>
+            </li>
+            <li class="py-1 relative group ">
+                <!-- 자격관리 항목 -->
+                <a href="#" 
+                    class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
+                    onclick="toggleSubMenu(event)">
+                        문자관리
+                        <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
+                    id="qualification-submenu">
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 그룹</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 보내기</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 기록</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">관리자 권한 관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">게시판 관리</a>
+            </li>
+            <li class="py-1">
+                <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">로그인 로그</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+    <!-- 컨텐츠 영역 -->
+    <div id="main-content" class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300">
+        <div class="w-full h-full px-6">
+            <h1 class="mt-[50px] h1-title border-gray-300 font-normal paperlogy">회원등록</h1>
+            <form class="create-top mt-[30px]">
+                <!-- <div>
+                    <div class="mb-4 m-auto max-w-[500px]">
+                        <label for="email" class="block sub-title font-bold">아이디</label>
+                        <input type="email" id="email" class="border border-[#EFEFEF] w-full px-4 mt-[8px] py-2 border-[2px] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" placeholder="아이디를 입력해 주세요." required>
+                    </div>
+                    <div class="mb-4 m-auto max-w-[500px] mt-[58px]">
+                        <label for="password" class="block sub-title font-bold">비밀번호</label>
+                        <input type="password" id="password" class="max-w-[500px] border border-[#EFEFEF] w-full px-4 mt-[8px] py-2 border-[2px] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" placeholder="비밀번호를 입력해 주세요." required>
+                    </div>
+                </div> -->
+                <div class="max-w-[1190px] bg-white p-8 rounded-[12px]">
+                    <div class="grid grid-cols-1 gap-[32px]">
+
+                        <div class="grid grid-cols-2 gap-[110px]">
+                            <!-- 아이디 -->
+                            <div>
+                                <label class="block sub-title font-bold">아이디</label>
+                                <input type="text" placeholder="순번을 입력해 주세요." 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                                <p class="text-[#F34457] font-bold mt-1 text-[16px]">*영문+숫자 이용하여 5~13자리 가능</p>
+                            </div>
+                        
+                            <!-- 비밀번호 -->
+                            <div>
+                                <label class="block sub-title font-bold">비밀번호</label>
+                                <input type="password" placeholder="비밀번호를 입력해 주세요." 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                                <p class="text-[#F34457] font-bold mt-1 text-[16px]">*영문+숫자 및 특수문자 조합을 이용하여 4~16자리 가능</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-[110px]">
+                            <!-- 생년월일 -->
+                            <div>
+                                <label class="block sub-title font-bold">생년월일</label>
+                                <input type="text" placeholder="예시) 19870510" 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                            </div>
+                        
+                            <!-- 성별 -->
+                            <div>
+                                <label class="block sub-title font-bold">성별</label>
+                                <div class="flex items-center gap-4 mt-1">
+                                <label class="flex items-center">
+                                    <input type="radio" name="gender" class="mr-2">
+                                    남자
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="gender" class="mr-2">
+                                    여자
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-[110px]">
+                            <!-- 이메일 -->
+                            <div>
+                                <label class="block sub-title font-bold">이메일</label>
+                                <input type="email" placeholder="이메일을 입력해 주세요." 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                            </div>
+                        
+                            <!-- 휴대 번호 -->
+                            <div>
+                                <label class="block sub-title font-bold">휴대 번호</label>
+                                <input type="text" placeholder="'-'없이 숫자만 입력해 주세요. 예시) 01088832222" 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-[110px]">
+                            <!-- 우편 번호 -->
+                            <div class="flex gap-2 flex items-end">
+                                <div class="w-full">
+                                    <label class="block sub-title font-bold">우편 번호</label>
+                                    <input type="text" 
+                                        class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                                </div>
+                                <button class="bg-[#EDF3FF] min-w-[152px] max-h-[48px] text-[#2B5BBB] rounded-lg px-4 py-2 mt-7">우편번호 찾기</button>
+                            </div>
+                        
+                            <!-- 상세 주소 -->
+                            <div>
+                                <label class="block sub-title font-bold">상세 주소</label>
+                                <input type="text" placeholder="상세 주소를 입력해 주세요." 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-lg w-full px-4 py-2 mt-1">
+                            </div>
+                        </div>
+                        
+                    </div>
+                  </div>
+
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
