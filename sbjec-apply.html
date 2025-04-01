@@ -224,207 +224,232 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300 overflow-y-auto min-h-screen">
         <div class="w-full h-full px-6">
-            <div class="pt-5 pb-5 w-full flex items-center justify-between mt-[50px] bg-yellow-100">
-                <div class="left-content">
-                <h1 class="h1-title font-normal paperlogy flex items-center bg-green-100">과정신청</h1>
+            <div class="pt-5 pb-5 w-full flex items-center justify-between mt-[50px] max-sm:flex-col">
+                <div class="left-content max-sm:text-left max-sm:w-full">
+                <h1 class="h1-title font-normal paperlogy flex items-cente ">과정신청</h1>
                 </div>
             <!-- right-content (탭들) -->
-                <div class="right-content flex justify-end text-lg space-x-2">
-                    <div class="flex justify-between space-x-2">
-                        <div class="relative">
-                            <!-- <select class="peer appearance-none bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-[50px] w-full">
-                                <option disabled selected>카테고리 선택</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div> -->
-                                <!-- 선택된 옵션 -->
-                            <button id="dropdownButton" class="bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-[50px] w-full flex justify-between items-center">
-                                <span id="selectedOption">카테고리 선택</span>
+                <div class="right-content flex justify-end text-lg space-x-2 max-sm:mt-4 max-sm:w-full bg-pink-10">
+                    <div class="flex justify-between space-x-2 max-xl:hidden">
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">년도</span>
                                 <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
-
                             <!-- 드롭다운 옵션 -->
-                            <div id="dropdownMenu" class="absolute left-0 mt-1 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
-                                <div class="py-1">
-                                    <div class="dropdown-item px-4 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">Option 1</div>
-                                    <div class="dropdown-item px-4 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">Option 2</div>
-                                    <div class="dropdown-item px-4 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">Option 3</div>
-                                </div>
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2021</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2022</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2023</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2024</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2025</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">시기</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">1학기</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">하계</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2학기</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">동계</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-5 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">직무</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">서울 직무</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경기 직무</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">자율</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">교육 장소</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">연촌초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">명원초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">동구로초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">남수원중</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">서울디자인고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">오금고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">창동고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">상계고</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">요일</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        <!-- 드롭다운 옵션 -->
+                        <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">해당없음</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 월</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 화</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 수</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 목</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 금</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 토</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 일</div>
+                        </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">시간</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">1차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">3차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">4차</div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-between space-x-2 max-xl:space-x-0">
+                    <div class="flex justify-between items-center space-x-2">
+                        <div class="flex justify-between space-x-2 max-xl:space-x-0">
                         <input type="text" placeholder="연수 과정 검색하기" 
-                            class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#B0B0B0] 
-                            focus:outline-none rounded-[8px] px-4 w-full max-w-[330px] max-lg:max-w-[750px] 
-                            h-[50px] max-xl:rounded-tr-none max-xl:rounded-br-none" />
-                        <button class="bg-[#2B5BBB] w-16 py-2 px-3 rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none ">
-                            <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:inline-block h-6 w-6">
+                            class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
+                            focus:outline-none rounded-[8px] px-4 w-full max-xl:w-[150px] w-[750px] 
+                            h-[50px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none" />
+                        <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
+                            <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
                             <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
                         </button>
+                        </div>
+                        <div class="text-[#202020] max-xl:flex justify-between items-center px-1 py-1 hidden max-xl:block  rounded-md hover:bg-[#ECECEC]">
+                            <div class="px-2 w-12 text-center">필터</div><img class="w-8 h-8"src="img/filter.png" alt="필터 아이콘">
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="w-full overflow-hidden">
-            <div class="overflow-x-auto">
-            <div class="min-w-[1520px]">
-            <!-- 테이블 헤더 부분 -->
-            <table class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center">
-                <thead>
-                    <tr class="bg-[#FEFEFE] text-[#292929] text-[18px] font-bold border-b border-gray-300 h-[70px]">
-                        <th style="width: 5%;">번호</th>
-                        <th style="width: 8%;">아이디</th>
-                        <th style="width: 7%;">성명</th>
-                        <th style="width: 4%;">성별</th>
-                        <th style="width: 7%;">생년월일</th>
-                        <th style="width: 5%;">근무지역</th>
-                        <th style="width: 11%;">소속교육지원청</th>
-                        <th style="width: 9%;">직장명</th>
-                        <th style="width: 5%;">설립구분</th>
-                        <th style="width: 6%;">직급</th>
-                        <th style="width: 8%;">전공과목</th>
-                        <th style="width: 10%;">연락처</th>
-                        <th style="width: 15%">관리</th>
-                    </tr>
-                </thead>
-            </table>
-            <!-- 테이블 본문 부분 -->
-            <table class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                <tbody>
-                    <tr class="border-gray-300 text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
-                        <td style="width: 5%;">18119</td>
-                        <td style="width: 8%;">hong hong</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 7%;"><a href="#">정솔비</a></td>
-                        <td style="width: 4%;">남</td>
-                        <td style="width: 7%;">1984-06-28</td>
-                        <td style="width: 5%;">서울</td>
-                        <td style="width: 11%;">가평교육지원청</td>
-                        <td style="width: 9%;">다산가람초</td>
-                        <td style="width: 5%;">공립</td>
-                        <td style="width: 6%;">기간제</td>
-                        <td style="width: 8%;">영양</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 10%;"><a href="#">01066542154</a></td>
-                        <td class="pl-2 font-bold cursor-pointer" style="width: 6%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                            <span class="inline-block mr-1 align-middle">
-                                <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
-                            </span>
-                            <span class="text-[#f28909]">수정</span>
-                            </button>
-                        </td>
-                        <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                <span class="inline-block mr-1 align-middle">
-                                    <img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5">
-                                </span>
-                                <span class="text-[#2b5bbb]">과목신청</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="border-gray-300 text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
-                        <td style="width: 5%;">18115</td>
-                        <td style="width: 8%;">mizsong922</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 7%;"><a href="#">김혜경</a></td>
-                        <td style="width: 4%;">여</td>
-                        <td style="width: 7%;">1954-12-05</td>
-                        <td style="width: 5%;">서울</td>
-                        <td style="width: 11%;">강서양천교육지원청</td>
-                        <td style="width: 9%;">성동글로벌경영고</td>
-                        <td style="width: 5%;">공립</td>
-                        <td style="width: 6%;">교육공무직</td>
-                        <td style="width: 8%;">교무행정지원사</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 10%;"><a href="#">01045854512</a></td>
-                        <td class="pl-2 font-bold cursor-pointer" style="width: 6%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                            <span class="inline-block mr-1 align-middle">
-                                <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
-                            </span>
-                            <span class="text-[#f28909]">수정</span>
-                            </button>
-                        </td>
-                        <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                <span class="inline-block mr-1 align-middle">
-                                    <img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5">
-                                </span>
-                                <span class="text-[#2b5bbb]">과목신청</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="border-gray-300 text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
-                        <td style="width: 5%;">18114</td>
-                        <td style="width: 8%;">sol10004ok</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 7%;"><a href="#">우희은</a></td>
-                        <td style="width: 4%;">여</td>
-                        <td style="width: 7%;">1990-05-10</td>
-                        <td style="width: 5%;">경기</td>
-                        <td style="width: 11%;">구리남양주교육지원청</td>
-                        <td style="width: 9%;">신화초</td>
-                        <td style="width: 5%;">공립</td>
-                        <td style="width: 5%;">교사</td>
-                        <td style="width: 8%;">도덕윤리</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 10%;"><a href="#">01084562542</a></td>
-                        <td class="pl-2 font-bold cursor-pointer" style="width: 6%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                            <span class="inline-block mr-1 align-middle">
-                                <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
-                            </span>
-                            <span class="text-[#f28909]">수정</span>
-                            </button>
-                        </td>
-                        <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                <span class="inline-block mr-1 align-middle">
-                                    <img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5">
-                                </span>
-                                <span class="text-[#2b5bbb]">과목신청</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="border-gray-300 text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
-                        <td style="width: 5%;">18106</td>
-                        <td style="width: 8%;">ilovesohi</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 7%;"><a href="#">김은정</a></td>
-                        <td style="width: 4%;">여</td>
-                        <td style="width: 7%;">1968-01-26</td>
-                        <td style="width: 5%;">서울</td>
-                        <td style="width: 11%;">양산교육지원청</td>
-                        <td style="width: 9%;">고은초</td>
-                        <td style="width: 5%;">사립</td>
-                        <td style="width: 6%;">교원</td>
-                        <td style="width: 8%;">정보컴퓨터</td>
-                        <td class="font-bold text-[#2B5BBB]" style="width: 10%;"><a href="#">01047528098</a></td>
-                        <td class="pl-2 font-bold cursor-pointer" style="width: 6%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                            <span class="inline-block mr-1 align-middle">
-                                <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
-                            </span>
-                            <span class="text-[#f28909]">수정</span>
-                            </button>
-                        </td>
-                        <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
-                            <button class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                <span class="inline-block mr-1 align-middle">
-                                    <img src="/img/note.png" alt="수정 아이콘" class="w-5 h-5">
-                                </span>
-                                <span class="text-[#2b5bbb]">과목신청</span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <div class="overflow-x-auto">
+                    <div class="min-w-[1024px]">
+                        <!-- 테이블 헤더 부분 -->
+                        <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed">
+                            <thead>
+                                <tr class="bg-[#FEFEFE] text-[#292929] text-[18px] h-[70px] font-semibold">
+                                    <th class="px-2 py-2 font-semibold w-[10%]">연수 주관</th>
+                                    <th class="px-2 py-2 font-semibold w-[12%]">종목</th>
+                                    <th class="px-2 py-2 font-semibold w-[25%]">과정명</th>
+                                    <th class="px-2 py-2 font-semibold w-[5%]">시간</th>
+                                    <th class="px-2 py-2 font-semibold w-[5%]">학점</th>
+                                    <th class="px-2 py-2 font-semibold w-[14%]">교육장소</th>
+                                    <th class="px-2 py-2 font-semibold w-[8%]">요일</th>
+                                    <th class="px-2 py-2 font-semibold w-[18%]">연수기간</th>
+                                    <th class="px-2 py-2 font-semibold w-[18%]">개설상태</th>
+                                </tr>
+                            </thead>
+                        </table>
+
+                        <!-- 테이블 본문 부분 -->
+                        <table class="w-full border rounded-[12px] overflow-hidden mt-4 text-center table-fixed">
+                            <tbody>
+                                <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%]">연수원용</td>
+                                    <td class="px-2 py-2 w-[12%]"><div class="bg-[#4E9DFB] text-[#FEFEFE] rounded-lg text-center px-2 py-1">댄스스포츠</div></td>
+                                    <td class="px-2 py-2 w-[25%]">(자율) 꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[5%]">30</td>
+                                    <td class="px-2 py-2 w-[5%]">0</td>
+                                    <td class="px-2 py-2 w-[14%]">서울디자인고</td>
+                                    <td class="px-2 py-2 w-[8%]">수요일</td>
+                                    <td class="px-2 py-2 w-[18%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
+                                    <td class="px-8 max-2xl:px-5 py-2 w-[18%] text-[#2b5bbb] font-bold cursor-pointer text-center align-middle"">
+                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-4 py-2 rounded-lg w-full h-full">
+                                            <div class="mr-1">
+                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                            </div>
+                                            <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%]">연수원용</td>
+                                    <td class="px-2 py-2 w-[12%]"><div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-2 py-1">라인댄스</div></td>
+                                    <td class="px-2 py-2 w-[25%]">[자율]라인초급자격</td>
+                                    <td class="px-2 py-2 w-[5%]">30</td>
+                                    <td class="px-2 py-2 w-[5%]">0</td>
+                                    <td class="px-2 py-2 w-[14%]">남수원중</td>
+                                    <td class="px-2 py-2 w-[8%]">수요일</td>
+                                    <td class="px-2 py-2 w-[18%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
+                                    <td class="px-8 max-2xl:px-5 py-2 w-[18%] text-[#2b5bbb] font-bold cursor-pointer text-center align-middle"">
+                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-4 py-2 rounded-lg w-full h-full">
+                                            <div class="mr-1">
+                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                            </div>
+                                            <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%]">연수원용</td>
+                                    <td class="px-2 py-2 w-[12%]"><div class="bg-[#AFE7E0] text-[#292929] rounded-lg text-center px-2 py-1">웰빙댄스</div></td>
+                                    <td class="px-2 py-2 w-[25%]">[자율] 웰빙댄스 초급</td>
+                                    <td class="px-2 py-2 w-[5%]">30</td>
+                                    <td class="px-2 py-2 w-[5%]">0</td>
+                                    <td class="px-2 py-2 w-[14%]">명원초</td>
+                                    <td class="px-2 py-2 w-[8%]">해당없음</td>
+                                    <td class="px-2 py-2 w-[18%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
+                                    <td class="px-8 max-2xl:px-5 py-2 w-[18%] text-[#2b5bbb] font-bold cursor-pointer text-center align-middle"">
+                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-4 py-2 rounded-lg w-full h-full">
+                                            <div class="mr-1">
+                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                            </div>
+                                            <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%]">연수원용</td>
+                                    <td class="px-2 py-2 w-[12%]"><div class="bg-[#4EC3E8] text-[#FEFEFE] rounded-lg text-center px-2 py-1">필라테스</div></td>
+                                    <td class="px-2 py-2 w-[25%]">(자율) 필라테스 초중급</td>
+                                    <td class="px-2 py-2 w-[5%]">28</td>
+                                    <td class="px-2 py-2 w-[5%]">0</td>
+                                    <td class="px-2 py-2 w-[14%]">연촌초</td>
+                                    <td class="px-2 py-2 w-[8%]">화요일</td>
+                                    <td class="px-2 py-2 w-[18%]">시작일: 2025-04-08<br>종료일: 2025-07-08</td>
+                                    <td class="px-8 max-2xl:px-5 py-2 w-[18%] text-[#2b5bbb] font-bold cursor-pointer text-center align-middle"">
+                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-4 py-2 rounded-lg w-full h-full">
+                                            <div class="mr-1">
+                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                            </div>
+                                            <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
             </div>
-            </div>
+            
             <div class="flex justify-center items-center mt-4 mt-[100px]">
                 <!-- 이전 / 다음 버튼 그룹 -->
                 <div class="flex items-center space-x-3 max-lg:space-x-1">
@@ -468,27 +493,97 @@
     </div>
     </div>
     <script>
-        const dropdownButton = document.getElementById("dropdownButton");
-        const dropdownMenu = document.getElementById("dropdownMenu");
-        const selectedOption = document.getElementById("selectedOption");
-        const dropdownItems = document.querySelectorAll(".dropdown-item");
+        document.addEventListener("DOMContentLoaded", function () {
+        // 모든 드롭다운을 선택
+        const dropdowns = document.querySelectorAll(".dropdown");
 
-        dropdownButton.addEventListener("click", () => {
-            dropdownMenu.classList.toggle("hidden");
-        });
+        dropdowns.forEach((dropdown) => {
+            const button = dropdown.querySelector(".dropdown-button");
+            const menu = dropdown.querySelector(".dropdown-menu");
+            const options = dropdown.querySelectorAll(".dropdown-item");
+            const selectedText = dropdown.querySelector(".selected-option");
 
-        dropdownItems.forEach(item => {
-            item.addEventListener("click", () => {
-                selectedOption.textContent = item.textContent;
-                dropdownMenu.classList.add("hidden");
+            // 버튼 클릭 시 드롭다운 열고 닫기
+            button.addEventListener("click", function (event) {
+                event.stopPropagation(); // 이벤트 전파 방지
+                closeAllDropdowns(); // 다른 드롭다운 닫기
+                menu.classList.toggle("hidden");
+            });
+
+            // 옵션 클릭 시 선택된 값 변경
+            options.forEach((option) => {
+                option.addEventListener("click", function () {
+                    selectedText.textContent = this.textContent;
+                    menu.classList.add("hidden"); // 선택 후 닫기
+                });
             });
         });
 
-        document.addEventListener("click", (event) => {
-            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add("hidden");
-            }
+        // 다른 곳 클릭 시 모든 드롭다운 닫기
+        document.addEventListener("click", function () {
+            closeAllDropdowns();
         });
+
+        function closeAllDropdowns() {
+            dropdowns.forEach((dropdown) => {
+                dropdown.querySelector(".dropdown-menu").classList.add("hidden");
+            });
+        }
+    });
+        // const dropdownButtons = document.querySelectorAll("[id^='dropdownButton']");
+            
+        //     // 각 드롭다운 버튼에 고유 ID 부여하고 이벤트 리스너 설정
+        //     dropdownButtons.forEach((button, index) => {
+        //         // 고유 ID 설정
+        //         button.id = `dropdownButton-${index}`;
+                
+        //         // 관련 드롭다운 메뉴와 선택된 옵션 요소 찾기
+        //         const dropdownMenu = button.nextElementSibling;
+        //         dropdownMenu.id = `dropdownMenu-${index}`;
+        //         const selectedOption = button.querySelector("#selectedOption");
+        //         selectedOption.id = `selectedOption-${index}`;
+                
+        //         // 드롭다운 메뉴 내 항목들 선택
+        //         const dropdownItems = dropdownMenu.querySelectorAll(".dropdown-item");
+                
+        //         // 버튼 클릭 이벤트 - 메뉴 표시/숨김 토글
+        //         button.addEventListener("click", (e) => {
+        //             e.stopPropagation();
+                    
+        //             // 다른 열린 메뉴들 닫기
+        //             document.querySelectorAll("[id^='dropdownMenu']").forEach(menu => {
+        //                 if (menu.id !== dropdownMenu.id) {
+        //                     menu.classList.add("hidden");
+        //                 }
+        //             });
+                    
+        //             // 현재 메뉴 토글
+        //             dropdownMenu.classList.toggle("hidden");
+        //         });
+                
+        //         // 각 항목 클릭 이벤트 - 선택 옵션 업데이트
+        //         dropdownItems.forEach(item => {
+        //             item.addEventListener("click", () => {
+        //                 selectedOption.textContent = item.textContent;
+        //                 dropdownMenu.classList.add("hidden");
+        //             });
+        //         });
+        //     });
+            
+        //     // 문서 클릭 시 열린 모든 드롭다운 메뉴 닫기
+        //     document.addEventListener("click", (event) => {
+        //         const isButtonClick = Array.from(dropdownButtons).some(button => 
+        //             button.contains(event.target));
+                
+        //         const isMenuClick = Array.from(document.querySelectorAll("[id^='dropdownMenu']")).some(menu => 
+        //             menu.contains(event.target));
+                
+        //         if (!isButtonClick && !isMenuClick) {
+        //             document.querySelectorAll("[id^='dropdownMenu']").forEach(menu => {
+        //                 menu.classList.add("hidden");
+        //             });
+        //         }
+        //     });
     </script>
     <script src="js/script.js"></script>
 </body>
