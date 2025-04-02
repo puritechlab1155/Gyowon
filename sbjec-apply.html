@@ -285,8 +285,8 @@
                     <div class="flex justify-between space-x-2 max-xl:space-x-0">
                     <input type="text" placeholder="과정명을 검색하세요" 
                         class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
-                        focus:outline-none rounded-[8px] px-4 w-full min-w-[250px] 
-                        h-[50px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none" />
+                        rounded-[8px] px-4 w-full min-w-[250px] 
+                        h-[50px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] " />
                     <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
                         <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
                         <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
@@ -333,7 +333,7 @@
                                     <td class="px-2 py-2 w-[15%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
+                                        <button class="flex justify-center items-center align-middle hover:bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
                                                 <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                             </div>
@@ -355,7 +355,7 @@
                                     <td class="px-2 py-2 w-[15%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
+                                        <button class="flex justify-center items-center align-middle hover:bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
                                                 <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                             </div>
@@ -377,7 +377,7 @@
                                     <td class="px-2 py-2 w-[15%]">시작일: 2025-04-09<br>종료일: 2025-07-14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
+                                        <button class="flex justify-center items-center align-middle hover:bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
                                                 <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                             </div>
@@ -399,7 +399,7 @@
                                     <td class="px-2 py-2 w-[15%]">시작일: 2025-04-08<br>종료일: 2025-07-08</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[18%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
+                                        <button class="flex justify-center items-center align-middle hover:bg-[#E7F0FD] px-6 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
                                                 <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                             </div>
@@ -418,9 +418,11 @@
             <div class="flex justify-center items-center mt-4 mt-[100px]">
                 <!-- 이전 / 다음 버튼 그룹 -->
                 <div class="flex items-center space-x-3 max-lg:space-x-1">
-                    <button class="px-4 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center">
-                        <img src="img/left-arrow.png" alt="왼쪽 화살표" class="w-5 h-5">
-                        <span class="hidden lg:inline-block">이전</span>
+                    <button class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group"> 
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
+                            <path d="M0.68629 9.89949L10.5858 19.799L12 18.3848L3.51471 9.8995L12 1.41421L10.5858 -6.18172e-08L0.68629 9.89949Z"/>
+                        </svg>
+                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold ml-2">이전</span>
                     </button>
             
                     <!-- 페이지 번호들 -->
@@ -446,110 +448,29 @@
                         <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                             7
                         </button>
+                        <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            8
+                        </button>
+                        <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            9
+                        </button>
+                        <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            10
+                        </button>
                     </div>
                     <!-- 다음 버튼 -->
-                    <button class="px-4 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center">
-                        <span class="hidden lg:inline-block">다음</span>
-                        <img src="img/right-arrow.png" alt="오른쪽 화살표" class="w-5 h-5">
+                    <button class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
+                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold mr-2">다음</span>
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
+                            <path d="M11.3137 10.1005L1.41423 0.201019L2.07232e-05 1.61523L8.48529 10.1005L1.68643e-08 18.5858L1.41421 20L11.3137 10.1005Z" />
+                            </svg>
+                            
                     </button>
                 </div>
             </div>
         </div>
     </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        // 모든 드롭다운을 선택
-        const dropdowns = document.querySelectorAll(".dropdown");
-
-        dropdowns.forEach((dropdown) => {
-            const button = dropdown.querySelector(".dropdown-button");
-            const menu = dropdown.querySelector(".dropdown-menu");
-            const options = dropdown.querySelectorAll(".dropdown-item");
-            const selectedText = dropdown.querySelector(".selected-option");
-
-            // 버튼 클릭 시 드롭다운 열고 닫기
-            button.addEventListener("click", function (event) {
-                event.stopPropagation(); // 이벤트 전파 방지
-                closeAllDropdowns(); // 다른 드롭다운 닫기
-                menu.classList.toggle("hidden");
-            });
-
-            // 옵션 클릭 시 선택된 값 변경
-            options.forEach((option) => {
-                option.addEventListener("click", function () {
-                    selectedText.textContent = this.textContent;
-                    menu.classList.add("hidden"); // 선택 후 닫기
-                });
-            });
-        });
-
-        // 다른 곳 클릭 시 모든 드롭다운 닫기
-        document.addEventListener("click", function () {
-            closeAllDropdowns();
-        });
-
-        function closeAllDropdowns() {
-            dropdowns.forEach((dropdown) => {
-                dropdown.querySelector(".dropdown-menu").classList.add("hidden");
-            });
-        }
-    });
-        // const dropdownButtons = document.querySelectorAll("[id^='dropdownButton']");
-            
-        //     // 각 드롭다운 버튼에 고유 ID 부여하고 이벤트 리스너 설정
-        //     dropdownButtons.forEach((button, index) => {
-        //         // 고유 ID 설정
-        //         button.id = `dropdownButton-${index}`;
-                
-        //         // 관련 드롭다운 메뉴와 선택된 옵션 요소 찾기
-        //         const dropdownMenu = button.nextElementSibling;
-        //         dropdownMenu.id = `dropdownMenu-${index}`;
-        //         const selectedOption = button.querySelector("#selectedOption");
-        //         selectedOption.id = `selectedOption-${index}`;
-                
-        //         // 드롭다운 메뉴 내 항목들 선택
-        //         const dropdownItems = dropdownMenu.querySelectorAll(".dropdown-item");
-                
-        //         // 버튼 클릭 이벤트 - 메뉴 표시/숨김 토글
-        //         button.addEventListener("click", (e) => {
-        //             e.stopPropagation();
-                    
-        //             // 다른 열린 메뉴들 닫기
-        //             document.querySelectorAll("[id^='dropdownMenu']").forEach(menu => {
-        //                 if (menu.id !== dropdownMenu.id) {
-        //                     menu.classList.add("hidden");
-        //                 }
-        //             });
-                    
-        //             // 현재 메뉴 토글
-        //             dropdownMenu.classList.toggle("hidden");
-        //         });
-                
-        //         // 각 항목 클릭 이벤트 - 선택 옵션 업데이트
-        //         dropdownItems.forEach(item => {
-        //             item.addEventListener("click", () => {
-        //                 selectedOption.textContent = item.textContent;
-        //                 dropdownMenu.classList.add("hidden");
-        //             });
-        //         });
-        //     });
-            
-        //     // 문서 클릭 시 열린 모든 드롭다운 메뉴 닫기
-        //     document.addEventListener("click", (event) => {
-        //         const isButtonClick = Array.from(dropdownButtons).some(button => 
-        //             button.contains(event.target));
-                
-        //         const isMenuClick = Array.from(document.querySelectorAll("[id^='dropdownMenu']")).some(menu => 
-        //             menu.contains(event.target));
-                
-        //         if (!isButtonClick && !isMenuClick) {
-        //             document.querySelectorAll("[id^='dropdownMenu']").forEach(menu => {
-        //                 menu.classList.add("hidden");
-        //             });
-        //         }
-        //     });
-    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

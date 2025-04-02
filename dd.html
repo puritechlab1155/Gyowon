@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 회원등록</title>
+    <title>교원관리자 | 연수등록</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/script.js" defer></script>
@@ -26,9 +26,9 @@
                                 </span>
                             </li>
                         </ul>
-                        <a href="#">
+                        <!-- <a href="#">
                             <img src="img/logo.png" alt="logo" class="w-10 h-10 max-sm:w-9 max-sm:h-9 min-w-40px min-w-40px">
-                        </a>
+                        </a> -->
                     <div class="w-[53px] h-[30px] leading-[30px] text-center text-[#2B5BBB] bg-[#EDF3FF] rounded-[10px] text-base max-sm:text-[15px] font-semibold max-sm:w-[40px] max-sm:h-[25px] max-sm:leading-[25px] ">
                         cms
                     </div>
@@ -226,102 +226,137 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300">
         <div class="w-full h-full px-6">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">회원등록</h1>
+            <h1 class="mt-[50px] h1-title border-gray-300 font-normal paperlogy">연수 등록하기</h1>
             <!-- 폼1 -->
             <form class="create-top mt-[30px]">
                 <div class="max-w-[1190px] bg-white p-8 rounded-[12px]">
                     <div class="grid grid-cols-1 gap-2 md:gap-[32px]">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
-                            <!-- 아이디 -->
+                            <!-- 순서-->
                             <div class="id">
-                                <label class="block sub-title font-bold">아이디</label>
-                                <input type="text" placeholder="아이디를 입력해 주세요." 
+                                <label class="block sub-title font-bold">순서</label>
+                                <input type="number" placeholder="순번을 입력해 주세요." 
                                 class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
-                                <p class="text-[#F34457] font-bold mt-1 text-[16px]">*영문+숫자 이용하여 5~13자리 가능</p>
                             </div>
                         
-                            <!-- 비밀번호 -->
-                            <div class="pw">
-                                <label class="block sub-title font-bold">비밀번호</label>
-                                <input type="password" placeholder="비밀번호를 입력해 주세요." 
-                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
-                                <p class="text-[#F34457] font-bold mt-1text-[16px]">*영문+숫자 및 특수문자 조합을 이용하여 4~16자리 가능</p>
+                            <!-- 학기-->
+                            <div>
+                                <label class="block sub-title font-bold">학기</label>
+                                <div class="relative dropdown z-[9900]">
+                                    <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
+                                        <span class="selected-option text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <!-- 드롭다운 옵션 -->
+                                    <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">1학기</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">하계</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">동계</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2학기</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="grid rid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
-                            <!-- 생년월일 -->
-                            <div class="birth">
-                                <label class="block sub-title font-bold">생년월일</label>
-                                <input type="text" placeholder="예시) 19870510" 
-                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
-                                <p class="text-[#F34457] font-bold mt-1 t text-[16px]">*8자리로 입력해주세요.</p>
+                            <!-- 과정 -->
+                            <div>
+                                <label class="block sub-title font-bold">과정</label>
+                                <div class="relative dropdown z-[9800]">
+                                    <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
+                                        <span class="selected-option text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <!-- 드롭다운 옵션 -->
+                                    <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">과정개설 및 접수증</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">접수마감</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">과정종료</div>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="flex gap-10 max-lg:gap-3 items-start">
-                                <!-- 성명 -->
-                                <div class="flex gap-4 flex items-end w-[50%]">
-                                    <div class="name w-full ">
-                                        <label class="block sub-title font-bold">성명</label>
-                                        <input type="text" 
-                                            class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 placeholder-[#AFAFAF] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB]" required>
-                                    </div>
-                                </div>
-                                <!-- 성별 -->
-                                <div class="gender md:w-[60%] w-[45%]">
-                                    <label class="block sub-title font-bold">성별</label>
-                                    <div class="flex items-center gap-1 mt-1">
-                                    <label class="flex items-center">
-                                        <input type="radio" name="gender" class="mr-2">
-                                        남자
-                                    </label>
-                                    <label class="flex items-center">
-                                        <input type="radio" name="gender" class="mr-2">
-                                        여자
-                                    </label>
-                                    </div>
-                                </div>
+        
+                            <!-- 과정명 -->
+                            <div>
+                                <label class="block sub-title font-bold">과정명</label>
+                                <input type="text" placeholder="(예시) 웰빙초중급" 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
                             </div>
                             
                         </div>
 
                         <div class="grid rid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
-                            <!-- 이메일 -->
-                            <div class="email">
-                                <label class="block sub-title font-bold">이메일</label>
-                                <input type="email" placeholder="이메일을 입력해 주세요." 
-                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
+                            <!-- 과정상태 -->
+                            <div>
+                                <label class="block sub-title font-bold">과정상태</label>
+                                <div class="relative dropdown z-[9700]">
+                                    <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
+                                        <span class="selected-option text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <!-- 드롭다운 옵션 -->
+                                    <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">과정개설 및 접수증</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">접수마감</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">과정종료</div>
+                                    </div>
+                                </div>
                             </div>
                         
-                            <!-- 휴대 번호 -->
-                            <div class="hp">
-                                <label class="block sub-title font-bold">휴대 번호</label>
-                                <input type="text" placeholder="예시) 01088832222" 
+                            <!-- 학점 -->
+                            <div>
+                                <label class="block sub-title font-bold">학점</label>
+                                <input type="number" placeholder="학점을 입력해주세요." 
                                 class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
-                                <p class="text-[#F34457] font-bold mt-1 t text-[16px]">*'-'없이 숫자만 입력</p>
                             </div>
                         </div>
                         
                         <div class="grid rid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
-                            <!-- 우편 번호 -->
-                            <div class="flex gap-2 flex items-end">
-                                <div class="postcode w-full">
-                                    <label class="block sub-title font-bold">우편 번호</label>
-                                    <input type="text" 
-                                        class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required disabled>
-                                </div>
-                                <button class="bg-[#EDF3FF] min-w-[135px] max-h-[50px] text-[#2B5BBB] rounded-[10px] px-4 py-2 mt-7 hover:bg-[#D3E1FB]">우편번호 찾기</button>
+                            <!-- 적용년도 -->
+                            <div>
+                                <label class="block sub-title font-bold">적용년도</label>
+                                <input type="number" placeholder=" (예시) 2025" 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
                             </div>
                         
-                            <!-- 상세 주소 -->
-                            <div class="address">
-                                <label class="block sub-title font-bold">상세 주소</label>
-                                <input type="text" placeholder="상세 주소를 입력해 주세요." 
-                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 placeholder-[#AFAFAF] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB]" required>
+                            <!-- 종목-->
+                            <div>
+                                <label class="block sub-title font-bold">종목</label>
+                                <div class="relative dropdown z-[9600]">
+                                    <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
+                                        <span class="selected-option text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <!-- 드롭다운 옵션 -->
+                                    <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">댄스스포츠</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">웰빙댄스</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">라인댄스</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">필라테스</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
+                        <div class="grid rid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
+                            <!-- 지원비 -->
+                            <div>
+                                <label class="block sub-title font-bold">지원비</label>
+                                <input type="number" placeholder="숫자만 입력해주세요(예시: 140000)." 
+                                class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -330,10 +365,10 @@
                 <div class="max-w-[1190px] bg-white p-8 rounded-[12px]">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px] xl:gap-[110px]">
                         
-                        <!-- 근무지역 -->
+                        <!--직무구분-->
                         <div>
-                            <label class="block sub-title font-bold">근무지역</label>
-                            <div class="relative dropdown z-[9999]">
+                            <label class="block sub-title font-bold">직무구분</label>
+                            <div class="relative dropdown z-[9500]">
                                 <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
                                     <span class="selected-option text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -343,33 +378,25 @@
                                 <!-- 드롭다운 옵션 -->
                                 <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                     <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">강원</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경기</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경남</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경북</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">광주</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">대구</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">대전</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">부산</div>
+                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">자율</div>
                                     <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">서울</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">울산</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">인천</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">전남</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">전북</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">제주</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">충남</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">충북</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">퇴직</div>
+                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경기</div>
                                 </div>
                             </div>
                         </div>
                         
-                        
-                        <!-- 소속 기관 -->
+                        <!-- 이수시간 -->
                         <div>
-                            <label class="block sub-title font-bold">소속기관</label>
-                            <div class="relative dropdown z-[9900]">
-                                <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none h-[45px] w-full flex justify-between items-center gap-20">
+                            <label class="block sub-title font-bold">이수시간</label>
+                            <input type="text" placeholder="이수시간을 입력해주세요." 
+                            class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
+                        </div>
+                        
+                        <!--직무구분-->
+                        <div>
+                            <label class="block sub-title font-bold">연수 주관</label>
+                            <div class="relative dropdown z-[9400]">
+                                <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-20">
                                     <span class="selected-option text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -378,55 +405,16 @@
                                 <!-- 드롭다운 옵션 -->
                                 <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                     <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">유치원</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">초등학교</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">중학교</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">고등학교</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">특수학교</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">교육청</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">대학교</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">대학원</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">퇴직</div>
+                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">연수원</div>
+                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">연구회</div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- 소속청 -->
+                        <!-- 수강료 -->
                         <div>
-                            <label class="block sub-title font-bold">소속청</label>
-                            <div class="relative dropdown z-[9800]">
-                                <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none h-[45px] w-full flex justify-between items-center gap-20">
-                                    <span class="selected-option text-[#AFAFAF]">선택하세요</span>
-                                    <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <!-- 드롭다운 옵션 -->
-                                <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 설립 구분 -->
-                        <div>
-                            <label class="block sub-title font-bold">설립구분</label>
-                            <div class="relative dropdown z-[9700]">
-                                <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF] text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none h-[45px] w-full flex justify-between items-center gap-20">
-                                    <span class="selected-option text-[#AFAFAF]">선택하세요</span>
-                                    <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <!-- 드롭다운 옵션 -->
-                                <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#EFEFEF] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">선택하세요</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">교사</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">기간제</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">부장</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">교감</div>
-                                </div>
-                            </div>
+                            <label class="block sub-title font-bold">수강료</label>
+                            <input type="number" placeholder="숫자만 입력해주세요. (예시: 140000)" 
+                            class="max-w-[500px] border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#2B5BBB] placeholder-[#AFAFAF]" required>
                         </div>
                         
                         <!-- 직장명 -->
@@ -441,9 +429,9 @@
                         <!-- 직급 -->
                         <div class="flex flex-wrap max-xl:flex-col items-top gap-2">
                             <div class="flex w-[65%] max-xl:w-[100%] flex-col ">
-                                <label class="block sub-title font-bold">직급</label>
+                                <label class="block sub-title font-bold">학기 중 개설</label>
                                 <div id="select-container">
-                                <div class="relative dropdown z-[9600] mt-1">
+                                <div class="relative dropdown z-[9500] mt-1">
                                     <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#EFEFEF]  text-[#727272] py-2 px-4 pr-2 rounded-[10px] focus:outline-none h-[45px] w-full flex justify-between items-center max-sm:gap-10 gap-20">
                                         <span class="selected-option text-[#AFAFAF]">선택하세요</span>
                                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

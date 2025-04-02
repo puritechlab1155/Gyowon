@@ -29,17 +29,17 @@
                                     </li>
                                 </ul>
                                 <a href="#">
-                                    <img
+                                    <!-- <img
                                         src="img/logo.png"
                                         alt="logo"
                                         class="w-10 h-10 max-sm:w-9 max-sm:h-9 min-w-40px min-w-40px">
-                                </a>
+                                </a> -->
                                 <div
                                     class="w-[53px] h-[30px] leading-[30px] text-center text-[#2B5BBB] bg-[#EDF3FF] rounded-[10px] text-base max-sm:text-[15px] font-semibold max-sm:w-[40px] max-sm:h-[25px] max-sm:leading-[25px] ">
                                     cms
                                 </div>
                             </div>
-                            <div
+                            <!-- <div
                                 class="flex items-center max-lg:space-x-2 max-sm:space-x-0 space-x-5 justify-center max-lg:px-1">
                                 <span class="text-lg font-semibold hidden xl:inline-block ">최근 댄스화 주문</span>
                                 <span class="text-base text-gray-500 hidden xl:inline-block">2025-01-06 | 00:03:19</span>
@@ -49,7 +49,7 @@
                                     <span class="text-sm xl:hidden max-sm:text-[14px] text-[#2B5BBB]">댄스화</span>
                                     주문확인
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                         <div
                             id="right-button"
@@ -294,26 +294,26 @@
         <!-- 컨텐츠 영역 -->
         <div
             id="main-content"
-            class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300 overflow-y-auto min-h-screen">
+            class="ml-64 max-lg:ml-52 max-md:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
             <div class="w-full h-full px-6">
                 <h1
-                    class="h1-title mt-[50px] font-normal paperlogy h-[80px] max-lg:mt-[20px] max-lg:h-[30px] flex items-center">회원관리</h1>
+                    class="mt-[50px] h1-title font-normal paperlogy">회원관리</h1>
                 <div
-                    class="pt-5 pb-5 w-full flex items-center justify-between max-xl:flex-col-reverse  max-xl:justify-center max-xl:items-center max-xl:gap-4">
+                    class="pt-5 pb-5 w-full flex items-center justify-between max-xl:flex-col-reverse  max-xl:justify-center max-xl:items-center max-xl:gap-4 ">
                     <!-- left-content (탭들) -->
                     <div
-                        class="flex bg-[#FEFEFE] space-x-11 pl-10 pr-10 max-xl:pl-3 max-xl:pr-3 max-2xl:pl-4 max-2xl:pr-4 pt-1 text-center rounded-2xl max-xl:space-x-1 max-2xl:space-x-4 max-xl:rounded-none max-xl:w-full">
+                        class="drop-shadow flex bg-[#FEFEFE] space-x-11 pl-10 pr-10 max-xl:pl-3 max-xl:pr-3 max-2xl:pl-4 max-2xl:pr-4 pt-1 text-center rounded-[12px] max-xl:space-x-1 max-2xl:space-x-4 max-xl:rounded-none max-xl:w-full">
                         <div class="tab-box max-xl:flex-1">
                             <button
-                                class="tab px-4 py-3 max-xl:px-3 text-[#2B5BBB] border-[#2B5BBB] font-semibold text-lg border-b-4 hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
+                                class="tab px-4 py-1 max-xl:px-3 text-[#2B5BBB] border-[#2B5BBB] font-semibold text-lg border-b-4 hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
                         </div>
                         <div class="tab-box max-xl:flex-1">
                             <button
-                                class="tab px-4 py-3 max-xl:px-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
+                                class="tab px-4 py-1 max-xl:px-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
                         </div>
                         <div class="tab-box max-xl:flex-1">
                             <button
-                                class="tab px-4 py-3 max-xl:px-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
+                                class="tab px-4 py-1 max-xl:px-3 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
                         </div>
                     </div>
                     <!-- right-content (탭들) -->
@@ -352,33 +352,72 @@
                     <div class="overflow-x-auto">
                         <div class="min-w-[1520px]">
                             <!-- 테이블 헤더 부분 -->
-                            <table
+                            <!-- <table
+                            class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center">
+                            <thead>
+                                <tr
+                                    class="bg-[#D3E1FB] text-[#2B5BBB] text-[18px] border-b border-gray-300 h-[70px]">
+                                    <th class="font-semibold" style="width: 5%;">번호</th>
+                                    <th class="font-semibold" style="width: 8%;">아이디</th>
+                                    <th class="font-semibold" style="width: 7%;">성명</th>
+                                    <th class="font-semibold" style="width: 4%;">성별</th>
+                                    <th class="font-semibold" style="width: 7%;">생년월일</th>
+                                    <th class="font-semibold" style="width: 5%;">근무지역</th>
+                                    <th class="font-semibold" style="width: 11%;">소속교육지원청</th>
+                                    <th class="font-semibold" style="width: 9%;">직장명</th>
+                                    <th class="font-semibold" style="width: 5%;">설립구분</th>
+                                    <th class="font-semibold" style="width: 6%;">직급</th>
+                                    <th class="font-semibold" style="width: 8%;">전공과목</th>
+                                    <th class="font-semibold" style="width: 10%;">연락처</th>
+                                    <th class="font-semibold" style="width: 15%">관리</th>
+                                </tr>
+                                </thead>
+                            </table> -->
+                            <!-- 테이블 헤더 부분 -->
+                        <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed drop-shadow">
+                            <thead>
+                                <tr class="bg-[#Fefefe] text-[#292929] text-[18px] h-[70px] font-semibold">
+                                    <th class="px-2 py-2 font-semibold w-[10%]">연수 주관</th>
+                                    <th class="px-2 py-2 font-semibold w-[11%]">종목</th>
+                                    <th class="px-2 py-2 font-semibold w-[7%]">직무</th>
+                                    <th class="px-2 py-2 font-semibold w-[7%]">학기</th>
+                                    <th class="px-2 py-2 font-semibold w-[16%]">과정명</th>
+                                    <th class="px-2 py-2 font-semibold w-[6%]">시간</th>
+                                    <th class="px-2 py-2 font-semibold w-[5%]">학점</th>
+                                    <th class="px-2 py-2 font-semibold w-[14%]">교육장소</th>
+                                    <th class="px-2 py-2 font-semibold w-[7%]">요일</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">연수기간</th>
+                                    <th class="px-2 py-2 font-semibold w-[17%]">개설상태</th>
+                                </tr>
+                            </thead>
+                        </table>
+                            <!-- <table
                                 class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center">
                                 <thead>
                                     <tr
-                                        class="bg-[#FEFEFE] text-[#292929] text-[18px] border-b border-gray-300 h-[70px]">
-                                        <th class="font-semibold" style="width: 5%;">번호</th>
-                                        <th class="font-semibold" style="width: 8%;">아이디</th>
-                                        <th class="font-semibold" style="width: 7%;">성명</th>
-                                        <th class="font-semibold" style="width: 4%;">성별</th>
-                                        <th class="font-semibold" style="width: 7%;">생년월일</th>
-                                        <th class="font-semibold" style="width: 5%;">근무지역</th>
-                                        <th class="font-semibold" style="width: 11%;">소속교육지원청</th>
-                                        <th class="font-semibold" style="width: 9%;">직장명</th>
-                                        <th class="font-semibold" style="width: 5%;">설립구분</th>
-                                        <th class="font-semibold" style="width: 6%;">직급</th>
-                                        <th class="font-semibold" style="width: 8%;">전공과목</th>
-                                        <th class="font-semibold" style="width: 10%;">연락처</th>
-                                        <th class="font-semibold" style="width: 15%">관리</th>
+                                        class="bg-[#3E5C99]  text-[18px] border-b border-gray-300 h-[60px]">
+                                        <th class="font-semibold text-white" style="width: 5%;">번호</th>
+                                        <th class="font-semibold text-white" style="width: 8%;">아이디</th>
+                                        <th class="font-semibold text-white" style="width: 7%;">성명</th>
+                                        <th class="font-semibold text-white" style="width: 4%;">성별</th>
+                                        <th class="font-semibold text-white" style="width: 7%;">생년월일</th>
+                                        <th class="font-semibold text-white" style="width: 5%;">근무지역</th>
+                                        <th class="font-semibold text-white" style="width: 11%;">소속교육지원청</th>
+                                        <th class="font-semibold text-white" style="width: 9%;">직장명</th>
+                                        <th class="font-semibold text-white" style="width: 5%;">설립구분</th>
+                                        <th class="font-semibold text-white" style="width: 6%;">직급</th>
+                                        <th class="font-semibold text-white" style="width: 8%;">전공과목</th>
+                                        <th class="font-semibold text-white" style="width: 10%;">연락처</th>
+                                        <th class="font-semibold text-white" style="width: 15%">관리</th>
                                     </tr>
                                 </thead>
-                            </table>
+                            </table> -->
                             <!-- 테이블 본문 부분 -->
                             <table
                                 class="w-full border border-gray-300 rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">18119</td>
                                         <td style="width: 8%;">hong hong</td>
                                         <td class="text-[#2B5BBB]" style="width: 7%;">
@@ -395,27 +434,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">18115</td>
                                         <td style="width: 8%;">mizsong922</td>
                                         <td class="font-bold text-[#2B5BBB]" style="width: 7%;">
@@ -432,27 +474,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01045854512</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">18114</td>
                                         <td style="width: 8%;">sol10004ok</td>
                                         <td class="text-[#2B5BBB]" style="width: 7%;">
@@ -469,27 +514,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01084562542</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">18106</td>
                                         <td style="width: 8%;">ilovesohi</td>
                                         <td class="font-bold text-[#2B5BBB]" style="width: 7%;">
@@ -506,27 +554,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01047528098</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">238</td>
                                         <td style="width: 8%;">spssspss</td>
                                         <td class="font-bold text-[#2B5BBB]" style="width: 7%;">
@@ -543,27 +594,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01057527848</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">235</td>
                                         <td style="width: 8%;">jane0304</td>
                                         <td class="font-bold text-[#2B5BBB]" style="width: 7%;">
@@ -580,27 +634,30 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01047587098</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[80px] border-b border-gray-300">
+                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                         <td style="width: 5%;">231</td>
                                         <td style="width: 8%;">jane0304</td>
                                         <td class="font-bold text-[#2B5BBB]" style="width: 7%;">
@@ -617,22 +674,25 @@
                                         <td style="width: 10%;">
                                             <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
                                         </td>
-                                        <td class="pl-2 cursor-pointer" style="width: 6%;">
+                                        <td class="text-center" style="width: 6%;">
+                                            <div class="flex justify-center items-center">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#FFF3E5] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
-                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-4 h-4">
+                                                class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFF3E5] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="/img/pen.png" alt="수정 아이콘" class="w-5 h-5">
                                                 </span>
-                                                <span class="font-semibold text-[#f28909]">수정</span>
                                             </button>
+                                            </div>
                                         </td>
                                         <td class="text-[#2b5bbb] font-bold cursor-pointer" style="width: 9%;">
                                             <button
-                                                class="flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
-                                                <span class="inline-block mr-1 align-middle">
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#E7F0FD] p-2 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle">
                                                     <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
                                                 </span>
                                                 <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
                                             </button>
                                         </td>
                                     </tr>
@@ -645,48 +705,54 @@
                 <div class="flex justify-center items-center mt-4 mt-[100px]">
                     <!-- 이전 / 다음 버튼 그룹 -->
                     <div class="flex items-center space-x-3 max-lg:space-x-1">
-                        <button
-                            class="px-4 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center">
-                            <img src="img/left-arrow.png" alt="왼쪽 화살표" class="w-5 h-5">
-                            <span class="hidden lg:inline-block">이전</span>
+                        <button class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group"> 
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
+                                <path d="M0.68629 9.89949L10.5858 19.799L12 18.3848L3.51471 9.8995L12 1.41421L10.5858 -6.18172e-08L0.68629 9.89949Z"/>
+                            </svg>
+                            <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold ml-2">이전</span>
                         </button>
 
+                        
                         <!-- 페이지 번호들 -->
                         <div class="flex space-x-2 max-lg:space-x-2">
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 1
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 2
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:text-[#EDF3FF]">
                                 3
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 4
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 5
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 6
                             </button>
-                            <button
-                                class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
                                 7
+                            </button>
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                                8
+                            </button>
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                                9
+                            </button>
+                            <button class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
+                                10
                             </button>
                         </div>
                         <!-- 다음 버튼 -->
-                        <button
-                            class="px-4 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center">
-                            <span class="hidden lg:inline-block">다음</span>
-                            <img src="img/right-arrow.png" alt="오른쪽 화살표" class="w-5 h-5">
+                        <button class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
+                            <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold mr-2">다음</span>
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
+                                <path d="M11.3137 10.1005L1.41423 0.201019L2.07232e-05 1.61523L8.48529 10.1005L1.68643e-08 18.5858L1.41421 20L11.3137 10.1005Z" />
+                                </svg>
+                                
                         </button>
                     </div>
                 </div>
