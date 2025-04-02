@@ -278,19 +278,124 @@
         <div class="w-full h-full px-6">
             <div class="pt-5 pb-5 w-full flex items-center justify-between mt-[50px] max-sm:flex-col">
                 <div class="left-content max-sm:text-left max-sm:w-full">
-                <h1 class="h1-title font-normal paperlogy flex items-cente ">2025년도 1학기</h1>
+                <h1 class="h1-title font-normal paperlogy flex items-cente ">과정신청</h1>
                 </div> 
             <!-- right-content (탭들) -->
-                <div class="right-content flex justify-end text-lg space-x-2 max-sm:mt-4 max-sm:w-full">
-                    <div class="flex justify-between space-x-2 max-xl:space-x-0">
-                    <input type="text" placeholder="과정명을 검색하세요" 
-                        class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
-                        focus:outline-none rounded-[8px] px-4 w-full min-w-[250px] 
-                        h-[50px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none" />
-                    <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
-                        <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
-                        <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
-                    </button>
+                <div class="right-content flex justify-end text-lg space-x-2 max-sm:mt-4 max-sm:w-full bg-pink-10">
+                    <div class="flex justify-between space-x-2 max-xl:hidden">
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">년도</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2021</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2022</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2023</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2024</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2025</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">시기</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">1학기</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">하계</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2학기</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">동계</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-5 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">직무</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">서울 직무</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">경기 직무</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">자율</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">교육 장소</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">연촌초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">명원초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">동구로초</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">남수원중</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">서울디자인고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">오금고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">창동고</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">상계고</div>
+                            </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">요일</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        <!-- 드롭다운 옵션 -->
+                        <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">해당없음</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 월</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 화</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 수</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 목</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 금</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 토</div>
+                            <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">매주 일</div>
+                        </div>
+                        </div>
+                        <div class="relative dropdown">
+                            <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                                <span class="selected-option">시간</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">1차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">2차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">3차</div>
+                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929]">4차</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center space-x-2">
+                        <div class="flex justify-between space-x-2 max-xl:space-x-0">
+                        <input type="text" placeholder="연수 과정 검색하기" 
+                            class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
+                            focus:outline-none rounded-[8px] px-4 w-full max-xl:w-[150px] w-[750px] 
+                            h-[50px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none" />
+                        <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
+                            <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
+                            <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
+                        </button>
+                        </div>
+                        <div class="text-[#202020] max-xl:flex justify-between items-center px-1 py-1 hidden max-xl:block  rounded-md hover:bg-[#ECECEC]">
+                            <div class="px-2 w-12 text-center">필터</div><img class="w-8 h-8"src="img/filter.png" alt="필터 아이콘">
+                        </div>
                     </div>
                 </div>
             </div>
