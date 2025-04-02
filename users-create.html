@@ -259,9 +259,9 @@
                                 <p class="text-[#F34457] font-bold mt-1 text-[16px]">*8자리로 입력해주세요.</p>
                             </div>
                             
-                            <div class="flex gap-20 items-start">
+                            <div class="flex gap-20 md:gap-5 lg:gap-20 items-start">
                                 <!-- 성명 -->
-                                <div class="flex gap-4 flex items-end">
+                                <div class="flex gap-4 flex items-end w-[30%] lg:w-[40%]">
                                     <div class="name w-full">
                                         <label class="block sub-title font-bold">성명</label>
                                         <input type="text" 
@@ -269,7 +269,7 @@
                                     </div>
                                 </div>
                                 <!-- 성별 -->
-                                <div class="gender">
+                                <div class="gender w-[70%] lg:w-[60%]">
                                     <label class="block sub-title font-bold">성별</label>
                                     <div class="flex items-center gap-4 mt-1">
                                     <label class="flex items-center">
@@ -334,7 +334,24 @@
                         <div>
                             <label class="block sub-title font-bold">근무지역</label>
                             <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
+                                <option>선택해주세요</option>
+                                <option>강원</option>
+                                <option>경기</option>
+                                <option>경남</option>
+                                <option>경북</option>
+                                <option>광주</option>
+                                <option>대구</option>
+                                <option>대전</option>
+                                <option>부산</option>
                                 <option>서울</option>
+                                <option>울산</option>
+                                <option>인천</option>
+                                <option>전남</option>
+                                <option>전북</option>
+                                <option>제주</option>
+                                <option>충남</option>
+                                <option>충북</option>
+                                <option>퇴직</option>
                             </select>
                         </div>
                         
@@ -342,7 +359,16 @@
                         <div>
                             <label class="block sub-title font-bold">소속 기관</label>
                             <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
-                                <option>선택해 주세요.</option>
+                                <option>선택해주세요</option>
+                                <option>유치원</option>
+                                <option>초등학교</option>
+                                <option>중학교</option>
+                                <option>고등학교</option>
+                                <option>특수학교</option>
+                                <option>교육청</option>
+                                <option>대학교</option>
+                                <option>대학원</option>
+                                <option>퇴직</option>
                             </select>
                         </div>
                         
@@ -350,15 +376,20 @@
                         <div>
                             <label class="block sub-title font-bold">소속청</label>
                             <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
-                                <option>선택해 주세요.</option>
+                                <option>선택해주세요</option>
                             </select>
+                            <p class="text-[#F34457] font-bold mt-1 text-[16px]">*근무지역과 소속기간을 먼저 선택후 선택해주세요.</p>
                         </div>
                         
                         <!-- 설립 구분 -->
-                        <div>
+                        <div class="establishment">
                             <label class="block sub-title font-bold">설립 구분</label>
                             <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
-                              <option>공립</option>
+                                <option>선택해주세요</option>
+                                <option>공립</option>
+                                <option>공립</option>
+                                <option>공립</option>
+                                <option>퇴직</option>
                             </select>
                         </div>
                         
@@ -367,37 +398,58 @@
                             <label class="block sub-title font-bold">직장명</label>
                             <input type="text" placeholder="양재" 
                                 class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 placeholder-[#AFAFAF]">
-                            <p class="text-[#F34457] font-bold mt-1 text-[16px]">*학교명 입력시 학교구분을 제외한 이름만 입력해주세요. <br>예)양재고등학교을 양재으로 입력해주세요</p>
+                            <p class="text-[#F34457] font-bold mt-1 text-[16px]">*학교명 입력시 학교구분을 제외한 이름만 입력해주세요. <span class="xl:block inline text-[#F34457] font-bold mt-1 text-[16px]
+                                ">예)양재고등학교을 양재으로 입력해주세요</span></p>
                         </div>
                         
                         <!-- 직급 -->
-                        <div class="flex items-top gap-2">
-                            <div class="w-full">
+                        <div class="flex flex-wrap items-top gap-2">
+                            <div class="flex w-[60%] flex-shrink-0 flex-col">
                                 <label class="block sub-title font-bold">직급</label>
-                                <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
-                                    <option>선택해 주세요.</option>
-                                </select>
+                                <div id="select-container">
+                                    <select id="positionSelect"
+                                        class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none 
+                                        bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12 min-h-[50px] ">
+                                        <option>선택해주세요</option>
+                                        <option>교사</option>
+                                        <option>기간제</option>
+                                        <option>부장</option>
+                                        <option>교감</option>
+                                        <option>교장</option>
+                                        <option>원감</option>
+                                        <option>원장</option>
+                                        <option>교육전문직</option>
+                                        <option>행정실장</option>
+                                        <option>교육공무직</option>
+                                        <option>강사</option>
+                                        <option>일반직</option><!-- 퇴직은 기타직급을 추가해서 작성했나봄. 교원이 아닌 일반인은 '일반'이라고 적는것같음 -->
+                                    </select>
+                                </div>
                             </div>
-                            <button class="bg-[#EDF3FF] min-w-[152px] max-h-[50px] text-[#2B5BBB] rounded-[10px] px-4 py-2 mt-9 hover:bg-[#D3E1FB]">기타 직급 추가</button>                           
+                            <button id="toggleButton"
+                                class="bg-[#EDF3FF] min-w-[152px] max-h-[50px] text-[#2B5BBB] rounded-[10px] px-4 py-2 mt-9 hover:bg-[#D3E1FB]">
+                                기타 직급 추가
+                            </button>
                         </div>
-                        
+
                         <!-- 전공 과목 -->
                         <div>
                             <label class="block sub-title font-bold">전공 과목</label>
                             <input type="text" placeholder="초등/유아/특수/상담" 
                                 class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 placeholder-[#AFAFAF]">
-                            <p class="text-[#F34457] font-bold mt-1 text-[16px]">*초등교육/유아교욱/특수교육/전문상담등 교육이나 전문이 표기된 부분은 <br>생략하여 초등/유아/특수/상담으로 표기바랍니다.</p>
+                            <p class="text-[#F34457] font-bold mt-1 text-[16px]">*초등교육/유아교욱/특수교육/전문상담등 교육이나 전문이 표기된 부분은 생략하여<span class="2xl:block inline text-[#F34457] font-bold mt-1 text-[16px]
+                                "> 초등/유아/특수/상담으로 표기바랍니다.</span></p>
                         </div>
 
                         <!-- 사진 -->
-                        <div class="flex gap-2 items-start">
+                        <div class="flex flex-wrap items-start gap-2">
                             <div class="flex flex-shrink-0 flex-col">
                                 <label class="block sub-title font-bold">사진</label>
                                 <button class="bg-[#EDF3FF] text-[#2B5BBB] rounded-[10px] px-4 py-2 min-w-[121px] min-h-[50px] mt-1 hover:bg-[#D3E1FB]">
                                     파일 선택
                                 </button>
                             </div>
-                            <input type="text" class="flex-grow border border-[#EFEFEF] rounded-[10px] px-4 py-2 max-h-[50px] mt-9 placeholder-[#AFAFAF]" required>
+                            <input type="text" class="flex-grow border border-[#EFEFEF] rounded-[10px] px-4 py-2 min-h-[50px] mt-9 placeholder-[#AFAFAF]" required>
                         </div>
 
                     </div>
@@ -413,7 +465,10 @@
                             <div>
                                 <label class="block sub-title font-bold">관리자 권한</label>
                                 <select class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
-                                <option>공립</option>
+                                    <option>선택해주세요</option>
+                                    <option>일반</option>
+                                    <option>관리자</option>
+                                    <option>최고관리자</option>
                                 </select>
                             </div>
                             <!-- NICE 번호 -->
@@ -429,11 +484,11 @@
             </form>
             <!-- 버튼 -->
             <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
-                <div class="w-[576px] flex gap-2 items-center mx-auto">
-                    <button class="min-w-[282px] px-5 py-2.5 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
+                <div class="max-w-[576px] flex gap-2 items-center mx-auto">
+                    <button class="max-w-[282px] w-full px-5 py-2.5 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
                         등록하기
                     </button>
-                    <button class="min-w-[282px] px-5 py-2.5 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
+                    <button class="max-w-[282px] w-full px-5 py-2.5 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
                         취소하기
                     </button>
                 </div>
@@ -447,5 +502,29 @@
         </button>
     </div>
 
+    <script>
+        // 직급 버튼 클릭시 이벤트
+        document.getElementById("toggleButton").addEventListener("click", function () {
+            const selectContainer = document.getElementById("select-container");
+            const button = document.getElementById("toggleButton");
+
+            if (selectContainer.innerHTML.includes("select")) {
+                // Select → Input 변경
+                selectContainer.innerHTML = `
+                    <input type="text" placeholder="직급을 입력해 주세요."
+                        class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1">`;
+                button.textContent = "되돌리기";
+            } else {
+                // Input → Select 복구
+                selectContainer.innerHTML = `
+                    <select id="positionSelect"
+                        class="border border-[#EFEFEF] rounded-[10px] w-full px-4 py-2 mt-1 appearance-none 
+                        bg-[url('img/select-arrow.png')] bg-no-repeat bg-[calc(100%-20px)_center] pr-12">
+                        <option>선택해 주세요.</option>
+                    </select>`;
+                button.textContent = "기타 직급 추가";
+            }
+        });
+    </script>
 </body>
 </html>
