@@ -115,25 +115,15 @@ document.addEventListener('DOMContentLoaded', initializeMenu);
 // ✅ 스위치 클릭 이벤트 추가
 switchContainer.addEventListener('click', toggleSideMenu);
 
-// ✅ 터치 스크롤 감지 (모바일에서 스크롤 시 메뉴 닫힘 방지)
-document.addEventListener('touchmove', () => {
-    isScrolling = true;
-});
-
+// ✅ 터치 스크롤 감지 (스크롤 중 메뉴 닫힘 방지)
+document.addEventListener('touchmove', () => isScrolling = true);
 document.addEventListener('touchend', (event) => {
-    if (isScrolling) {
-        isScrolling = false;
-        return; // 스크롤 중이면 메뉴 닫기 방지
-    }
-    
-    if (
-        switchElement.checked && 
-        !sideMenu.contains(event.target) && 
-        !switchContainer.contains(event.target)
-    ) {
+    setTimeout(() => isScrolling = false, 150); // 0.15초 후 스크롤 종료
+    if (!isScrolling && switchElement.checked && !sideMenu.contains(event.target)) {
         closeMenu();
     }
 });
+
 
 // ✅ 바깥 클릭 시 메뉴 닫기
 document.addEventListener('click', (event) => {
