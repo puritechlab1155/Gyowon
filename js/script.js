@@ -52,7 +52,7 @@ const sideMenu = document.getElementById('side-menu');
 const mainContent = document.getElementById('main-content');
 
 let isScrolling = false; 
-let userToggled = false;
+
 
 // ✅ 초기 로딩 시 메뉴 상태 설정
 function initializeMenu() {
@@ -65,13 +65,8 @@ function initializeMenu() {
 
 // ✅ 메뉴 열기
 function openMenu() {
-    userToggled = true;
-    
-    if (animate) {
-        sideMenu.classList.add('transition-all', 'duration-300'); // 애니메이션 적용
-    } else {
-        sideMenu.classList.remove('transition-all', 'duration-300'); // 초기 로딩 시 애니메이션 제거
-    }
+    sideMenu.classList.remove('-translate-x-full');
+    sideMenu.classList.add('translate-x-0');
     switchElement.checked = true;
     switchContainer.classList.replace('bg-gray-300', 'bg-[#2B5BBB]');
     
@@ -123,8 +118,11 @@ switchContainer.addEventListener('click', toggleSideMenu);
 
 // ✅ 터치 스크롤 감지 (스크롤 중 메뉴 닫힘 방지)
 document.addEventListener('touchmove', () => isScrolling = true);
-document.addEventListener('touchend', () => {
+document.addEventListener('touchend', (event) => {
     setTimeout(() => isScrolling = false, 150); // 0.15초 후 스크롤 종료
+    if (!isScrolling && switchElement.checked && !sideMenu.contains(event.target)) {
+        closeMenu();
+    }
 });
 
 
