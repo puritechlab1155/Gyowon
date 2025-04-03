@@ -61,3 +61,8 @@
 .sub-title {
     font-size: clamp(20px, 2vw, 23px);
 }
+
+#side-menu {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
