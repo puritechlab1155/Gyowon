@@ -51,6 +51,8 @@ const switchDot = document.querySelector('.dot');
 const sideMenu = document.getElementById('side-menu');
 const mainContent = document.getElementById('main-content');
 
+let isScrolling = false; 
+
 // ✅ 초기 로딩 시 메뉴 상태 설정
 function initializeMenu() {
     if (window.innerWidth > 1280) {
@@ -113,6 +115,26 @@ document.addEventListener('DOMContentLoaded', initializeMenu);
 // ✅ 스위치 클릭 이벤트 추가
 switchContainer.addEventListener('click', toggleSideMenu);
 
+// ✅ 터치 스크롤 감지 (모바일에서 스크롤 시 메뉴 닫힘 방지)
+document.addEventListener('touchmove', () => {
+    isScrolling = true;
+});
+
+document.addEventListener('touchend', (event) => {
+    if (isScrolling) {
+        isScrolling = false;
+        return; // 스크롤 중이면 메뉴 닫기 방지
+    }
+    
+    if (
+        switchElement.checked && 
+        !sideMenu.contains(event.target) && 
+        !switchContainer.contains(event.target)
+    ) {
+        closeMenu();
+    }
+});
+
 // ✅ 바깥 클릭 시 메뉴 닫기
 document.addEventListener('click', (event) => {
     if (
@@ -133,6 +155,7 @@ document.addEventListener('click', (event) => {
         toggleSideMenu();
     }
 });
+
 // 서브 메뉴와 화살표 회전 토글 함수
 function toggleSubMenu(event) {
     // 클릭된 a 태그 요소의 부모 li 선택
