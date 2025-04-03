@@ -51,8 +51,6 @@ const switchDot = document.querySelector('.dot');
 const sideMenu = document.getElementById('side-menu');
 const mainContent = document.getElementById('main-content');
 
-let isScrolling = false; 
-
 
 // ✅ 초기 로딩 시 메뉴 상태 설정
 function initializeMenu() {
@@ -101,14 +99,6 @@ function toggleSideMenu() {
     }
 }
 
-// ✅ 화면 크기 변경 시 자동으로 상태 업데이트
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 1280) {
-        openMenu();  // 1024px 이상이면 자동으로 열림
-    } else {
-        closeMenu(); // 1024px 이하이면 자동으로 닫힘
-    }
-});
 
 // ✅ 초기 로딩 시 실행 (DOMContentLoaded 이벤트 추가)
 document.addEventListener('DOMContentLoaded', initializeMenu);
@@ -116,14 +106,6 @@ document.addEventListener('DOMContentLoaded', initializeMenu);
 // ✅ 스위치 클릭 이벤트 추가
 switchContainer.addEventListener('click', toggleSideMenu);
 
-// ✅ 터치 스크롤 감지 (스크롤 중 메뉴 닫힘 방지)
-document.addEventListener('touchmove', () => isScrolling = true);
-document.addEventListener('touchend', (event) => {
-    setTimeout(() => isScrolling = false, 150); // 0.15초 후 스크롤 종료
-    if (!isScrolling && switchElement.checked && !sideMenu.contains(event.target)) {
-        closeMenu();
-    }
-});
 
 
 // ✅ 바깥 클릭 시 메뉴 닫기
