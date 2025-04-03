@@ -1,35 +1,129 @@
+// const switchElement = document.getElementById('s1');
+// const switchContainer = document.querySelector('.switch');
+// const switchDot = document.querySelector('.dot');
+// const sideMenu = document.getElementById('side-menu');
+
+
+// // Toggle functionality for both checkbox and switch
+// function toggleSideMenu() {
+//     // Toggle checkbox state
+//     switchElement.checked = !switchElement.checked;
+
+//     // Update switch visual
+//     if (switchElement.checked) {
+//         switchContainer.classList.replace('bg-gray-300', 'bg-[#2B5BBB]');
+//         if (window.innerWidth <= 640) {
+//             switchDot.classList.add('translate-x-5'); // 작은 화면에서는 짧게 이동
+//         } else {
+//             switchDot.classList.add('translate-x-6'); // 기본 이동 거리
+//         }
+//         sideMenu.classList.remove('-translate-x-full');
+//         sideMenu.classList.add('translate-x-0');
+//     } else {
+//         switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
+//         switchDot.classList.remove('translate-x-5', 'translate-x-6');
+//         sideMenu.classList.add('-translate-x-full');
+//         sideMenu.classList.remove('translate-x-0');
+//     }
+// }
+
+// // Add click event to the switch
+// switchContainer.addEventListener('click', toggleSideMenu);
+
+
+// // ✅ 화면 크기 변경 시 768px 이하일 때 메뉴 닫기
+// window.addEventListener('resize', () => {
+//     if (window.innerWidth <= 1024) {
+//         sideMenu.classList.add('-translate-x-full');
+//         sideMenu.classList.remove('translate-x-0');
+//         switchElement.checked = false;
+//         switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
+//         switchDot.classList.remove('translate-x-6');
+//     }
+// });
+
+// Optional: Close side menu when clicking outside
+
+
 const switchElement = document.getElementById('s1');
 const switchContainer = document.querySelector('.switch');
 const switchDot = document.querySelector('.dot');
 const sideMenu = document.getElementById('side-menu');
+const mainContent = document.getElementById('main-content');
 
-// Toggle functionality for both checkbox and switch
-function toggleSideMenu() {
-    // Toggle checkbox state
-    switchElement.checked = !switchElement.checked;
-
-    // Update switch visual
-    if (switchElement.checked) {
-        switchContainer.classList.replace('bg-gray-300', 'bg-[#2B5BBB]');
-        if (window.innerWidth <= 640) {
-            switchDot.classList.add('translate-x-5'); // 작은 화면에서는 짧게 이동
-        } else {
-            switchDot.classList.add('translate-x-6'); // 기본 이동 거리
-        }
-        sideMenu.classList.remove('-translate-x-full');
-        sideMenu.classList.add('translate-x-0');
+// ✅ 초기 로딩 시 메뉴 상태 설정
+function initializeMenu() {
+    if (window.innerWidth > 1280) {
+        openMenu();
     } else {
-        switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
-        switchDot.classList.remove('translate-x-5', 'translate-x-6');
-        sideMenu.classList.add('-translate-x-full');
-        sideMenu.classList.remove('translate-x-0');
+        closeMenu();
     }
 }
 
-// Add click event to the switch
+// ✅ 메뉴 열기
+function openMenu() {
+    sideMenu.classList.remove('-translate-x-full');
+    sideMenu.classList.add('translate-x-0');
+    switchElement.checked = true;
+    switchContainer.classList.replace('bg-gray-300', 'bg-[#2B5BBB]');
+    
+    if (window.innerWidth <= 640) {
+        switchDot.classList.add('translate-x-5'); // 작은 화면에서는 짧게 이동
+    } else {
+        switchDot.classList.add('translate-x-6'); // 기본 이동 거리
+    }
+
+    mainContent.classList.add('ml-64');
+    mainContent.classList.remove('mx-auto'); // 가운데 정렬 해제
+}
+
+// ✅ 메뉴 닫기
+function closeMenu() {
+    sideMenu.classList.add('-translate-x-full');
+    sideMenu.classList.remove('translate-x-0');
+    switchElement.checked = false;
+    switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
+    switchDot.classList.remove('translate-x-5', 'translate-x-6');
+    
+    mainContent.classList.remove('ml-64');
+    mainContent.classList.add('mx-auto'); // 가운데 정렬 적용
+}
+
+// ✅ 스위치 클릭 시 토글 기능
+function toggleSideMenu() {
+    if (switchElement.checked) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+}
+
+// ✅ 화면 크기 변경 시 자동으로 상태 업데이트
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280) {
+        openMenu();  // 1024px 이상이면 자동으로 열림
+    } else {
+        closeMenu(); // 1024px 이하이면 자동으로 닫힘
+    }
+});
+
+// ✅ 초기 로딩 시 실행 (DOMContentLoaded 이벤트 추가)
+document.addEventListener('DOMContentLoaded', initializeMenu);
+
+// ✅ 스위치 클릭 이벤트 추가
 switchContainer.addEventListener('click', toggleSideMenu);
 
-// Optional: Close side menu when clicking outside
+// ✅ 바깥 클릭 시 메뉴 닫기
+document.addEventListener('click', (event) => {
+    if (
+        switchElement.checked && 
+        !sideMenu.contains(event.target) && 
+        !switchContainer.contains(event.target)
+    ) {
+        closeMenu();
+    }
+});
+
 document.addEventListener('click', (event) => {
     if (
         switchElement.checked && 
