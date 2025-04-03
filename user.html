@@ -812,10 +812,12 @@
         <div
             id="infoModal"
             class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div class="bg-[#FEFEFE] rounded-xl p-6 w-4/5 max-w-3xl max-h-[95vh] shadow-lg">
+            <div class="bg-[#FEFEFE] rounded-xl p-6 max-w-4xl max-h-[80vh] shadow-lg relative">
+                <!-- ✖️ 닫기 버튼 -->
+                    <img src="img/close.png" alt="닫기" class="close-modal absolute top-4 right-4 w-6 h-6 cursor-pointer">
                 <h1 class=" h1-title paperlogy font-normal text-[#292929] pb-4 text-center">개인정보</h1>
                 <div
-                    class="overflow-y-auto max-h-[calc(95vh-10rem)]"
+                    class="overflow-y-auto max-h-[calc(80vh-10rem)]"
                     style="-ms-overflow-style: none; scrollbar-width: none;">
 
                     <!-- 개인 정보 섹션 -->
@@ -845,26 +847,27 @@
                     </div>
 
                     <div class="overflow-x-auto">
-                        <div class="min-w-[660px]">
+                        <div class="min-w-[680px]">
                             <!-- 상세 정보 섹션 -->
-                            <div class="bg-[#F8F8F8] rounded-[10px] p-5 grid grid-cols-3 gap-10">
-                                <div>
+                            <div class="bg-[#F8F8F8] rounded-[10px] p-5 grid grid-cols-3 gap-3">
+                                <div class="flex items-center gap-2 bg-pink-100">
                                     <p class="text-[18px] font-semibold text-[#292929] mb-1">아이디</p>
                                     <p class="text-[16px] font-medium text-[#727272]">example_id</p>
                                 </div>
-                                <div>
+                                <div class="flex items-center gap-2 bg-blue-100">
                                     <p class="text-[18px] font-semibold text-[#292929] mb-1">이메일</p>
                                     <p class="text-[16px] font-medium text-[#727272]">example@email.com</p>
                                 </div>
-                                <div>
-                                    <p class="text-[18px] font-semibold text-[#292929] mb-1">소속 교육지원청</p>
+                                <div class="flex items-center gap-2 bg-pink-100">
+                                    <p class="text-[18px] font-semibold text-[#292929] mb-1">소속교육지원청</p>
                                     <p class="text-[16px] font-medium text-[#727272]">가평교육지원청</p>
                                 </div>
-                                <div>
+                                <div class="col-span-3 border-t border-gray-300"></div>
+                                <div class="flex items-center gap-2">
                                     <p class="text-[18px] font-semibold text-[#292929] mb-1">직장명</p>
                                     <p class="text-[16px] font-medium text-[#727272]">다산가람초</p>
                                 </div>
-                                <div class="col-span-2">
+                                <div class="flex items-center gap-2 col-span-2">
                                     <p class="text-[18px] font-semibold text-[#292929] mb-1">주소</p>
                                     <p class="text-[16px] font-medium text-[#727272]">서울특별시 강남구 00로 00</p>
                                 </div>
@@ -888,9 +891,9 @@
                                         <th class="p-2 font-semibold text-[#292929] rounded-tr-[10px]">상태</th>
                                     </tr>
                                 </thead>
-                                <tbody class="bg-[#FEFEFE] text-[#727272]">
-                                    <tr class="border-b-[1px] border-b-[#EEEEEE]">
-                                        <td class="p-2 font-medium text-[#727272]">(자율) 라인댄스심화</td>
+                                <tbody class="text-[#727272]">
+                                    <tr class="bg-[#FEFEFE] border-b-[1px] border-b-[#EEEEEE]">
+                                        <td class="text-left p-2 font-medium text-[#727272]">라인댄스심화</td>
                                         <td class="p-2 font-medium text-[#727272]">자율</td>
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-2 py-1">라인댄스</div>
@@ -898,14 +901,14 @@
                                         <td class="p-2 font-medium text-[#727272]">1학기</td>
                                         <td class="p-2 font-medium text-[#727272]">35</td>
                                         <td class="p-2 font-medium text-[#727272]">
-                                            <div class="text-[#727272]">25-05-09 ~
+                                            <div class="text-[#727272]">25.05.09 ~
                                             </div>
-                                            <div class=" text-[#727272]">25-08-14</div>
+                                            <div class=" text-[#727272]">25.08.14</div>
                                         </td>
                                         <td class="p-2 font-medium text-[#727272]">수강확정</td>
                                     </tr>
-                                    <tr class="border-b-[1px] border-b-[#EEEEEE]">
-                                        <td class="p-2 font-medium text-[#727272]">(자율) 라틴2종 파티대비B</td>
+                                    <tr class="bg-[#F8F8F8] border-b-[1px] border-b-[#EEEEEE]">
+                                        <td class="text-left p-2 font-medium text-[#727272]">라틴2종 파티대비B</td>
                                         <td class="p-2 font-medium text-[#727272]">자율</td>
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div class="bg-[#4E9DFB] text-[#FEFEFE] rounded-lg text-center px-2 py-1">댄스스포츠</div>
@@ -913,37 +916,37 @@
                                         <td class="p-2 font-medium text-[#727272]">1학기</td>
                                         <td class="p-2 font-medium text-[#727272]">24</td>
                                         <td class="p-2 font-medium text-[#727272]">
-                                            <div class="text-[#727272]">25-04-01 ~
+                                            <div class="text-[#727272]">25.04.01 ~
                                             </div>
-                                            <div class=" text-[#727272]">25-03-27</div>
+                                            <div class=" text-[#727272]">25.03.27</div>
                                         </td>
                                         <td class="p-2 font-medium text-[#727272]">진행중</td>
                                     </tr>
-                                    <tr class="border-b-[1px] border-b-[#EEEEEE]">
-                                        <td class="p-2 font-medium text-[#727272]">역량을 키우는 라인댄스 기초</td>
-                                        <td class="p-2 font-medium text-[#727272]">서울 직무</td>
+                                    <tr class="bg-[#FEFEFE] border-b-[1px] border-b-[#EEEEEE]">
+                                        <td class="text-left p-2 font-medium text-[#727272]">역량을 키우는 라인댄스 기초</td>
+                                        <td class="p-2 font-medium text-[#727272]">서울</td>
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-2 py-1">라인댄스</div>
                                         </td>
                                         <td class="p-2 font-medium text-[#727272]">1학기</td>
                                         <td class="p-2 font-medium text-[#727272]">35</td>
                                         <td class="p-2 font-medium text-[#727272]">
-                                            <div class="text-[#727272]">24-07-29 ~
+                                            <div class="text-[#727272]">24.07.29 ~
                                             </div>
-                                            <div class=" text-[#727272]">24-08-02</div>
+                                            <div class=" text-[#727272]">24.08.02</div>
                                         </td>
                                         <td class="p-2">
-                                            <div>
-                                                <a href="#" class="font-medium text-[#F34457] font-semibold">이수증</a>
-                                            </div>
-                                            <div class="mt-2">
-                                                <a href="#" class="font-medium text-[#22BEB5] font-semibold">영수증</a>
-                                            </div>
+                                            <button class="bg-[#EDF3FF] hover:bg-[#D3E1FB] modal-trigger-2 p-2 rounded-xl mr-2">
+                                                <img src="img/license.png" alt="이수증" class="w-6 h-6">
+                                            </button>
+                                            <button class="bg-[#EEF9F8] hover:bg-[#BEEFEC] modal-trigger-3 p-2 rounded-xl">
+                                                <img src="img/receipe.png" alt="영수증" class="w-6 h-6">
+                                            </button>
                                         </td>
                                     </tr>
-                                    <tr class="border-b-[1px] border-b-[#EEEEEE]">
-                                        <td class="p-2 font-medium text-[#727272]">희망을 키우는 웰빙댄스 초중급Ⅱ</td>
-                                        <td class="p-2 font-medium text-[#727272]">경기 직무</td>
+                                    <tr class="bg-[#F8F8F8] border-b-[1px] border-b-[#EEEEEE]">
+                                        <td class="text-left p-2 font-medium text-[#727272]">희망을 키우는 웰빙댄스 초중급Ⅱ</td>
+                                        <td class="p-2 font-medium text-[#727272]">경기</td>
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div
                                                 class="bg-[#AFE7E0] text-[#292929] font-semibold rounded-lg text-center px-2 py-1">웰빙댄스</div>
@@ -951,45 +954,22 @@
                                         <td class="p-2 font-medium text-[#727272]">2학기</td>
                                         <td class="p-2 font-medium text-[#727272]">30</td>
                                         <td class="p-2 font-medium text-[#727272]">
-                                            <div class="text-[#727272]">24-07-29 ~
+                                            <div class="text-[#727272]">24.07.29 ~
                                             </div>
-                                            <div class=" text-[#727272]">24-08-02</div>
+                                            <div class=" text-[#727272]">24.08.02</div>
                                         </td>
                                         <td class="p-2">
-                                            <div>
-                                                <a href="#" class="font-medium text-[#F34457] font-semibold">이수증</a>
-                                            </div>
-                                            <div class="mt-2">
-                                                <a href="#" class="font-medium text-[#22BEB5] font-semibold">영수증</a>
-                                            </div>
+                                            <button class="bg-[#EDF3FF] hover:bg-[#D3E1FB] modal-trigger-2 p-2 rounded-xl mr-2">
+                                                <img src="img/license.png" alt="이수증" class="w-6 h-6">
+                                            </button>
+                                            <button class="bg-[#EEF9F8] hover:bg-[#BEEFEC] modal-trigger-3 p-2 rounded-xl">
+                                                <img src="img/receipe.png" alt="영수증" class="w-6 h-6">
+                                            </button>
                                         </td>
                                     </tr>
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 연수 기록 테이블 -->
-                    <h2 class="text-[20px] font-semibold text-[#292929] mt-10">연수기록 (2020년도 이전)</h2>
-                    <div class="overflow-x-auto">
-                        <div class="min-w-[650px]">
-                            <table class="text-center w-full text-left mt-2">
-                                <thead class="bg-[#F8F8F8] rounded-t-[10px]">
-                                    <tr>
-                                        <th class="p-2 font-semibold text-[#292929] rounded-tl-[10px]">과정명</th>
-                                        <th class="p-2 font-semibold text-[#292929]">직무구분</th>
-                                        <th class="p-2 font-semibold text-[#292929]">종목</th>
-                                        <th class="p-2 font-semibold text-[#292929]">시기</th>
-                                        <th class="p-2 font-semibold text-[#292929]">시간</th>
-                                        <th class="p-2 font-semibold text-[#292929]">연수 기간</th>
-                                        <th class="p-2 font-semibold text-[#292929] rounded-tr-[10px]">상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-[#FEFEFE] text-[#727272]">
-                                    <tr class="border-b-[1px] border-b-[#EEEEEE]">
-                                        <td class="p-2 font-medium text-[#727272]">역량을 키우는 라인댄스 기초</td>
-                                        <td class="p-2 font-medium text-[#727272]">서울 직무</td>
+                                    <tr class="bg-[#FEFEFE] border-b-[1px] border-b-[#EEEEEE]">
+                                        <td class="text-left p-2 font-medium text-[#727272]">역량을 키우는 라인댄스 기초</td>
+                                        <td class="p-2 font-medium text-[#727272]">서울</td>
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-2 py-1">라인댄스</div>
                                         </td>
@@ -998,43 +978,35 @@
                                         <td class="p-2 font-medium text-[#727272]">
                                             <div class="text-[#727272]">24-07-29 ~
                                             </div>
-                                            <div class=" text-[#727272]">24-08-02
-                                            </div>
+                                            <div class=" text-[#727272]">24-08-02</div>
                                         </td>
                                         <td class="p-2">
-                                            <div>
-                                                <a href="#" class="font-medium text-[#F34457] font-semibold">이수증</a>
-                                            </div>
-                                            <div class="mt-2">
-                                                <a href="#" class="font-medium text-[#22BEB5] font-semibold">영수증</a>
-                                            </div>
+                                            <button class="bg-[#EDF3FF] hover:bg-[#D3E1FB] modal-trigger-2 p-2 rounded-xl mr-2">
+                                                <img src="img/license.png" alt="이수증" class="w-6 h-6">
+                                            </button>
+                                            <button class="bg-[#EEF9F8] hover:bg-[#BEEFEC] modal-trigger-3 p-2 rounded-xl">
+                                                <img src="img/receipe.png" alt="영수증" class="w-6 h-6">
+                                            </button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <!-- 수강 횟수 -->
+                            <div
+                            class="flex justify-start space-x-2 mt-5 mb-20 text-[14px]">
+                            <div class="text-[#727272] font-semibold px-1 text-left">댄스스포츠
+                                <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">1</span></div>
+                            <div class="text-[#727272] font-semibold px-1 text-left">라인댄스
+                                <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">3</span></div>
+                            <div class="text-[#727272] font-semibold px-1 text-left">웰빙댄스
+                                <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">1</span></div>
+                            <div class="text-[#727272] font-semibold px-1 text-left">필라테스
+                                <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">0</span></div>
+                        </div>
                         </div>
                     </div>
-
-                    <!-- 수강 횟수 -->
-                    <div
-                        class="flex justify-start space-x-2 mt-20 text-[14px] max-sm:space-x-0 max-sm:grid max-sm:grid-cols-2 max-md:gap-4">
-                        <div class="text-[#727272] font-semibold px-1 text-left">댄스스포츠
-                            <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">1</span></div>
-                        <div class="text-[#727272] font-semibold px-1 text-left">라인댄스
-                            <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">3</span></div>
-                        <div class="text-[#727272] font-semibold px-1 text-left">웰빙댄스
-                            <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">1</span></div>
-                        <div class="text-[#727272] font-semibold px-1 text-left">필라테스
-                            <span class="text-[#727272] bg-[#EEEEEE] font-semibold px-2 py-1 rounded-md">0</span></div>
-                    </div>
-
-                    <!-- 닫기 버튼 -->
-                    <button
-                        id="closeModal"
-                        class="mt-6 block w-full font-semibold text-center text-[#727272] bg-[#F2F2F2] py-3 rounded-[10px]">닫기</button>
                 </div>
             </div>
-
         </div>
         <!-- 사이드 메뉴 -->
         <div id="side-menu" class="fixed overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
@@ -1367,32 +1339,25 @@
             document.addEventListener("DOMContentLoaded", function () {
                 const modal = document.getElementById("infoModal");
                 const openModalButtons = document.querySelectorAll(".modal-trigger"); // 모든 모달 트리거 선택
-                const closeModal = document.getElementById("closeModal");
+                const closeModalButton = document.querySelector(".close-modal");
 
                 // 모달 트리거 버튼 클릭 시 모달 열기
                 openModalButtons.forEach(button => {
                     button.addEventListener("click", function (e) {
                         e.preventDefault();
-                        modal
-                            .classList
-                            .remove("hidden");
+                        modal.classList.remove("hidden");
                     });
                 });
 
                 // 모달 닫기 버튼 클릭 시 모달 닫기
-                closeModal.addEventListener("click", function () {
-                    modal
-                        .classList
-                        .add("hidden");
+                closeModalButton.addEventListener("click", function () { 
+                    modal.classList.add("hidden");
                 });
 
                 // 모달 외부 영역 클릭 시 모달 닫기
-                window.addEventListener("click", function (e) {
-                    // modal을 제외한 영역을 클릭했을 때 모달 닫기
-                    if (e.target === modal) {
-                        modal
-                            .classList
-                            .add("hidden");
+                modal.addEventListener("click", function (e) {
+                    if (e.target === modal) { // 모달 전체가 아니라 배경을 클릭했을 때만 닫힘
+                        modal.classList.add("hidden");
                     }
                 });
             });
