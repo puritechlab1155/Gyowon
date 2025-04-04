@@ -26,12 +26,17 @@
                 background-color: #F5F9FF; /* 배경색 */
                 padding: 10px 16px; /* 내부 패딩 */
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-                z-index: 50; /* 헤더 위로 배치 */
+                z-index: 10; /* 헤더 위로 배치 */
                 display: none; /* 기본적으로 숨김 */
             }
           
             .animate-scroll {
               animation: scroll 30s linear infinite;
+            }
+            @media (max-width: 768px) {
+                .mobile-banner {
+                    display: block;
+                }
             }
           </style>
 
@@ -105,14 +110,36 @@
                                     <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-6 max-lg:pr-3">▼</button>
                                     <ul id="dropdown-menu" class="absolute right-0 w-[300px] md:w-[400px] lg:w-[500px] bg-white shadow-lg rounded-lg hidden">
                                         <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <div class="flex items-center max-lg:space-x-2 max-sm:space-x-0 space-x-5 justify-center max-lg:px-1"> 
-                                                <span class="font-semibold hidden xl:inline-block ">최근 댄스화 주문</span> 
-                                                <span class="text-gray-500 hidden xl:inline-block">2025-01-06 | 00:03:19</span> 
-                                                <span class="text-sm text-[#2B5BBB] hidden sm:inline-block font-semibold">연습화 240</span> 
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">👠 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             </div>
                                         </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">💡 공지사항: 서비스 점검 안내</li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">🎉 업데이트 소식! 새로운 버전을 만나보세요!</li>
+                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">💰 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm lg:text-base font-semibold max-sm:hidden">자</span></span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">🎉 신규 가입자</span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">📣 최근 공지<span class="text-sm lg:text-base font-semibold max-sm:hidden">사항</span></span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -139,8 +166,48 @@
                 </div>
             </nav>
             <!-- 모바일 전용 드롭다운 배너 -->
-
-            
+            <!-- <div id="mobile-banner" class="fixed top-16 left-0 w-full bg-white shadow-md">
+                <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
+                    <button id="mobile-banner-close" class="text-gray-500">✖</button>
+                </div>
+                <div class="p-4 text-sm text-gray-700">
+                    <!-- 1. 최근 댄스화 주문 -->
+                    <div class="banner-text text-sm font-semibold">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-semibold">👠 최근 댄스화 주문</span> 
+                            <span class="text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
+                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
+                        </div>
+                    </div>
+                    <!-- 2. 최근 수강 입금자 -->
+                    <div class="banner-text text-sm font-semibold mt-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-semibold">💰 최근 수강 입금자</span> 
+                            <span class="text-sm text-[#2B5BBB] font-semibold">라틴2종 파티대비A</span> 
+                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
+                        </div>
+                    </div>
+                    <!-- 3. 신규 가입자 -->
+                    <div class="banner-text text-sm font-semibold mt-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-semibold">🎉 신규 가입자</span> 
+                            <span class="text-sm text-[#2B5BBB] font-semibold">교원</span> 
+                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
+                        </div>
+                    </div>
+                    <!-- 4. 최근 공지 -->
+                    <div class="banner-text text-sm font-semibold mt-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-semibold">📣 최근 공지</span> 
+                            <span class="text-sm text-[#2B5BBB] font-semibold">홈페이지 리뉴얼 관련 안내</span> 
+                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </header>
         
 
