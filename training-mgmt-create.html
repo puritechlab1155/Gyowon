@@ -550,9 +550,9 @@
                     </div>
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                     </div>
-                    <div class="bg-[#F9F9F9] col-span-2 px-2 h-[60px] flex items-center">
-                        <div class="w-1/6 "></div>
-                        <div class="w-5/6 flex items-center gap-2">
+                    <div class="bg-[#F9F9F9] col-span-2 px-2 h-[60px] flex items-center max-xl:col-span-1">
+                        <div class="w-1/6 max-xl:w-0/6"></div>
+                        <div class="w-5/6 max-xl:w-6/6 max-xl:justify-start flex gap-2">
                             <button class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
                             <img src="img/training-mgmt/bold.png" alt="icon1" class="w-6 h-6"/>
                             </button>
@@ -579,9 +579,9 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-span-2 px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[500px] grid grid-cols-6">
-                    <label class="col-span-1 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center">교육내용</label>
-                    <div class="col-span-5 bg-[#FFFFFF] border border-[#EFEFEF] mb-2 rounded-xl"> 
+                    <div class="col-span-2 max-xl:col-span-1 px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[500px] grid grid-cols-6">
+                    <label class="col-span-1 max-xl:col-span-2 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center">교육내용</label>
+                    <div class="col-span-5 max-xl:col-span-4 bg-[#FFFFFF] border border-[#EFEFEF] mb-2 rounded-xl"> 
                         <textarea
                             class="w-full h-full px-4 py-4 text-[16px] text-[#292929] rounded-xl resize-none focus:outline-none focus:border-[#2B5BBB] placeholder-[#AFAFAF]"
                             placeholder="교육내용을 입력하세요"></textarea>
@@ -632,6 +632,11 @@
                 menu.classList.toggle("hidden");
             });
 
+            // 드롭다운이 열리면 해당 드롭다운을 가장 앞에 오도록 z-index 설정
+            if (!menu.classList.contains("hidden")) {
+                dropdown.style.zIndex = "10"; // 원하는 z-index 값 설정
+            }
+
             menu.addEventListener("click", function (event) {
                 event.stopPropagation();
             });
@@ -653,6 +658,8 @@
         dropdowns.forEach((dropdown) => {
             const menu = dropdown.querySelector(".dropdown-menu");
             if (menu) menu.classList.add("hidden");
+
+            dropdown.style.zIndex = ""; 
         });
     }
     document.addEventListener("DOMContentLoaded", function () {
@@ -673,9 +680,9 @@
     });
 
     document.addEventListener("click", function () {
-        closeAllDropdowns();
+            closeAllDropdowns();
+        });
     });
-});
 
     </script>
 </body>
