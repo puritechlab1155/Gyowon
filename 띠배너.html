@@ -26,19 +26,14 @@
                 background-color: #F5F9FF; /* 배경색 */
                 padding: 10px 16px; /* 내부 패딩 */
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-                z-index: 10; /* 헤더 위로 배치 */
+                z-index: 50; /* 헤더 위로 배치 */
                 display: none; /* 기본적으로 숨김 */
             }
           
             .animate-scroll {
               animation: scroll 30s linear infinite;
             }
-            @media (max-width: 768px) {
-                .mobile-banner {
-                    display: block;
-                }
-            }
-          </style>
+        </style>
 
 
     </head>
@@ -63,78 +58,88 @@
                         </div>
 
                         <!-- 오른쪽 영역 -->
-                        <div class="flex justify-between items-center w-full">
-                            <!-- 배너 및 드롭다운 -->
-                            <div class="relative max-md:w-[300px] lg:w-[450px] xl:w-[590px] h-10 flex items-center border-2 rounded-lg banner-border max-md:hidden">
-                                <!-- 변경되는 배너 문구 -->
-                                <div class="banner-container w-full flex justify-start pl-6 max-lg:pl-3">
-                                    <!-- 1. 최근댄스화 주문 -->
-                                    <div class="banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
-                                        <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                            <span class="text-sm lg:text-base font-semibold">👠 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
-                                            <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
-                                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                                            <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                        </div>
-                                    </div>
-                                    <!-- 2. 최근 수강입금자 문구 -->
-                                    <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                            <span class="text-sm lg:text-base font-semibold">💰 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm lg:text-base font-semibold max-sm:hidden">자</span></span> 
-                                            <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
-                                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                                            <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                        </div>
-                                    </div>
-                                    <!-- 3. 신규 가입자 문구 -->
-                                    <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                            <span class="text-sm lg:text-base font-semibold">🎉 신규 가입자</span> 
-                                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                                            <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
-                                            <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                        </div>
-                                    </div>
-                                    <!-- 4. 최근 게시된 공지 -->
-                                    <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                            <span class="text-sm lg:text-base font-semibold">📣 최근 공지<span class="text-sm lg:text-base font-semibold max-sm:hidden">사항</span></span> 
-                                            <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
-                                            <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 드롭다운 버튼 -->
-                                <div class="relative">
-                                    <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-6 max-lg:pr-3">▼</button>
-                                    <ul id="dropdown-menu" class="absolute right-0 w-[300px] md:w-[400px] lg:w-[500px] bg-white shadow-lg rounded-lg hidden">
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        <div class="flex justify-between items-center w-full max-md:justify-end">
+                            <!-- 전체 배너 영역 -->
+                            <div class="relative flex items-center sm:w-[330px] max-md:w-[300px] lg:w-[450px] xl:w-[590px] h-10 border-2 rounded-lg banner-border max-md:hidden px-3 justify-between">
+                                <!-- 변경되는 배너 문구 영역 -->
+                                <div class="flex-1 overflow-hidden">
+                                    <div class="w-full h-full flex items-center banner-container pl-3 max-lg:pl-0">
+                                        
+                                        <!-- 1. 최근댄스화 주문 -->
+                                        <div class="banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
                                             <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
                                                 <span class="text-sm lg:text-base font-semibold">👠 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
                                                 <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
                                                 <span class="text-sm text-gray-500 font-semibold">홍길동</span>
                                                 <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             </div>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        </div>
+                                        <!-- 2. 최근 수강입금자 문구 -->
+                                        <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
                                             <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
                                                 <span class="text-sm lg:text-base font-semibold">💰 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm lg:text-base font-semibold max-sm:hidden">자</span></span> 
                                                 <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
                                                 <span class="text-sm text-gray-500 font-semibold">홍길동</span>
                                                 <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             </div>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        </div>
+                                        <!-- 3. 신규 가입자 문구 -->
+                                        <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
                                             <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
                                                 <span class="text-sm lg:text-base font-semibold">🎉 신규 가입자</span> 
                                                 <span class="text-sm text-gray-500 font-semibold">홍길동</span>
                                                 <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
                                                 <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             </div>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        </div>
+                                        <!-- 4. 최근 게시된 공지 -->
+                                        <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
                                             <div class="flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">📣 최근 공지<span class="text-sm lg:text-base font-semibold max-sm:hidden">사항</span></span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- 드롭다운 -->
+                                <div class="relative flex-shrink-0 pl-2">
+                                    <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-3 max-lg:pr-0">▼</button>
+                                    
+                                    <ul id="dropdown-menu" class="absolute right-[-13px] top-[30px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden z-10 mt-1">
+                                        <!-- 1. 최근댄스화 주문 -->
+                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">👠 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
+                                        <!-- 2. 최근 수강입금자 문구 -->
+                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">💰 <span class="text-sm lg:text-base font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm lg:text-base font-semibold max-sm:hidden">자</span></span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
+                                        <!-- 3. 신규 가입자 문구 -->
+                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
+                                                <span class="text-sm lg:text-base font-semibold">🎉 신규 가입자</span> 
+                                                <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
+                                                <span class="text-sm text-gray-500 font-semibold">홍길동</span>
+                                                
+                                                <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            </div>
+                                        </li>
+                                        <!-- 4. 최근 게시된 공지 -->
+                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg">
+                                            <div class="flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
                                                 <span class="text-sm lg:text-base font-semibold">📣 최근 공지<span class="text-sm lg:text-base font-semibold max-sm:hidden">사항</span></span> 
                                                 <span class="text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
                                                 <span class="text-sm text-gray-500 font-semibold max-lg:hidden">25.01.06 <span class="text-sm text-gray-500 font-semibold max-xl:hidden">| 00:03:19</span></span> 
@@ -166,48 +171,8 @@
                 </div>
             </nav>
             <!-- 모바일 전용 드롭다운 배너 -->
-            <!-- <div id="mobile-banner" class="fixed top-16 left-0 w-full bg-white shadow-md">
-                <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
-                    <button id="mobile-banner-close" class="text-gray-500">✖</button>
-                </div>
-                <div class="p-4 text-sm text-gray-700">
-                    <!-- 1. 최근 댄스화 주문 -->
-                    <div class="banner-text text-sm font-semibold">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-sm font-semibold">👠 최근 댄스화 주문</span> 
-                            <span class="text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
-                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
-                        </div>
-                    </div>
-                    <!-- 2. 최근 수강 입금자 -->
-                    <div class="banner-text text-sm font-semibold mt-2">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-sm font-semibold">💰 최근 수강 입금자</span> 
-                            <span class="text-sm text-[#2B5BBB] font-semibold">라틴2종 파티대비A</span> 
-                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
-                        </div>
-                    </div>
-                    <!-- 3. 신규 가입자 -->
-                    <div class="banner-text text-sm font-semibold mt-2">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-sm font-semibold">🎉 신규 가입자</span> 
-                            <span class="text-sm text-[#2B5BBB] font-semibold">교원</span> 
-                            <span class="text-sm text-gray-500 font-semibold">홍길동</span>
-                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
-                        </div>
-                    </div>
-                    <!-- 4. 최근 공지 -->
-                    <div class="banner-text text-sm font-semibold mt-2">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-sm font-semibold">📣 최근 공지</span> 
-                            <span class="text-sm text-[#2B5BBB] font-semibold">홈페이지 리뉴얼 관련 안내</span> 
-                            <span class="text-sm text-gray-500 font-semibold">25.01.06 | 00:03:19</span> 
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+
+            
         </header>
         
 
@@ -235,7 +200,8 @@
                                 <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 mr-1"/>
                                 엑셀 다운로드
                             </button>
-                            <button class="bg-[#EDF3FF] text-[#2B5BBB] w-full max-sm:text-sm px-4 py-2 max-xl:px-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                            <button onclick="location.href='/users-create.html'"
+                                class="bg-[#EDF3FF] text-[#2B5BBB] w-full max-sm:text-sm px-4 py-2 max-xl:px-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 회원 등록하기
                             </button>
                         </div>
@@ -303,7 +269,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -340,7 +307,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -377,7 +345,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -414,7 +383,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -451,7 +421,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -488,7 +459,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button onclick="location.href='/sbjec-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -517,8 +489,8 @@
                                         </td>
                                         <td class="w-[6%] text-center">
                                             <div class="flex justify-center items-center">
-                                                <button
-                                                    class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <button onclick="location.href='/sbjec-apply.html'"
+                                                        class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
                                                     </span>
@@ -526,266 +498,8 @@
                                             </div>
                                         </td>
                                         <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                <div class="flex justify-center items-center">
-                                                    <span class="inline-block align-middle mr-1">
-                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
-                                                    </span>
-                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                </div>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[5%] text-[#727272]">231</td>
-                                        <td class="w-[8%] text-[#727272]">jane0304</td>
-                                        <td class="w-[7%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline modal-trigger" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[11%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">-</td>
-                                        <td class="w-[10%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline" href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[6%] text-center">
-                                            <div class="flex justify-center items-center">
-                                                <button class="bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]"/>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="w-[9%] text-[#2b5bbb] font-bold cursor-pointer">
-                                            <button class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <button 
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
                                                 <div class="flex justify-center items-center">
                                                     <span class="inline-block align-middle mr-1">
                                                         <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
@@ -987,7 +701,7 @@
                                                 <img src="img/license.png" alt="이수증" class="w-6 h-6"/>
                                             </button>
                                             <button class="bg-[#EEF9F8] hover:bg-[#BEEFEC] modal-trigger-3 p-2 rounded-xl">
-                                                <img src="img/receipe.png" alt="영수증" class="w-6 h-6"/>
+                                                <img src="img/receipt.png" alt="영수증" class="w-6 h-6"/>
                                             </button>
                                         </td>
                                     </tr>
