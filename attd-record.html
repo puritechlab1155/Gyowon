@@ -360,9 +360,6 @@
         class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6">
             <h1 class="mt-[50px] h1-title border-gray-300 font-normal paperlogy">과정출석부</h1>
-            <span class="text-[14px] font-semibold text-[#64748B]">
-                ※ "과목명, 교육장소, 요일, 회차"를 선택하시면 [ 기초자료 / 과정출석부 / 명찰 ] 이 화면에 표시됩니다.  <br/> ※ 미입금이여도 수강확정이면 표시됩니다.
-            </span>
             <div class="pt-5 pb-5 max-lg:flex max-lg:flex-col-reverse">
                 <div class="w-full flex items-center justify-between mt-[50px] max-lg:mt-[20px] max-2xl:flex-col max-2xl:items-stretch max-2xl:gap-5 max-lg:flex-col-reverse">
                     <!-- left-content -->
@@ -566,7 +563,7 @@
                             <div class="w-full max-lg:col-span-1 hidden max-lg:block">
                                 <button id="filterButton"
                                     class="text-[#202020] flex justify-between items-center px-1 py-3 max-sm:py-2 w-full rounded-md bg-[#ECECEC]">
-                                    <div class="w-14 text-center min-w-[30px]">필터</div>
+                                    <div class="w-14 text-center min-w-[30px] max-sm:text-[14px]">필터</div>
                                     <img class="w-8 h-6" src="img/filter.png" alt="필터 아이콘" />
                                 </button>
                             </div>
@@ -575,17 +572,19 @@
                 </div>
                 <div class="flex justify-between mt-5 max-sm:flex-col-reverse max-sm:gap-3 ">
                     <!-- left-content -->
-                    <div class="left-content flex items-center justify-between max-sm:justify-start gap-2">
-                        
+                    <div class="left-content flex items-center justify-between max-md:justify-start gap-2">
+                        <span class="text-[14px] font-semibold text-[#64748B] max-xl:tracking-tighter">
+                            ※ "과목명, 교육장소, 요일, 회차"를 선택하시면 <br class="hidden max-lg:block"/>[ 기초자료 | 과정출석부 | 명찰 ]이 화면에 표시됩니다.  <br/> ※ 미입금이여도 수강확정이면 표시됩니다.
+                        </span>
                     </div>
                     <!-- right-content (탭들) -->
-                    <div class="right-content flex justify-end text-lg space-x-2 max-sm:justify-start">
+                    <div class="right-content flex justify-end text-lg space-x-2 max-md:justify-start">
                         <div class="relative group">
                             <button
-                                class="openBasicDataModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                                class="openBasicDataModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 기초자료
                             </button>
-                            <div class="text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                 PDF, Excel<br/>다운로드
                             </div>
                         </div>
@@ -593,10 +592,10 @@
                         <!-- 과정출석부 버튼 -->
                         <div class="relative group">
                             <button
-                                class="openAttendanceModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                                class="openAttendanceModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 과정출석부
                             </button>
-                            <div class="text-center  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="pointer-events-none text-center  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                 PDF, Excel<br/>다운로드
                             </div>
                         </div>
@@ -604,10 +603,10 @@
                         <!-- 명찰 버튼 -->
                         <div class="relative group">
                             <button 
-                                class="openNameTagModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                                class="openNameTagModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 명찰
                             </button>
-                            <div class="text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                 PDF<br/>다운로드
                             </div>
                         </div>
@@ -647,7 +646,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">본청</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">누원고</td>
                                     <td class="w-[6%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">주무관</td>
@@ -681,7 +680,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">화성오산</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">배곧해솔</td>
                                     <td class="w-[6%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">기간제</td>
@@ -715,7 +714,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">강남서초</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">영신</td>
                                     <td class="w-[6%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">설립자</td>
@@ -749,7 +748,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">수원</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">영덕</td>
                                     <td class="w-[6%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">교장</td>
@@ -783,7 +782,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">북부</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">평택여자</td>
                                     <td class="w-[7%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">교육공무직</td>
@@ -817,7 +816,7 @@
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">구리남양주</td>
                                     <td class="px-2 py-2 w-[9%] text-[#727272]">발안바이오과학</td>
                                     <td class="w-[6%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline modal-trigger" href="#">가나다라</a>
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">가나다라</a>
                                     </td>
                                     <td class="px-2 py-2 w-[8%] text-[#727272] leading-tight">1987-12-02</td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">퇴직교사</td>
@@ -1282,11 +1281,12 @@
             <div class="flex justify-end gap-3">
                 <button class="bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
-                    엑셀 다운로드
+                    엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
                 <button onclick="printClassArea('basicDataModal')"
-                        class="bg-[#A40B0D] hover:bg-[#8E2F2A] text-white py-2 px-6 rounded-md shadow-sm">
-                    PDF 다운로드
+                        class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                    <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                    PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
             </div>
         </div>
@@ -1295,7 +1295,7 @@
 
     <!-- 과정출석부 모달 -->
     <div id="attendanceModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
-        <div class="bg-white rounded-lg p-6 w-[90%] min-w-[1500px] max-h-[90vh] overflow-y-auto shadow-lg relative" style="-ms-overflow-style:none; scrollbar-width:none;">
+        <div class="bg-white rounded-lg p-6 w-[90%] max-h-[90vh] overflow-y-auto shadow-lg relative" style="-ms-overflow-style:none; scrollbar-width:none;">
             
             <button class="closeAttendanceModal absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
                 <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
@@ -1303,15 +1303,14 @@
             <h2 class="h1-title paperlogy font-normal text-[#292929] mb-4 text-left">과정출석부</h2>
             <div class="border-t-[2px] border-[#2B5BBB]"></div>
             <div class="printArea">
-                <h2 class="text-[28px] max-sm:text-[22px] font-semibold text-[#292929] mt-8 mb-10 text-center">출석부</h2>
+                <h2 class="text-[28px] max-sm:text-[22px] font-semibold text-[#292929] mt-8 mb-2 text-center">라틴 초중급 과정출석부</h2>
 
-                <div class="text-[#333] text-[16px] font-medium mb-1"> ● 과 정 명 : 라틴 초중급 과정</div>
                 <div class="text-[#333] text-[16px] font-medium mb-1"> ● 적용시기 : 2025 · 1학기</div>
                 <div class="text-[#333] text-[16px] font-medium mb-1"> ● 연수기간 : 2025.02.27 - 2025.03.29</div>
                 <div class="text-[#333] text-[16px] font-medium mb-4"> ● 연수장소 : 서울디자인고</div>
 
                 <div class="overflow-auto flex justify-center">
-                    <table class="min-w-[1300px] w-full table-auto text-sm border border-[#ccc]">
+                    <table class="min-w-[1400px] w-full table-auto text-sm border border-[#ccc]">
                         <thead class="bg-[#EDF3FF] text-[#2B5BBB] font-semibold text-center">
                             <tr>
                                 <th class="border px-2 py-2">번호</th>
@@ -1405,57 +1404,59 @@
             <div class="flex justify-end gap-3">
                 <button class="bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
-                    엑셀 다운로드
+                    엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
                 <button onclick="printClassArea('attendanceModal')"
-                        class="bg-[#A40B0D] hover:bg-[#8E2F2A] text-white py-2 px-6 rounded-md shadow-sm">
-                    PDF 다운로드
+                        class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                    <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                    PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
+            </div>
             </div>
         </div>
     </div>
 
 
     <!-- 명찰 모달 -->
-    <div id="nameTagModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+    <div id="nameTagModal" class="overflow-auto fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] min-w-[1500px] max-h-[90vh] overflow-y-auto shadow-lg relative" style="-ms-overflow-style:none; scrollbar-width:none;">
             
             <button class="closeNameTagModal absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
                 <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
             </button>
             <h2 class="h1-title paperlogy font-normal text-[#292929] mb-4 text-left">명찰</h2>
-            <div class="border-t-[2px] border-[#2B5BBB]"></div>
+            <div class="border-t-[2px] border-[#2B5BBB] mb-10"></div>
             <div class="printArea">
-                <h2 class="text-[28px] max-sm:text-[22px] font-semibold text-[#292929] mt-8 mb-10 text-center">명찰</h2>
 
-                <div class="text-[#333] text-[16px] font-medium mb-1"> ● 과 정 명 : 라틴 초중급 과정</div>
-                <div class="text-[#333] text-[16px] font-medium mb-1"> ● 적용시기 : 2025 · 1학기</div>
-                <div class="text-[#333] text-[16px] font-medium mb-1"> ● 연수기간 : 2025.02.27 - 2025.03.29</div>
-                <div class="text-[#333] text-[16px] font-medium mb-4"> ● 연수장소 : 서울디자인고</div>
-
-                <div class="overflow-auto flex justify-center gap-2 w-full">
-                    <div class="w-[400px] h-[250px] border text-center shadow-sm">
-                        <div class="bg-yellow-300 text-xs h-[25%] font-semibold">한국댄스스포츠협회</div>
-                        <div class="flex-1 flex items-center h-[50%] justify-center text-xl font-bold text-[#1a1a1a]">
-                            김복녀
+                <div class="overflow-auto">
+                    <div class="min-w-[1300px] flex justify-center gap-2 w-full">
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
+                            <div class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">한국댄스스포츠협회</div>
+                            <div class="flex-1 flex items-center h-[60%] justify-center text-[50px] font-bold text-[#1a1a1a]"
+                                    style="background-image: url('img/name-tag-back.png'); background-size: cover; background-position: center;">
+                                김복녀
+                            </div>
+                            <div class="bg-blue-800 flex items-center justify-center text-white h-[20%] text-[25px] py-1">일반</div>
                         </div>
-                        <div class="bg-blue-800 text-white h-[25%] text-xs py-1">일반</div>
-                    </div>
-                    <div class="w-[400px] h-[250px] border text-center shadow-sm">
-                        <div class="bg-yellow-300 text-xs py-1 font-semibold">한국댄스스포츠협회</div>
-                        <div class="flex-1 flex items-center justify-center text-xl font-bold text-[#1a1a1a]" >
-                            김복녀
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
+                            <div class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">한국댄스스포츠협회</div>
+                            <div class="flex-1 flex items-center h-[60%] justify-center text-[50px] font-bold text-[#1a1a1a]"
+                                    style="background-image: url('img/name-tag-back.png'); background-size: cover; background-position: center;">
+                                김희정
+                            </div>
+                            <div class="bg-blue-800 flex items-center justify-center text-white h-[20%] text-[25px] py-1">태천초</div>
                         </div>
-                        <div class="bg-blue-800 text-white text-xs py-1">일반</div>
-                    </div>
-                    <div class="w-[400px] h-[250px] border text-center shadow-sm">
-                        <div class="bg-yellow-300 text-xs py-1 font-semibold">한국댄스스포츠협회</div>
-                        <div class="flex-1 flex items-center justify-center text-xl font-bold text-[#1a1a1a]">
-                            김복녀
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
+                            <div class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">한국댄스스포츠협회</div>
+                            <div class="flex-1 flex items-center h-[60%] justify-center text-[50px] font-bold text-[#1a1a1a]"
+                                    style="background-image: url('img/name-tag-back.png'); background-size: cover; background-position: center;">
+                                이애희
+                            </div>
+                            <div class="bg-blue-800 flex items-center justify-center text-white h-[20%] text-[25px] py-1">서울응암초</div
                         </div>
-                        <div class="bg-blue-800 text-white text-xs py-1">일반</div>
                     </div>
                 </div>
+
             </div>
 
             <div class="border-t-[2px] border-[#2B5BBB] mt-10 mb-5"></div>
@@ -1463,11 +1464,12 @@
             <div class="flex justify-end gap-3">
                 <button class="bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
-                    엑셀 다운로드
+                    엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
-                <button onclick="printClassArea('attendanceModal')"
-                        class="bg-[#A40B0D] hover:bg-[#8E2F2A] text-white py-2 px-6 rounded-md shadow-sm">
-                    PDF 다운로드
+                <button onclick="printClassArea('nameTagModal')"
+                        class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                    <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                    PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
             </div>
         </div>
@@ -1475,11 +1477,11 @@
 
     <!-- 개인정보 모달 -->
     <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
-        <div class="bg-white rounded-lg p-6 w-[90%] max-w-5xl max-h-[90%] overflow-y-auto shadow-lg relative">
-            <img src="img/close.png" alt="닫기" class="close-modal absolute top-4 right-4 w-6 h-6 cursor-pointer">
+        <div class="bg-white rounded-lg p-6 w-[90%] max-w-5xl max-h-[90vh] shadow-lg relative">
+            <img src="img/close.png" alt="닫기" class="closeInfoModal absolute top-4 right-4 w-6 h-6 cursor-pointer">
             <h1 class="h1-title paperlogy font-normal text-[#292929] pb-4 text-center">개인정보</h1>
             <div class="flex items-center justify-center" >
-                <div class="flex items-start justify-center max-md:items-center max-md:flex-col gap-5 h-full w-full p-5" style="-ms-overflow-style:none; scrollbar-width:none;">
+                <div class="flex items-start justify-center max-md:items-center max-md:flex-col gap-5 h-full w-full p-5">
                     <div class="w-1/4 min-w-[220px] max-md:w-full overflow-y-auto">
                         <!-- 개인 정보 섹션 -->
                         <div class="flex pb-4 justify-start flex-col text-left">
@@ -1674,57 +1676,63 @@
 
 
     <!-- 이수증 슬라이드 패널 -->
-    <div id="certificateSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
-        <div class="p-6">
-            <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">이수증</h2>
-            <div class="text-[16px] text-[#555] font-medium mb-2">
-                ※ 발급기관: <span class="text-[#000]">한국댄스스포츠협회</span>
-            </div>
-            <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+    <div id="certificateSlideOverlay" class="fixed inset-0 z-50 hidden">
+        <div id="certificateSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">이수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 발급기관: <span class="text-[#000]">한국댄스스포츠협회</span>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+                <div class="printArea">
+                    <!-- 이수증 이미지 -->
+                    <img src="img/license-real.png" alt="이수증 이미지"
+                        class="w-full max-h-[600px] object-contain ㅗmb-4 rounded-md" />
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
 
-            <!-- 이수증 이미지 -->
-            <img src="img/license-real.png" alt="이수증 이미지"
-                class="w-full max-h-[600px] object-contain mb-4 rounded-md" />
-
-            <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
-
-            <!-- 하단 버튼 영역 -->
-            <div class="flex justify-between">
-                <a href="img/license-real.png" download="이수증.pdf"
-                    class="px-4 py-2 bg-[#A40B0D] text-white rounded hover:bg-[#8E2F2A]">
-                    PDF 다운로드
-                </a>
-                <button class="closeCertificateSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
-                    닫기
-                </button>
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('certificateSlidePanel')"
+                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeCertificateSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- 영수증 슬라이드 패널 -->
-    <div id="receiptSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
-        <div class="p-6">
-            <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">영수증</h2>
-            <div class="text-[16px] text-[#555] font-medium mb-2">
-                ※ 은행명: <span class="text-[#000]">기업은행</span>
-            </div>
-            <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+    <div id="receiptSlideOverlay" class="fixed inset-0 z-50 hidden">
+        <div id="receiptSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">영수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 은행명: <span class="text-[#000]">기업은행</span>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+                <div class="printArea">
+                    <!-- 영수증 이미지 -->
+                    <img src="img/receipt-real.png" alt="영수증 이미지"
+                        class=" w-full max-h-[500px] object-contain mb-4 rounded-md" />
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
 
-            <!-- 영수증 이미지 -->
-            <img src="img/receipt-real.png" alt="영수증 이미지"
-                class="w-full max-h-[400px] object-contain mb-4 rounded-md" />
-
-            <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
-
-            <!-- 하단 버튼 영역 -->
-            <div class="flex justify-between">
-                <a href="img/receipt-real.png" download="영수증.pdf"
-                    class="px-4 py-2 bg-[#A40B0D] text-white rounded hover:bg-[#8E2F2A]">
-                    PDF 다운로드
-                </a>
-                <button class="closeReceiptSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
-                    닫기
-                </button>
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('receiptSlidePanel')"
+                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeReceiptSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -1830,7 +1838,7 @@
                 for (const key in filters) {
                     if (filters[key]) {
                         const tag = document.createElement('div');
-                        tag.className = ' text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base';
+                        tag.className = 'bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base';
                         tag.innerHTML = `
                             ${filters[key]} <span class="cursor-pointer text-[#2B5BBB] text-base remove-tag">✕</span>
                         `;
@@ -1863,6 +1871,41 @@
         }
         window.addEventListener('resize', resetFiltersOnMd);
 
+
+        // ✅ 개인정보 모달
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("infoModal");
+            const openBtns = document.querySelectorAll(".openInfoModal");
+
+            if (openBtns.length > 0 && modal) {
+                const closeBtns = modal.querySelectorAll(".closeInfoModal");
+
+                openBtns.forEach(openBtn => {
+                    openBtn.addEventListener("click", (e) => {
+                        e.preventDefault(); // a 태그 기본 동작 방지
+                        modal.classList.remove("hidden");
+                        document.body.style.overflow = "hidden";
+                    });
+                });
+
+                closeBtns.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        modal.classList.add("hidden");
+                        document.body.style.overflow = "";
+                    });
+                });
+
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.classList.add("hidden");
+                        document.body.style.overflow = "";
+                    }
+                });
+            }
+        });
+
+
         // ✅  기초자료 모달
         document.addEventListener("DOMContentLoaded", function () {
             const openBtn = document.querySelector(".openBasicDataModal");
@@ -1871,14 +1914,24 @@
             if (openBtn && modal) {
                 const closeBtns = modal.querySelectorAll(".closeBasicDataBtn");
 
-                openBtn.addEventListener("click", () => {
+                openBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 이벤트 버블링 방지
                     modal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
 
                 closeBtns.forEach(btn => {
                     btn.addEventListener("click", () => {
                         modal.classList.add("hidden");
+                        document.body.style.overflow = "";
                     });
+                });
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", (e) => {
+                    // e.target이 modal 자체일 경우만 닫기
+                    if (e.target === modal) {
+                        modal.classList.add("hidden");
+                    }
                 });
             }
         });
@@ -1891,18 +1944,28 @@
             if (openBtn && modal) {
                 const closeBtns = modal.querySelectorAll(".closeAttendanceModal");
 
-                openBtn.addEventListener("click", () => {
+                openBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 이벤트 버블링 방지
                     modal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
 
                 closeBtns.forEach(btn => {
                     btn.addEventListener("click", () => {
                         modal.classList.add("hidden");
+                        document.body.style.overflow = "";
                     });
+                });
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", (e) => {
+                    // e.target이 modal 자체일 경우만 닫기
+                    if (e.target === modal) {
+                        modal.classList.add("hidden");
+                    }
                 });
             }
         });
-        // ✅  과정출석부 모달
+        // ✅  명찰 모달
         document.addEventListener("DOMContentLoaded", function () {
             const openBtn = document.querySelector(".openNameTagModal");
             const modal = document.getElementById("nameTagModal");
@@ -1910,17 +1973,28 @@
             if (openBtn && modal) {
                 const closeBtns = modal.querySelectorAll(".closeNameTagModal");
 
-                openBtn.addEventListener("click", () => {
+                openBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 이벤트 버블링 방지
                     modal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
 
                 closeBtns.forEach(btn => {
                     btn.addEventListener("click", () => {
                         modal.classList.add("hidden");
+                        document.body.style.overflow = "";
                     });
+                });
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", (e) => {
+                    // e.target이 modal 자체일 경우만 닫기
+                    if (e.target === modal) {
+                        modal.classList.add("hidden");
+                    }
                 });
             }
         });
+
 
         // ✅  PDF저장 + 프린트 모달
         function printClassArea(modalId) {
@@ -1939,70 +2013,80 @@
             document.body.innerHTML = originalContents;
         }
 
-        // ✅  개인정보 모달
-        document.addEventListener("DOMContentLoaded", function () {
-            const modal = document.getElementById("infoModal");
-            const openModalButtons = document.querySelectorAll(".modal-trigger"); // 모든 모달 트리거 선택
-            const closeModalButton = document.querySelector(".close-modal");
-
-            // 모달 트리거 버튼 클릭 시 모달 열기
-            openModalButtons.forEach(button => {
-                button.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    modal.classList.remove("hidden");
-                });
-            });
-
-            // 모달 닫기 버튼 클릭 시 모달 닫기
-            closeModalButton.addEventListener("click", function () { 
-                modal.classList.add("hidden");
-            });
-
-            // 모달 외부 영역 클릭 시 모달 닫기
-            modal.addEventListener("click", function (e) {
-                if (e.target === modal) { // 모달 전체가 아니라 배경을 클릭했을 때만 닫힘
-                    modal.classList.add("hidden");
-                }
-            });
-        });
-
         // ✅  영수증 슬라이드
         document.addEventListener("DOMContentLoaded", function () {
             const openButtons = document.querySelectorAll(".openReceiptSlide");
+            const overlay = document.getElementById("receiptSlideOverlay");
             const slidePanel = document.getElementById("receiptSlidePanel");
             const closeButton = slidePanel.querySelector(".closeReceiptSlide");
 
+            // 열기
             openButtons.forEach((btn) => {
                 btn.addEventListener("click", function () {
+                    overlay.classList.remove("hidden");
                     slidePanel.classList.remove("right-[-100%]");
                     slidePanel.classList.add("right-0");
                     document.body.classList.add("modal-open");
                 });
             });
 
+            // 닫기 버튼
             closeButton.addEventListener("click", function () {
                 slidePanel.classList.remove("right-0");
                 slidePanel.classList.add("right-[-100%]");
                 document.body.classList.remove("modal-open");
+
+                // 약간의 애니메이션 딜레이 후 오버레이 숨기기
+                setTimeout(() => {
+                    overlay.classList.add("hidden");
+                }, 300);
+            });
+
+            // 오버레이 클릭 시 닫기
+            overlay.addEventListener("click", function (e) {
+                // 슬라이드 내부를 클릭한 경우는 제외
+                if (!slidePanel.contains(e.target)) {
+                    closeButton.click();
+                }
             });
         });
 
-        // ✅  수료증 슬라이드
-        document.addEventListener("DOMContentLoaded", function () {
-            const openCertBtn = document.querySelector(".openCertificateSlide");
-            const certificatePanel = document.getElementById("certificateSlidePanel");
-            const closeCertBtn = certificatePanel.querySelector(".closeCertificateSlide");
 
-            openCertBtn.addEventListener("click", function () {
-                certificatePanel.classList.remove("right-[-100%]");
-                certificatePanel.classList.add("right-0");
-                document.body.classList.add("modal-open");
+        // ✅  이수증 슬라이드
+        document.addEventListener("DOMContentLoaded", function () {
+            const openButtons = document.querySelectorAll(".openCertificateSlide");
+            const overlay = document.getElementById("certificateSlideOverlay");
+            const slidePanel = document.getElementById("certificateSlidePanel");
+            const closeButton = slidePanel.querySelector(".closeCertificateSlide");
+
+            // 열기
+            openButtons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    overlay.classList.remove("hidden");
+                    slidePanel.classList.remove("right-[-100%]");
+                    slidePanel.classList.add("right-0");
+                    document.body.classList.add("modal-open");
+                });
             });
 
-            closeCertBtn.addEventListener("click", function () {
-                certificatePanel.classList.remove("right-0");
-                certificatePanel.classList.add("right-[-100%]");
+            // 닫기 버튼
+            closeButton.addEventListener("click", function () {
+                slidePanel.classList.remove("right-0");
+                slidePanel.classList.add("right-[-100%]");
                 document.body.classList.remove("modal-open");
+
+                // 약간의 애니메이션 딜레이 후 오버레이 숨기기
+                setTimeout(() => {
+                    overlay.classList.add("hidden");
+                }, 300);
+            });
+
+            // 오버레이 클릭 시 닫기
+            overlay.addEventListener("click", function (e) {
+                // 슬라이드 내부를 클릭한 경우는 제외
+                if (!slidePanel.contains(e.target)) {
+                    closeButton.click();
+                }
             });
         });
 
