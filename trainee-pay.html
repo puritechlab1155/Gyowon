@@ -367,7 +367,7 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content"
         class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
-        <div class="w-full h-full px-6 max-sm:pt-[70px]">
+        <div class="w-full h-full px-6">
             <h1 class="mt-[50px] h1-title font-normal paperlogy">수강자 입금관리</h1>
             <div class="pt-5 pb-5">
                 <div class="max-lg:flex max-lg:flex-col-reverse">
@@ -378,7 +378,7 @@
                             <div class="flex justify-end space-x-2 max-2xl:space-x-1 max-lg:hidden">
                                 <div class="relative dropdown w-[85px] max-xl:w-[75px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center gap-2">
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">년도</span>
                                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -388,7 +388,7 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -421,7 +421,7 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -450,7 +450,7 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto ">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -507,7 +507,7 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -621,7 +621,7 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -701,7 +701,7 @@
                                 </button>
                                 <!-- 드롭다운 옵션 -->
                                 <div
-                                    class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden">
+                                    class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                     <div
                                         class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                         선택</div>
@@ -833,21 +833,21 @@
                         <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed drop-shadow ">
                             <thead>
                                 <tr class="bg-[#FEFEFE] h-[70px]">
-                                    <th class="px-2 py-2 font-semibold w-[4%]" id="selectAllBtn">
+                                    <th class="px-2 py-2 font-semibold w-[4%] " id="selectAllBtn">
                                         선택
                                     </th>
-                                    <th class="px-2 py-2 font-semibold w-[5%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">직무 · 종목</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">과정명</th>
-                                    <th class="px-2 py-2 font-semibold w-[7%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[12%]">직장명</th>
-                                    <th class="px-2 py-2 font-semibold w-[9%]">교육장소</th>
-                                    <th class="px-2 py-2 font-semibold w-[8%]">연수기간</th>
-                                    <th class="px-2 py-2 font-semibold w-[7%]">요일</th>
+                                    <th class="px-2 py-2 font-semibold w-[4%]">번호</th>
+                                    <th class="px-2 py-2 font-semibold w-[9%] ">직무 · 종목</th>
+                                    <th class="px-2 py-2 font-semibold w-[13%]">과정명</th>
+                                    <th class="px-2 py-2 font-semibold w-[6%] ">이름</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">직장명</th>
+                                    <th class="px-2 py-2 font-semibold w-[8%] ">교육장소</th>
+                                    <th class="px-2 py-2 font-semibold w-[7%]">연수기간</th>
+                                    <th class="px-2 py-2 font-semibold w-[6%] ">요일</th>
                                     <th class="px-2 py-2 font-semibold w-[5%]">회차</th>
-                                    <th class="px-2 py-2 font-semibold w-[11%]">입금내역</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">수강현황</th>
-                                    <th class="px-2 py-2 font-semibold w-[12%]">관리</th>
+                                    <th class="px-2 py-2 font-semibold w-[9%] ">입금내역</th>
+                                    <th class="px-2 py-2 font-semibold w-[9%]">수강현황</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">관리</th>
                                 </tr>
                             </thead>
                         </table>
@@ -865,8 +865,8 @@
                                             checked:after:text-[16px]
                                             self-center" />
                                     </td>
-                                    <td class="px-2 py-2 w-[5%] text-[#727272]">333</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                    <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[9%] text-[#727272]">
                                         <div class="flex flex-col items-center gap-2">
                                             <div
                                                 class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
@@ -878,64 +878,55 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[15%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
-                                    <td class="px-2 py-2 w-[7%] text-[#292929] font-semibold ">가나다라</td>
-                                    <td class="px-2 py-2 w-[12%] text-[#727272]">중앙대학교 사범대학 부속고</td>
-                                    <td class="px-2 py-2 w-[9%] text-[#727272]">서울디자인고</td>
-                                    <th class="px-2 py-2 w-[8%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
+                                    <td class="px-2 py-2 w-[13%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#292929] font-semibold ">가나다라</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">중앙대학교 사범대학 부속고</td>
+                                    <td class="px-2 py-2 w-[8%] text-[#727272]">서울디자인고</td>
+                                    <th class="px-2 py-2 w-[7%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
                                         25.07.08</th>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">수요일</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#727272]">해당없음</td>
                                     <td class="px-2 py-2 w-[5%] text-[#727272]">0차</td>
-                                    <td class="px-2 py-2 w-[11%]">
+                                    <td class="px-2 py-2 w-[9%]">
                                         <div class="text-[#727272] mb-2">25.04.09</div>
-                                        <div class="flex justify-between gap-1 px-2.5">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <div class="relative group">
                                                 <button
-                                                    class="receiptModalBtn bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
+                                                    class="openReceiptSlide bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/receipt.png" alt="영수증 아이콘" class="w-6 h-6" />
                                                 </button>
-
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[rgba(0,0,0,0.8)] text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                                    영수증
-
-                                                    <!-- 꼬리 삼각형 -->
-                                                    <div
-                                                        class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-[rgba(0,0,0,0.8)]">
-                                                    </div>
-                                                </div>
                                             </div>
-
-
                                             <div class="relative">
                                                 <button
                                                     class="group memoButton bg-[#FDF5F1] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/memo.png" alt="메모 아이콘" class="w-6 h-6"/>
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
-                                                    opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
-                                                    pointer-events-none group-hover:pointer-events-auto">
-                                                    <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-8 border-y-transparent 
-                                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
-                                                    <!-- 꼬리 안쪽 (배경색) -->
-                                                    <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-7 border-y-transparent 
-                                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
-                                                    <!-- 내용 -->
-                                                    <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
-                                                    <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
-                                                    <div class="text-black whitespace-nowrap">전액연기</div>
-                                                </div>
-                                            </button>
+                                                    <!-- 툴팁 박스 -->
+                                                    <div
+                                                        class="absolute left-full top-[10%] -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
+                                                        opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
+                                                        pointer-events-none group-hover:pointer-events-auto">
+                                                        
+                                                        <!-- 꼬리 바깥쪽 (테두리색) -->
+                                                        <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-8 border-y-transparent 
+                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
+                                                        
+                                                        <!-- 꼬리 안쪽 (배경색) -->
+                                                        <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-7 border-y-transparent 
+                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
+                                                        
+                                                        <!-- 내용 -->
+                                                        <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
+                                                        <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
+                                                        <div class="text-black whitespace-nowrap">전액연기</div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
-                                    </td>    
-                                    <td class="px-1.5 font-semibold w-[10%]">
+                                    </td>
+                                    <td class="px-1.5 font-semibold w-[9%]">
                                         <div class="flex justify-center items-center">
-                                            <div class="relative dropdown w-[120px]">
+                                            <div class="relative dropdown w-[110px]">
                                                 <button
                                                     class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2.5 px-2 pr-1 rounded-md focus:outline-none flex justify-between items-center 0">
                                                     <span
@@ -948,7 +939,7 @@
                                                 </button>
                                                 <!-- 드롭다운 옵션 -->
                                                 <div
-                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden text-left">
+                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[200px] overflow-y-auto">
                                                     <div
                                                         class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                                         대기</div>
@@ -970,8 +961,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[12%]">
-                                        <div class="flex justify-between gap-2 px-3">
+                                    <td class="px-2 py-2 w-[10%]">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <button
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
@@ -997,8 +988,8 @@
                                             checked:after:text-[16px]
                                             self-center" />
                                     </td>
-                                    <td class="px-2 py-2 w-[5%] text-[#727272]">333</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                    <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[9%] text-[#727272]">
                                         <div class="flex flex-col items-center gap-2">
                                             <div
                                                 class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
@@ -1010,64 +1001,55 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[15%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
-                                    <td class="px-2 py-2 w-[7%] text-[#292929] font-semibold ">가나다라</td>
-                                    <td class="px-2 py-2 w-[12%] text-[#727272]">중앙대학교 사범대학 부속고</td>
-                                    <td class="px-2 py-2 w-[9%] text-[#727272]">서울디자인고</td>
-                                    <th class="px-2 py-2 w-[8%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
+                                    <td class="px-2 py-2 w-[13%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#292929] font-semibold ">가나다라</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">중앙대학교 사범대학 부속고</td>
+                                    <td class="px-2 py-2 w-[8%] text-[#727272]">서울디자인고</td>
+                                    <th class="px-2 py-2 w-[7%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
                                         25.07.08</th>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">수요일</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#727272]">수요일</td>
                                     <td class="px-2 py-2 w-[5%] text-[#727272]">0차</td>
-                                    <td class="px-2 py-2 w-[11%]">
+                                    <td class="px-2 py-2 w-[9%]">
                                         <div class="text-[#727272] mb-2">25.04.09</div>
-                                        <div class="flex justify-between gap-1 px-2.5">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <div class="relative group">
                                                 <button
-                                                    class="receiptModalBtn bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
+                                                    class="openReceiptSlide bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/receipt.png" alt="영수증 아이콘" class="w-6 h-6" />
                                                 </button>
-
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[rgba(0,0,0,0.8)] text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                                    영수증
-
-                                                    <!-- 꼬리 삼각형 -->
-                                                    <div
-                                                        class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-[rgba(0,0,0,0.8)]">
-                                                    </div>
-                                                </div>
                                             </div>
-
-
                                             <div class="relative">
                                                 <button
                                                     class="group memoButton bg-[#FDF5F1] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/memo.png" alt="메모 아이콘" class="w-6 h-6"/>
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
-                                                    opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
-                                                    pointer-events-none group-hover:pointer-events-auto">
-                                                    <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-8 border-y-transparent 
-                                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
-                                                    <!-- 꼬리 안쪽 (배경색) -->
-                                                    <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-7 border-y-transparent 
-                                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
-                                                    <!-- 내용 -->
-                                                    <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
-                                                    <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
-                                                    <div class="text-black whitespace-nowrap">전액연기</div>
-                                                </div>
-                                            </button>
+                                                    <!-- 툴팁 박스 -->
+                                                    <div
+                                                        class="absolute left-full top-[10%] -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
+                                                        opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
+                                                        pointer-events-none group-hover:pointer-events-auto">
+                                                        
+                                                        <!-- 꼬리 바깥쪽 (테두리색) -->
+                                                        <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-8 border-y-transparent 
+                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
+                                                        
+                                                        <!-- 꼬리 안쪽 (배경색) -->
+                                                        <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-7 border-y-transparent 
+                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
+                                                        
+                                                        <!-- 내용 -->
+                                                        <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
+                                                        <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
+                                                        <div class="text-black whitespace-nowrap">전액연기</div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
-                                    </td>    
-                                    <td class="px-1.5 font-semibold w-[10%]">
+                                    </td>
+                                    <td class="px-1.5 font-semibold w-[9%]">
                                         <div class="flex justify-center items-center">
-                                            <div class="relative dropdown w-[120px]">
+                                            <div class="relative dropdown w-[110px]">
                                                 <button
                                                     class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2.5 px-2 pr-1 rounded-md focus:outline-none flex justify-between items-center 0">
                                                     <span
@@ -1080,7 +1062,7 @@
                                                 </button>
                                                 <!-- 드롭다운 옵션 -->
                                                 <div
-                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden text-left">
+                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[200px] overflow-y-auto">
                                                     <div
                                                         class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                                         대기</div>
@@ -1103,8 +1085,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[12%]">
-                                        <div class="flex justify-between gap-2 px-3">
+                                    <td class="px-2 py-2 w-[10%]">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <button
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
@@ -1130,8 +1112,8 @@
                                             checked:after:text-[16px]
                                             self-center" />
                                     </td>
-                                    <td class="px-2 py-2 w-[5%] text-[#727272]">333</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                    <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[9%] text-[#727272]">
                                         <div class="flex flex-col items-center gap-2">
                                             <div
                                                 class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
@@ -1143,64 +1125,55 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[15%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
-                                    <td class="px-2 py-2 w-[7%] text-[#292929] font-semibold ">가나다라</td>
-                                    <td class="px-2 py-2 w-[12%] text-[#727272]">중앙대학교 사범대학 부속고</td>
-                                    <td class="px-2 py-2 w-[9%] text-[#727272]">서울디자인고</td>
-                                    <th class="px-2 py-2 w-[8%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
+                                    <td class="px-2 py-2 w-[13%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#292929] font-semibold ">가나다라</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">중앙대학교 사범대학 부속고</td>
+                                    <td class="px-2 py-2 w-[8%] text-[#727272]">서울디자인고</td>
+                                    <th class="px-2 py-2 w-[7%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
                                         25.07.08</th>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">수요일</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#727272]">수요일</td>
                                     <td class="px-2 py-2 w-[5%] text-[#727272]">0차</td>
-                                    <td class="px-2 py-2 w-[11%]">
+                                    <td class="px-2 py-2 w-[9%]">
                                         <div class="text-[#727272] mb-2">25.04.09</div>
-                                        <div class="flex justify-between gap-1 px-2.5">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <div class="relative group">
                                                 <button
-                                                    class="receiptModalBtn bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
+                                                    class="openReceiptSlide bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/receipt.png" alt="영수증 아이콘" class="w-6 h-6" />
                                                 </button>
-
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[rgba(0,0,0,0.8)] text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                                    영수증
-
-                                                    <!-- 꼬리 삼각형 -->
-                                                    <div
-                                                        class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-[rgba(0,0,0,0.8)]">
-                                                    </div>
-                                                </div>
                                             </div>
-
-
                                             <div class="relative">
                                                 <button
                                                     class="group memoButton bg-[#FDF5F1] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/memo.png" alt="메모 아이콘" class="w-6 h-6"/>
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
-                                                    opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
-                                                    pointer-events-none group-hover:pointer-events-auto">
-                                                    <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-8 border-y-transparent 
-                                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
-                                                    <!-- 꼬리 안쪽 (배경색) -->
-                                                    <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-7 border-y-transparent 
-                                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
-                                                    <!-- 내용 -->
-                                                    <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
-                                                    <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
-                                                    <div class="text-black whitespace-nowrap">전액연기</div>
-                                                </div>
-                                            </button>
+                                                    <!-- 툴팁 박스 -->
+                                                    <div
+                                                        class="absolute left-full top-[10%] -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
+                                                        opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
+                                                        pointer-events-none group-hover:pointer-events-auto">
+                                                        
+                                                        <!-- 꼬리 바깥쪽 (테두리색) -->
+                                                        <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-8 border-y-transparent 
+                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
+                                                        
+                                                        <!-- 꼬리 안쪽 (배경색) -->
+                                                        <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-7 border-y-transparent 
+                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
+                                                        
+                                                        <!-- 내용 -->
+                                                        <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
+                                                        <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
+                                                        <div class="text-black whitespace-nowrap">전액연기</div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
-                                    </td>    
-                                    <td class="px-1.5 font-semibold w-[10%]">
+                                    </td>  
+                                    <td class="px-1.5 font-semibold w-[9%]">
                                         <div class="flex justify-center items-center">
-                                            <div class="relative dropdown w-[120px]">
+                                            <div class="relative dropdown w-[110px]">
                                                 <button
                                                     class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2.5 px-2 pr-1 rounded-md focus:outline-none flex justify-between items-center 0">
                                                     <span
@@ -1213,7 +1186,7 @@
                                                 </button>
                                                 <!-- 드롭다운 옵션 -->
                                                 <div
-                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden text-left">
+                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[200px] overflow-y-auto">
                                                     <div
                                                         class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                                         대기</div>
@@ -1236,8 +1209,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[12%]">
-                                        <div class="flex justify-between gap-2 px-3">
+                                    <td class="px-2 py-2 w-[10%]">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <button
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
@@ -1263,8 +1236,8 @@
                                             checked:after:text-[16px]
                                             self-center" />
                                     </td>
-                                    <td class="px-2 py-2 w-[5%] text-[#727272]">333</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                    <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[9%] text-[#727272]">
                                         <div class="flex flex-col items-center gap-2">
                                             <div
                                                 class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
@@ -1276,64 +1249,55 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[15%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
-                                    <td class="px-2 py-2 w-[7%] text-[#292929] font-semibold ">가나다라</td>
-                                    <td class="px-2 py-2 w-[12%] text-[#727272]">중앙대학교 사범대학 부속고</td>
-                                    <td class="px-2 py-2 w-[9%] text-[#727272]">서울디자인고</td>
-                                    <th class="px-2 py-2 w-[8%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
+                                    <td class="px-2 py-2 w-[13%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#292929] font-semibold ">가나다라</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">중앙대학교 사범대학 부속고</td>
+                                    <td class="px-2 py-2 w-[8%] text-[#727272]">서울디자인고</td>
+                                    <th class="px-2 py-2 w-[7%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
                                         25.07.08</th>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">수요일</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#727272]">수요일</td>
                                     <td class="px-2 py-2 w-[5%] text-[#727272]">0차</td>
-                                    <td class="px-2 py-2 w-[11%]">
+                                    <td class="px-2 py-2 w-[9%]">
                                         <div class="text-[#727272] mb-2">25.04.09</div>
-                                        <div class="flex justify-between gap-1 px-2.5">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <div class="relative group">
                                                 <button
-                                                    class="receiptModalBtn bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
+                                                    class="openReceiptSlide bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/receipt.png" alt="영수증 아이콘" class="w-6 h-6" />
                                                 </button>
-
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[rgba(0,0,0,0.8)] text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                                    영수증
-
-                                                    <!-- 꼬리 삼각형 -->
-                                                    <div
-                                                        class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-[rgba(0,0,0,0.8)]">
-                                                    </div>
-                                                </div>
                                             </div>
-
-
                                             <div class="relative">
                                                 <button
                                                     class="group memoButton bg-[#FDF5F1] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/memo.png" alt="메모 아이콘" class="w-6 h-6"/>
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
-                                                    opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
-                                                    pointer-events-none group-hover:pointer-events-auto">
-                                                    <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-8 border-y-transparent 
-                                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
-                                                    <!-- 꼬리 안쪽 (배경색) -->
-                                                    <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-7 border-y-transparent 
-                                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
-                                                    <!-- 내용 -->
-                                                    <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
-                                                    <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
-                                                    <div class="text-black whitespace-nowrap">전액연기</div>
-                                                </div>
-                                            </button>
+                                                    <!-- 툴팁 박스 -->
+                                                    <div
+                                                        class="absolute left-full top-[10%] -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
+                                                        opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
+                                                        pointer-events-none group-hover:pointer-events-auto">
+                                                        
+                                                        <!-- 꼬리 바깥쪽 (테두리색) -->
+                                                        <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-8 border-y-transparent 
+                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
+                                                        
+                                                        <!-- 꼬리 안쪽 (배경색) -->
+                                                        <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-7 border-y-transparent 
+                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
+                                                        
+                                                        <!-- 내용 -->
+                                                        <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
+                                                        <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
+                                                        <div class="text-black whitespace-nowrap">전액연기</div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
-                                    </td>    
-                                    <td class="px-1.5 font-semibold w-[10%]">
+                                    </td>  
+                                    <td class="px-1.5 font-semibold w-[9%]">
                                         <div class="flex justify-center items-center">
-                                            <div class="relative dropdown w-[120px]">
+                                            <div class="relative dropdown w-[110px]">
                                                 <button
                                                     class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2.5 px-2 pr-1 rounded-md focus:outline-none flex justify-between items-center 0">
                                                     <span
@@ -1346,7 +1310,7 @@
                                                 </button>
                                                 <!-- 드롭다운 옵션 -->
                                                 <div
-                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden text-left">
+                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[200px] overflow-y-auto">
                                                     <div
                                                         class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                                         대기</div>
@@ -1369,8 +1333,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[12%]">
-                                        <div class="flex justify-between gap-2 px-3">
+                                    <td class="px-2 py-2 w-[10%]">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <button
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
@@ -1396,8 +1360,8 @@
                                             checked:after:text-[16px]
                                             self-center" />
                                     </td>
-                                    <td class="px-2 py-2 w-[5%] text-[#727272]">333</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                    <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[9%] text-[#727272]">
                                         <div class="flex flex-col items-center gap-2">
                                             <div
                                                 class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
@@ -1409,64 +1373,55 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[15%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
-                                    <td class="px-2 py-2 w-[7%] text-[#292929] font-semibold ">가나다라</td>
-                                    <td class="px-2 py-2 w-[12%] text-[#727272]">중앙대학교 사범대학 부속고</td>
-                                    <td class="px-2 py-2 w-[9%] text-[#727272]">서울디자인고</td>
-                                    <th class="px-2 py-2 w-[8%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
+                                    <td class="px-2 py-2 w-[13%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#292929] font-semibold ">가나다라</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">중앙대학교 사범대학 부속고</td>
+                                    <td class="px-2 py-2 w-[8%] text-[#727272]">서울디자인고</td>
+                                    <th class="px-2 py-2 w-[7%] text-[#727272] leading-tight">25.04.08 <br /> - <br />
                                         25.07.08</th>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">수요일</td>
+                                    <td class="px-2 py-2 w-[6%] text-[#727272]">수요일</td>
                                     <td class="px-2 py-2 w-[5%] text-[#727272]">0차</td>
-                                    <td class="px-2 py-2 w-[11%]">
+                                    <td class="px-2 py-2 w-[9%]">
                                         <div class="text-[#727272] mb-2">25.04.09</div>
-                                        <div class="flex justify-between gap-1 px-2.5">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <div class="relative group">
                                                 <button
-                                                    class="receiptModalBtn bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
+                                                    class="openReceiptSlide bg-[#E7F7F6] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/receipt.png" alt="영수증 아이콘" class="w-6 h-6" />
                                                 </button>
-
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[rgba(0,0,0,0.8)] text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                                    영수증
-
-                                                    <!-- 꼬리 삼각형 -->
-                                                    <div
-                                                        class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-[rgba(0,0,0,0.8)]">
-                                                    </div>
-                                                </div>
                                             </div>
-
-
                                             <div class="relative">
                                                 <button
                                                     class="group memoButton bg-[#FDF5F1] flex justify-center items-center p-2 rounded-lg">
                                                     <img src="img/memo.png" alt="메모 아이콘" class="w-6 h-6"/>
-                                                <!-- 툴팁 박스 -->
-                                                <div
-                                                    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
-                                                    opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
-                                                    pointer-events-none group-hover:pointer-events-auto">
-                                                    <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-8 border-y-transparent 
-                                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
-                                                    <!-- 꼬리 안쪽 (배경색) -->
-                                                    <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
-                                                                                    border-y-7 border-y-transparent 
-                                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
-                                                    <!-- 내용 -->
-                                                    <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
-                                                    <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
-                                                    <div class="text-black whitespace-nowrap">전액연기</div>
-                                                </div>
-                                            </button>
+                                                    <!-- 툴팁 박스 -->
+                                                    <div
+                                                        class="absolute left-full top-[10%] -translate-y-1/2 ml-3 px-4 py-2 bg-[#FEFEFE] text-sm rounded-md
+                                                        opacity-0 group-hover:opacity-100 transition-opacity z-20 shadow-lg border border-[#ccc] w-max
+                                                        pointer-events-none group-hover:pointer-events-auto">
+                                                        
+                                                        <!-- 꼬리 바깥쪽 (테두리색) -->
+                                                        <div class="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-8 border-y-transparent 
+                                                                    border-r-[9px] border-r-[#ccc] z-10"></div>
+                                                        
+                                                        <!-- 꼬리 안쪽 (배경색) -->
+                                                        <div class="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 
+                                                                    border-y-7 border-y-transparent 
+                                                                    border-r-[8px] border-r-[#FEFEFE] z-20"></div>
+                                                        
+                                                        <!-- 내용 -->
+                                                        <div class="text-[#F44336] whitespace-nowrap">7만원 입금 3만원 부족</div>
+                                                        <div class="text-[#2196F3] whitespace-nowrap">2종목 할인</div>
+                                                        <div class="text-black whitespace-nowrap">전액연기</div>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
-                                    </td>    
-                                    <td class="px-1.5 font-semibold w-[10%]">
+                                    </td>                                    
+                                    <td class="px-1.5 font-semibold w-[9%]">
                                         <div class="flex justify-center items-center">
-                                            <div class="relative dropdown w-[120px]">
+                                            <div class="relative dropdown w-[110px]">
                                                 <button
                                                     class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2.5 px-2 pr-1 rounded-md focus:outline-none flex justify-between items-center 0">
                                                     <span
@@ -1479,7 +1434,7 @@
                                                 </button>
                                                 <!-- 드롭다운 옵션 -->
                                                 <div
-                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden text-left">
+                                                    class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[200px] overflow-y-auto text-left">
                                                     <div
                                                         class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                                         대기</div>
@@ -1501,8 +1456,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[12%]">
-                                        <div class="flex justify-between gap-2 px-3">
+                                    <td class="px-2 py-2 w-[10%]">
+                                        <div class="flex justify-between gap-2 px-2">
                                             <button
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
@@ -1614,7 +1569,7 @@
         <div class="mb-4">
             <div class="relative dropdown"> 
                 <button
-                    class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center gap-2">
+                    class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center ">
                     <span class="selected-option">년도</span>
                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
@@ -1648,7 +1603,7 @@
         <div class="mb-4">
             <div class="relative dropdown">
                 <button
-                    class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center gap-2">
+                    class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center ">
                     <span class="selected-option">학기</span>
                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
@@ -1678,7 +1633,7 @@
             <!-- 과정명 -->
             <div class="mb-4">
                 <div class="relative dropdown">
-                    <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                    <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
                         <span class="selected-option">과정명</span>
                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1737,7 +1692,7 @@
             <div class="mb-4">
                 <div class="relative dropdown">
                     <button
-                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
                         <span class="selected-option">교육장소</span>
                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1780,7 +1735,7 @@
             <div class="mb-4">
                 <div class="relative dropdown">
                     <button
-                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
                         <span class="selected-option">요일</span>
                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1820,7 +1775,7 @@
             <div class="mb-4">
                 <div class="relative dropdown">
                     <button
-                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
                         <span class="selected-option">회차</span>
                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1852,7 +1807,7 @@
             <div class="mb-4">
                 <div class="relative dropdown">
                     <button
-                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center gap-2">
+                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-4 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
                         <span class="selected-option">수강상태</span>
                         <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1955,7 +1910,7 @@
                 <label class="w-28 max-sm:w-16 font-semibold shrink-0">은행명</label>
                 <div class="relative dropdown w-full">
                     <button
-                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[45px] w-full flex justify-between items-center gap-2">
+                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[45px] w-full flex justify-between items-center ">
                         <span class="selected-option text-[#727272]">은행명</span>
                         <svg class="w-5 h-5 text-[#727272]" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1965,24 +1920,24 @@
                     </button>
                     <!-- 드롭다운 옵션 -->
                     <div
-                        class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                        class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md hadow-lg hidden max-h-[250px] overflow-y-auto text-left">
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             선택</div>
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             기업</div>
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             농협1</div>
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             농협2</div>
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             연기금 사용</div>
                         <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             리브머니</div>
                     </div>
                 </div>
@@ -2033,24 +1988,24 @@
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu min-w-[100%] absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        class="text-[16px] dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md hadow-lg hidden max-h-[250px] overflow-y-auto text-left">
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             전액연기</div>
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             부분연기</div>
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             전액환불</div>
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             부분환불</div>
                                         <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                            class="dropdown-item px-2 py-2 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             연기금 사용완료</div>
                                     </div>
                                 </div>
@@ -2269,32 +2224,64 @@
     </div>
 
 
-    <!-- 영수증 모달 -->
-    <div id="receiptModal"
-    class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-        <div class="bg-white w-[90%] max-w-md rounded-lg shadow-lg p-6 relative">
-            <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">영수증</h2>
-            <div class="text-[16px] text-[#555] font-medium mb-2">※ 은행명: <span class="text-[#000]">기업은행</span></div>
-            <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
-
-            <!-- 영수증 이미지 -->
-            <img src="img/receipt-real.png" alt="영수증 이미지"
-                class="w-full max-h-[400px] object-contain mb-4 rounded-md" />
-
-            <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
-            <!-- 하단 버튼 영역 -->
-            <div class="flex justify-between">
-                <!-- PDF 다운로드 + 수정 -->
-                <div class="flex gap-2">
-                    <a href="img/receipt-real.png" download="영수증.pdf"
-                    class="px-4 py-2 bg-[#A40B0D] text-white rounded hover:bg-[#8E2F2A]">
-                    PDF 다운로드
-                    </a>
+    <!-- 이수증 슬라이드 패널 -->
+    <div id="certificateSlideOverlay" class="fixed inset-0 z-50 hidden">
+        <div id="certificateSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">이수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 발급기관: <span class="text-[#000]">한국댄스스포츠협회</span>
                 </div>
-                <button class="receiptCancelBtn px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
-                    닫기
-                </button>
-                
+                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+                <div class="printArea">
+                    <!-- 이수증 이미지 -->
+                    <img src="img/license-real.png" alt="이수증 이미지"
+                        class="w-full max-h-[600px] object-contain ㅗmb-4 rounded-md" />
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
+
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('certificateSlidePanel')"
+                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeCertificateSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 영수증 슬라이드 패널 -->
+    <div id="receiptSlideOverlay" class="fixed inset-0 z-50 hidden">
+        <div id="receiptSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">영수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 은행명: <span class="text-[#000]">기업은행</span>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
+                <div class="printArea">
+                    <!-- 영수증 이미지 -->
+                    <img src="img/receipt-real.png" alt="영수증 이미지"
+                        class="w-full max-h-[500px] object-contain mb-4 rounded-md" />
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
+
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('receiptSlidePanel')"
+                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeReceiptSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -2304,69 +2291,99 @@
 
     <script src="js/script.js"></script>
     <script>
-        // ✅  드롭다운 열고 닫기
+        // // ✅  드롭다운 열고 닫기
+        // document.querySelectorAll('.dropdown-button').forEach(button => {
+        //     button.addEventListener('click', function (e) {
+        //         e.stopPropagation();
+        //         const dropdown = this.closest('.dropdown');
+        //         const menu = dropdown.querySelector('.dropdown-menu');
+        //         document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
+        //         if (menu.classList.contains('hidden')) {
+        //             dropdown.style.zIndex = '10';
+        //         }
+        //         document.querySelectorAll('.dropdown-menu').forEach(m => {
+        //             if (m !== menu) m.classList.add('hidden');
+        //         });
+        //         menu.classList.toggle('hidden');
+
+        //         // ✅ 드롭다운 열기
+        //         if (!menu.classList.contains('hidden')) {
+        //             const rect = button.getBoundingClientRect();
+        //             const parentRect = dropdown.getBoundingClientRect(); 
+
+        //             menu.style.position = 'absolute';
+        //             menu.style.left = `${rect.left - parentRect.left}px`;
+        //             menu.style.top = `${rect.bottom - parentRect.top}px`;
+        //             menu.style.width = `${rect.width}px`;
+        //             menu.style.zIndex = '9999';
+        //         } else {
+        //             // 리셋
+        //             menu.style.position = '';
+        //             menu.style.left = '';
+        //             menu.style.top = '';
+        //             menu.style.width = '';
+        //             menu.style.zIndex = '';
+        //         }
+        //     });
+        // });
+        // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.stopPropagation();
+
                 const dropdown = this.closest('.dropdown');
                 const menu = dropdown.querySelector('.dropdown-menu');
+                const clonedMenu = menu.cloneNode(true);
+
+                // 기존 열려있던 메뉴들 닫기
                 document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
+                document.querySelectorAll('.dropdown-menu-body').forEach(m => m.remove());
+
+                // 열기 상태면 새로 그려줌
                 if (menu.classList.contains('hidden')) {
+                    const rect = this.getBoundingClientRect();
                     dropdown.style.zIndex = '10';
-                }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
-                });
-                menu.classList.toggle('hidden');
 
-                // ✅ 드롭다운 열기
-                if (!menu.classList.contains('hidden')) {
-                    const rect = button.getBoundingClientRect();
-                    const parentRect = dropdown.getBoundingClientRect(); 
+                    // ✅ 드롭다운 메뉴 위치 계산 (스크롤 보정)
+                    clonedMenu.classList.remove('hidden');
+                    clonedMenu.classList.add('dropdown-menu-body');
+                    clonedMenu.style.position = 'absolute';
+                    clonedMenu.style.left = `${rect.left + window.scrollX}px`;
+                    clonedMenu.style.top = `${rect.bottom + window.scrollY}px`;
+                    clonedMenu.style.width = `${rect.width}px`;
+                    clonedMenu.style.zIndex = '9999';
+                    clonedMenu.style.background = 'white'; // 필요한 스타일
+                    clonedMenu.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)'; // 선택적
 
-                    menu.style.position = 'absolute';
-                    menu.style.left = `${rect.left - parentRect.left}px`;
-                    menu.style.top = `${rect.bottom - parentRect.top}px`;
-                    menu.style.width = `${rect.width}px`;
-                    menu.style.zIndex = '9999';
+                    document.body.appendChild(clonedMenu);
+
+                    // ✅ 드롭다운 항목 클릭 시 반영
+                    clonedMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedText = this.textContent;
+                            dropdown.querySelector('.selected-option').textContent = selectedText;
+
+                            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
+                            if (hiddenInput) hiddenInput.value = selectedText;
+
+                            dropdown.style.zIndex = '0';
+                            clonedMenu.remove();
+                        });
+                    });
+
                 } else {
-                    // 리셋
-                    menu.style.position = '';
-                    menu.style.left = '';
-                    menu.style.top = '';
-                    menu.style.width = '';
-                    menu.style.zIndex = '';
+                    dropdown.style.zIndex = '0';
                 }
             });
         });
 
-        // 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
+        // ✅ 외부 클릭 시 드롭다운 닫기
         document.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.add('hidden');
-
-                
-            });
+            document.querySelectorAll('.dropdown-menu-body').forEach(menu => menu.remove());
             document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
         });
+
+
 
         // ✅  필터모달창 + 적용 후 선택옵션 
         document.addEventListener('DOMContentLoaded', function () {
@@ -2520,6 +2537,102 @@
             });
         });
 
+
+
+        // ✅  PDF저장 + 프린트 모달
+        function printClassArea(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+
+            const areas = modal.querySelectorAll('.printArea');
+            let printContents = '';
+            areas.forEach(area => {
+                printContents += area.innerHTML;
+            });
+
+            const originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+
+        // ✅  영수증 슬라이드
+        document.addEventListener("DOMContentLoaded", function () {
+            const openButtons = document.querySelectorAll(".openReceiptSlide");
+            const overlay = document.getElementById("receiptSlideOverlay");
+            const slidePanel = document.getElementById("receiptSlidePanel");
+            const closeButton = slidePanel.querySelector(".closeReceiptSlide");
+
+            // 열기
+            openButtons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    overlay.classList.remove("hidden");
+                    slidePanel.classList.remove("right-[-100%]");
+                    slidePanel.classList.add("right-0");
+                    document.body.classList.add("modal-open");
+                });
+            });
+
+            // 닫기 버튼
+            closeButton.addEventListener("click", function () {
+                slidePanel.classList.remove("right-0");
+                slidePanel.classList.add("right-[-100%]");
+                document.body.classList.remove("modal-open");
+
+                // 약간의 애니메이션 딜레이 후 오버레이 숨기기
+                setTimeout(() => {
+                    overlay.classList.add("hidden");
+                }, 300);
+            });
+
+            // 오버레이 클릭 시 닫기
+            overlay.addEventListener("click", function (e) {
+                // 슬라이드 내부를 클릭한 경우는 제외
+                if (!slidePanel.contains(e.target)) {
+                    closeButton.click();
+                }
+            });
+        });
+
+
+        // ✅  이수증 슬라이드
+        document.addEventListener("DOMContentLoaded", function () {
+            const openButtons = document.querySelectorAll(".openCertificateSlide");
+            const overlay = document.getElementById("certificateSlideOverlay");
+            const slidePanel = document.getElementById("certificateSlidePanel");
+            const closeButton = slidePanel.querySelector(".closeCertificateSlide");
+
+            // 열기
+            openButtons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    overlay.classList.remove("hidden");
+                    slidePanel.classList.remove("right-[-100%]");
+                    slidePanel.classList.add("right-0");
+                    document.body.classList.add("modal-open");
+                });
+            });
+
+            // 닫기 버튼
+            closeButton.addEventListener("click", function () {
+                slidePanel.classList.remove("right-0");
+                slidePanel.classList.add("right-[-100%]");
+                document.body.classList.remove("modal-open");
+
+                // 약간의 애니메이션 딜레이 후 오버레이 숨기기
+                setTimeout(() => {
+                    overlay.classList.add("hidden");
+                }, 300);
+            });
+
+            // 오버레이 클릭 시 닫기
+            overlay.addEventListener("click", function (e) {
+                // 슬라이드 내부를 클릭한 경우는 제외
+                if (!slidePanel.contains(e.target)) {
+                    closeButton.click();
+                }
+            });
+        });
+
         // ✅  삭제모달
         document.addEventListener('DOMContentLoaded', () => {
             const deleteModal = document.getElementById('deleteConfirmModal');
@@ -2578,33 +2691,9 @@
                 }
             });
         });
-        // ✅  영수증 모달
-        const receiptModalBtns = document.querySelectorAll('.receiptModalBtn');
-        const receiptModal = document.getElementById('receiptModal');
-        const receiptcancelBtns = document.querySelectorAll('.receiptCancelBtn');
 
-            // 열기
-            receiptModalBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    receiptModal.classList.remove("hidden");
-                });
-            });
 
-            // 닫기
-            receiptcancelBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    receiptModal.classList.add("hidden");
-                });
-            });
-
-            // 바깥 클릭 시 닫기
-            receiptModal.addEventListener("click", (e) => {
-                if (e.target === receiptModal) {
-                    receiptModal.classList.add("hidden");
-                }
-            });
-
-            // ✅  연수과정 찾기 슬라이드
+        // ✅  연수과정 찾기 슬라이드
             function openSlidePanel() {
                 document.getElementById('slidePanel').style.right = '0';
             }
@@ -2639,6 +2728,23 @@
                 </tr>
             `;
             }
+
+        // ✅  PDF저장 + 프린트 모달
+        function printClassArea(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+
+            const areas = modal.querySelectorAll('.printArea');
+            let printContents = '';
+            areas.forEach(area => {
+                printContents += area.innerHTML;
+            });
+
+            const originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
 
     </script>
 
