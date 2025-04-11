@@ -1511,36 +1511,7 @@
                 });
             });
 
-            // 우편번호 검색 기능
-            const elZonecode = document.querySelector("#zonecode");
-            const elRoadAddress = document.querySelector("#roadAddress");
-            const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
-            const searchBtn = document.querySelector("#search-btn");
-
-            const onClickSearch = (event) => {
-                event.stopPropagation(); // 이벤트 버블링 방지
-                new daum.Postcode({
-                    oncomplete: function (data) {
-                        elZonecode.value = data.zonecode;
-                        elRoadAddress.value = data.address;
-                    },
-                }).open();
-            };
-
-            const register = () => {
-                console.log(`우편번호: ${elZonecode.value}`);
-                console.log(`주소: ${elRoadAddress.value}`);
-                console.log(`상세주소: ${elRoadAddressDetail.value}`);
-            };
-
-            searchBtn.addEventListener("click", onClickSearch);
-
-            // daum postcode 스크립트 로드
-            const script = document.createElement("script");
-            script.src = "https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
-            document.head.appendChild(script);
-
-
+            
             // 메뉴
             document.addEventListener('click', () => {
                 document.querySelectorAll('.dropdown-menu').forEach(menu => {
