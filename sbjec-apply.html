@@ -296,7 +296,7 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6">
-            <div class="pt-5 pb-5 w-full flex items-center justify-between mt-[50px] max-sm:gap-2 max-sm:flex-wrap">
+            <div class="pb-5 w-full flex items-center justify-between mt-[50px] max-sm:gap-2 max-sm:flex-wrap">
                 <div class="left-content ">
                 <h1 class="h1-title font-normal paperlogy flex items-cente ">2025년도 1학기</h1>
                 </div> 
@@ -323,8 +323,7 @@
                             <thead>
                                 <tr class="bg-[#FEFEFE] text-[#292929] text-[18px] h-[70px] font-semibold">
                                     <th class="px-2 py-2 font-semibold w-[10%]">연수 주관</th>
-                                    <th class="px-2 py-2 font-semibold w-[11%]">종목</th>
-                                    <th class="px-2 py-2 font-semibold w-[7%]">직무</th>
+                                    <th class="px-2 py-2 font-semibold w-[11%]">직무 · 종목</th>
                                     <th class="px-2 py-2 font-semibold w-[7%]">학기</th>
                                     <th class="px-2 py-2 font-semibold w-[16%]">과정명</th>
                                     <th class="px-2 py-2 font-semibold w-[6%]">시간</th>
@@ -342,8 +341,17 @@
                             <tbody>
                                 <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">연수원용</td>
-                                    <td class="px-2 py-2 w-[11%] text-[#727272]"><div class="flex justify-center items-center"><div class="bg-[#4E9DFB] text-[#FEFEFE] rounded-lg text-center px-4 py-1">댄스스포츠</div> </div></td>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">자율</td>
+                                    <td class="px-2 py-2 w-[11%] text-[#727272]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">1학기</td>
                                     <td class="px-2 py-2 w-[16%] text-[#727272] text-left">꿈을 펼치는 라틴 초중급</td>
                                     <td class="px-2 py-2 w-[6%] text-[#727272]">30</td>
@@ -353,9 +361,9 @@
                                     <td class="px-2 py-2 w-[15%] text-[#727272]">25.04.09 ~ 25.07.14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
+                                        <button onclick="openModal()" class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
-                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                                <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
                                             </div>
                                             <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
                                         </button>
@@ -364,8 +372,16 @@
                                 </tr>
                                 <tr class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[80px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">연수원용</td>
-                                    <td class="px-2 py-2 w-[11%] text-[#727272]"><div class="flex justify-center items-center"><div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-4 py-1">라인댄스</div></div></td>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">자율</td>
+                                    <td class="px-2 py-2 w-[11%] text-[#727272]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
+                                            </div>
+                                            <div class="bg-[#8B98F5] text-[#FEFEFE] rounded-lg text-center px-4 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">1학기</td>
                                     <td class="px-2 py-2 w-[16%] text-[#727272] text-left">라인 초급 자격</td>
                                     <td class="px-2 py-2 w-[6%] text-[#727272]">30</td>
@@ -375,19 +391,25 @@
                                     <td class="px-2 py-2 w-[15%] text-[#727272]">25.04.09 ~ 25.07.14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
-                                            <div class="mr-1">
-                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
-                                            </div>
-                                            <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
-                                        </button>
+                                            <button onclick="openModal()" class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
+                                                <div class="mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
+                                                </div>
+                                                <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] text-[#727272] text-[18px] font-normal h-[80px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">연수원용</td>
-                                    <td class="px-2 py-2 w-[11%] text-[#727272]"><div class="flex justify-center items-center"><div class="bg-[#AFE7E0] text-[#292929] rounded-lg text-center px-4 py-1">웰빙댄스</div></div></td>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">자율</td>
+                                    <td class="px-2 py-2 w-[11%] text-[#727272]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                경기
+                                            </div>
+                                            <div class="bg-[#AFE7E0] text-[#292929] rounded-lg text-center px-4 py-1">웰빙댄스</div>
+                                        </div>
+                                    </td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">1학기</td>
                                     <td class="px-2 py-2 w-[16%] text-[#727272] text-left">웰빙댄스 초급</td>
                                     <td class="px-2 py-2 w-[6%] text-[#727272]">30</td>
@@ -397,9 +419,9 @@
                                     <td class="px-2 py-2 w-[15%] text-[#727272]">25.04.09 ~ 25.07.14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
+                                        <button onclick="openModal()" class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
-                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                                <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
                                             </div>
                                             <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
                                         </button>
@@ -408,8 +430,14 @@
                                 </tr>
                                 <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[80px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">연수원용</td>
-                                    <td class="px-2 py-2 w-[10%] text-[#727272]"><div class="flex justify-center items-center"><div class="bg-[#4EC3E8] text-[#FEFEFE] rounded-lg text-center px-4 py-1">필라테스</div></div></td>
-                                    <td class="px-2 py-2 w-[7%] text-[#727272]">자율</td>
+                                    <td class="px-2 py-2 w-[11%] text-[#727272]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                경기
+                                            </div>
+                                            <div class="bg-[#4EC3E8] text-[#FEFEFE] rounded-lg text-center px-4 py-1">필라테스</div>
+                                        </div>
+                                    </td>
                                     <td class="px-2 py-2 w-[7%] text-[#727272]">1학기</td>
                                     <td class="px-2 py-2 w-[16%] text-[#727272] text-left ">필라테스 초중급</td>
                                     <td class="px-2 py-2 w-[6%] text-[#727272]">28</td>
@@ -419,9 +447,9 @@
                                     <td class="px-2 py-2 w-[15%] text-[#727272]">25.04.09 ~ 25.07.14</td>
                                     <td class="px-8 max-2xl:px-5 py-2 w-[17%] text-[#2b5bbb] font-bold text-center align-middle">
                                         <div class="flex justify-center items-center">
-                                        <button class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
+                                        <button onclick="openModal()" class="flex justify-center items-center align-middle bg-[#E7F0FD] hover:bg-[#D3E1FB] px-3 py-2 rounded-lg cursor-pointer ">
                                             <div class="mr-1">
-                                                <img src="/img/note.png" alt="노트 아이콘" class="w-5 h-5">
+                                                <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5"/>
                                             </div>
                                             <div class="font-semibold text-[#2b5bbb] flex-shrink-0">신청하기</div>
                                         </button>
@@ -430,6 +458,166 @@
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!-- 신청하기 버튼 모달 -->
+                        <div
+                        class="list-box flex justify-between gap-3 md:min-w-[1024px] max-md:flex-col max-sm:p-3 bg-gray-100 p-5 bg-white rounded-xl shadow border border-[#E3E6EA]">
+                        <div class="w-[2%]">
+                            <input type="checkbox"
+                                class="check-target w-5 h-5 mt-3 appearance-none border border-[#2B5BBB] rounded-sm 
+                                            checked:bg-[#2B5BBB] checked:border-[#2B5BBB]
+                                            checked:after:content-['✓'] checked:after:text-white
+                                            checked:after:flex checked:after:justify-center checked:after:items-center
+                                            checked:after:w-full checked:after:h-full checked:after:-translate-y-[0.5px]" />
+                        </div>
+                        <div class="w-[98%] max-sm:w-full">
+                            <div class="flex items-start justify-between gap-5">
+                                <div class="flex flex-col">
+                                    <div
+                                        class="flex items-center gap-2 max-sm:gap-1 max-sm:flex-col-reverse max-sm:items-start ">
+                                        <span
+                                            class="paperlogy font-medium text-[30px] max-sm:text-[25px] text-[#2B5BBB] text-[#292929]">모던
+                                            초중급</span>
+                                        <div class="flex justify-start gap-2">
+                                            <span
+                                                class="text-xs px-2 py-1 border border-[#4E9DFB] bg-[#4E9DFB] text-[#FEFEFE] rounded-md">댄스스포츠</span>
+                                            <span
+                                                class="text-xs px-2 py-1 border border-[#2B5BBB] bg-[#FEFEFE] text-[#2B5BBB] rounded-md">자율</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-base text-[#A1A1A1] mt-1">25.04.01 ｜ 12:12:03</span>
+                                </div>
+    
+                                <!-- 우측 드롭다운 및 버튼 -->
+                                <div class="flex items-center gap-2 max-sm:flex-col">
+                                    <div class="relative dropdown w-[120px] max-sm:w-[100px]">
+                                        <button
+                                            class="dropdown-button w-full bg-[#FFFFFF] border border-[1px] border-[#DBDEE3] focus:border-[#2B5BBB] text-[#727272] py-2 max-sm:px-2 px-3 pr-2 max-sm:py-2.5 rounded-md focus:outline-none flex justify-between items-center gap-0">
+                                            <span
+                                                class="selected-option text-[18px] text-[#727272] pr-2 max-sm:pr-0 whitespace-nowrap">과정상태</span>
+                                            <svg class="w-5 h-5 text-[#292929] flex-shrink-0"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <!-- 드롭다운 옵션 -->
+                                        <div
+                                            class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                            <div
+                                                class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                                접수중</div>
+                                            <div
+                                                class="dropdown-item px-3 py-3 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                                접수마감</div>
+                                            <div
+                                                class="dropdown-item px-3 py-3 truncate cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                                과정종료</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between gap-2">
+                                        <button 
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                            </span>
+                                        </button>
+                                        <button 
+                                            class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/training-mgmt/delete.png" alt="삭제 아이콘" class="w-6 h-6" />
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <hr class="my-4 border-[1.5px] border-[#2B5BBB]" />
+                            <!-- 하단 정보들 -->
+                            <div class="grid max-md:grid-cols-3 grid-cols-10 gap-y-4 gap-x-4 text-base text-[#292929]">
+                                <div
+                                    class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">적용시기</span>
+                                    <span class="text-[20px] max-md:text-[18px]">2025 · 1학기</span>
+                                </div>
+                                <div
+                                    class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">연수기간</span>
+                                    <span class="text-[20px] max-md:text-[18px]">25.04.09 ~ 25.07.14</span>
+                                </div>
+                                <div
+                                    class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">요일회차</span>
+                                    <span class="text-[20px] max-md:text-[18px]">수요일 0차</span>
+                                </div>
+                                <div class="col-span-3 hidden max-md:block">
+                                    <hr class="border-[1px] border-[#EFEFEF]" />
+                                </div>
+                                <div
+                                    class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">이수학점</span>
+                                    <span class="text-[20px] max-md:text-[18px]">30시간 0점</span>
+                                </div>
+                                <div class="col-span-10 max-md:hidden">
+                                    <hr class="border-[1px] border-[#EFEFEF]" />
+                                </div>
+                                <div
+                                    class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">교육장소</span>
+                                    <span class="text-[20px] max-md:text-[18px]">서울디자인고 | 컨실초</span>
+                                </div>
+                                <div
+                                    class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">지정번호</span>
+                                    <span class="text-[20px] max-md:text-[18px]">경기-교육-2025-216</span>
+                                </div>
+                                <div class="col-span-3 hidden max-md:block">
+                                    <hr class="border-[1px] border-[#EFEFEF]" />
+                                </div>
+                                <div
+                                    class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">수강료</span>
+                                    <span class="text-[20px] max-md:text-[18px]">₩ 140,000</span>
+                                </div>
+                                <div
+                                    class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                    <span class="w-20 text-[#727272] max-md:text-[16px]">지원금액</span>
+                                    <span class="text-[20px] max-md:text-[18px]">₩ 0</span>
+                                </div>
+                            </div>
+    
+                            <!-- 토클 버튼 -->
+                            <div class="flex justify-end mt-2">
+                                <button onclick="toggleDetails()"
+                                    class="bg-[#EFEFEF] flex justify-center items-center align-middle hover:bg-[#DDDDDD] p-2.5 rounded-lg"
+                                    id="toggle-icon">
+                                    <span class="inline-block align-middle">
+                                        <img src="img/down-arrow.png" alt="토글 아이콘" class="w-5 h-5" />
+                                    </span>
+                                </button>
+                            </div>
+                            <!-- 토글 콘텐츠 -->
+                            <div id="training-details(this)" class="hidden mt-8">
+                                <span class="w-20 text-[#727272]">연수내용</span>
+                                <div
+                                    class="bg-[#FAFAFA] border border-[#E3E6EA] rounded-xl p-8 text-[#292929] mt-4 text-base">
+                                    <span>자율 웰빙초중급 (지터벅, 블루스에 관심 있는 사람은 누구나)</span>
+                                    <ul class="list-disc ml-5 mt-2 space-y-1">
+                                        <li>장소: 서울디자인고 4층 체육관</li>
+                                        <li>시간: 2025.2.1(토) 개강 / 10 ~ 12시</li>
+                                        <li>지터벅, 블루스</li>
+                                        <li>준비물: 댄스화, 개인음료, 편한 복장</li>
+                                        <li class="list-none text-[#A1A1A1] text-sm mt-[20px]">※ 댄스화 구매를 원하실 경우, 연수 시작 전 미리
+                                            주문해 주세요.</li>
+                                        <li class="list-none text-[#A1A1A1] text-sm">※ 문의: 010-6661-9191</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
 
                     </div>
                 </div>
@@ -492,5 +680,31 @@
     </div>
     </div>
     <script src="js/script.js"></script>
+    <script>
+        // 신청하기 버튼 모달
+        // 모달 열기
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        // 모달 닫기
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // 토글 버튼으로 상세 내용 보기
+        function toggleDetails() {
+            const details = document.getElementById('training-details');
+            const icon = document.getElementById('toggle-icon');
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                icon.innerHTML = '<img src="img/up-arrow.png" alt="토글 아이콘" class="w-5 h-5" />';
+            } else {
+                details.classList.add('hidden');
+                icon.innerHTML = '<img src="img/down-arrow.png" alt="토글 아이콘" class="w-5 h-5" />';
+            }
+        }
+
+    </script>
 </body>
 </html>
