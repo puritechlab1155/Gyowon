@@ -29,9 +29,9 @@
                 z-index: 50; /* 헤더 위로 배치 */
                 display: none; /* 기본적으로 숨김 */
             }
-          
+        
             .animate-scroll {
-              animation: scroll 30s linear infinite;
+                animation: scroll 30s linear infinite;
             }
         </style>
 
@@ -561,11 +561,11 @@
                         </button>
                     </div>
                 </div>
+                <!-- TOP버튼 -->
+                <button class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+                    TOP
+                </button>
             </div>
-            <!-- TOP버튼 -->
-            <button class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
-                TOP
-            </button>
         </div>
 
 
@@ -1029,11 +1029,13 @@
                 <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
                     <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
                 </button>
-                <form class="create-top mt-[30px] max-w-[1000px] w-full mx-auto">
+                <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
                     <div class="flex justify-between items-end mb-2">
-                        <h2 class="paperlogy text-[30px] max-md:text-[22px] font-medium mb-2">회원수정</h2>
+                        <h2 class="h1-title font-normal paperlogy font-bold">회원등록</h2>
+                        <p class="text-[16px] font-semibold text-[#2B5BBB]">* 표시는 필수 입력입니다</p>
                     </div>
                     <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
+    
                     <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:px-0 px-6 bg-[#FFFFFF]">
                         <!-- Row Template -->
                         <!-- 1 -->
@@ -1185,7 +1187,7 @@
                         <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] py-[6px] flex items-center">
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">근무지역</label>
                             <div class="relative dropdown w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1217,7 +1219,7 @@
                         <div class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center">
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">가입경로</label>
                             <div class="relative dropdown w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1236,7 +1238,7 @@
                             </div>
                         </div>
                         <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
-
+    
                         <!-- 여기서부터 교원일 경우 나타는 부분 -->
                         <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
@@ -1244,7 +1246,7 @@
                             </label>
                             
                             <div class="relative dropdown z-[9900] w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1270,7 +1272,7 @@
                                 <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                             </label>
                             <div class="relative dropdown z-[9900] w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1292,7 +1294,7 @@
                                 <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                             </label>
                             <div class="relative dropdown z-[9900] w-2/3 ">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1310,46 +1312,46 @@
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">직급
                                 <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                             </label>
-
-
+    
+    
                             <div class="w-2/3 flex items-center gap-2 max-sm:gap-0">
                                 <div id="select-container" class="flex-1">
-                                <div class="relative dropdown z-[9900] w-full">
-                                <!-- 버튼 -->
-                                <button
-                                    type="button"
-                                    id="dropdownBtn"
-                                    class="w-full dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 max-sm:px-2 py-1.5 pr-2 rounded-lg h-[45px] flex justify-between items-center gap-15 max-sm:gap-0 focus:outline-none focus:border-[#2B5BBB]"
-                                >
-                                    <span id="selectedOption" class="selected-option text-[16px] max-sm:text-[14px] text-[#AFAFAF]">선택하세요</span>
-                                    <svg class="w-5 h-5 max-sm:w-4 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                            
-                                <!-- 드롭다운 메뉴 -->
-                                <div id="dropdownMenu"
-                                    class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto z-10">
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="선택하세요">선택하세요</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="교사">교사</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기간제">기간제</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="부장">부장</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기타">기타</div>
+                                    <div class="relative dropdown z-[9900] w-full">
+                                        <!-- 버튼 -->
+                                        <button
+                                        type="button"
+                                        id="dropdownBtn"
+                                        class="w-full dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 max-sm:px-2 py-1.5 pr-2 rounded-lg h-[45px] flex justify-between items-center gap-15 max-sm:gap-0 focus:outline-none focus:border-[#2B5BBB]"
+                                        >
+                                        <span id="selectedOption" class="selected-option text-[16px] max-sm:text-[14px] text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 max-sm:w-4 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                        </button>
+                                
+                                        <!-- 드롭다운 메뉴 -->
+                                        <div id="dropdownMenu"
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto z-10">
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="선택하세요">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="교사">교사</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기간제">기간제</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="부장">부장</div>
+                                        <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기타">기타</div>
+                                        </div>
+                                
+                                        <!-- 기타 입력창 -->
+                                        <input
+                                        type="text"
+                                        id="customInput"
+                                        placeholder="직접 입력"
+                                        class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] mt-[6px] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB] hidden"
+                                        />
+                                    </div>
+                                    </div>
                                 </div>
-                            
-                                <!-- 기타 입력창 -->
-                                <input
-                                    type="text"
-                                    id="customInput"
-                                    placeholder="직접 입력"
-                                    class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] mt-[6px] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB] hidden"
-                                />
-                                </div>
-                            </div>
-                        </div>
-
-                            
+    
+                                
                             <!-- <div class="w-2/3 flex items-center gap-2 max-sm:gap:0">
                                 <div id="select-container" class="flex-1">
                                     <div class="relative dropdown z-[9900] w-full">
@@ -1418,7 +1420,7 @@
                                 <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                             </label>
                             <div class="relative dropdown z-[9900] w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1444,14 +1446,14 @@
                         <label class="w-1/6 px-4 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">사진</label>
                         <input type="file" class="w-5/6 text-[16px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                         </div> -->
-
+    
                         <!-- 14 -->
                         <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929]">관리자 권한
                                 <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                             </label>
                             <div class="relative dropdown z-[9900] w-2/3">
-                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center gap-20 focus:outline-none focus:border-[#2B5BBB]">
+                                <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center  focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
                                     <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1482,22 +1484,24 @@
                             class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                         </div>
                     </div>
-
-
+    
                     <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
-                    
+    
                     <!-- 버튼 -->
-                    <div class="flex justify-end gap-3 mt-8">
-                        <button
-                            class="closeEditModalBtn bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#4B5563] font-semibold py-2 px-5 rounded-md border border-[#D1D5DB]">
-                            취소하기
-                        </button>
-                        <button id="submitEditBtn"
-                            class="bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md shadow-sm">
-                            수정하기
-                        </button>
+                    <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
+                        <div class="max-w-[576px] flex gap-2 items-center mx-auto">
+                            <button
+                                class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
+                                등록하기
+                            </button>
+                            <button type="button" onclick="window.location.href='user.html'"
+                                class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
+                                취소하기
+                            </button>
+                        </div>
                     </div>
-                </form>    
+    
+                </form>  
             </div>
         </div>
 
