@@ -132,18 +132,48 @@ function toggleSubMenu(event) {
         arrow.classList.remove('rotate-[-90deg]');
     }
 
-    const svgIcon = mainLink.querySelector('.subIconSvg');
-    if (svgIcon) {
-        const path = svgIcon.querySelector('path');
-        if (path) {
-            // path의 fill과 stroke를 변경
-            path.setAttribute('fill', '#2B5BBB');  // 원하는 색으로 변경
-            path.setAttribute('stroke', '#2B5BBB');  // stroke 색상도 동일하게 변경
-        }
-    }
 
     event.preventDefault();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.subUl a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            // 다른 메뉴를 닫기
+            document.querySelectorAll('.subUl').forEach(ul => {
+                if (!ul.contains(e.target)) {
+                    ul.classList.add('max-h-0');
+                    ul.classList.remove('max-h-96', 'py-2');
+                }
+            });
+
+            // 서브 항목 클릭 시 텍스트 색상 변경
+            document.querySelectorAll('.subUl a').forEach(link => {
+                link.classList.remove('text-[#1E4799]');
+            });
+
+            // 현재 클릭 항목에 스타일 적용
+            this.classList.add('text-[#1E4799]');
+
+            // 부모 메뉴에 스타일 적용 (비활성화 제거는 하지 않음)
+            const parentGroup = this.closest('.group');
+            const parentmainLink = parentGroup.querySelector('.mainLink');
+
+            if (parentmainLink) {
+                parentmainLink.classList.add('text-[#2B5BBB]');
+                parentmainLink.focus();  // 부모 메뉴에 포커스 추가
+            }
+
+            // SVG fill 색상 변경
+            const svgIcon = parentSubLink.querySelector('.subIconSvg');
+            if (svgIcon) {
+                svgIcon.querySelector('path').setAttribute('fill', '#2B5BBB');
+            }
+
+            e.preventDefault();
+        });
+    });
+});
 
 
 
