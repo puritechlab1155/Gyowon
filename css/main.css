@@ -3,9 +3,10 @@
     .scrollbar-hidden::-webkit-scrollbar {
         display: none;
     }
+
     .scrollbar-hidden {
-        -ms-overflow-style: none; 
-        scrollbar-width: none; 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
 
@@ -35,14 +36,15 @@
 
 @supports (-webkit-touch-callout: none) {
     .Paperlogy-text {
-        font-weight: 10;  /* 사파리에서만 폰트 웨이트 낮추기 */
+        font-weight: 10;
+        /* 사파리에서만 폰트 웨이트 낮추기 */
     }
 }
 
 * {
     font-family: 'Pretendard Variable', sans-serif;
     color: #292929;
-    font-size: clamp(16px,1vw,18px);
+    font-size: clamp(16px, 1vw, 18px);
     font-weight: 400;
     line-height: 160%;
     letter-spacing: -0.025em
@@ -55,14 +57,220 @@
     text-rendering: optimizeLegibility;
     font-weight: 100;
 }
+
 .h1-title {
     font-size: clamp(24px, 2vw, 32px);
 }
+
 .sub-title {
     font-size: clamp(20px, 2vw, 23px);
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE, Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.banner-border {
+    border-color: #E7F0FD;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 모바일 배너 스타일 */
+.mobile-banner {
+    position: fixed;
+    /* 화면에 고정 */
+    top: 64px;
+    /* 헤더 아래로 위치 조정 */
+    left: 0;
+    width: 100%;
+    background-color: #F5F9FF;
+    /* 배경색 */
+    padding: 10px 16px;
+    /* 내부 패딩 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    z-index: 50;
+    /* 헤더 위로 배치 */
+    display: none;
+    /* 기본적으로 숨김 */
+}
+
+#mbanner-toggle {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
 }
 
 #side-menu {
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
+}
+
+@media screen {
+    .certificate-box {
+        max-width: 794px;
+        aspect-ratio: 794 / 1123;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        width: 794px;
+        height: 1123px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        font-size: 12px;
+    }
+
+    thead {
+        -webkit-print-color-adjust: exact;
+        /* 색상 유지 */
+        print-color-adjust: exact;
+    }
+
+    .overflow-auto,
+    .flex,
+    .justify-center {
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .printArea {
+        width: 794px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .basicdata-box {
+        box-sizing: border-box;
+        width: 1123px !important;
+        height: 794px !important;
+        min-width: none !important;
+        padding: 100px;
+    }
+
+    .attendance-box {
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto !important;
+        min-width: none !important;
+        max-width: 1123px !important;
+        height: auto !important;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .namatag-box-flex {
+        max-width: 1300px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 5p
+    }
+
+    .certificate-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 794px;
+        height: 1123px;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .certificate-box {
+        max-height: none;
+        box-sizing: border-box;
+        width: 794px !important;
+        height: 1123px !important;
+        max-width: none !important;
+        aspect-ratio: auto !important;
+    }
+
+    .certificate-inner {
+        margin-left: 40px;
+    }
+
+
+    .certificate-box h2 {
+        margin-top: 60px;
+        font-size: 35px !important;
+        margin-right: 40px;
+    }
+
+    .certificate-box h1 {
+        font-size: 40px !important;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        margin-right: 40px;
+    }
+
+    .certificate-box p {
+        font-size: 20px !important;
+        line-height: 2 !important;
+        margin-right: 40px;
+    }
+
+    .certificate-box span {
+        font-size: 25px !important;
+        line-height: 2 !important;
+        margin-bottom: 15px;
+    }
+
+    .certificate-box .certificate-info,
+    .certificate-box .grid>div:last-child {
+        margin-bottom: 50px;
+    }
+
+    .receipt-box {
+        width: 80%;
+        min-width: 600px;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 24px;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
