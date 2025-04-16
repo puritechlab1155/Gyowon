@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>교원관리자 | 대시보드</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 차트 관련 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
-
 <body class="bg-[#F7F7F7] overflow-auto">
     <header class="relative z-[20]">
         <nav class="bg-white">
@@ -512,261 +513,635 @@
         </ul>
     </div>
 
-
     <!-- 컨텐츠 영역 -->
-    <div id="main-content"
-        class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]"
-        style="z-index: -1;">
-        <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">대시보드</h1>
-            <div class="pb-5 w-full flex items-center justify-between mt-[50px] max-sm:gap-2 max-sm:flex-wrap">
-                <div class="right-content flex justify-end text-lg space-x-2 max-sm:w-full">
-                    <div class="flex justify-between space-x-2 max-xl:space-x-0">
-                        <input type="text" placeholder="과정명을 검색하세요"
-                            class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
-                                rounded-[8px] px-4 w-full min-w-[250px] 
-                                h-[50px] max-sm:h-[40px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] " />
-                        <button
-                            class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
-                            <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
-                            <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full">
+    <div id="main-content" class="max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px] mx-auto">
+        <div class="w-full h-full px-6 max-sm:pt-[10px] pb-[100px]">
+            <h1 class="mt-[50px] h1-title font-normal paperlogy">대시보드</h1>           
+            <div class="w-full max-sm:pt-6 mt-5">
                 <div class="overflow-x-auto">
-                    <div class="min-w-[1280px]" style="background: yellow;">
-
-
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-                            <!-- 수강자 분석 -->
-                            <div class="col-span-1 md:col-span-3">
-                                <h2 class="text-xl font-semibold text-gray-800 mb-3">수강자 분석</h2>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    연령별 통계
-                                </h3>
-                                <canvas id="ageChart" class="w-full h-48 mt-4"></canvas>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    재수강 통계
-                                </h3>
-                                <canvas id="repeatChart" class="w-full h-48 mt-4"></canvas>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    댄스 종목별 선호도
-                                </h3>
-                                <canvas id="genreChart" class="w-full h-48 mt-4"></canvas>
-                            </div>
-
-                            <!-- 가입 및 수강현황 -->
-                            <div class="col-span-1 md:col-span-3">
-                                <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-3">가입 및 수강현황</h2>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    최근 가입자
-                                </h3>
-                                <ul class="mt-4 text-sm text-gray-600 space-y-2">
-                                    <li>홍길동 - 2025.04.01</li>
-                                    <li>김영희 - 2025.03.30</li>
-                                    <li>박철수 - 2025.03.29</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    학기별 접수현황
-                                </h3>
-                                <canvas id="semesterChart" class="w-full h-48 mt-4"></canvas>
-                            </div>
-
-                            <!-- 연수 신청자 현황 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    연수 신청자 현황
-                                </h3>
-
-                                <div class="mt-4 grid grid-cols-1 gap-3 text-sm text-gray-600">
-                                    <div class="flex justify-between items-center">
-                                        <span><strong>총 신청자:</strong> 35명</span>
-                                        <!-- Sparkline 선 -->
-                                        <div class="w-24 h-6">
-                                            <canvas id="sparkline"></canvas>
-                                        </div>
-                                    </div>
-                                    <div><strong>연수명:</strong> 2025년 상반기 댄스스포츠 지도자 연수</div>
-                                    <div><strong>연수기간:</strong> 2025.04.15 ~ 2025.04.17</div>
-                                    <div><strong>장소:</strong> 대한댄스스포츠협회 회관</div>
+                    <div class="min-w-[320px] md:min-w-[768px] lg:min-w-[1280px]">
+                
+                        <!-- 1. 댄스화, 공지사항 -->
+                        <section>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <!-- 댄스화 구매내역 -->
+                            <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">댄스화 구매내역</h3>
+                                    <a href="#" class="text-sm text-gray-400 hover:text-[#2B5BBB]">더보기</a>
+                                </div>
+                                <div class="rounded-md">
+                                    <ul class="text-sm text-[#292929] space-y-4">
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-[#cbf1ff] min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">댄스화</span>
+                                                <span>홍길동</span>
+                                                <span class="block sm-w-[220px] max-w-[300px] truncate overflow-hidden whitespace-nowrap">댄스화 주문합니다. 사이즈는 235mm 입니다.</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-[#cbf1ff] min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">연습화</span>
+                                                <span>홍길동</span>
+                                                <span class="block sm-w-[220px] max-w-[300px] truncate overflow-hidden whitespace-nowrap">연습화 235 사이즈 주문합니다.</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-[#cbf1ff] min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">연습화</span>
+                                                <span>홍길동</span>
+                                                <span class="block sm-w-[220px] max-w-[300px] truncate overflow-hidden whitespace-nowrap">연습화 235 사이즈 주문합니다.</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <!-- 운영 및 공지 -->
-                            <div class="col-span-1 md:col-span-3">
-                                <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-3">운영 및 공지</h2>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    댄스화 구매내역
-                                </h3>
-                                <ul class="mt-4 text-sm text-gray-600 space-y-2">
-                                    <li>홍길동 - 2025.04.02 - 블랙 라틴화</li>
-                                    <li>김영희 - 2025.03.28 - 실버 스탠다드화</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-white rounded-2xl p-4 shadow-sm">
-                                <h3 class="flex items-center gap-2 text-lg font-medium text-gray-700">
-                                    공지사항
-                                </h3>
-                                <ul class="mt-4 text-sm text-gray-600 space-y-2">
-                                    <li>4월 강의 일정 변경 안내</li>
-                                    <li>신규 프로그램 모집 공지</li>
-                                    <li>댄스화 사전 주문 안내</li>
-                                </ul>
+                
+                            <!-- 공지사항 -->
+                            <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">공지사항</h3>
+                                    <a href="#" class="text-sm text-gray-400 hover:text-[#2B5BBB]">더보기</a>
+                                </div>
+                                <div class="rounded-md">
+                                    <ul class="text-sm text-[#292929] space-y-4">
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-gray-100 text-gray-500 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">일반</span>
+                                                <span class="block max-w-[350px] truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내 홈페이지 리뉴얼 관련 안내</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-gray-100 text-gray-500 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">일반</span>
+                                                <span class="block max-w-[300px] truncate overflow-hidden whitespace-nowrap">아이디/비밀번호 정보를 찾을 수 없는</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex flex-wrap items-center justify-between gap-y-2">
+                                            <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                <span class="text-sm bg-gray-100 text-gray-500 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">공지사항</span>
+                                                <span class="block sm:w-[300px] truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A</span>
+                                            </div>
+                                            <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                        </section>
+                
+                        <!-- 2. 회원 증가 추이 및 재수강 통계 -->
+                        <section class="mt-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm lg:col-span-2 relative">
+                                    <div class="flex flex-wrap items-top justify-between gap-2">
+                                        <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB]">회원 증가 추이</h3>
+                                        <div class="bg-[#FAFAFA] text-sm px-3 py-1.5 rounded-xl font-semibold border border-[#EFEFEF] text-center">
+                                            총 회원 <span class="block text-base sm:text-xl text-black font-bold ml-1">35,200</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-4 text-sm font-medium">
+                                        <button id="monthlyBtn" class="text-[#2B5BBB] border-b-2 border-[#2B5BBB]">월별</button>
+                                        <button id="yearlyBtn" class="text-gray-400 hover:text-[#2B5BBB]">연도별</button>
+                                    </div>
+                                    <div class="h-64 mt-4">
+                                        <canvas id="userChart" class="w-full h-full"></canvas>
+                                    </div>
+                                </div>
+                        
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">재수강 통계</h3>
+                                    <div class="h-60 rounded-md">
+                                        <canvas id="repeatChart" class="w-full h-full mt-4"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                
+                        <!-- 3. 연령별, 학기별 접수현황, 댄스 종목별 선호도 -->
+                        <section class="mt-6 mb-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">연령별</h3>
+                                    <div class="rounded-md">
+                                        <canvas id="ageChart" class="w-full mt-4"></canvas>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">학기별 접수현황</h3>
+                                    <div class="rounded-md">
+                                        <canvas id="semesterChart" class="w-full mt-4"></canvas>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                    <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">댄스 종목별 선호도</h3>
+                                    <div class="rounded-md">
+                                        <canvas id="genreChart" class="w-full mt-4"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
+                        <!-- 4. 수강자 입금 관리, 최근 가입자 -->
+                        <section class="mt-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                <!-- 수강자 입금 관리 -->
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm lg:col-span-2">
 
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">수강자 입금 관리</h3>
+                                        <a href="student-pay.html" class="text-sm text-gray-400 hover:text-[#2B5BBB]">더보기</a>
+                                    </div>
+                                    <div class="rounded-md">
+                                        <ul class="text-sm text-[#292929] space-y-4">
+                                            <li>
+                                                <a href="student-pay.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                    <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">자율</div>
+                                                    <div class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">댄스스포츠</div>
+                                                    <span>홍길동</span>
+                                                    <span>꿈을 펼치는 라틴 초중급</span>
+                                                </div>
+                                                <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="student-pay.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                    <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                        <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">경기</div>
+                                                        <div class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">라인댄스</div>
+                                                        <span>홍길동</span>
+                                                        <span>꿈을 펼치는 라인댄스 초중급</span>
+                                                    </div>
+                                                    <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="student-pay.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                    <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                        <div class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">서울</div>
+                                                        <div class="bg-[#AFE7E0] text-[16px] text-[#FEFEFE] border border-[#AFE7E0] rounded-lg text-center px-3 py-1">댄스스포츠</div>
+                                                        <span>홍길동</span>
+                                                        <span>웰빙 초중급</span>
+                                                    </div>
+                                                    <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
+                                <!-- 최근 가입자 -->
+                                <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-7 shadow-sm">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-base sm:text-lg font-medium text-[#2B5BBB] mb-2">최근 가입자</h3>
+                                        <a href="user.html" class="text-sm text-gray-400 hover:text-[#2B5BBB]">더보기</a>
+                                    </div>
+                                    <div class="rounded-md">
+                                        <ul class="mt-4 text-sm text-[#292929] space-y-4">
+                                            <li>
+                                                <a href="user.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                    <span class="text-sm bg-gray-100 text-gray-500 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">일반</span>
+                                                    <span>홍길동</span>
+                                                    <span>idid0000</span>
+                                                </div>
+                                                <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="user.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                    <span class="text-sm  text-[#2B5BBB] bg-gray-100 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">교원</span>
+                                                    <span>홍길동</span>
+                                                    <span>id1234</span>
+                                                </div>
+                                                <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="user.html" class="flex flex-wrap items-center justify-between gap-y-2">
+                                                <div class="flex flex-wrap items-center gap-2 sm:gap-5">
+                                                    <span class="text-sm bg-gray-100 text-gray-500 min-w-[80px] py-1.5 rounded-[8px] text-center font-medium">일반</span>
+                                                    <span>홍길동</span>
+                                                    <span>abcdefg987</span>
+                                                </div>
+                                                <span class="text-gray-400 text-xs sm:text-sm">2025.03.05</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                
                     </div>
                 </div>
+              </div>
 
-            </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
+    
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. 연령별 통계 (Bar)
-            const ageCtx = document.getElementById('ageChart');
-            new Chart(ageCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['10대', '20대', '30대', '40대', '50대 이상'],
-                    datasets: [{
-                        label: '수강자 수',
-                        data: [5, 15, 20, 10, 3],
-                        backgroundColor: '#60a5fa',
-                        borderRadius: 6,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
 
-            // 2. 재수강 통계 (Doughnut)
-            const repeatCtx = document.getElementById('repeatChart');
-            new Chart(repeatCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['재수강', '신규수강'],
-                    datasets: [{
-                        data: [12, 28],
-                        backgroundColor: ['#34d399', '#f87171'],
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { position: 'bottom' }
-                    }
-                }
-            });
+    <!-- chartjs-plugin-datalabels CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
-            // 3. 댄스 종목별 선호도 (Bar)
-            const genreCtx = document.getElementById('genreChart');
-            new Chart(genreCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['라틴', '스탠다드', '자이브', '왈츠'],
-                    datasets: [{
-                        label: '선호도',
-                        data: [18, 10, 8, 14],
-                        backgroundColor: '#facc15',
-                        borderRadius: 6,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
+    <!-- chartjs-plugin-datalabels CDN 추가 (동그라미 수치) -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
-            // 4. 학기별 접수현황 (Line)
-            const semesterCtx = document.getElementById('semesterChart');
-            new Chart(semesterCtx, {
-                type: 'line',
-                data: {
-                    labels: ['1학기', '여름방학', '2학기', '겨울방학'],
-                    datasets: [{
-                        label: '접수 인원',
-                        data: [12, 8, 15, 6],
-                        fill: true,
-                        borderColor: '#6366f1',
-                        backgroundColor: 'rgba(99, 102, 241, 0.2)',
-                        tension: 0.3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
+
+
+<script>
+    // DOMContentLoaded 이벤트 리스너 (차트 초기화)
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // 재수강 통계 (Doughnut)
+        const repeatCtx = document.getElementById('repeatChart');
+        new Chart(repeatCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['재수강', '신규수강'],
+                datasets: [{
+                data: [12, 28],
+                backgroundColor: ['#34d399', '#f87171'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                legend: { position: 'bottom' }
                 }
-            });
+            }
         });
 
-        // 5. 연수 신청자 현황 Sparkline
-        const ctx = document.getElementById('sparkline').getContext('2d');
-        new Chart(ctx, {
+        // 배경색 플러그인
+        const backgroundColorPlugin = {
+            id: 'custom_canvas_background_color',
+            beforeDraw: (chart) => {
+                const ctx = chart.canvas.getContext('2d');
+                ctx.save();
+                ctx.globalCompositeOperation = 'destination-over';
+                ctx.fillStyle = '#FAFAFA';
+                ctx.fillRect(0, 0, chart.width, chart.height);
+                ctx.restore();
+            }
+        };
+
+        // 연령별 (Bar)
+        const ageCtx = document.getElementById('ageChart');
+        new Chart(ageCtx, {
+            type: 'bar',
+            data: {
+                labels: ['20대', '30대', '40대', '50대', '60대', '기타'],
+                datasets: [{
+                    label: '연령별',
+                    data: [800, 1200, 1500, 1000, 500, 200],
+                    backgroundColor: [
+                        '#26F9D8', // 20대 
+                        '#45DEF9', // 30대 
+                        '#8B98F5', // 40대
+                        '#2B5BBB', // 50대 
+                        '#4E9DFB', // 60대 
+                        '#2AD44F'  // 기타 
+                    ],
+                    borderRadius: 8,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'start',
+                        offset: -30,
+                        backgroundColor: '#DCDCDC',
+                        borderRadius: 20,
+                        color: '#333',
+                        font: {
+                            size: 12,
+                            weight: '500'
+                        },
+                        padding: {
+                            top: 4,
+                            bottom: 4,
+                            left: 8,
+                            right: 8
+                        },
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 2500,
+                        ticks: {
+                            stepSize: 500,
+                            padding: 10
+                        },
+                        grid: {
+                            color: '#eee'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            },
+            plugins: [ChartDataLabels, backgroundColorPlugin]
+        });
+
+        // 댄스 종목별 선호도 (Bar)
+        const genreCtx = document.getElementById('genreChart');
+        new Chart(genreCtx, {
+            type: 'bar',
+            data: {
+                labels: ['라틴', '댄스스포츠', '필라테스', '웰빙', '라인'],
+                datasets: [{
+                    label: '선호도',
+                    data: [1000, 3200, 2400, 800, 1400],
+                    backgroundColor: [
+                        '#6679FF', // 라틴
+                        '#4E9DFB', // 댄스스포츠
+                        '#4EC3E8', // 필라테스
+                        '#AFE7E0', // 웰빙
+                        '#8B98F5', // 라인
+                    ],
+                    borderRadius: 8,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'start',
+                        offset: -30,
+                        backgroundColor: '#DCDCDC',
+                        borderRadius: 20,
+                        color: '#333',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 4,
+                            bottom: 4,
+                            left: 8,    
+                            right: 8
+                        },
+                    }
+            },
+            scales: {
+            y: {
+                beginAtZero: true,
+                min: 0,
+                max: 4000,
+                ticks: {
+                stepSize: 1000,
+                padding: 10
+                },
+                grid: {
+                color: '#eee'
+                }
+            },
+            x: {
+                grid: {
+                display: false
+                }
+            }
+            }
+        },
+        plugins: [ChartDataLabels, backgroundColorPlugin]
+        });
+
+        // 학기별 접수현황 (Line)
+        const semesterCtx = document.getElementById('semesterChart');
+        new Chart(semesterCtx, {
             type: 'line',
             data: {
-                labels: Array(7).fill(''), // 축 없음
+                labels: ['1학기', '하계', '2학기', '동계'],
                 datasets: [{
-                    data: [2, 4, 6, 10, 12, 15, 18],
-                    borderColor: '#22c55e', // 초록 계열
-                    backgroundColor: 'transparent',
-                    pointRadius: 0,
-                    borderWidth: 1.5,
-                    tension: 0.4,
+                    label: '접수 인원',
+                    data: [1500, 3300, 2200, 3800],
+                    fill: true,
+                    borderColor: '#6366f1',
+                    backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                    tension: 0.3,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#6366f1',
+                    pointRadius: 5,
+                    pointBorderWidth: 2
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                scales: { x: { display: false }, y: { display: false } },
                 plugins: {
                     legend: { display: false },
-                    tooltip: { enabled: false }
+                    tooltip: { enabled: true }
                 },
-                elements: {
-                    line: {
-                        borderJoinStyle: 'round',
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5000,
+                        ticks: {
+                            stepSize: 1000,
+                            padding: 10
+                        },
+                        grid: { color: '#eee' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                animation: {
+                    onComplete: function () {
+                        const chart = this.chart;
+                        const ctx = chart.ctx;
+                        ctx.font = 'bold 12px sans-serif';
+                        ctx.fillStyle = '#2B5BBB';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'bottom';
+
+                        this.data.datasets.forEach((dataset, i) => {
+                            const meta = chart.getDatasetMeta(i);
+                            meta.data.forEach((point, index) => {
+                                const value = dataset.data[index];
+                                ctx.fillText(value + '명', point.x, point.y - 10);
+                            });
+                        });
                     }
                 }
             }
         });
-    </script>
+        
+    });
+
+    // 회원 증가 추이 (Line 차트 - 월별, 연도별)
+    const ctx = document.getElementById('userChart').getContext('2d');
+    
+    
+    // 월별 데이터
+    const monthlyData = {
+        labels: ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'],
+        datasets: [{
+            label: '회원 수',
+            data: [30, 50, 100, 130, 250, 240, 270, 340, 170, 230, 300, 350],
+            borderColor: '#2C72FF',
+            backgroundColor: '#2C72FF',
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#2C72FF',
+            pointBorderWidth: 2,
+            pointRadius: 5,
+            fill: false
+        }]
+    };
+    // 연도별 데이터
+    const yearlyData = {
+        labels: ['2015', '2016','2017', '2018', '2019', '2020','2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: '회원 수',
+            data: [500, 800, 500, 800, 1000, 1200, 900, 1300, 1200, 1400],
+            borderColor: '#2C72FF',
+            backgroundColor: '#2C72FF',
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#2C72FF',
+            pointBorderWidth: 2,
+            pointRadius: 5,
+            fill: false
+        }]
+    };
+
+    // 기본 차트 초기화 (월별 데이터로 시작)
+    let userChart = new Chart(ctx, {
+        type: 'line',
+        data: monthlyData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 30
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    enabled: false // 툴팁을 비활성화하여 호버하지 않아도 수치가 보이게 설정
+                },
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    font: {
+                        size: 12,
+                        weight: 'bold',
+                    },
+                    color: '#2B5BBB'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 400,
+                    ticks: {
+                        stepSize: 50, // 월별 차트는 50단위
+                        padding: 10 // y축 레이블과 축 간의 간격을 설정 (10px)
+                    },
+                    grid: {
+                        color: '#eee'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        },
+        
+        plugins: [ChartDataLabels] // chartjs-plugin-datalabels 활성화
+    });
+
+    // 월별 버튼 클릭 이벤트
+    document.getElementById('monthlyBtn').addEventListener('click', () => {
+        userChart.data = monthlyData; // 월별 데이터로 변경
+        userChart.options.scales.y.ticks.stepSize = 50; // 월별 차트는 50 단위
+        userChart.update();
+        document.getElementById('monthlyBtn').classList.add('border-b-2', 'border-[#2C72FF]');
+        document.getElementById('yearlyBtn').classList.remove('border-b-2');
+        document.getElementById('yearlyBtn').classList.add('text-gray-400');
+        document.getElementById('monthlyBtn').classList.remove('text-gray-400');
+        document.getElementById('monthlyBtn').classList.add('text-[#2C72FF]');
+    });
+
+    // 연도별 버튼 클릭 이벤트
+    document.getElementById('yearlyBtn').addEventListener('click', () => {
+        userChart.data = yearlyData; // 연도별 데이터로 변경
+        userChart.options.scales.y.min = 100;   // 연도별 차트는 y축 최소값을 100으로 설정
+        userChart.options.scales.y.max = 1500;  // 연도별 차트는 y축 최대값을 1500으로 설정
+        userChart.options.scales.y.ticks.stepSize = 100; // 연도별 차트는 100 단위
+        userChart.update();
+        document.getElementById('yearlyBtn').classList.add('border-b-2', 'border-[#2C72FF]');
+        document.getElementById('monthlyBtn').classList.remove('border-b-2');
+        document.getElementById('monthlyBtn').classList.add('text-gray-400');
+        document.getElementById('yearlyBtn').classList.remove('text-gray-400');
+        document.getElementById('yearlyBtn').classList.add('text-[#2C72FF]');
+    });
+
+    // 버튼 스타일 업데이트 함수
+    function updateButtonStyles(activeBtn) {
+        const monthlyBtn = document.getElementById('monthlyBtn');
+        const yearlyBtn = document.getElementById('yearlyBtn');
+        
+        if (activeBtn === 'monthly') {
+        monthlyBtn.classList.add('border-b-2', 'border-[#2B5BBB]');
+        yearlyBtn.classList.remove('border-b-2');
+        yearlyBtn.classList.add('text-gray-400');
+        monthlyBtn.classList.remove('text-gray-400');
+        monthlyBtn.classList.add('text-[#2B5BBB]');
+        } else {
+        yearlyBtn.classList.add('border-b-2', 'border-[#2B5BBB]');
+        monthlyBtn.classList.remove('border-b-2');
+        monthlyBtn.classList.add('text-gray-400');
+        yearlyBtn.classList.remove('text-gray-400');
+        yearlyBtn.classList.add('text-[#2B5BBB]');
+        }
+    }
+
+
+</script>
 
 
 </body>
-
 </html>
