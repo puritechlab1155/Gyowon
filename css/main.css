@@ -153,21 +153,21 @@ a * {
 
 @media print {
     @page {
-        size: A4;
-        margin: 0;
+        size: A4 portrait;
+        margin: 20mm;
     }
 
     body,
     html {
-        margin: 0 auto;
-        width: 794px;
-        height: 1123px;
+        width: 100%;
+        height: 100%;
         background-color: #FFFFFF !important;
     }
 
     table {
         border-collapse: collapse;
         width: 100%;
+        table-layout: fixed;
     }
 
     th,
@@ -190,34 +190,67 @@ a * {
     }
 
     .printArea {
-        width: 750px;
+        width: 100%;
         height: auto;
-        margin: 20px auto; 
-        background-color: white;
     }
 
-    .basicdata-box {
-        box-sizing: border-box;
-        width: 1123px !important;
-        height: 794px !important;
-        min-width: none !important;
-        padding: 100px;
-        display: block !important;
-    }
 
-    .attendance-box {
+    .receipt-box {
+        width: 794px !important;
         box-sizing: border-box;
-        width: 100% !important;
-        height: auto !important;
-        min-width: none !important;
-        max-width: 1123px !important;
-        height: auto !important;
-        padding: 10px;
         margin: 0 auto;
-        display: block;
-        background-color: #ffffff !important; 
     }
 
+    .certificate-box img {
+        margin: 20px auto;
+        width: 96%;
+        height: 96%;
+        object-fit: cover;
+    }
+
+    .certificate-box {
+        width: 794px !important;
+        height: 1123px !important;
+        box-sizing: border-box;
+        max-width: none !important;
+        aspect-ratio: auto !important;
+    }
+
+    .certificate-inner {
+        margin: 0 auto;
+        width: 630px;
+    }
+
+
+    .certificate-box h2 {
+        margin-top: 70px;
+        font-size: 35px !important;
+    }
+
+    .certificate-box h1 {
+        font-size: 45px !important;
+        margin-bottom: 50px;
+    }
+
+    .certificate-box p {
+        font-size: 18px !important;
+        line-height: 2 !important;
+    }
+
+    .certificate-box .certificate-info {
+        margin-bottom: 50px;
+    }
+
+    .certificate-box span {
+        font-size: 22px !important;
+        line-height: 2 !important;
+        margin-bottom: 20px;
+    }
+
+    .certificate-box .grid>div:last-child {
+        margin-bottom: 20px;
+    }
+    
     .namatag-box-flex {
         max-width: 1300px;
         display: flex;
@@ -225,70 +258,6 @@ a * {
         justify-content: start;
         align-items: start;
         gap: 5px;
-    }
-
-    .certificate-box img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 794px;
-        height: 1123px;
-        object-fit: cover;
-        z-index: 0;
-    }
-
-    .certificate-box {
-        max-height: none;
-        box-sizing: border-box;
-        width: 794px !important;
-        height: 1123px !important;
-        max-width: none !important;
-        aspect-ratio: auto !important;
-    }
-
-    .certificate-inner {
-        margin-left: 40px;
-    }
-
-
-    .certificate-box h2 {
-        margin-top: 60px;
-        font-size: 35px !important;
-        margin-right: 40px;
-    }
-
-    .certificate-box h1 {
-        font-size: 40px !important;
-        margin-top: 30px;
-        margin-bottom: 70px;
-        margin-right: 40px;
-    }
-
-    .certificate-box p {
-        font-size: 20px !important;
-        line-height: 2 !important;
-        margin-right: 40px;
-    }
-
-    .certificate-box span {
-        font-size: 25px !important;
-        line-height: 2 !important;
-        margin-bottom: 15px;
-    }
-
-    .certificate-box .certificate-info,
-    .certificate-box .grid>div:last-child {
-        margin-bottom: 50px;
-    }
-
-    .receipt-box {
-        width: 80%;
-        min-width: 600px;
-        height: auto;
-        margin: 0 auto;
-        overflow: hidden;
-        box-sizing: border-box;
-        padding: 24px;
     }
 
     * {

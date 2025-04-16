@@ -1999,7 +1999,7 @@
                 const menu = dropdown.querySelector('.dropdown-menu');
                 document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
                 if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '10';
+                    dropdown.style.zIndex = '5';
                 }
                 document.querySelectorAll('.dropdown-menu').forEach(m => {
                     if (m !== menu) m.classList.add('hidden');
