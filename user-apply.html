@@ -680,124 +680,124 @@
                             </table>
                         </div>
 
-<!-- 신청하기 모달 -->
-<div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[800] hidden flex justify-center items-center">
-    <div class="bg-white rounded-lg p-6 w-[90%] max-w-[1200px] shadow-lg relative overflow-y-auto max-h-[80%]" style="-ms-overflow-style:none; scrollbar-width:none;">
-        <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
-            <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
-        </button>
-        <form class="create-top mt-[30px] max-w-[1000px] w-full mx-auto">
-            <!-- training-mgmt-0N 데이터 불러와서 보여지는 내용틀-->
-            <div class="">
-                <div class="flex flex-col">
-                    <div
-                        class="flex items-center gap-2 max-sm:gap-1 max-sm:flex-col-reverse max-sm:items-start ">
-                        <span
-                            class="paperlogy font-medium text-[30px] max-sm:text-[25px] text-[#2B5BBB] text-[#292929]">모던
-                            초중급</span>
-                        <div class="flex justify-start gap-2">
-                            <span
-                                class="text-xs px-2 py-1 border border-[#4E9DFB] bg-[#4E9DFB] text-[#FEFEFE] rounded-md">댄스스포츠</span>
-                            <span
-                                class="text-xs px-2 py-1 border border-[#2B5BBB] bg-[#FEFEFE] text-[#2B5BBB] rounded-md">자율</span>
+                        <!-- 신청하기 모달 -->
+                        <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[800] hidden flex justify-center items-center">
+                            <div class="bg-white rounded-lg p-6 w-[90%] max-w-[1200px] shadow-lg relative overflow-y-auto max-h-[80%]" style="-ms-overflow-style:none; scrollbar-width:none;">
+                                <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
+                                    <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
+                                </button>
+                                <form class="create-top mt-[30px] max-w-[1000px] w-full mx-auto">
+                                    <!-- training-mgmt-0N 데이터 불러와서 보여지는 내용틀-->
+                                    <div class="">
+                                        <div class="flex flex-col">
+                                            <div
+                                                class="flex items-center gap-2 max-sm:gap-1 max-sm:flex-col-reverse max-sm:items-start ">
+                                                <span
+                                                    class="paperlogy font-medium text-[30px] max-sm:text-[25px] text-[#2B5BBB] text-[#292929]">모던
+                                                    초중급</span>
+                                                <div class="flex justify-start gap-2">
+                                                    <span
+                                                        class="text-xs px-2 py-1 border border-[#4E9DFB] bg-[#4E9DFB] text-[#FEFEFE] rounded-md">댄스스포츠</span>
+                                                    <span
+                                                        class="text-xs px-2 py-1 border border-[#2B5BBB] bg-[#FEFEFE] text-[#2B5BBB] rounded-md">자율</span>
+                                                </div>
+                                            </div>
+                                            <span class="text-base text-[#A1A1A1] mt-1">25.04.01 ｜ 12:12:03</span>
+                                        </div>
+                                        <hr class="my-4 border-[1.5px] border-[#2B5BBB]" />
+                                        <!-- 하단 정보들 -->
+                                        <div class="grid max-md:grid-cols-3 grid-cols-10 gap-y-4 gap-x-4 text-base text-[#292929]">
+                                            <div
+                                                class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">적용시기</span>
+                                                <span class="text-[20px] max-md:text-[18px]">2025 · 1학기</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">연수기간</span>
+                                                <span class="text-[20px] max-md:text-[18px]">25.04.09 ~ 25.07.14</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">요일회차</span>
+                                                <span class="text-[20px] max-md:text-[18px]">수요일 0차</span>
+                                            </div>
+                                            <div class="col-span-3 hidden max-md:block">
+                                                <hr class="border-[1px] border-[#EFEFEF]" />
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">이수학점</span>
+                                                <span class="text-[20px] max-md:text-[18px]">30시간 0점</span>
+                                            </div>
+                                            <div class="col-span-10 max-md:hidden">
+                                                <hr class="border-[1px] border-[#EFEFEF]" />
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">교육장소</span>
+                                                <span class="text-[20px] max-md:text-[18px]">서울디자인고 | 컨실초</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">지정번호</span>
+                                                <span class="text-[20px] max-md:text-[18px]">경기-교육-2025-216</span>
+                                            </div>
+                                            <div class="col-span-3 hidden max-md:block">
+                                                <hr class="border-[1px] border-[#EFEFEF]" />
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">수강료</span>
+                                                <span class="text-[20px] max-md:text-[18px]">₩ 140,000</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
+                                                <span class="w-20 text-[#727272] max-md:text-[16px]">지원금액</span>
+                                                <span class="text-[20px] max-md:text-[18px]">₩ 0</span>
+                                            </div>
+                                        </div>
+                                        <!-- 토클 버튼 -->
+                                        <div class="flex justify-end mt-2">
+                                            <button 
+                                                class="sbtoggle-icon bg-[#EFEFEF] flex justify-center items-center align-middle hover:bg-[#DDDDDD] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/down-arrow.png" alt="토글 아이콘" class="toggle-img w-5 h-5" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <!-- 토글 콘텐츠 -->
+                                        <div class="training-details hidden mt-8">
+                                            <span class="w-20 text-[#727272]">연수내용</span>
+                                            <div
+                                                class="bg-[#FAFAFA] border border-[#E3E6EA] rounded-xl p-8 text-[#292929] mt-4 text-base">
+                                                <span>자율 웰빙초중급 (지터벅, 블루스에 관심 있는 사람은 누구나)</span>
+                                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                                    <li>장소: 서울디자인고 4층 체육관</li>
+                                                    <li>시간: 2025.2.1(토) 개강 / 10 ~ 12시</li>
+                                                    <li>지터벅, 블루스</li>
+                                                    <li>준비물: 댄스화, 개인음료, 편한 복장</li>
+                                                    <li class="list-none text-[#A1A1A1] text-sm mt-[20px]">※ 댄스화 구매를 원하실 경우, 연수 시작 전 미리
+                                                        주문해 주세요.</li>
+                                                    <li class="list-none text-[#A1A1A1] text-sm">※ 문의: 010-6661-9191</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!-- 버튼 -->
+                                    <div class="flex justify-end gap-3 mt-8">
+                                        <button id="submitEditBtn"
+                                            class="bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md shadow-sm">
+                                            신청하기
+                                        </button>
+                                        <button
+                                            class="closeEditModalBtn bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#4B5563] font-semibold py-2 px-5 rounded-md border border-[#D1D5DB]">
+                                            취소하기
+                                        </button>
+                                    </div>
+                                </form> 
+                            </div>
                         </div>
-                    </div>
-                    <span class="text-base text-[#A1A1A1] mt-1">25.04.01 ｜ 12:12:03</span>
-                </div>
-                <hr class="my-4 border-[1.5px] border-[#2B5BBB]" />
-                <!-- 하단 정보들 -->
-                <div class="grid max-md:grid-cols-3 grid-cols-10 gap-y-4 gap-x-4 text-base text-[#292929]">
-                    <div
-                        class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">적용시기</span>
-                        <span class="text-[20px] max-md:text-[18px]">2025 · 1학기</span>
-                    </div>
-                    <div
-                        class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">연수기간</span>
-                        <span class="text-[20px] max-md:text-[18px]">25.04.09 ~ 25.07.14</span>
-                    </div>
-                    <div
-                        class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">요일회차</span>
-                        <span class="text-[20px] max-md:text-[18px]">수요일 0차</span>
-                    </div>
-                    <div class="col-span-3 hidden max-md:block">
-                        <hr class="border-[1px] border-[#EFEFEF]" />
-                    </div>
-                    <div
-                        class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">이수학점</span>
-                        <span class="text-[20px] max-md:text-[18px]">30시간 0점</span>
-                    </div>
-                    <div class="col-span-10 max-md:hidden">
-                        <hr class="border-[1px] border-[#EFEFEF]" />
-                    </div>
-                    <div
-                        class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">교육장소</span>
-                        <span class="text-[20px] max-md:text-[18px]">서울디자인고 | 컨실초</span>
-                    </div>
-                    <div
-                        class="flex items-center col-span-3 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">지정번호</span>
-                        <span class="text-[20px] max-md:text-[18px]">경기-교육-2025-216</span>
-                    </div>
-                    <div class="col-span-3 hidden max-md:block">
-                        <hr class="border-[1px] border-[#EFEFEF]" />
-                    </div>
-                    <div
-                        class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">수강료</span>
-                        <span class="text-[20px] max-md:text-[18px]">₩ 140,000</span>
-                    </div>
-                    <div
-                        class="flex items-center col-span-2 max-md:col-span-1 max-md:flex-col max-md:items-start">
-                        <span class="w-20 text-[#727272] max-md:text-[16px]">지원금액</span>
-                        <span class="text-[20px] max-md:text-[18px]">₩ 0</span>
-                    </div>
-                </div>
-                <!-- 토클 버튼 -->
-                <div class="flex justify-end mt-2">
-                    <button 
-                        class="sbtoggle-icon bg-[#EFEFEF] flex justify-center items-center align-middle hover:bg-[#DDDDDD] p-2.5 rounded-lg">
-                        <span class="inline-block align-middle">
-                            <img src="img/down-arrow.png" alt="토글 아이콘" class="toggle-img w-5 h-5" />
-                        </span>
-                    </button>
-                </div>
-                <!-- 토글 콘텐츠 -->
-                <div class="training-details hidden mt-8">
-                    <span class="w-20 text-[#727272]">연수내용</span>
-                    <div
-                        class="bg-[#FAFAFA] border border-[#E3E6EA] rounded-xl p-8 text-[#292929] mt-4 text-base">
-                        <span>자율 웰빙초중급 (지터벅, 블루스에 관심 있는 사람은 누구나)</span>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>장소: 서울디자인고 4층 체육관</li>
-                            <li>시간: 2025.2.1(토) 개강 / 10 ~ 12시</li>
-                            <li>지터벅, 블루스</li>
-                            <li>준비물: 댄스화, 개인음료, 편한 복장</li>
-                            <li class="list-none text-[#A1A1A1] text-sm mt-[20px]">※ 댄스화 구매를 원하실 경우, 연수 시작 전 미리
-                                주문해 주세요.</li>
-                            <li class="list-none text-[#A1A1A1] text-sm">※ 문의: 010-6661-9191</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>     
-            <!-- 버튼 -->
-            <div class="flex justify-end gap-3 mt-8">
-                <button id="submitEditBtn"
-                    class="bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md shadow-sm">
-                    신청하기
-                </button>
-                <button
-                    class="closeEditModalBtn bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#4B5563] font-semibold py-2 px-5 rounded-md border border-[#D1D5DB]">
-                    취소하기
-                </button>
-            </div>
-        </form>    
-    </div>
-</div>
 
                        
                     </div>
@@ -857,6 +857,12 @@
                     </button>
                 </div>
             </div>
+            <!-- TOP버튼 -->
+            <button
+                class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+                TOP
+            </button>
+        
         </div>
     </div>
 
