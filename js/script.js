@@ -95,204 +95,6 @@ document.addEventListener('click', (event) => {
 });
 
 
-// // ✅ 사이드 메뉴 설정
-// document.addEventListener('DOMContentLoaded', function () {
-//     // 메뉴 링크 정보 설정
-//     const links = [
-//         { id: 'dashboardLink', path: ['/index.html', '/'] },
-//         { id: 'userLink', path: ['user'] },
-//         { id: 'trainingLink', path: ['training'], parentId: 'trainingLink', isSubMenu: true },
-//         { id: 'studentLink', path: ['student'], parentId: 'studentLink', isSubMenu: true },
-//         { id: 'graduateLink', path: ['graduate'], parentId: 'graduateLink', isSubMenu: true },
-//         { id: 'qualifyLink', path: ['qualify'], parentId: 'qualifyLink', isSubMenu: true },
-//         { id: 'adminLink', path: ['admin'], parentId: 'adminLink', isSubMenu: true },
-//         { id: 'mailLink', path: ['mail'], parentId: 'mailLink', isSubMenu: true },
-//         { id: 'settingLink', path: ['setting'], parentId: 'settingLink', isSubMenu: true },
-//     ];
-
-//     // 현재 페이지 경로 가져오기
-//     const currentPage = window.location.pathname;
-    
-//     // 서브메뉴 매핑 - 현재 페이지가 서브메뉴에 속하는지 확인하기 위한 매핑
-//     const subMenuMapping = {
-//         'training-01.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-02.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-create.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-end-01.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-end-02.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-before-2020-01.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'training-before-2020-02.html': { parentId: 'trainingLink', linkClass: 'px-8 py-3' },
-//         'student-pay.html': { parentId: 'studentLink', linkClass: 'px-8 py-3' },
-//         'student-record.html': { parentId: 'studentLink', linkClass: 'px-8 py-3' },
-//         'graduate.html': { parentId: 'graduateLink', linkClass: 'px-8 py-3' },
-//         'qualify.html': { parentId: 'qualifyLink', linkClass: 'px-8 py-3' },
-//         'admin.html': { parentId: 'adminLink', linkClass: 'px-8 py-3' },
-//         'mail.html': { parentId: 'mailLink', linkClass: 'px-8 py-3' },
-//         'setting.html': { parentId: 'settingLink', linkClass: 'px-8 py-3' }
-//     };
-
-//     // 현재 페이지에 해당하는 메인메뉴와 서브메뉴 찾기
-//     const currentPageName = currentPage.split('/').pop();
-//     let activeMainMenu = null;
-//     let activeSubMenu = null;
-
-//     // 1. 현재 페이지가 메인메뉴인지 확인
-//     links.forEach(link => {
-//         const linkElement = document.getElementById(link.id);
-//         if (linkElement) {
-//             if (link.path.some(p => currentPage.startsWith(p))) {
-//                 linkElement.classList.add('active');
-
-//                 // 서브메뉴 메인링크인 경우, 해당 ID 저장
-//                 if (link.isSubMenu) {
-//                     activeMainMenu = link.id;
-//                 }
-//             }
-//         }
-//     });
-
-//     // 2. 현재 페이지가 서브메뉴인지 확인
-//     if (currentPageName in subMenuMapping) {
-//         const subMenuInfo = subMenuMapping[currentPageName];
-//         activeMainMenu = subMenuInfo.parentId;
-        
-//         // 현재 페이지와 일치하는 서브메뉴 링크 찾기
-//         const mainMenuElement = document.getElementById(activeMainMenu);
-//         if (mainMenuElement) {
-//             const parentLi = mainMenuElement.closest('.group');
-//             if (parentLi) {
-//                 const subMenuLinks = parentLi.querySelectorAll('.subUl a');
-//                 subMenuLinks.forEach(link => {
-//                     if (link.getAttribute('href') === currentPageName) {
-//                         activeSubMenu = link;
-//                         link.classList.add('active');
-//                         link.classList.add('text-[#1E4799]');
-//                     }
-//                 });
-//             }
-//         }
-//     }
-
-//     // 서브메뉴 토글 함수
-//     function toggleSubMenu(event, forceOpen = false) {
-//         event.preventDefault();
-//         event.stopPropagation();
-
-//         const mainLink = event.currentTarget;
-//         const parentLi = mainLink.closest('.group');
-//         const submenu = parentLi.querySelector('.subUl');
-//         const arrow = parentLi.querySelector('.subIcon');
-        
-//         // 서브메뉴 상태 확인
-//         const isOpen = !submenu.classList.contains('max-h-0');
-
-//         // 기존 토글 동작 유지 (모든 메뉴 닫기는 forceOpen이 false일 때만)
-//         if (!forceOpen) {
-//             // 모든 서브메뉴 닫기
-//             document.querySelectorAll('.subUl').forEach(ul => {
-//                 if (ul !== submenu) {
-//                     ul.classList.add('max-h-0');
-//                     ul.classList.remove('max-h-150', 'py-2');
-                    
-//                     // 해당 화살표도 초기화
-//                     const parentGroup = ul.closest('.group');
-//                     if (parentGroup) {
-//                         const arrow = parentGroup.querySelector('.subIcon');
-//                         if (arrow) {
-//                             arrow.classList.remove('rotate-[-90deg]');
-//                         }
-//                     }
-//                 }
-//             });
-//         }
-
-//         // 현재 서브메뉴 열기/닫기
-//         if (forceOpen || submenu.classList.contains('max-h-0')) {
-//             // 서브메뉴 열기
-//             submenu.classList.remove('max-h-0');
-//             submenu.classList.add('max-h-150', 'py-2');
-//             arrow.classList.add('rotate-[-90deg]');
-            
-//             // 로컬 스토리지에 상태 저장
-//             localStorage.setItem(mainLink.id, 'open');
-//         } else {
-//             // 서브메뉴 닫기 (forceOpen이 false일 때만)
-//             submenu.classList.add('max-h-0');
-//             submenu.classList.remove('max-h-96', 'py-2');
-//             arrow.classList.remove('rotate-[-90deg]');
-            
-//             // 로컬 스토리지에 상태 저장
-//             localStorage.setItem(mainLink.id, 'closed');
-//         }
-//     }
-
-//     // 모든 메인 링크에 toggleSubMenu 이벤트 연결 (서브메뉴가 있는 경우에만)
-//     document.querySelectorAll('.mainLink').forEach(link => {
-//         const id = link.id;
-//         const targetLink = links.find(l => l.id === id);
-//         if (targetLink && targetLink.isSubMenu) {
-//             link.addEventListener('click', function(e) {
-//                 toggleSubMenu(e);
-//             });
-//         }else {
-//             // 서브메뉴가 없는 링크에 포커스 및 active 클래스 처리
-//             link.addEventListener('click', function(e) {
-//                 e.stopPropagation(); // 이벤트 버블링 중단
-//                 // 모든 active 클래스 제거
-//                 document.querySelectorAll('.mainLink').forEach(l => l.classList.remove('active'));
-//                 // 현재 클릭된 링크에 active 클래스 추가
-//                 link.classList.add('active');
-//                 link.focus(); // 포커스를 명시적으로 설정
-//             });
-//         }
-//     });
-
-//     // 페이지 로드 시 서브메뉴 상태 처리
-//     function initializeMenu() {
-//         // 현재 페이지가 서브메뉴 페이지인 경우
-//         if (activeMainMenu) {
-//             const mainMenuElement = document.getElementById(activeMainMenu);
-//             if (mainMenuElement) {
-//                 // 메인 메뉴 활성화
-//                 mainMenuElement.classList.add('active');
-                
-//                 // 해당 서브메뉴 열기
-//                 const event = {
-//                     preventDefault: () => {},
-//                     stopPropagation: () => {},
-//                     currentTarget: mainMenuElement
-//                 };
-//                 toggleSubMenu(event, true);
-                
-//                 // 서브메뉴 아이템 활성화 및 포커스
-//                 if (activeSubMenu) {
-//                     activeSubMenu.classList.add('active');
-//                     activeSubMenu.classList.add('bg-[#EDF3FF]','text-[#1E4799]');
-//                     activeSubMenu.focus();
-                    
-//                     // 메인 메뉴에도 포커스를 설정
-//                     mainMenuElement.focus();
-//                 }
-//             }
-//         } else {
-//             // 서브메뉴가 없는 경우에도 메인 메뉴에 포커스를 주기
-//             const activeLink = document.querySelector('.mainLink.active');
-//             if (activeLink) {
-//                 activeLink.focus();
-//             }
-//         }
-//     }
-//     document.querySelectorAll('.subUl a').forEach(link => {
-//         link.setAttribute('tabindex', '0'); // 키보드 접근성
-//         link.classList.add('focus:bg-[#EDF3FF]'); // 포커스 스타일
-//         link.addEventListener('click', e => {
-//             e.stopPropagation(); // 메인 메뉴가 접히지 않도록
-//         });
-//     });
-
-//     // 초기화 실행
-//     initializeMenu();
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
     const keywordLinkMap = {
@@ -310,6 +112,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentPage = window.location.pathname.split('/').pop(); // ex) userList.html
     let activeMainMenu = null;
     let activeSubMenu = null;
+
+    // 모든 서브메뉴 닫기 함수
+    function closeAllSubmenus() {
+        document.querySelectorAll('.subUl').forEach(ul => {
+            ul.classList.add('max-h-0');
+            ul.classList.remove('max-h-150', 'py-2');
+
+            const group = ul.closest('.group');
+            if (group) {
+                const arrow = group.querySelector('.subIcon');
+                if (arrow) {
+                    arrow.classList.remove('rotate-[-90deg]');
+                }
+                // 저장
+                const mainLink = group.querySelector('.mainLink');
+                if (mainLink?.id) {
+                    localStorage.setItem(mainLink.id, 'closed');
+                }
+            }
+        });
+    }
 
     // 1. 현재 페이지가 어떤 메인 메뉴에 해당하는지 매핑 키워드로 찾기
     for (const keyword in keywordLinkMap) {
@@ -344,6 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (arrow) {
                     arrow.classList.add('rotate-[-90deg]');
                 }
+            } else {
+                // 서브메뉴가 없는 메인 메뉴인 경우 모든 서브메뉴 닫기
+                closeAllSubmenus();
             }
         }
     }
@@ -398,6 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 4. 각 메인 메뉴에 이벤트 연결
     document.querySelectorAll('.mainLink').forEach(link => {
+        link.setAttribute('tabindex', '0');
         const id = link.id;
         const parentLi = link.closest('.group');
         const submenu = parentLi?.querySelector('.subUl');
@@ -410,6 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('.mainLink').forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
                 link.focus();
+                localStorage.setItem('activeMenu', link.id); 
             });
         }
     });
@@ -432,6 +260,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const mainLink = parentGroup.querySelector('.mainLink');
                 if (mainLink) {
                     mainLink.classList.add('active');
+                    localStorage.setItem('activeMenu', mainLink.id);
+                        // 포커스 이동 코드 추가
+                        mainLink.focus();
                 }
             }
         });
@@ -439,6 +270,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 6. 로컬 스토리지 기반으로 서브메뉴 상태 복원
     function restoreSubMenuState() {
+        // 메인 메뉴 포커스 상태 복원
+        const activeMenuId = localStorage.getItem('activeMenu');
+        if (activeMenuId) {
+            const activeMenu = document.getElementById(activeMenuId);
+            if (activeMenu) {
+                activeMenu.classList.add('active');
+                activeMenu.focus();
+            }
+        }
         document.querySelectorAll('.mainLink').forEach(link => {
             const savedState = localStorage.getItem(link.id);
             if (savedState === 'open') {
@@ -448,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     currentTarget: link
                 };
                 toggleSubMenu(event, true);
-            }
+            } 
         });
     }
 

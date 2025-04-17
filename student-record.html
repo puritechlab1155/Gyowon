@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-[20]">
+    <header class="relative z-100">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -80,7 +80,7 @@
                             <div class="relative flex-shrink-0 pl-2">
                                 <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-3 max-lg:pr-0">▼</button>
                                 
-                                <ul id="dropdown-menu" class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden z-10 xl:mt-1">
+                                <ul id="dropdown-menu" class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden z-600 xl:mt-1">
                                     <!-- 1. 최근댄스화 주문 -->
                                     <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
                                         <div class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
@@ -146,7 +146,7 @@
             </div>
         </nav>
         <!-- 모바일 전용 배너 -->
-        <div id="mobile-banner" class="flex fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md overflow-hidden transition-all duration-300 h-auto">
+        <div id="mobile-banner" class="flex fixed top-[64px] z-600 md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md overflow-hidden transition-all duration-300 h-auto">
             <div class="banner-container flex transition-transform duration-300 ease-in-out">
                 <!-- 배너 아이템들 -->
                 <div class="shoes banner-item text-white flex-shrink-0 w-full">   
@@ -175,7 +175,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-10 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -1075,10 +1075,10 @@
 
 
     <!-- 모달 배경 -->
-    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-899 hidden"></div>
 
     <!-- 필터 모달 -->
-    <div id="filterModal" class="fixed inset-0 top-[60px] bg-white z-50 hidden overflow-y-auto">
+    <div id="filterModal" class="fixed inset-0 top-[60px] bg-white z-900 hidden overflow-y-auto">
         <div class="p-4 border-b border-gray-200 flex justify-between items-center">
             <h2 class="font-medium paperlogy text-[26px]">검색 조건 설정</h2>
             <button id="closeButton">
@@ -1279,7 +1279,7 @@
 
 
     <!-- 기초자료 모달 -->
-    <div id="basicDataModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+    <div id="basicDataModal" class="fixed inset-0 bg-black bg-opacity-50 z-800 hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] max-w-5xl max-h-[90vh] overflow-y-auto shadow-lg relative" style="-ms-overflow-style:none; scrollbar-width:none;">
             
             <button class="closeBasicDataBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
@@ -1287,7 +1287,7 @@
             </button>
             <h2 class="h1-title paperlogy font-normal text-[#292929] mb-4 text-left">기초자료</h2>
             <div class="border-t-[2px] border-[#2B5BBB]"></div>
-            <div class="printArea landscape">
+            <div class="printArea">
                 <div class="basicdata-box">
                     <h2 class="text-[28px] max-sm:text-[22px] font-semibold text-[#292929] mt-8 mb-10 text-center">라틴 초중급 과정</h2>
                     <div class="flex justify-between max-xl:flex-col">
@@ -1421,7 +1421,7 @@
 
 
     <!-- 과정출석부 모달 -->
-    <div id="attendanceModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+    <div id="attendanceModal" class="fixed inset-0 bg-black bg-opacity-50 z-800 hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] max-h-[90vh] overflow-y-auto shadow-lg relative" style="-ms-overflow-style:none; scrollbar-width:none;">
             
             <button class="closeAttendanceModal absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
@@ -1546,7 +1546,7 @@
 
 
     <!-- 명찰 모달 -->
-    <div id="nameTagModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center overflow-x-auto ">
+    <div id="nameTagModal" class="fixed inset-0 bg-black bg-opacity-50 z-800 hidden flex justify-center items-center overflow-x-auto ">
         <div class="bg-white rounded-lg p-6 w-[90%] max-h-[90vh] overflow-x-auto shadow-lg relative max-w-[1300px]" style="-ms-overflow-style:none; scrollbar-width:none;">
             
             <button class="closeNameTagModal absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
@@ -1614,7 +1614,7 @@
     </div>
 
     <!-- 개인정보 모달 -->
-    <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+    <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 z-800 hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] max-w-5xl max-h-[90vh] shadow-lg relative overflow-y-auto">
             <img src="img/close.png" alt="닫기" class="closeInfoModal absolute top-4 right-4 w-6 h-6 cursor-pointer">
             <h1 class="h1-title paperlogy font-normal text-[#292929] pb-4 text-center">개인정보</h1>
@@ -1813,7 +1813,7 @@
 
 
     <!-- 이수증 슬라이드 패널 -->
-    <div id="certificateSlideOverlay" class="fixed inset-0 z-50 hidden">
+    <div id="certificateSlideOverlay" class="fixed inset-0 z-999 hidden">
         <div id="certificateSlidePanel"
             class="fixed top-0 right-[-100%] w-full max-w-[550px] h-full max-h-screen bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
             <div class="p-6">
@@ -1896,7 +1896,7 @@
     </div>
 
     <!-- 영수증 슬라이드 패널 -->
-    <div id="receiptSlideOverlay" class="fixed inset-0 z-50 hidden">
+    <div id="receiptSlideOverlay" class="fixed inset-0 z-999 hidden">
         <div id="receiptSlidePanel"
             class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
             <div class="p-6">
@@ -1907,7 +1907,7 @@
                 <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
                     <div class="printArea overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
                         <div class="relative bg-white receipt-box max-h-[650px] max-w-[570px] min-w-[550px]">
-                            <div class="relative z-10 p-4 receipt-inner">
+                            <div class="relative p-4 receipt-inner">
                                 <h1 class="text-center text-2xl font-bold mb-8 receipt">영 수 증</h1>
                         
                                 <!-- 공급자 정보 -->
@@ -2292,13 +2292,16 @@
                         #${modalId} .printArea, #${modalId} .printArea * {
                             visibility: visible;
                         }
+                        #${modalId} .printArea {
+                            padding-top: 100px;
+                        }
                         #${modalId} {
                             position: absolute;
                             left: 0;
-                            top: 30;
-                            width: auto !important; /* auto로 변경하여 내용에 맞게 조절 */
+                            top: 0;
+                            width: auto !important;
                             height: auto !important;
-                            display: block !important; /* flex hidden 해제 */
+                            display: block !important;
                         }
                         #${modalId} .printArea {
                             width: 100%; /* printArea 자체의 너비도 100%로 설정 */
