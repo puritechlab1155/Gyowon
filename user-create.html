@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -177,7 +177,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -684,23 +684,23 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">서울</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경기</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부산</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대구</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인천</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">광주</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대전</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">울산</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강원도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청남도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경상북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라남도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">제주</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">서울</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경기</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부산</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대구</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인천</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">광주</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대전</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">울산</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강원도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청북도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청남도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경상북도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라북도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라남도</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">제주</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
                             </div>
                         </div>
                     </div>
@@ -716,13 +716,13 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인터넷검색</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">동료교사추천</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내공문</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청단체연수</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내책자</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타(직접입력)</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인터넷검색</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">동료교사추천</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내공문</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청단체연수</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내책자</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타(직접입력)</div>
                             </div>
                         </div>
                     </div>
@@ -743,16 +743,16 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
                             </div>
                         </div>
                     </div>
@@ -769,10 +769,10 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">공립</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">사립</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">국립</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">공립</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">사립</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">국립</div>
                             </div>
                         </div>
                     </div>
@@ -791,7 +791,7 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
                             </div>
                         </div>
                     </div>
@@ -821,7 +821,7 @@
                             
                                     <!-- 드롭다운 메뉴 -->
                                     <div id="dropdownMenu"
-                                    class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto z-10">
+                                    class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                     <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="선택하세요">선택하세요</div>
                                     <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="교사">교사</div>
                                     <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기간제">기간제</div>
@@ -852,19 +852,19 @@
                                     </button>
                                     
                                     <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap ">교사</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기간제</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교감</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">원감</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장전문직</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">행정실장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육공무직</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강사</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반직</div>
-                                        <div id="toggleButton" class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap ">교사</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기간제</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교감</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">원감</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장전문직</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">행정실장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육공무직</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강사</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반직</div>
+                                        <div id="toggleButton" class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타</div>
                                     </div>
                                 </div>
                             </div>
@@ -892,7 +892,7 @@
                             </p>
                         
                             <!-- sm 이하에서 input 포커스 시 나타나는 말풍선 툴팁 -->
-                            <!-- <div class="absolute bottom-[52px] left-0 bg-black text-white text-[13px] leading-[18px] px-3 py-2 rounded-lg opacity-90 max-w-[280px] hidden sm:max-md:block peer-focus:block z-[9999]"
+                            <!-- <div class="absolute bottom-[52px] left-0 bg-black text-white text-[13px] leading-[18px] px-3 py-2 rounded-lg opacity-90 max-w-[280px] hidden sm:max-md:block peer-focus:block"
                             >
                             ※ "교육" 또는 "전문" 생략해주세요. <br/>
                             (초등교육/유아교육/특수교육/전문상담 <br/> → 초등/유아/특수/상담)
@@ -917,16 +917,16 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
                             </div>
                         </div>
                     </div>
@@ -950,10 +950,10 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">관리자</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">최고관리자</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">관리자</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">최고관리자</div>
                             </div>
                         </div>
                     </div>
@@ -999,49 +999,68 @@
     </div>
 
     <script>
-        // ✅ 드롭다운 열고 닫기
-        document.querySelectorAll('.dropdown-button').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
-                if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '500';
-                }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
+        // ✅  드롭다운 열고 닫기
+        function setupDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach((dropdown) => {
+                const button = dropdown.querySelector(".dropdown-button");
+                const menu = dropdown.querySelector(".dropdown-menu");
+                const options = dropdown.querySelectorAll(".dropdown-item");
+                const selectedText = dropdown.querySelector(".selected-option");
+
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation();
+
+                    // 모든 드롭다운 닫고 z-index 초기화
+                    closeAllDropdowns();
+
+                    // 현재 드롭다운만 열고 z-index 높임
+                    menu.classList.remove("hidden");
+                    menu.classList.add("z-[500]");
                 });
-                menu.classList.toggle('hidden');
+
+                // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
+                menu.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // 항목 선택 시 처리
+                options.forEach((option) => {
+                    option.addEventListener("click", function () {
+                        selectedText.textContent = this.textContent;
+                        selectedText.style.color = "#202020";
+                        selectedText.parentElement.style.backgroundColor = "#FFFFFF";
+                        menu.classList.add("hidden");
+                        menu.classList.remove("z-[500]");
+                    });
+                });
             });
-        });
+        }
 
-        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-                buttonSpan.classList.remove('text-[#AFAFAF]');
-                buttonSpan.classList.add('text-[#292929]');
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '500';
+        // ✅  드롭다운 옵션 클릭 시 텍스트 변경
+        function closeAllDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach((dropdown) => {
+                const menu = dropdown.querySelector(".dropdown-menu");
+                if (menu) menu.classList.add("hidden");
+                menu.classList.remove("z-[500]");
             });
-        });
-        
-
+        }
 
         document.addEventListener("DOMContentLoaded", function () {
-            setupDropdowns(); // 최초 실행
+            setupDropdowns();
 
+            // 바깥 클릭 시 드롭다운 닫기
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+        });
+
+        // ✅ 인풋 옵션
+        document.addEventListener("DOMContentLoaded", function () {
+            setupDropdowns(); 
+            
             // input 이벤트 리스너도 그대로 유지
             const inputs = document.querySelectorAll("input");
             inputs.forEach(input => {
@@ -1062,7 +1081,7 @@
         });
 
 
-        // 기타직급
+        // ✅ 기타직급
         document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
                 item.addEventListener('click', function () {
                 const dropdown = this.closest('.dropdown');

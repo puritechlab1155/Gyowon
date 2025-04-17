@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -175,7 +175,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -734,7 +734,7 @@
                             </div>
                         </div>
                         <div
-                            class=" flex justify-between items-center space-x-2 max-lg:space-x-0 max-lg:grid max-lg:grid-cols-5 max-lg: max-lg:w-full">
+                            class=" flex justify-between items-center gap-2 space-x-2 max-lg:space-x-0 max-lg:grid max-lg:grid-cols-5 max-lg:w-full">
                             <div
                                 class="flex justify-between space-x-2 max-lg:space-x-0 max-2xl:space-x-1  max-lg:col-span-4">
                                 <input type="text" placeholder="연수 과정 검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
@@ -1342,10 +1342,10 @@
     </div>
 
     <!-- 모달 배경 -->
-    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-899 hidden"></div>
+    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-[899] hidden"></div>
 
     <!-- 필터 모달 -->
-    <div id="filterModal" class="fixed inset-0 top-[60px] bg-white z-900 hidden overflow-y-auto">
+    <div id="filterModal" class="fixed inset-0 top-[60px] bg-white z-[900] hidden overflow-y-auto">
         <div class="p-4 border-b border-gray-200 flex justify-between items-center">
             <h2 class="font-medium paperlogy text-[26px]">검색 조건 설정</h2>
             <button id="closeButton">
@@ -1649,7 +1649,7 @@
                         <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
                                 과정상태 </label>
-                            <div class="relative dropdown z-[9700] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg focus:bg-[#FFFFFF] h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1691,13 +1691,13 @@
                                         rounded-l-lg">
                                     연수원
                                 </label>
-                                <input type="radio" name="gender" id="training-02" value="연수회"
+                                <input type="radio" name="gender" id="training-02" value="연구회"
                                     class="hidden peer/training-02" />
                                 <label for="training-02" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
                                         border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
                                         peer-checked/training-02:bg-[#EDF3FF] peer-checked/training-02:text-[#2B5BBB] peer-checked/training-02:border-[#2B5BBB]
                                         rounded-r-lg">
-                                    연수회
+                                    연구회
                                 </label>
                             </div>
                         </div>
@@ -1706,7 +1706,7 @@
                             class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">직무</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1740,7 +1740,7 @@
                             class="px-2 bg-[#F9F9F9] max-xl:bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">종목</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1774,7 +1774,7 @@
                         <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">회차</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1817,7 +1817,7 @@
                             class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">학기</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1884,7 +1884,7 @@
                             class="px-2 bg-[#F9F9F9] max-xl:bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">요일</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -1930,7 +1930,7 @@
                         <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                             <label
                                 class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929]">교육장소</label>
-                            <div class="relative dropdown z-[9900] w-2/3">
+                            <div class="relative dropdown w-2/3">
                                 <button type="button"
                                     class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                     <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -2213,7 +2213,7 @@
             });
         });
 
-        // 드롭다운 옵션 클릭 시 텍스트 변경
+        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
         document.querySelectorAll('.dropdown-item').forEach(item => {
             item.addEventListener('click', function () {
                 const dropdown = this.closest('.dropdown');

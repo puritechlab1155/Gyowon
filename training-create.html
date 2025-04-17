@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -177,7 +177,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -570,7 +570,7 @@
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
                             과정상태 </label>
-                        <div class="relative dropdown z-[9700] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg focus:bg-[#FFFFFF] h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -584,16 +584,16 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     선택하세요</div> -->
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     과정개설 및 접수증</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     접수마감</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     과정종료</div>
                             </div>
                         </div>
@@ -612,13 +612,13 @@
                                     rounded-l-lg">
                                 연수원
                             </label>
-                            <input type="radio" name="gender" id="training-02" value="연수회"
+                            <input type="radio" name="gender" id="training-02" value="연구회"
                                 class="hidden peer/training-02" />
                             <label for="training-02" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
                                     border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
                                     peer-checked/training-02:bg-[#EDF3FF] peer-checked/training-02:text-[#2B5BBB] peer-checked/training-02:border-[#2B5BBB]
                                     rounded-r-lg">
-                                연수회
+                                연구회
                             </label>
                         </div>
                     </div>
@@ -627,7 +627,7 @@
                         class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">직무</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -641,16 +641,16 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     선택하세요</div> -->
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     자율</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     서울</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     경기</div>
                             </div>
                         </div>
@@ -661,7 +661,7 @@
                         class="px-2 bg-[#F9F9F9] max-xl:bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">종목</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -675,19 +675,19 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     선택하세요</div> -->
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     댄스스포츠</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     웰빙댄스</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     라인댄스</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     필라테스</div>
                             </div>
                         </div>
@@ -695,7 +695,7 @@
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">회차</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -709,19 +709,19 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     해당없음</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     1차</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     2차</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     3차</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     4차</div>
                             </div>
                         </div>
@@ -731,14 +731,14 @@
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">적용년도</label>
-                        <input placeholder="숫자만 입력 (예: 2025)"
+                        <input placeholder="숫자만 입력 (예: 2025)" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
                             class="h-[45px] w-2/3 text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:bg-[#FFFFFF] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
                     <div
                         class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">학기</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -752,19 +752,19 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FFFFFF] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     선택하세요</div> -->
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     1학기</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     하계</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     2학기</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     동계</div>
                             </div>
                         </div>
@@ -775,13 +775,13 @@
                         class="px-2 bg-[#F9F9F9] max-xl:bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">이수시간</label>
-                        <input placeholder="숫자만 입력 (예: 30)"
+                        <input placeholder="숫자만 입력 (예: 30)" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
                             class="h-[45px] w-2/3 text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:bg-[#FFFFFF] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">학점</label>
-                        <input placeholder="숫자만 입력 (예: 3)"
+                        <input placeholder="숫자만 입력 (예: 3)" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
                             class="h-[45px] w-2/3 text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:bg-[#FFFFFF] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
 
@@ -789,14 +789,14 @@
                     <div class="px-2 bg-[#FFFFFF]  border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">수강료</label>
-                        <input placeholder="숫자만 입력 (예: 140000)"
+                        <input placeholder="숫자만 입력 (예: 140000)" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
                             class="h-[45px] w-2/3 text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:bg-[#FFFFFF] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
                     <div
                         class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">지원비</label>
-                        <input placeholder="숫자만 입력 (예: 140000)"
+                        <input placeholder="숫자만 입력 (예: 140000)" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
                             class="h-[45px] w-2/3 text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:bg-[#FFFFFF] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
 
@@ -805,7 +805,7 @@
                         class="px-2 bg-[#F9F9F9] max-xl:bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">요일</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <!-- <span class="selected-option text-[18px] max-sm:text-[16px] text-[#AFAFAF]">매주 진행요일 선택</span> -->
@@ -820,39 +820,39 @@
                             <div
                                 class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     매주 진행요일 선택</div> -->
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     해당없음</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     월요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     화요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     수요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     목요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     금요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     토요일</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                     일요일</div>
                             </div>
                         </div>
                     </div>
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label
-                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929]">교육장소</label>
-                        <div class="relative dropdown z-[9900] w-2/3">
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">교육장소</label>
+                        <div class="relative dropdown w-2/3">
                             <button type="button"
                                 class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] text-[#AFAFAF]">선택하세요</span>
@@ -864,19 +864,34 @@
                             </button>
                             <!-- 드롭다운 옵션 -->
                             <div
-                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <!-- <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#fefefe] hover:text-[#2B5BBB]">
-                                    선택하세요</div> -->
+                                class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#fefefe] hover:text-[#2B5BBB]">
-                                    일반</div>
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#fefefe] hover:text-[#2B5BBB]">
-                                    관리자</div>
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    연촌초</div>
                                 <div
-                                    class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#fefefe] hover:text-[#2B5BBB]">
-                                    최고관리자</div>
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    명원초</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    동구로초</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    남수원중</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    서울디자인고</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    오금고</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    창동고</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    상계고</div>
                             </div>
                         </div>
                     </div>
@@ -906,7 +921,7 @@
                         class="bg-[#F9F9F9] max-xl:bg-[#FEFEFE] col-span-2 px-2 h-[60px] flex items-center max-xl:col-span-1 max-sm:flex-col max-sm:h-[100px]">
                         <div class="w-1/6 max-xl:w-1/4 max-sm:justify-start max-sm:w-full">
                             <label
-                                class="p-4 x-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center py-4 xl:hidden">교육내용</label>
+                                class="p-4 x-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] flex items-center py-4 xl:hidden">교육내용</label>
                         </div>
                         <div
                             class="w-5/6 max-xl:w-3/4 max-sm:w-full max-xl:justify-end max-sm:gap-1 max-xl:justify-start flex gap-2">
@@ -1127,6 +1142,7 @@
     </div>
 
     <script>
+        // ✅  드롭다운 열고 닫기
         function setupDropdowns() {
             const dropdowns = document.querySelectorAll(".dropdown");
 
@@ -1144,7 +1160,7 @@
 
                     // 현재 드롭다운만 열고 z-index 높임
                     menu.classList.remove("hidden");
-                    dropdown.classList.add("z-[9999]");
+                    menu.classList.add("z-[500]");
                 });
 
                 // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
@@ -1157,19 +1173,21 @@
                     option.addEventListener("click", function () {
                         selectedText.textContent = this.textContent;
                         selectedText.style.color = "#202020";
+                        selectedText.parentElement.style.backgroundColor = "#FFFFFF";
                         menu.classList.add("hidden");
-                        dropdown.classList.remove("z-[9999]"); // 닫히면 z-index 초기화
+                        menu.classList.remove("z-[500]");
                     });
                 });
             });
         }
 
+        // ✅  드롭다운 옵션 클릭 시 텍스트 변경
         function closeAllDropdowns() {
             const dropdowns = document.querySelectorAll(".dropdown");
             dropdowns.forEach((dropdown) => {
                 const menu = dropdown.querySelector(".dropdown-menu");
                 if (menu) menu.classList.add("hidden");
-                dropdown.classList.remove("z-[9999]");
+                menu.classList.remove("z-[500]");
             });
         }
 
@@ -1182,19 +1200,20 @@
             });
         });
 
+        // ✅ 인풋 옵션
         document.addEventListener("DOMContentLoaded", function () {
-            setupDropdowns(); // 최초 실행
-
+            setupDropdowns(); 
+            
             // input 이벤트 리스너도 그대로 유지
             const inputs = document.querySelectorAll("input");
             inputs.forEach(input => {
                 input.addEventListener("input", () => {
                     if (input.value.trim() !== "") {
                         input.classList.remove("bg-[#F3F3F3]");
-                        input.classList.add("bg-[#Fefefe]");
+                        input.classList.add("bg-[#FFFFFF]");
                     } else {
                         input.classList.remove("bg-[#EFEFEF]");
-                        input.classList.add("bg-[#Fefefe]");
+                        input.classList.add("bg-[#FFFFFF]");
                     }
                 });
             });
@@ -1204,6 +1223,7 @@
             });
         });
 
+        // ✅ 컬러팔레트
         document.addEventListener("DOMContentLoaded", function () {
             // 글자색
             const toggleBtn = document.getElementById("colorToggleBtn");
@@ -1257,6 +1277,7 @@
                 bgPalette.classList.add("hidden");
             });
         });
+
     </script>
 </body>
 

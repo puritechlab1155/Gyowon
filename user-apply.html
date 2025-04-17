@@ -9,7 +9,7 @@
 
 </head>
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -79,7 +79,7 @@
                             <div class="relative flex-shrink-0 pl-2">
                                 <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-3 max-lg:pr-0">▼</button>
                                 
-                                <ul id="dropdown-menu" class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden z-10 xl:mt-1">
+                                <ul id="dropdown-menu" class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden xl:mt-1">
                                     <!-- 1. 최근댄스화 주문 -->
                                     <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
                                         <div class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
@@ -174,7 +174,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -524,8 +524,8 @@
                     <input type="text" placeholder="과정명을 검색하세요" 
                         class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] max-sm:placeholder:text-sm border border-[#DBDEE3] 
                         focus:outline-none focus:border-[#2B5BBB] rounded-[8px] px-4 w-full min-w-[250px] 
-                        h-[50px] max-sm:h-[40px] max-lg:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] " />
-                    <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-lg:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
+                        h-[50px] max-sm:h-[45px] max-xl:rounded-tr-none max-xl:rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#2B5BBB] " />
+                    <button class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] rounded-lg hover:bg-[#648DDF] focus:outline-none max-xl:rounded-tl-none max-xl:rounded-bl-none flex justify-center items-center gap-2">
                         <img src="/img/search.png" alt="검색 아이콘" class="hidden max-xl:block h-6 w-6">
                         <span class=" text-[#EDF3FF] max-xl:hidden">검색</span>
                     </button>
@@ -678,7 +678,7 @@
                         </table>
 
 <!-- 신청하기 모달 -->
-<div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+<div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[800] hidden flex justify-center items-center">
     <div class="bg-white rounded-lg p-6 w-[90%] max-w-[1200px] shadow-lg relative overflow-y-auto max-h-[80%]" style="-ms-overflow-style:none; scrollbar-width:none;">
         <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
             <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>

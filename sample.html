@@ -10,7 +10,7 @@
 
 </head>
 <body class="bg-[#F7F7F7]">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -175,7 +175,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -510,234 +510,13 @@
             </li>
         </ul>
     </div>
-
-
-    <div class="main relative">
-        <!-- 사이드 메뉴 -->
-        <div id="side-menu" class=" overflow-y-auto scrollbar-hidden absolute left-0 top-16 bg-[#FEFEFE] w-64 max-lg:w-52 transform -translate-x-full transition-transform duration-300 min-h-screen">
-            <ul class="p-4">
-                <li class="py-1">
-                    <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">대시보드</a>
-                </li>
-                <li class="py-1">
-                    <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] ">회원관리</a>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            연수
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리(이전)</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수기록</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            수강자 관리
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강자입금관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">과정 출석부</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강인원통계</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            수료자
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자 등록</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자 보고서</a>
-                        </li>
-                    </ul>
-                </li>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            자격관리
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="pl-2 pr-2 bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격등록</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격입금관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격출석부</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">합격공지</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 관리자 게시판 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            관리자 게시판
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="pr-2 pl-2 pr-2 bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">개발자 게시판</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 게시판</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관 지정서</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수 공문</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수 자료실</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">환불 처리 등록</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/ 연기 /환불관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자유게시판</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">Q&A</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문 / 조회 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">구인・구직</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            문자관리
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 그룹</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 보내기</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자 기록</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="py-1 relative group ">
-                    <!-- 자격관리 항목 -->
-                    <a href="#" 
-                        class="flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] " 
-                        onclick="toggleSubMenu(event)">
-                            설정
-                            <img src="img/dropDown.png" alt="Arrow" class="w-4 h-4 ml-2 transform transition-transform duration-300" />
-                    </a>
-                    <!-- 서브 메뉴 (기본적으로 숨김) -->
-                    <ul class="p- bg-[#F9F9F9] mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" 
-                        id="qualification-submenu">
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">권리자 권한 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">게시판 관리</a>
-                        </li>
-                        <li class="py-1">
-                            <a href="#" class="block px-4 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인 로그</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <!-- 컨텐츠 영역 -->
+    <div id="main-content"
+        class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+        <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
+            <h1 class="mt-[50px] h1-title font-normal paperlogy">샘플</h1>
         </div>
-        <!-- 컨텐츠 영역 -->
-        <div id="main-content" class="ml-64 max-lg:ml-0 transition-all duration-300">
-            <div class="w-full h-full px-6">
-                <h1 class="mt-[50px] h-[2000px] h1-title font-normal paperlogy">타이틀</h1>
-                <h3 class="sub-title block font-bold text-gray-600">sub-title</h3>
-                <p class="mt-4">여기에 실제 컨텐츠가 들어갑니다.</p>
-            </div>
-
-            <!-- TOP버튼 -->
-            <button class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
-                TOP
-            </button>
-        </div>
-    </div>  
+    </div>
 
 </body>
 </html>
