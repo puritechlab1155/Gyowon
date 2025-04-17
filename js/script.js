@@ -41,7 +41,7 @@ function openMenu() {
         switchDot.classList.add('translate-x-6'); // 기본 이동 거리
     }
 
-    mainContent.classList.add('ml-64');
+    mainContent.classList.add('ml-64'); // 본문 영역을 왼쪽으로 64px만큼 밀어서 사이드 메뉴가 열린 공간 확보.
     mainContent.classList.remove('mx-auto'); // 가운데 정렬 해제
 }
 
