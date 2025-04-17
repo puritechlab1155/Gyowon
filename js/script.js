@@ -339,55 +339,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ✅ 모바일 배너 슬라이드, 스와이프 기능
-const bannerContainer = document.querySelector('#mobile-banner .banner-container');
-const banners = document.querySelectorAll('#mobile-banner .banner-item');
-let currentIndex = 0;
+const mobileBannerContainer = document.querySelector('#mobile-banner .banner-container');
+let banners = document.querySelectorAll('#mobile-banner .banner-item');
+let currentIndex = 1;
 let touchStartX = 0;
 let touchEndX = 0;
-let autoSlideInterval; // 자동 슬라이드 인터벌 변수
+let autoSlideInterval;
 
-function showBanner(index) {
-    bannerContainer.style.transform = `translateX(-${index * 100}%)`;
+// 슬라이드 복제 (앞뒤)
+function cloneSlides() {
+    const first = banners[0];
+    const last = banners[banners.length - 1];
+    const firstClone = first.cloneNode(true);
+    const lastClone = last.cloneNode(true);
+    mobileBannerContainer.appendChild(firstClone);
+    mobileBannerContainer.insertBefore(lastClone, first);
+    banners = document.querySelectorAll('#mobile-banner .banner-item');
+}
+
+// 슬라이드 이동
+function showBanner(index, animate = true) {
+    if (!animate) {
+        mobileBannerContainer.style.transition = "none";
+    } else {
+        mobileBannerContainer.style.transition = "transform 0.3s ease";
+    }
+    mobileBannerContainer.style.transform = `translateX(-${index * 100}%)`;
     currentIndex = index;
 }
 
+// 다음/이전 슬라이드
 function showNextBanner() {
-    showBanner((currentIndex + 1) % banners.length);
+    showBanner(currentIndex + 1);
+}
+function showPrevBanner() {
+    showBanner(currentIndex - 1);
 }
 
+// 트랜지션 종료 후 위치 조정 (루프 처리)
+function handleTransitionEnd() {http://127.0.0.1:5501/student-pay.html
+    if (currentIndex === banners.length - 1) {
+        showBanner(1, false); // 마지막 복제 → 첫번째
+    } else if (currentIndex === 0) {
+        showBanner(banners.length - 2, false); // 첫 복제 → 마지막
+    }
+}
+
+// 터치 이벤트
 function handleTouchStart(event) {
-    clearInterval(autoSlideInterval); // 터치 시작 시 자동 슬라이드 중단
+    clearInterval(autoSlideInterval);
     touchStartX = event.touches[0].clientX;
 }
-
 function handleTouchMove(event) {
     touchEndX = event.touches[0].clientX;
 }
-
 function handleTouchEnd() {
     const diffX = touchStartX - touchEndX;
-    if (diffX > 50) { // 오른쪽에서 왼쪽으로 스와이프
-        if (currentIndex < banners.length - 1) {
-            showBanner(currentIndex + 1);
-        }
-    } else if (diffX < -50) { // 왼쪽에서 오른쪽으로 스와이프
-        if (currentIndex > 0) {
-            showBanner(currentIndex - 1);
-        }
+    if (diffX > 50) {
+        showNextBanner();
+    } else if (diffX < -50) {
+        showPrevBanner();
     }
-    autoSlideInterval = setInterval(showNextBanner, 3000); // 터치 종료 후 자동 슬라이드 재시작
+    autoSlideInterval = setInterval(showNextBanner, 3000);
 }
 
-// 초기 실행
+// 초기 설정
+cloneSlides();
 showBanner(currentIndex);
 
-// 자동 슬라이드 시작
+// 자동 슬라이드
 autoSlideInterval = setInterval(showNextBanner, 3000);
 
-// 이벤트 리스너 추가
-bannerContainer.addEventListener('touchstart', handleTouchStart);
-bannerContainer.addEventListener('touchmove', handleTouchMove);
-bannerContainer.addEventListener('touchend', handleTouchEnd);
+// 이벤트 연결
+mobileBannerContainer.addEventListener('transitionend', handleTransitionEnd);
+mobileBannerContainer.addEventListener('touchstart', handleTouchStart);
+mobileBannerContainer.addEventListener('touchmove', handleTouchMove);
+mobileBannerContainer.addEventListener('touchend', handleTouchEnd);
 
 
 

@@ -129,6 +129,14 @@ a * {
     /* 기본적으로 숨김 */
 }
 
+/* #mobile-banner .banner-item {
+    flex: 0 0 100%;
+    display: flex;             
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
+} */
+
 #mbanner-toggle {
     transition: transform 0.3s ease-in-out;
 }
