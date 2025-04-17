@@ -154,114 +154,202 @@ a * {
 @media print {
     @page {
         size: A4 portrait;
-        margin: 20mm;
+        margin: 10mm;
+        /* 여백 더 줄임 */
     }
 
     body,
     html {
-        width: 100%;
-        height: 100%;
-        background-color: #FFFFFF !important;
+        width: 100% !important;
+        background-color: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
+    /* 테이블 레이아웃 개선 - 높이 조정 제거 */
     table {
-        border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
+        border-collapse: collapse !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        font-size: 9px !important;
+        page-break-inside: auto !important;
     }
 
     th,
     td {
-        border: 1px solid #ccc;
-        font-size: 12px;
+        border: 1px solid #ccc !important;
+        padding: 2px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        max-width: 100px !important;
+        /* 높이 관련 속성 제거 */
     }
 
+    /* 테이블 헤더 설정 */
     thead {
-        -webkit-print-color-adjust: exact;
-        /* 색상 유지 */
-        print-color-adjust: exact;
+        display: table-header-group !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 
+    tr {
+        page-break-inside: avoid !important;
+        page-break-after: auto !important;
+    }
+
+    /* 오버플로우 문제 해결 */
     .overflow-auto,
-    .flex,
-    .justify-center {
-        display: block !important;
+    .overflow-x-auto,
+    .overflow-y-auto,
+    .overflow-hidden {
         overflow: visible !important;
     }
 
-    .printArea {
-        width: 100%;
-        height: auto;
+    /* 가로 너비만 제어 - 높이는 그대로 유지 */
+    div {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        /* height 관련 속성 제거 */
     }
 
+    /* 테이블 너비만 초기화 */
+    table {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
 
+    /* 인쇄 영역 설정 - 높이 자동 유지 */
+    .printArea {
+        width: 100% !important;
+        overflow: visible !important;
+        /* height: auto 제거 */
+    }
+
+    /* 영수증 - 기존 높이 유지 및 미세 조정 */
     .receipt-box {
-        width: 794px !important;
-        box-sizing: border-box;
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: 794px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        page-break-inside: avoid !important;
+        transform: scale(0.95) !important;
+        /* 95%로 약간 축소하여 여백 확보 */
+        transform-origin: top center !important;
+    }
+
+    /* 이수증 - 특별히 높이 관련 속성 유지 (원본 값 중요) */
+    .certificate-box {
+        width: 100% !important;
+        max-width: 794px !important;
+        height: 1080px !important;
+        /* 약간 줄여서 맞춤 */
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        page-break-inside: avoid !important;
+        aspect-ratio: auto !important;
+        transform: scale(0.95) !important;
+        /* 95%로 약간 축소하여 여백 확보 */
+        transform-origin: top center !important;
     }
 
     .certificate-box img {
-        margin: 20px auto;
-        width: 96%;
-        height: 96%;
-        object-fit: cover;
-    }
-
-    .certificate-box {
-        width: 794px !important;
-        height: 1123px !important;
-        box-sizing: border-box;
-        max-width: none !important;
-        aspect-ratio: auto !important;
+        width: 96% !important;
+        height: auto !important;
+        /* 높이를 자동으로 조정 */
+        object-fit: cover !important;
+        margin: 10px auto !important;
+        /* 여백 줄임 */
+        display: block !important;
     }
 
     .certificate-inner {
-        margin: 0 auto;
-        width: 630px;
+        margin: 0 auto !important;
+        width: 630px !important;
+        position: relative !important;
+        padding-top: 0 !important;
+        /* 상단 패딩 제거 */
     }
 
+    /* 명찰 - 원래 높이 유지하되 약간 축소 */
+    .namatag-box-flex {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 5px !important;
+        transform: scale(0.95) !important;
+        /* 약간 축소 */
+        transform-origin: top center !important;
+    }
 
+    .namatag-box-flex>div {
+        width: 48% !important;
+        page-break-inside: avoid !important;
+        margin-bottom: 10px !important;
+        box-sizing: border-box !important;
+        /* height: auto 제거 - 원래 높이 유지 */
+    }
+
+    /* 원래 이수증 폰트 크기 유지하되 여백 조정 */
     .certificate-box h2 {
-        margin-top: 70px;
+        margin-top: 60px !important;
+        /* 여백 줄임 */
         font-size: 35px !important;
     }
 
     .certificate-box h1 {
         font-size: 45px !important;
-        margin-bottom: 50px;
+        margin-bottom: 60px !important;
     }
 
     .certificate-box p {
         font-size: 18px !important;
         line-height: 2 !important;
+        /* 줄 간격 줄임 */
     }
 
     .certificate-box .certificate-info {
-        margin-bottom: 50px;
+        margin-bottom: 40px !important;
+    }
+
+    .grid > div:last-of-type{
+        margin-bottom: 40px !important;
     }
 
     .certificate-box span {
         font-size: 22px !important;
         line-height: 2 !important;
-        margin-bottom: 20px;
+        /* 줄 간격 줄임 */
+        margin-bottom: 15px !important;
+        /* 여백 줄임 */
     }
 
-    .certificate-box .grid>div:last-child {
-        margin-bottom: 20px;
-    }
-    
-    .namatag-box-flex {
-        max-width: 1300px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: start;
-        gap: 5px;
+    /* 버튼 및 불필요 요소 숨김 */
+    button,
+    .closeBasicDataBtn,
+    .closeAttendanceModal,
+    .closeNameTagModal,
+    #modalBackdrop,
+    .hidden {
+        display: none !important;
     }
 
+    /* 색상 인쇄 보장 */
     * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* 이수증/영수증 2개의 페이지로 나뉘지 않게 방지 */
+    .certificate-box,
+    .receipt-box {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
     }
 }

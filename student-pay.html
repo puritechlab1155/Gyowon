@@ -2788,11 +2788,13 @@
                 button.addEventListener('click', (e) => {
                     targetButton = e.currentTarget;
                     deleteModal.classList.remove('hidden');
+                    document.body.style.overflow = "hidden";
                 });
             });
 
             deleteCancelBtn.addEventListener('click', () => {
                 deleteModal.classList.add('hidden');
+                document.body.style.overflow = "";
                 targetButton = null;
             });
 
@@ -2816,6 +2818,7 @@
             editModalBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden"; 
                 });
             });
 
@@ -2823,6 +2826,7 @@
             editCancelBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = ""; 
                 });
             });
 

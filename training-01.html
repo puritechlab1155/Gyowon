@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-100">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
@@ -175,7 +175,7 @@
     </header>
     <!-- 사이드 메뉴 -->
     <div id="side-menu"
-        class="fixed top-[64px] z-600 overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
             <li class="py-1">
                 <a href="index.html" id="dashboardLink"
@@ -702,9 +702,6 @@
                                 <!-- 드롭다운 옵션 -->
                                 <div
                                     class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                    <div
-                                        class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                        선택</div>
                                     <div
                                         class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                         연촌초</div>
@@ -1564,7 +1561,7 @@
                 <button id="cancelButton"
                     class="flex-1 py-3 bg-[#F5F5F5] border border-[#DBDEE3] font-medium border border-[#D1D5DB] rounded-md">취소</button>
                 <button id="confirmButton"
-                    class="flex-1 py-3 bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md">적용</button>
+                    class="flex-1 py-3 bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold rounded-md">적용</button>
             </div>
         </div>
     </div>
@@ -1608,7 +1605,7 @@
             <!-- 폼1 -->
             <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
                 <div class="flex justify-between items-end mb-2">
-                    <h2 class="h1-title font-normal paperlogy font-bold">연수등록</h2>
+                    <h2 class="h1-title font-normal paperlogy font-bold">연수수정</h2>
                 </div>
                 <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
                 <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:p-0 p-10 bg-[#FFFFFF]">
@@ -2204,16 +2201,15 @@
 
 
                 <!-- 버튼 -->
-                <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
-                    <div class="max-w-[576px] flex gap-2 items-center mx-auto">
-                        <button
-                            class="max-w-[282px] w-full px-5 py-3 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
-                            취소하기
-                        </button>
-                        <button class="max-w-[282px] w-full px-5 py-3 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
-                            등록하기
-                        </button>
-                    </div>
+                <div class="flex justify-end gap-3 mt-8">
+                    <button
+                        class="closeEditModalBtn bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#4B5563] font-semibold py-2 px-6 rounded-md border border-[#D1D5DB]">
+                        취소하기
+                    </button>
+                    <button id="submitEditBtn"
+                        class="bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md shadow-sm">
+                        수정하기
+                    </button>
                 </div>
             </form>     
             </div>
@@ -2421,11 +2417,13 @@
                 button.addEventListener('click', (e) => {
                     targetButton = e.currentTarget;
                     deleteModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
                 });
             });
 
             deleteCancelBtn.addEventListener('click', () => {
                 deleteModal.classList.add('hidden');
+                document.body.style.overflow = '';
                 targetButton = null;
             });
 
@@ -2449,6 +2447,7 @@
             editModalBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
             });
 
@@ -2456,6 +2455,7 @@
             editCancelBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
                 });
             });
 
