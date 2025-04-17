@@ -3056,7 +3056,7 @@
 
 
 
-        // ✅ 영수증 모달
+        // ✅ 회원수정 모달
         document.addEventListener("DOMContentLoaded", function () {
             const editModalBtns = document.querySelectorAll(".editModalBtn");
             const editCancelBtns = document.querySelectorAll(".editCancelBtn");
@@ -3066,6 +3066,7 @@
             editModalBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
             });
 
@@ -3073,6 +3074,7 @@
             editCancelBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
                 });
             });
 
@@ -3080,6 +3082,7 @@
             editModal.addEventListener("click", (e) => {
                 if (e.target === editModal) {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
                 }
             });
         });

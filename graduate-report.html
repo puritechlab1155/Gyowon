@@ -1295,8 +1295,8 @@
         </div>
     </div>
 
-     <!-- 회원수정 모달 -->
-     <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[800] hidden flex justify-center items-center">
+    <!-- 회원수정 모달 -->
+    <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[999] hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] max-w-[1200px] shadow-lg relative overflow-y-auto max-h-[80%]">
             <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
                 <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7" />
@@ -1941,123 +1941,110 @@
     <script src="js/script.js"></script>
     <script>
 
-         // 드롭다운 클릭 핸들러
-        function handleDropdownClick(e) {
-            e.stopPropagation();
-            const dropdown = this.closest(".dropdown");
+    // ✅  드롭다운 열고 닫기
+    function setupDropdowns() {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+            const button = dropdown.querySelector(".dropdown-button");
             const menu = dropdown.querySelector(".dropdown-menu");
+            const options = dropdown.querySelectorAll(".dropdown-item");
+            const selectedText = dropdown.querySelector(".selected-option");
 
-            // 모든 드롭다운 zIndex 초기화
-            document.querySelectorAll(".dropdown").forEach((d) => (d.style.zIndex = "0"));
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
 
-            // 현재 드롭다운 열기
-            if (menu.classList.contains("hidden")) {
-            dropdown.style.zIndex = "10";
-            }
+                // 모든 드롭다운 닫고 z-index 초기화
+                closeAllDropdowns();
 
-            // 다른 드롭다운 메뉴 닫기
-            document.querySelectorAll(".dropdown-menu").forEach((m) => {
-            if (m !== menu) m.classList.add("hidden");
+                // 현재 드롭다운만 열고 z-index 높임
+                menu.classList.remove("hidden");
+                menu.classList.add("z-[500]");
             });
 
-            // 현재 드롭다운 토글
-            menu.classList.toggle("hidden");
-        }
-
-        // 드롭다운 아이템 클릭 핸들러
-        function handleDropdownItemClick() {
-            const dropdown = this.closest(".dropdown");
-            const selectedText = this.textContent.trim();
-            const buttonSpan = dropdown.querySelector(".selected-option");
-
-            buttonSpan.textContent = selectedText;
-
-            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-            if (hiddenInput) {
-            hiddenInput.value = selectedText;
-            }
-
-            // 선택된 항목 배경 흰색으로 변경
-            dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
-            item.style.backgroundColor = ""; // 초기화
-            });
-            this.style.backgroundColor = "#FFFFFF";
-
-            dropdown.querySelector(".dropdown-menu").classList.add("hidden");
-            dropdown.style.zIndex = "0";
-        }
-
-        // 이벤트 핸들러 바인딩
-        function setupDropdownEvents() {
-            document.querySelectorAll(".dropdown-button").forEach((button) => {
-            button.removeEventListener("click", handleDropdownClick);
-            button.addEventListener("click", handleDropdownClick);
+            // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
+            menu.addEventListener("click", function (event) {
+                event.stopPropagation();
             });
 
-            document.querySelectorAll(".dropdown-item").forEach((item) => {
-            item.removeEventListener("click", handleDropdownItemClick);
-            item.addEventListener("click", handleDropdownItemClick);
-            });
-        }
-
-        // 드롭다운 외 클릭 시 닫기
-        document.addEventListener("click", () => {
-            document.querySelectorAll(".dropdown-menu").forEach((menu) => {
-            menu.classList.add("hidden");
-            });
-            document.querySelectorAll(".dropdown").forEach((d) => (d.style.zIndex = "0"));
-        });
-
-        // 초기 이벤트 연결
-        setupDropdownEvents();
-
-        // ✅ 인풋 옵션
-        document.addEventListener("DOMContentLoaded", function () {
-            setupDropdowns();
-
-            // input 이벤트 리스너도 그대로 유지
-            const inputs = document.querySelectorAll("input");
-            inputs.forEach(input => {
-                input.addEventListener("input", () => {
-                    if (input.value.trim() !== "") {
-                        input.classList.remove("bg-[#F3F3F3]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    } else {
-                        input.classList.remove("bg-[#EFEFEF]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    }
+            // 항목 선택 시 처리
+            options.forEach((option) => {
+                option.addEventListener("click", function () {
+                    selectedText.textContent = this.textContent;
+                    selectedText.style.color = "#202020";
+                    selectedText.parentElement.style.backgroundColor = "#FFFFFF";
+                    menu.classList.add("hidden");
+                    menu.classList.remove("z-[500]");
                 });
             });
-
-            document.addEventListener("click", function () {
-                closeAllDropdowns();
-            });
         });
+    }
 
-
-        // ✅ 기타직급
-        document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                const buttonText = dropdown.querySelector('.selected-option');
-                const inputField = dropdown.querySelector('#customInput');
-                const value = this.getAttribute('data-value');
-
-                if (value === '기타') {
-                    buttonText.textContent = '직접 입력 중...';
-                    inputField.classList.remove('hidden');
-                } else {
-                    buttonText.textContent = value;
-                    if (inputField) {
-                        inputField.classList.add('hidden');
-                    }
-                }
-
-                menu.classList.add('hidden');
-            });
+    // ✅  드롭다운 옵션 클릭 시 텍스트 변경
+    function closeAllDropdowns() {
+        const dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach((dropdown) => {
+            const menu = dropdown.querySelector(".dropdown-menu");
+            if (menu) menu.classList.add("hidden");
+            menu.classList.remove("z-[500]");
         });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setupDropdowns();
+
+        // 바깥 클릭 시 드롭다운 닫기
+        document.addEventListener("click", function () {
+            closeAllDropdowns();
+        });
+    });
+
+    // ✅ 인풋 옵션
+    document.addEventListener("DOMContentLoaded", function () {
+        setupDropdowns(); 
         
+        // input 이벤트 리스너도 그대로 유지
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach(input => {
+            input.addEventListener("input", () => {
+                if (input.value.trim() !== "") {
+                    input.classList.remove("bg-[#F3F3F3]");
+                    input.classList.add("bg-[#FFFFFF]");
+                } else {
+                    input.classList.remove("bg-[#EFEFEF]");
+                    input.classList.add("bg-[#FFFFFF]");
+                }
+            });
+        });
+
+        document.addEventListener("click", function () {
+            closeAllDropdowns();
+        });
+    });
+
+
+    // ✅ 기타직급
+    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+            item.addEventListener('click', function () {
+            const dropdown = this.closest('.dropdown');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const buttonText = dropdown.querySelector('.selected-option');
+            const inputField = dropdown.querySelector('#customInput');
+            const value = this.getAttribute('data-value');
+
+            if (value === '기타') {
+                buttonText.textContent = '직접 입력 중...';
+                inputField.classList.remove('hidden');
+            } else {
+                buttonText.textContent = value;
+                if (inputField) {
+                inputField.classList.add('hidden');
+                }
+            }
+
+            menu.classList.add('hidden');
+            });
+        });
 
         // ✅  필터모달창 + 적용 후 선택옵션 
         document.addEventListener('DOMContentLoaded', function () {
@@ -2154,17 +2141,17 @@
 
 
 
-
-        // ✅ 회원정보 수정모달
+        // ✅ 회원수정 모달
         document.addEventListener("DOMContentLoaded", function () {
-            const editModalBtns = document.querySelectorAll(".editModalBtn");      
-            const editCancelBtns = document.querySelectorAll(".editCancelBtn");    
+            const editModalBtns = document.querySelectorAll(".editModalBtn");
+            const editCancelBtns = document.querySelectorAll(".editCancelBtn");
             const editModal = document.getElementById("editModal");
 
             // 열기
             editModalBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
             });
 
@@ -2172,6 +2159,7 @@
             editCancelBtns.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
                 });
             });
 
@@ -2179,6 +2167,7 @@
             editModal.addEventListener("click", (e) => {
                 if (e.target === editModal) {
                     editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
                 }
             });
         });
