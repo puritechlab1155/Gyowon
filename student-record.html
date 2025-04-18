@@ -183,7 +183,7 @@
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
                                 로그아웃
                             </a>
-                            <a href="#"
+                            <a href="#" id="goBackButton"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 뒤로가기
                             </a>
@@ -375,7 +375,7 @@
                             출석부</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="student-statistics.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강인원통계</a>
                     </li>
                 </ul>
@@ -408,7 +408,7 @@
                             관리</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="graduate-report.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자
                             보고서</a>
                     </li>
@@ -649,7 +649,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content"
-        class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+        class="ml-64 max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
             <h1 class="mt-[50px] h1-title border-gray-300 font-normal paperlogy">과정출석부</h1>
             <div class="flex justify-start flex-col max-md:justify-start mb-2">
@@ -1225,7 +1225,7 @@
                     </button>
                 </div>
                 <!-- TOP버튼 -->
-                <button
+                <button id="topButton"
                     class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
                     TOP
                 </button>
@@ -3075,6 +3075,9 @@
 
             // 이수증 및 영수증 슬라이드 이벤트 재설정
             reattachSlideEvents();
+
+            // 필터모달 재설정
+            initFilterModalEvents();
         }
 
         // 드롭다운 클릭 핸들러
@@ -3387,116 +3390,76 @@
             }
         }
 
-        // DOMContentLoaded 이벤트에서 호출될 초기 이벤트 리스너 설정
-        function initEventListeners() {
-            // 초기화 시 모든 이벤트 리스너 설정
-            reattachEventListeners();
+        
+    function initFilterModalEvents() {
+        const filterButton = document.getElementById("filterButton");
+        const filterModal = document.getElementById("filterModal");
+        const modalBackdrop = document.getElementById("modalBackdrop");
+        const closeButton = document.getElementById("closeButton");
+        const confirmButton = document.getElementById("confirmButton");
+        const cancelButton = document.getElementById("cancelButton");
 
-            // 문서 클릭 시 드롭다운 닫기
-            document.addEventListener("click", () => {
-                document.querySelectorAll(".dropdown-menu").forEach((menu) => {
-                    menu.classList.add("hidden");
-                });
-                document
-                    .querySelectorAll(".dropdown")
-                    .forEach((d) => (d.style.zIndex = "0"));
+        if (filterButton && filterModal) {
+            filterButton.addEventListener("click", function () {
+            filterModal.classList.remove("hidden");
+            modalBackdrop.classList.remove("hidden");
+            document.body.classList.add("overflow-hidden");
             });
 
-            // 필터 버튼 관련 이벤트 리스너
-            const filterButton = document.getElementById("filterButton");
-            const filterModal = document.getElementById("filterModal");
-            const modalBackdrop = document.getElementById("modalBackdrop");
-            const closeButton = document.getElementById("closeButton");
-            const confirmButton = document.getElementById("confirmButton");
-            const cancelButton = document.getElementById("cancelButton");
-
-            if (filterButton && filterModal) {
-                filterButton.addEventListener("click", function () {
-                    filterModal.classList.remove("hidden");
-                    modalBackdrop.classList.remove("hidden");
-                    document.body.classList.add("overflow-hidden");
-                });
-
-                function closeFilterModal() {
-                    filterModal.classList.add("hidden");
-                    modalBackdrop.classList.add("hidden");
-                    document.body.classList.remove("overflow-hidden");
-                }
-
-                if (closeButton)
-                    closeButton.addEventListener("click", closeFilterModal);
-                if (cancelButton)
-                    cancelButton.addEventListener("click", closeFilterModal);
-                if (modalBackdrop)
-                    modalBackdrop.addEventListener("click", closeFilterModal);
-
-                if (confirmButton) {
-                    confirmButton.addEventListener("click", function () {
-                        const name = document.getElementById("name").value;
-                        const eduPlace = document.getElementById("eduPlace").value;
-                        const day = document.getElementById("day").value;
-                        const count = document.getElementById("count").value;
-
-                        const selectedFilters =
-                            document.getElementById("selectedFilters");
-                        if (selectedFilters) {
-                            selectedFilters.innerHTML = "";
-
-                            const filters = {
-                                과정명: name,
-                                교육장소: eduPlace,
-                                요일: day,
-                                회차: count,
-                            };
-
-                            for (const key in filters) {
-                                if (filters[key]) {
-                                    const tag = document.createElement("div");
-                                    tag.className =
-                                        "bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base";
-                                    tag.innerHTML = `
-                                    ${filters[key]} <span class="cursor-pointer text-[#2B5BBB] text-base remove-tag">✕</span>
-                                `;
-                                    selectedFilters.appendChild(tag);
-
-                                    tag
-                                        .querySelector(".remove-tag")
-                                        .addEventListener("click", () => {
-                                            tag.remove();
-                                        });
-                                }
-                            }
-                        }
-
-                        closeFilterModal();
-                    });
-                }
+            function closeFilterModal() {
+            filterModal.classList.add("hidden");
+            modalBackdrop.classList.add("hidden");
+            document.body.classList.remove("overflow-hidden");
             }
 
-            // 필터 리셋 이벤트
-            window.addEventListener("resize", function () {
-                resetFiltersOnMd();
-            });
-        }
+            if (closeButton)
+            closeButton.addEventListener("click", closeFilterModal);
+            if (cancelButton)
+            cancelButton.addEventListener("click", closeFilterModal);
+            if (modalBackdrop)
+            modalBackdrop.addEventListener("click", closeFilterModal);
 
-        // 필터 리셋 함수
-        function resetFiltersOnMd() {
-            if (window.innerWidth >= 1024) {
+            if (confirmButton) {
+            confirmButton.addEventListener("click", function () {
+                const name = document.getElementById("name").value;
+                const eduPlace = document.getElementById("eduPlace").value;
+                const day = document.getElementById("day").value;
+                const count = document.getElementById("count").value;
+
                 const selectedFilters = document.getElementById("selectedFilters");
                 if (selectedFilters) {
-                    selectedFilters.innerHTML = "";
+                selectedFilters.innerHTML = "";
+
+                const filters = {
+                    과정명: name,
+                    교육장소: eduPlace,
+                    요일: day,
+                    회차: count,
+                };
+
+                for (const key in filters) {
+                    if (filters[key]) {
+                    const tag = document.createElement("div");
+                    tag.className =
+                        "bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base";
+                    tag.innerHTML = `
+                        ${filters[key]} <span class="cursor-pointer text-[#2B5BBB] text-base remove-tag">✕</span>
+                    `;
+                    selectedFilters.appendChild(tag);
+
+                    tag
+                        .querySelector(".remove-tag")
+                        .addEventListener("click", () => {
+                        tag.remove();
+                        });
+                    }
+                }
                 }
 
-                const nameInput = document.getElementById("name");
-                const eduPlaceInput = document.getElementById("eduPlace");
-                const dayInput = document.getElementById("day");
-                const countInput = document.getElementById("count");
-
-                if (nameInput) nameInput.value = "";
-                if (eduPlaceInput) eduPlaceInput.value = "";
-                if (dayInput) dayInput.value = "";
-                if (countInput) countInput.value = "";
+                closeFilterModal();
+            });
             }
+        }
         }
 
         // 문서 로드 시 모든 이벤트 리스너 초기화

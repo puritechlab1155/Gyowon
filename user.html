@@ -179,12 +179,12 @@
                             </div>
                         </div>
                         <!-- 오른쪽 버튼 -->
-                        <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
+                        <div class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
                             <a href="#"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
                                 로그아웃
                             </a>
-                            <a href="#"
+                            <a href="#" id="goBackButton"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 뒤로가기
                             </a>
@@ -1733,7 +1733,7 @@
                 </div>
             </div>
             <!-- TOP버튼 -->
-            <button
+            <button id="topButton"
                 class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
                 TOP
             </button>

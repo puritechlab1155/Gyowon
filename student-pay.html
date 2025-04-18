@@ -183,7 +183,7 @@
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
                                 로그아웃
                             </a>
-                            <a href="#"
+                            <a href="#" id="goBackButton"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 뒤로가기
                             </a>
@@ -375,7 +375,7 @@
                             출석부</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="student-statistics.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강인원통계</a>
                     </li>
                 </ul>
@@ -408,7 +408,7 @@
                             관리</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="graduate-report.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자
                             보고서</a>
                     </li>
@@ -649,7 +649,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content"
-        class="ml-64 max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+        class="ml-64 max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
             <h1 class="mt-[50px] h1-title font-normal paperlogy">수강자 입금관리</h1>
             <div class="pt-5 pb-5">
@@ -660,15 +660,14 @@
                             class="flex h-auto gap-2 mt-2 block lg:hidden whitespace-nowrap overflow-x-auto no-scrollbar">
                         </div>
                         <!-- right-content (탭들) -->
-                        <div
-                            class="right-content flex justify-end text-lg max-lg:space-x-0 max-2xl:space-x-1 space-x-2 max-lg:justify-between max-xl:w-full">
+                        <div class="right-content flex justify-end text-lg max-lg:space-x-0 max-2xl:space-x-1 space-x-2 max-lg:justify-between max-xl:w-full">
                             <div class="flex justify-end space-x-2 max-2xl:space-x-1 max-lg:hidden">
-                                <div class="relative dropdown w-[85px] max-xl:w-[75px]">
+                                <div class="relative dropdown w-[85px] max-2xl:w-[75px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center gap-2">
                                         <span class="selected-option">년도</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
@@ -700,8 +699,8 @@
                                     <button
                                         class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">학기</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
@@ -726,19 +725,18 @@
                                             동계</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[250px] max-xl:w-[240px] ">
-                                    <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
+                                <div class="relative dropdown w-[270px] max-2xl:w-[240px] ">
+                                    <button class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">과정명</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto ">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -771,24 +769,24 @@
                                             모던2종 파티대비A</div>
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            라인댄스 초급</div>
+                                            라인댄스 초급</div>    
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            라틴2급 자격</div>
+                                            라틴2급 자격</div>    
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            교육공동체를 위한 라인댄스 초급</div>
+                                            교육공동체를 위한 라인댄스 초급</div>   
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            교육공동체를 위한 라인댄스 기초</div>
+                                            교육공동체를 위한 라인댄스 기초</div>   
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[150px] max-xl:w-[120px]">
+                                <div class="relative dropdown w-[150px] max-2xl:w-[120px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">교육장소</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
@@ -825,19 +823,19 @@
                                             상계고</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[120px] max-xl:w-[95px]">
+                                <div class="relative dropdown w-[120px] max-2xl:w-[95px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 pr-2 px-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 pr-2 px-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">요일</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -867,19 +865,19 @@
                                             일요일</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[85px] max-xl:w-[65px]">
+                                <div class="relative dropdown w-[85px] max-2xl:w-[65px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 pr-2 px-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 pr-2 px-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">회차</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
-                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[300px] overflow-y-auto">
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             선택</div>
@@ -897,22 +895,18 @@
                                             4차</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[140px] max-xl:w-[95px]">
+                                <div class="relative dropdown w-[95px]">
                                     <button
-                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
-                                        <span class="selected-option">수강현황</span>
-                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
+                                        class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 rounded-md focus:outline-none h-[50px] w-full flex justify-between items-center ">
+                                        <span class="selected-option">수강상태</span>
+                                        <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <!-- 드롭다운 옵션 -->
                                     <div
                                         class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                        <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            선택</div>
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             대기</div>
@@ -928,9 +922,6 @@
                                         <div
                                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                                             연기금</div>
-                                        <div
-                                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                                            환불</div>
                                     </div>
                                 </div>
                             </div>
@@ -939,10 +930,10 @@
                                 <div
                                     class="flex justify-between space-x-2 max-lg:space-x-0 max-2xl:space-x-1  max-lg:col-span-4">
                                     <input type="text" placeholder="검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
-                                    focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full max-xl:w-[120px] 
+                                    focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full max-2xl:w-[120px] 
                                     h-[50px] max-sm:h-[45px] max-lg:rounded-tr-none max-lg:rounded-br-none" />
                                     <button
-                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 max-xl:w-12 rounded-lg hover:bg-[#648DDF] focus:outline-none max-lg:rounded-tl-none max-lg:rounded-bl-none flex justify-center items-center gap-2">
+                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none max-lg:rounded-tl-none max-lg:rounded-bl-none flex justify-center items-center gap-2">
                                         <img src="img/search.png" alt="검색 아이콘" class="hidden max-lg:block h-6 w-6" />
                                         <span class="text-[#EDF3FF] max-lg:hidden">검색</span>
                                     </button>
@@ -1857,7 +1848,7 @@
                 </div>
             </div>
             <!-- TOP버튼 -->
-            <button
+            <button id="topButton"
                 class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
                 TOP
             </button>
@@ -2116,7 +2107,7 @@
             </div>
 
 
-            <!-- 직무 -->
+            <!-- 수강상태 -->
             <div class="mb-4">
                 <div class="relative dropdown">
                     <button
@@ -2155,7 +2146,7 @@
                 <button id="cancelButton"
                     class="flex-1 py-3 bg-[#F5F5F5] border border-[#DBDEE3] font-medium border border-[#D1D5DB] rounded-md">취소</button>
                 <button id="confirmButton"
-                    class="flex-1 py-3 bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md">적용</button>
+                    class="flex-1 py-3 bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold rounded-md">적용</button>
             </div>
         </div>
     </div>
@@ -2688,6 +2679,7 @@
         //         }
         //     });
         // });
+        
         // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function (e) {
@@ -3307,6 +3299,10 @@
 
             // 이수증 및 영수증 슬라이드 이벤트 재설정
             reattachSlideEvents();
+
+            // 필터모달 재설정
+            initFilterModalEvents();
+            resetFiltersOnMd()
         }
 
         // 드롭다운 클릭 핸들러
@@ -3576,25 +3572,114 @@
             }
         }
 
-        // DOMContentLoaded 이벤트에서 호출될 초기 이벤트 리스너 설정
-        function initEventListeners() {
-            // 초기화 시 모든 이벤트 리스너 설정
-            reattachEventListeners();
+        // 문서 로드 시 모든 이벤트 리스너 초기화
+        document.addEventListener("DOMContentLoaded", initEventListeners);
 
-            // 문서 클릭 시 드롭다운 닫기
-            document.addEventListener("click", () => {
-                document.querySelectorAll(".dropdown-menu").forEach((menu) => {
-                    menu.classList.add("hidden");
-                });
-                document
-                    .querySelectorAll(".dropdown")
-                    .forEach((d) => (d.style.zIndex = "0"));
+        function initFilterModalEvents() {
+        const filterButton = document.getElementById("filterButton");
+        const filterModal = document.getElementById("filterModal");
+        const modalBackdrop = document.getElementById("modalBackdrop");
+        const closeButton = document.getElementById("closeButton");
+        const confirmButton = document.getElementById("confirmButton");
+        const cancelButton = document.getElementById("cancelButton");
+
+        if (filterButton && filterModal) {
+            filterButton.addEventListener("click", function () {
+            filterModal.classList.remove("hidden");
+            modalBackdrop.classList.remove("hidden");
+            document.body.classList.add("overflow-hidden");
             });
+
+            function closeFilterModal() {
+            filterModal.classList.add("hidden");
+            modalBackdrop.classList.add("hidden");
+            document.body.classList.remove("overflow-hidden");
+            }
+
+            if (closeButton)
+            closeButton.addEventListener("click", closeFilterModal);
+            if (cancelButton)
+            cancelButton.addEventListener("click", closeFilterModal);
+            if (modalBackdrop)
+            modalBackdrop.addEventListener("click", closeFilterModal);
+
+            if (confirmButton) {
+            confirmButton.addEventListener("click", function () {
+                const year = document.getElementById('year').value;
+                const semester = document.getElementById('semester').value;
+                const name = document.getElementById("name").value;
+                const eduPlace = document.getElementById("eduPlace").value;
+                const day = document.getElementById("day").value;
+                const count = document.getElementById("count").value;
+                const status = document.getElementById('status').value;
+
+                const selectedFilters = document.getElementById("selectedFilters");
+                if (selectedFilters) {
+                selectedFilters.innerHTML = "";
+
+                const filters = {
+                    년도: year,
+                    학기: semester,
+                    과정명: name,
+                    교육장소: eduPlace,
+                    요일: day,
+                    회차: count,
+                    수강상태: status,
+                };
+
+                for (const key in filters) {
+                    if (filters[key]) {
+                    const tag = document.createElement("div");
+                    tag.className =
+                        "bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base";
+                    tag.innerHTML = `
+                        ${filters[key]} <span class="cursor-pointer text-[#2B5BBB] text-base remove-tag">✕</span>
+                    `;
+                    selectedFilters.appendChild(tag);
+
+                    tag
+                        .querySelector(".remove-tag")
+                        .addEventListener("click", () => {
+                        tag.remove();
+                        });
+                    }
+                }
+                }
+
+                closeFilterModal();
+            });
+            }
+        }
+        }
+
+
+        // 필터 리셋 함수
+        function resetFiltersOnMd() {
+            if (window.innerWidth >= 1024) {
+                const selectedFilters = document.getElementById("selectedFilters");
+                if (selectedFilters) {
+                    selectedFilters.innerHTML = "";
+                }
+                const yearInput = document.getElementById("year");
+                const semesterInput = document.getElementById("semester");
+                const nameInput = document.getElementById("name");
+                const eduPlaceInput = document.getElementById("eduPlace");
+                const dayInput = document.getElementById("day");
+                const countInput = document.getElementById("count");
+                const statusInput = document.getElementById("status");
+
+                if (yearInput) yearInput.value = "";
+                if (semesterInput) semesterInput.value = "";
+                if (nameInput) nameInput.value = "";
+                if (eduPlaceInput) eduPlaceInput.value = "";
+                if (dayInput) dayInput.value = "";
+                if (countInput) countInput.value = "";
+                if (statusInput) statusInput.value = "";
+            }
         }
 
         // 문서 로드 시 모든 이벤트 리스너 초기화
         document.addEventListener("DOMContentLoaded", initEventListeners);
-
 
     </script>
 

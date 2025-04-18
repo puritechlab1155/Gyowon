@@ -1,13 +1,22 @@
-// ✅ 화면 크기 변경 시 768px 이하일 때 메뉴 닫기
-// window.addEventListener('resize', () => {
-//     if (window.innerWidth <= 1024) {
-//         sideMenu.classList.add('-translate-x-full');
-//         sideMenu.classList.remove('translate-x-0');
-//         switchElement.checked = false;
-//         switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
-//         switchDot.classList.remove('translate-x-6');
-//     }
-// });
+//✅ 화면 크기 변경 시 1280px 이하일 때 메뉴 닫기
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 1280) {
+        sideMenu.classList.add('-translate-x-full');
+        sideMenu.classList.remove('translate-x-0');
+        switchElement.checked = false;
+        switchContainer.classList.replace('bg-[#2B5BBB]', 'bg-gray-300');
+        switchDot.classList.remove('translate-x-6');
+    }
+    else {
+        sideMenu.classList.remove('-translate-x-full');
+        sideMenu.classList.add('translate-x-0');
+        switchElement.checked = true;
+        switchContainer.classList.replace('bg-gray-300', 'bg-[#2B5BBB]');
+        switchDot.classList.add('translate-x-6');
+        mainContent.classList.add('ml-64');
+        mainContent.classList.remove('mx-auto');
+    }
+});
 
 // Optional: Close side menu when clicking outside
 
@@ -43,6 +52,7 @@ function openMenu() {
 
     mainContent.classList.add('ml-64'); // 본문 영역을 왼쪽으로 64px만큼 밀어서 사이드 메뉴가 열린 공간 확보.
     mainContent.classList.remove('mx-auto'); // 가운데 정렬 해제
+
 }
 
 // 메뉴 닫기
@@ -56,6 +66,7 @@ function closeMenu() {
     mainContent.classList.remove('ml-64');
     mainContent.classList.add('mx-auto'); // 가운데 정렬 적용
 }
+
 
 // 스위치 클릭 시 토글 기능
 function toggleSideMenu() {
@@ -94,8 +105,33 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// ✅ 뒤로가기
+document.addEventListener('DOMContentLoaded', function() {
+    const goBackButton = document.getElementById('goBackButton');
 
+    if (goBackButton) {
+        goBackButton.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            window.history.back(); // 이전 페이지로 이동
+        });
+    }
+});
 
+// ✅ 탑버튼
+document.addEventListener('DOMContentLoaded', function() {
+    const topButton = document.getElementById('topButton');
+
+    if (topButton) {
+        topButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+// ✅ 사이드 메뉴 포커싱 효과
 document.addEventListener('DOMContentLoaded', function () {
     const keywordLinkMap = {
         'dashboard': 'dashboardLink',
@@ -146,8 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (activeMainMenu) {
         const mainMenuElement = document.getElementById(activeMainMenu);
         if (mainMenuElement) {
-            mainMenuElement.classList.add('active');
-
+            localStorage.setItem('activeMenu', activeMainMenu); // 초기 로드시 활성 메뉴 저장
+            mainMenuElement.focus(); // 초기 로드시 포커스 설정
             const parentLi = mainMenuElement.closest('.group');
             if (parentLi) {
                 const subMenuLinks = parentLi.querySelectorAll('.subUl a');
@@ -186,38 +222,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const isOpen = !submenu.classList.contains('max-h-0');
 
-        if (!forceOpen) {
-            document.querySelectorAll('.subUl').forEach(ul => {
-                if (ul !== submenu) {
-                    ul.classList.add('max-h-0');
-                    ul.classList.remove('max-h-150', 'py-2');
-
-                    const otherGroup = ul.closest('.group');
-                    if (otherGroup) {
-                        const otherArrow = otherGroup.querySelector('.subIcon');
-                        if (otherArrow) {
-                            otherArrow.classList.remove('rotate-[-90deg]');
-                        }
-                    }
-
-                    // 저장
-                    const otherMain = otherGroup?.querySelector('.mainLink');
-                    if (otherMain?.id) {
-                        localStorage.setItem(otherMain.id, 'closed');
-                    }
-                }
-            });
+        if (!forceOpen && !isOpen) {
+            closeAllSubmenus();
         }
 
         if (forceOpen || submenu.classList.contains('max-h-0')) {
             submenu.classList.remove('max-h-0');
             submenu.classList.add('max-h-150', 'py-2');
             arrow.classList.add('rotate-[-90deg]');
+            mainLink.classList.add('active');
             localStorage.setItem(mainLink.id, 'open');
         } else {
             submenu.classList.add('max-h-0');
             submenu.classList.remove('max-h-150', 'py-2');
             arrow.classList.remove('rotate-[-90deg]');
+            mainLink.classList.remove('active');
             localStorage.setItem(mainLink.id, 'closed');
         }
     }
@@ -225,21 +244,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // 4. 각 메인 메뉴에 이벤트 연결
     document.querySelectorAll('.mainLink').forEach(link => {
         link.setAttribute('tabindex', '0');
-        const id = link.id;
-        const parentLi = link.closest('.group');
-        const submenu = parentLi?.querySelector('.subUl');
-
-        if (submenu) {
-            link.addEventListener('click', e => toggleSubMenu(e));
-        } else {
-            link.addEventListener('click', e => {
-                e.stopPropagation();
-                document.querySelectorAll('.mainLink').forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                link.focus();
-                localStorage.setItem('activeMenu', link.id); 
+        const submenu = link.nextElementSibling;
+        link.addEventListener('click', e => {
+            e.stopPropagation();
+            document.querySelectorAll('.mainLink').forEach(l => {
+                if (l !== link) l.classList.remove('active');
             });
-        }
+            link.classList.add('active');
+            link.focus();
+            localStorage.setItem('activeMenu', link.id);
+            if (submenu && submenu.classList.contains('subUl')) {
+                toggleSubMenu(e);
+            } else {
+                closeAllSubmenus();
+            }
+        });
     });
 
     // 5. 서브메뉴 클릭 시 이벤트 중단 + 포커스 설정
@@ -252,18 +271,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // 모든 서브메뉴에서 active 제거
             document.querySelectorAll('.subUl a').forEach(l => l.classList.remove('active', 'text-[#1E4799]', 'bg-[#EDF3FF]'));
             link.classList.add('active', 'text-[#1E4799]', 'bg-[#EDF3FF]');
-
-            // 메인 메뉴에도 active 클래스 추가
-            const parentGroup = link.closest('.group');
-            if (parentGroup) {
+            const mainLink = link.closest('.group')?.querySelector('.mainLink');
+            if (mainLink) {
                 document.querySelectorAll('.mainLink').forEach(l => l.classList.remove('active'));
-                const mainLink = parentGroup.querySelector('.mainLink');
-                if (mainLink) {
-                    mainLink.classList.add('active');
-                    localStorage.setItem('activeMenu', mainLink.id);
-                        // 포커스 이동 코드 추가
-                        mainLink.focus();
-                }
+                mainLink.classList.add('active');
+                localStorage.setItem('activeMenu', mainLink.id);
+                mainLink.focus();
             }
         });
     });
@@ -272,28 +285,40 @@ document.addEventListener('DOMContentLoaded', function () {
     function restoreSubMenuState() {
         // 메인 메뉴 포커스 상태 복원
         const activeMenuId = localStorage.getItem('activeMenu');
-        if (activeMenuId) {
-            const activeMenu = document.getElementById(activeMenuId);
-            if (activeMenu) {
-                activeMenu.classList.add('active');
-                activeMenu.focus();
-            }
-        }
         document.querySelectorAll('.mainLink').forEach(link => {
+            if (link.id === activeMenuId) {
+                link.classList.add('active');
+                link.setAttribute('tabindex', '0');
+                setTimeout(() => link.focus(), 10);
+            } else {
+                link.classList.remove('active');
+            }
             const savedState = localStorage.getItem(link.id);
             if (savedState === 'open') {
-                const event = {
-                    preventDefault: () => {},
-                    stopPropagation: () => {},
-                    currentTarget: link
-                };
+                const event = { preventDefault: () => {}, stopPropagation: () => {}, currentTarget: link };
                 toggleSubMenu(event, true);
-            } 
+            }
         });
     }
 
     // 7. 초기화 실행
     restoreSubMenuState();
+
+    // 8. 메뉴가 열릴 때 활성 메인 메뉴에 포커스 설정
+    const sideMenu = document.getElementById('side-menu');
+    const observer = new MutationObserver(mutationsList => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                if (sideMenu && sideMenu.classList.contains('translate-x-0')) {
+                    restoreSubMenuState();
+                }
+            }
+        }
+    });
+
+    if (sideMenu) {
+        observer.observe(sideMenu, { attributes: true });
+    }
 });
 
 
