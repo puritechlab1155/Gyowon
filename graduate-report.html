@@ -620,7 +620,7 @@
                                             2021</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[80px]">
+                                <div class="relative dropdown w-[85px]">
                                     <button
                                         class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">학기</span>
@@ -1098,19 +1098,19 @@
                         class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2021</div>
-                        <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2022</div>
-                        <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2023</div>
+                            2025</div>하
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             2024</div>
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2025</div>
+                            2023</div>
+                        <div
+                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            2022</div>
+                        <div
+                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            2021</div>
                     </div>
                 </div>
                 <input type="hidden" id="year" name="year">
@@ -2001,108 +2001,80 @@
     <script src="js/script.js"></script>
     <script>
 
-    // ✅  드롭다운 열고 닫기
-    function setupDropdowns() {
-        const dropdowns = document.querySelectorAll(".dropdown");
+        // ✅ 드롭다운 열고 닫기
+        document.querySelectorAll('.dropdown-button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.stopPropagation();
 
-        dropdowns.forEach((dropdown) => {
-            const button = dropdown.querySelector(".dropdown-button");
-            const menu = dropdown.querySelector(".dropdown-menu");
-            const options = dropdown.querySelectorAll(".dropdown-item");
-            const selectedText = dropdown.querySelector(".selected-option");
+                const dropdown = this.closest('.dropdown');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                const clonedMenu = menu.cloneNode(true);
 
-            button.addEventListener("click", function (event) {
-                event.stopPropagation();
+                // 기존 열려있던 메뉴들 닫기
+                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
+                document.querySelectorAll('.dropdown-menu-body').forEach(m => m.remove());
 
-                // 모든 드롭다운 닫고 z-index 초기화
-                closeAllDropdowns();
+                // 열기 상태면 새로 그려줌
+                if (menu.classList.contains('hidden')) {
+                    const rect = this.getBoundingClientRect();
+                    dropdown.style.zIndex = '10';
 
-                // 현재 드롭다운만 열고 z-index 높임
-                menu.classList.remove("hidden");
-                menu.classList.add("z-[500]");
-            });
+                    // ✅ 드롭다운 메뉴 위치 계산 (스크롤 보정)
+                    clonedMenu.classList.remove('hidden');
+                    clonedMenu.classList.add('dropdown-menu-body');
+                    clonedMenu.style.position = 'absolute';
+                    clonedMenu.style.left = `${rect.left + window.scrollX}px`;
+                    clonedMenu.style.top = `${rect.bottom + window.scrollY}px`;
+                    clonedMenu.style.width = `${rect.width}px`;
+                    clonedMenu.style.zIndex = '9999';
+                    clonedMenu.style.background = 'white'; // 필요한 스타일
+                    clonedMenu.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)'; // 선택적
 
-            // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
-            menu.addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
+                    dropdown.appendChild(clonedMenu); // ✅ body → dropdown 으로 바꿈
+                    clonedMenu.style.position = 'absolute';
+                    clonedMenu.style.left = '0px';
+                    clonedMenu.style.top = '100%';
 
-            // 항목 선택 시 처리
-            options.forEach((option) => {
-                option.addEventListener("click", function () {
-                    selectedText.textContent = this.textContent;
-                    selectedText.style.color = "#202020";
-                    selectedText.parentElement.style.backgroundColor = "#FFFFFF";
-                    menu.classList.add("hidden");
-                    menu.classList.remove("z-[500]");
-                });
-            });
-        });
-    }
+                    // ✅ 드롭다운 항목 클릭 시 반영
+                    clonedMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedText = this.textContent;
+                            dropdown.querySelector('.selected-option').textContent = selectedText;
 
-    // ✅  드롭다운 옵션 클릭 시 텍스트 변경
-    function closeAllDropdowns() {
-        const dropdowns = document.querySelectorAll(".dropdown");
-        dropdowns.forEach((dropdown) => {
-            const menu = dropdown.querySelector(".dropdown-menu");
-            if (menu) menu.classList.add("hidden");
-            menu.classList.remove("z-[500]");
-        });
-    }
+                            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
+                            if (hiddenInput) hiddenInput.value = selectedText;
 
-    document.addEventListener("DOMContentLoaded", function () {
-        setupDropdowns();
+                            dropdown.style.zIndex = '0';
+                            clonedMenu.remove();
+                        });
+                    });
+                    clonedMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedText = this.textContent;
+                            const value = this.getAttribute('data-value');
+                            const inputField = dropdown.querySelector('#customInput');
+                            const buttonText = dropdown.querySelector('.selected-option');
+                            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
 
-        // 바깥 클릭 시 드롭다운 닫기
-        document.addEventListener("click", function () {
-            closeAllDropdowns();
-        });
-    });
+                            if (value === '기타') {
+                                buttonText.textContent = '직접 입력 중...';
+                                if (inputField) inputField.classList.remove('hidden');
+                                if (hiddenInput) hiddenInput.value = ''; // 필요하면 초기화
+                            } else {
+                                buttonText.textContent = selectedText;
+                                if (inputField) inputField.classList.add('hidden');
+                                if (hiddenInput) hiddenInput.value = selectedText;
+                            }
 
-    // ✅ 인풋 옵션
-    document.addEventListener("DOMContentLoaded", function () {
-        setupDropdowns(); 
-        
-        // input 이벤트 리스너도 그대로 유지
-        const inputs = document.querySelectorAll("input");
-        inputs.forEach(input => {
-            input.addEventListener("input", () => {
-                if (input.value.trim() !== "") {
-                    input.classList.remove("bg-[#F3F3F3]");
-                    input.classList.add("bg-[#FFFFFF]");
+                            dropdown.style.zIndex = '0';
+                            clonedMenu.remove();
+                        });
+                    });
+                    
+
                 } else {
-                    input.classList.remove("bg-[#EFEFEF]");
-                    input.classList.add("bg-[#FFFFFF]");
+                    dropdown.style.zIndex = '0';
                 }
-            });
-        });
-
-        document.addEventListener("click", function () {
-            closeAllDropdowns();
-        });
-    });
-
-
-    // ✅ 기타직급
-    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-            const dropdown = this.closest('.dropdown');
-            const menu = dropdown.querySelector('.dropdown-menu');
-            const buttonText = dropdown.querySelector('.selected-option');
-            const inputField = dropdown.querySelector('#customInput');
-            const value = this.getAttribute('data-value');
-
-            if (value === '기타') {
-                buttonText.textContent = '직접 입력 중...';
-                inputField.classList.remove('hidden');
-            } else {
-                buttonText.textContent = value;
-                if (inputField) {
-                inputField.classList.add('hidden');
-                }
-            }
-
-            menu.classList.add('hidden');
             });
         });
 
@@ -2182,23 +2154,6 @@
             cancelButton.addEventListener('click', closeModal);
             modalBackdrop.addEventListener('click', closeModal);
         });
-
-        // ✅ 필터기능 모바일에서만 작동 / 웹에서는 값 초기화
-        function resetFiltersOnMd() {
-            if (window.innerWidth >= 1024) {
-                const selectedFilters = document.getElementById('selectedFilters');
-                selectedFilters.innerHTML = '';
-                document.getElementById('year').value = '';
-                document.getElementById('semester').value = '';
-                document.getElementById('name').value = '';
-                document.getElementById('eduPlace').value = '';
-                document.getElementById('jobPosition').value = '';
-                document.getElementById('day').value = '';
-                document.getElementById('count').value = '';
-            }
-        }
-        window.addEventListener('resize', resetFiltersOnMd);
-
 
 
         // ✅ 회원수정 모달

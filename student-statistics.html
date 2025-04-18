@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 수강인원통계</title>
+    <title>교원관리자 | 수료자 관리</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -570,10 +570,11 @@
         </ul>
     </div>
 
+
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">수강인원통계</h1>
+            <h1 class="mt-[50px] h1-title font-normal paperlogy">수료자 관리</h1>
             <div class="flex justify-start flex-col max-md:justify-start mb-2">
                 <div class="text-[14px] font-semibold text-[#64748B] max-xl:tracking-tighter">
                     ※ 수료번호를 지우더라도, 재등록 가능합니다.
@@ -622,7 +623,7 @@
                                             2021</div>
                                     </div>
                                 </div>
-                                <div class="relative dropdown w-[80px]">
+                                <div class="relative dropdown w-[90px]">
                                     <button
                                         class="dropdown-button bg-[#FAFAFA] border border-[#DBDEE3] text-[#727272] py-2 px-2 pr-2 rounded-md focus:outline-none focus:border-[#2B5BBB] h-[50px] w-full flex justify-between items-center">
                                         <span class="selected-option">학기</span>
@@ -966,7 +967,7 @@
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr class="bg-[#FEFEFE] h-[110px] border-b">
+                                    <tr class="bg-[#F8F8F8] h-[110px] border-b">
                                         <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">화성오산</td>
                                         <td class="px-2 py-2 w-[11%] text-[#727272]">배곧해솔</td>
@@ -1058,7 +1059,7 @@
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr class="bg-[#FEFEFE] h-[110px] border-b">
+                                    <tr class="bg-[#F8F8F8] h-[110px] border-b">
                                         <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">수원</td>
                                         <td class="px-2 py-2 w-[11%] text-[#727272]">영덕</td>
@@ -1138,7 +1139,7 @@
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr class="bg-[#FEFEFE] h-[110px] border-b">
+                                    <tr class="bg-[#F8F8F8] h-[110px] border-b">
                                         <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">-</td>
                                         <td class="px-2 py-2 w-[11%] text-[#727272]">발안바이오과학</td>
@@ -1255,13 +1256,11 @@
                     </button>
                 </div>
             </div>
-
             <!-- TOP버튼 -->
             <button id="topButton"
-            class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
-            TOP
+                class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+                TOP
             </button>
-
         </div>
     </div>
 
@@ -1295,19 +1294,19 @@
                         class="dropdown-menu absolute left-0 w-full bg-[#FAFAFA] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2021</div>
-                        <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2022</div>
-                        <div
-                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2023</div>
+                            2025</div>
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
                             2024</div>
                         <div
                             class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
-                            2025</div>
+                            2023</div>
+                        <div
+                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            2022</div>
+                        <div
+                            class="dropdown-item px-3 py-3 cursor-pointer text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                            2021</div>
                     </div>
                 </div>
                 <input type="hidden" id="year" name="year">
@@ -1552,29 +1551,234 @@
         </div>
     </div>
 
+
+
+
+    <!-- 이수증 슬라이드 패널 -->
+    <div id="certificateSlideOverlay" class="fixed inset-0 z-[999] hidden">
+        <div id="certificateSlidePanel"
+            class="fixed top-0 right-[-100%] w-full max-w-[550px] h-full max-h-screen bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">이수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 발급기관: <span class="text-[#000]">한국댄스스포츠협회</span>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
+                <div
+                    class="printArea screen-layout overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
+                    <div class="relative bg-white certificate-box min-w-[450px] max-w-[450px]">
+                        <img src="img/certificate-bg.png" alt="이수증 배경"
+                            class="absolute inset-0 w-full h-full object-cover z-0" />
+                        <div class="certificate-inner absolute inset-0 z-10 px-16 py-[70px] text-center text-[#222]">
+                            <h2 class="text-[20px] font-medium">교육연수</h2>
+                            <h1 class="text-[25px] font-bold mb-6">이수증</h1>
+                            <p class="certificate-info text-left text-[12px] mb-4">
+                                경기도교육청 지정<br>
+                                (전국) 유초중등교원 특수분야연수기관 (지정번호: 경기-교육-2024-08 )
+                            </p>
+
+                            <div class="text-left mb-6 grid grid-cols-2 gap-x-6">
+                                <!-- 나머지는 한 줄 전체 사용 -->
+                                <div class="col-span-2 text-[12px] mb-2">
+                                    <span class="font-semibold text-[14px]">이수번호 :</span>
+                                    <span class="certificate-id text-[12px]">경기도교육-유초중-한단연-직무-2024-04028</span>
+                                </div>
+
+                                <!-- 성명 / 생년월일 -->
+                                <div class="text-[15px] mb-2">
+                                    <span
+                                        class="font-semibold text-[14px]">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명
+                                        :</span>
+                                    <span class="certificate-name text-[12px]">김이름</span>
+                                </div>
+                                <div class="text-[15px] mb-2">
+                                    <span class="font-semibold text-[14px]">생년월일 :</span>
+                                    <span class="certificate-name text-[12px]">0000.00.00</span>
+                                </div>
+
+                                <!-- 연수종별 / 이수시간 -->
+                                <div class="text-[15px] mb-2">
+                                    <span class="font-semibold text-[15px]">연수종별 :</span>
+                                    <span class="certificate-type text-[12px]">직무연수</span>
+                                </div>
+                                <div class="text-[15px] mb-2">
+                                    <span class="font-semibold text-[15px]">이수시간 :</span>
+                                    <span class="certificate-hours text-[12px]">15시간</span>
+                                </div>
+
+                                <div class="col-span-2 text-[15px] mb-2">
+                                    <span class="text-[15px] font-semibold">연수과정명 :</span>
+                                    <span class="certificate-course-name text-[12px]">미래역량을 키우는 라틴초급</span>
+                                </div>
+                                <div class="col-span-2 text-[15px] mb-2">
+                                    <span class="text-[15px] font-semibold">연수기간 :</span>
+                                    <span class="certificate-course-period text-[12px]">2025.01.20 ~ 2025.01.24</span>
+                                </div>
+                                <div class="col-span-2 text-[15px]">
+                                    <span class="text-[15px] font-semibold">연수성적 :</span>
+                                    <span class="certificate-grade text-[12px]">해당없음</span>
+                                </div>
+                            </div>
+                            <p class="mt-6 text-[12px]">위와 같이 이수하였음을 증명합니다.</p>
+                            <p class="text-[12px]">2024년 2월 22일</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-6"></div>
+
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('certificateSlidePanel')"
+                        class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeCertificateSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 영수증 슬라이드 패널 -->
+    <div id="receiptSlideOverlay" class="fixed inset-0 z-[999] hidden">
+        <div id="receiptSlidePanel"
+            class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+            <div class="p-6">
+                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mb-2">영수증</h2>
+                <div class="text-[16px] text-[#555] font-medium mb-2">
+                    ※ 은행명: <span class="text-[#000]">기업은행</span>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
+                <div class="printArea overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
+                    <div class="relative bg-white receipt-box max-h-[650px] max-w-[570px] min-w-[550px]">
+                        <div class="relative p-4 receipt-inner">
+                            <h1 class="text-center text-2xl font-bold mb-8 receipt">영 수 증</h1>
+
+                            <!-- 공급자 정보 -->
+                            <table class="table-auto w-full border border-black mb-4">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"
+                                            class="border border-black px-2 py-1 bg-gray-100 text-left font-semibold text-[18px]">
+                                            공급자 정보</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            class="border border-black px-1 py-1 font-semibold text-center text-[16px] w-1/5">
+                                            상&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;호</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]">서울초중등댄스스포츠교육연구회</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-1 py-1 font-semibold text-center text-[16px]">
+                                            성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]">김남현</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-1 py-1 font-semibold text-center text-[16px]">
+                                            사업장 소재지</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]">강남대로 42길 13, 호성빌딩 B1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 수령자 정보 -->
+                            <table class="table-auto w-full border border-black text-sm mb-6">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4"
+                                            class="border border-black px-2 py-1 bg-gray-100 text-left font-semibold text-[18px]">
+                                            연수 수강자 정보</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            class="border border-black px-2 py-1 font-semibold text-center text-[16px] w-1/5">
+                                            성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]"></td>
+                                        <td
+                                            class="border border-black px-2 py-1 font-semibold text-center text-[16px] w-1/5">
+                                            학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;교</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-2 py-1 font-semibold text-center text-[16px]">
+                                            연수과정</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]" colspan="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-2 py-1 font-semibold text-center text-[16px]">
+                                            수&nbsp;&nbsp;강&nbsp;&nbsp;비</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]"></td>
+                                        <td class="border border-black px-2 py-1 font-semibold text-center text-[16px]">
+                                            연수기간</td>
+                                        <td class="border border-black px-2 py-1 text-[16px]"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 기타 문구 -->
+                            <p class="mt-6 text-[14px] text-center">
+                                상기 연수비를 납입하였음을 확인합니다. <br />
+                                (직무연수 수강료)
+                            </p>
+
+                            <p class="mt-4 text-[14px] text-center">2025년 04월 10일</p>
+
+                            <div class="mt-4 w-[70%] mx-auto">
+                                <img src="img/receipt-bottom.png" alt="한국댄스스포츠연수원장 직인">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
+
+                <!-- 하단 버튼 영역 -->
+                <div class="flex justify-between">
+                    <button onclick="printClassArea('receiptSlidePanel')"
+                        class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
+                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
+                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
+                    </button>
+                    <button class="closeReceiptSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- 회원수정 모달 -->
-    <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[600] hidden flex justify-center items-center">
+    <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 z-[800] hidden flex justify-center items-center">
         <div class="bg-white rounded-lg p-6 w-[90%] max-w-[1200px] shadow-lg relative overflow-y-auto max-h-[80%]">
             <button class="editCancelBtn absolute top-6 right-6 text-gray-500 hover:text-black text-xl">
-                <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7"/>
+                <img src="img/close.png" alt="닫기 버튼" class="w-7 h-7" />
             </button>
+            <!-- 폼1 -->
             <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
                 <div class="flex justify-between items-end mb-2">
-                    <h2 class="h1-title font-normal paperlogy font-bold">회원등록</h2>
+                    <h2 class="h1-title font-normal paperlogy font-bold">회원수정</h2>
                     <p class="text-[16px] font-semibold text-[#2B5BBB]">* 표시는 필수 입력입니다</p>
                 </div>
                 <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
 
-                <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:px-0 px-6 bg-[#FFFFFF]">
+                <div
+                    class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:px-0 px-6 bg-[#FFFFFF]">
                     <!-- Row Template -->
                     <!-- 1 -->
                     <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[90px] flex items-center">
-                        <label class="w-1/3 px-4 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-sm:px-0">아이디 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                        <label
+                            class="w-1/3 px-4 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-sm:px-0">아이디
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <div class="w-2/3 flex flex-col">
                             <div class="flex items-center gap-2 max-sm:gap-1">
                                 <input type="text"
-                                    class="w-full flex-1 h-[45px] text-[18px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                                    class="w-full flex-1 h-[45px] text-[18px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                                 <button type="button"
                                     class="bg-[#EDF3FF] text-[#2B5BBB] text-[16px] h-[45px] px-4 py-1.5 max-sm:text-[14px] max-sm:min-w-[70px] min-w-[120px] rounded-lg border border-[#DBDEE3] focus:outline-none hover:bg-[#D3E1FB]">중복확인</button>
                             </div>
@@ -1588,97 +1792,107 @@
 
                     <!-- 2 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] py-[6px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">비밀번호 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">비밀번호
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <div class="w-2/3 flex flex-col">
                             <input type="password"
-                                class="text-[16px] h-[45px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 max-sm:px-2 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                                class="text-[16px] h-[45px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 max-sm:px-2 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                             <p class="text-[14px] font-semibold text-[#64748B]"> ※ 영문, 숫자, 특수문자 조합 (4~16자리)</p>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] h-[80px] max-xl:h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">비밀번호 확인 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                    <div
+                        class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] h-[80px] max-xl:h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">비밀번호
+                            확인 <span class="text-[#2B5BBB]">*</span></label>
                         <input type="password"
-                            class="w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                            class="w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
 
                     <!-- 3 -->
-                    <div class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">성명 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                    <div
+                        class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">성명
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <input type="text"
                             class="w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">성별 <span
-                            class="text-[#2B5BBB]">*</span></label>
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">성별
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <div class="w-2/3 flex gap-0">
                             <input type="radio" name="gender" id="female" value="여자" class="hidden peer/female" />
-                            <label for="female"
-                                class="flex-1 h-[45px] text-center cursor-pointer px-4 py-2 text-[16px] max-sm:text-sm max-sm:leading-[2] border 
+                            <label for="female" class="flex-1 h-[45px] text-center cursor-pointer px-4 py-2 text-[16px] max-sm:text-sm max-sm:leading-[2] border 
                                         border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
                                         peer-checked/female:bg-[#EDF3FF] peer-checked/female:text-[#2B5BBB] peer-checked/female:border-[#2B5BBB]
                                         rounded-l-lg">
                                 여자
                             </label>
-                            
+
                             <!-- 남자 -->
                             <input type="radio" name="gender" id="male" value="남자" class="hidden peer/male" />
-                            <label for="male"
-                                class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] max-sm:text-sm max-sm:leading-[2] border-t border-b border-r 
+                            <label for="male" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] max-sm:text-sm max-sm:leading-[2] border-t border-b border-r 
                                         border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
                                         peer-checked/male:bg-[#EDF3FF] peer-checked/male:text-[#2B5BBB] peer-checked/male:border-[#2B5BBB]
                                         rounded-r-lg">
                                 남자
                             </label>
                         </div>
-                        
+
                     </div>
 
                     <!-- 4 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">생년월일 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">생년월일
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <input type="date" placeholder="YYYY-MM-DD"
-                            class="w-2/3 text-[16px] bg-[#F3F3F3] px-3 py-2 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]"/>
+                            class="w-2/3 text-[16px] bg-[#F3F3F3] px-3 py-2 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
                         <!-- <input id="birthday" type="text" placeholder="YYYY-MM-DD" class="w-2/3 text-[16px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]"/> -->
 
                     </div>
-                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
+                    <div
+                        class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                     </div>
 
                     <!-- 5 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-sm:px-0">이메일 <span
-                        class="text-[#2B5BBB]">*</span></label>
+                        <label
+                            class="w-1/3 px-4 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-sm:px-0">이메일
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <div class="w-2/3 flex flex-col">
                             <div class="flex items-center gap-2 max-sm:gap-1">
                                 <input type="text"
-                                    class="w-full flex-1 h-[45px] text-[18px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                                    class="w-full flex-1 h-[45px] text-[18px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                                 <button type="button"
                                     class="bg-[#EDF3FF] text-[#2B5BBB] text-[16px] h-[45px] px-4 py-1.5 max-sm:text-[14px] max-sm:min-w-[70px] min-w-[120px] rounded-lg border border-[#DBDEE3] focus:outline-none hover:bg-[#D3E1FB]">중복확인</button>
                             </div>
-                        </div>                       
+                        </div>
                     </div>
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
+                    <div
+                        class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                     </div>
 
                     <!-- 6 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">휴대번호 <span class="text-[#2B5BBB]">*</span>
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">휴대번호
+                            <span class="text-[#2B5BBB]">*</span>
                         </label>
-                        <input type="tel" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
-                        placeholder="01012345678 (숫자만 입력)" 
-                        class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
+                        <input type="tel" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                            placeholder="01012345678 (숫자만 입력)"
+                            class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
-                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
+                    <div
+                        class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                     </div>
 
                     <!-- 7 주소 (3줄) -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center">
-                        <label class="w-1/3 block px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] mb-2">주소 <span
-                                class="text-[#2B5BBB]">*</span></label>
+                        <label
+                            class="w-1/3 block px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] mb-2">주소
+                            <span class="text-[#2B5BBB]">*</span></label>
                         <div class="w-2/3 py-2">
                             <div class="flex gap-2 mb-2">
                                 <input type="text" placeholder="우편번호" disabled id="zonecode"
@@ -1696,148 +1910,257 @@
                             </div>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-auto flex items-center px-4 max-xl:hidden">
+                    <div
+                        class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-auto flex items-center px-4 max-xl:hidden">
                     </div>
 
                     <!-- 8 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] py-[6px] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
-                        직장명 <span class="text-[#2B5BBB]">*</span>
+                            직장명 <span class="text-[#2B5BBB]">*</span>
                         </label>
-                        
+
                         <div class="w-2/3 flex flex-col">
                             <div class="flex items-center gap-2 max-sm:gap-1">
                                 <input type="text" placeholder="양재 or 일반"
-                                    class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                                    class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                             </div>
                             <p class="text-[14px] font-semibold text-[#64748B]"> ※ 예: 양재고등학교 → 양재 or 무직 → 일반</p>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] py-[6px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">근무지역</label>
+                    <div
+                        class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] py-[6px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">근무지역</label>
                         <div class="relative dropdown w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">서울</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경기</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부산</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대구</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인천</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">광주</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대전</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">울산</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강원도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">충청남도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">경상북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라북도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">전라남도</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">제주</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    서울</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    경기</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    부산</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대구</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    인천</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    광주</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대전</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    울산</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    강원도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    충청북도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    충청남도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    경상북도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    전라북도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    전라남도</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    제주</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    퇴직</div>
                             </div>
                         </div>
                     </div>
                     <!-- 9 -->
-                    <div class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">가입경로</label>
+                    <div
+                        class="px-2 bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">가입경로</label>
                         <div class="relative dropdown w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">인터넷검색</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">동료교사추천</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내공문</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청단체연수</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수안내책자</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타(직접입력)</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    인터넷검색</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    동료교사추천</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    연수안내공문</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    교육청단체연수</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    연수안내책자</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    기타(직접입력)</div>
                             </div>
                         </div>
                     </div>
-                    <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
+                    <div
+                        class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden ">
+                    </div>
 
                     <!-- 여기서부터 교원일 경우 나타는 부분 -->
-                    <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
+                    <div
+                        class="px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
                             소속기관<span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        
-                        <div class="relative dropdown z-[9900] w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+
+                        <div class="relative dropdown w-2/3">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    유치원</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    초등학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    중학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    고등학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    특수학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    교육청</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대학원</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    퇴직</div>
                             </div>
                         </div>
                     </div>
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">설립구분
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">설립구분
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        <div class="relative dropdown z-[9900] w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                        <div class="relative dropdown w-2/3">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">공립</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">사립</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">국립</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    공립</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    사립</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    국립</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- 10 -->
                     <div class="px-2 py-[6px] bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[17px] max-sm:text-[16px] font-bold text-[#292929]">소속교육지원청
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[17px] max-sm:text-[16px] font-bold text-[#292929]">소속교육지원청
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        <div class="relative dropdown z-[9900] w-2/3 ">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                        <div class="relative dropdown w-2/3 ">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- 11 -->
-                    <div class="px-2 py-[6px] bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] flex items-center">
+                    <div
+                        class="px-2 py-[6px] bg-[#FFFFFF] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">직급
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
@@ -1845,45 +2168,46 @@
 
                         <div class="w-2/3 flex items-center gap-2 max-sm:gap-0">
                             <div id="select-container" class="flex-1">
-                                <div class="relative dropdown z-[9900] w-full">
+                                <div class="relative dropdown w-full">
                                     <!-- 버튼 -->
-                                    <button
-                                    type="button"
-                                    id="dropdownBtn"
-                                    class="w-full dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 max-sm:px-2 py-1.5 pr-2 rounded-lg h-[45px] flex justify-between items-center gap-15 max-sm:gap-0 focus:outline-none focus:border-[#2B5BBB]"
-                                    >
-                                    <span id="selectedOption" class="selected-option text-[16px] max-sm:text-[14px] text-[#AFAFAF]">선택하세요</span>
-                                    <svg class="w-5 h-5 max-sm:w-4 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
+                                    <button type="button" id="dropdownBtn"
+                                        class="w-full dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 max-sm:px-2 py-1.5 pr-2 rounded-lg h-[45px] flex justify-between items-center gap-15 max-sm:gap-0 focus:outline-none focus:border-[#2B5BBB]">
+                                        <span id="selectedOption"
+                                            class="selected-option text-[16px] max-sm:text-[14px] text-[#AFAFAF]">선택하세요</span>
+                                        <svg class="w-5 h-5 max-sm:w-4 text-[#292929]"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
                                     </button>
-                            
+
                                     <!-- 드롭다운 메뉴 -->
                                     <div id="dropdownMenu"
-                                    class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto z-10">
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="선택하세요">선택하세요</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="교사">교사</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기간제">기간제</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="부장">부장</div>
-                                    <div class="dropdown-item px-3 py-3 cursor-pointer hover:bg-[#E7F0FD]" data-value="기타">기타</div>
+                                        class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD]"
+                                            data-value="선택하세요">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD]"
+                                            data-value="교사">교사</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD]"
+                                            data-value="기간제">기간제</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD]"
+                                            data-value="부장">부장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD]"
+                                            data-value="기타">기타</div>
                                     </div>
-                            
+
                                     <!-- 기타 입력창 -->
-                                    <input
-                                    type="text"
-                                    id="customInput"
-                                    placeholder="직접 입력"
-                                    class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] mt-[6px] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB] hidden"
-                                    />
-                                </div>
+                                    <input type="text" id="customInput" placeholder="직접 입력"
+                                        class="max-sm:placeholder:text-sm w-full flex-1 h-[45px] text-[16px] max-sm:text-[16px] text-[#292929] placeholder-[#AFAFAF] bg-[#F3F3F3] mt-[6px] px-3 py-1.5 max-sm:px-2 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB] hidden" />
                                 </div>
                             </div>
+                        </div>
 
-                            
+
                         <!-- <div class="w-2/3 flex items-center gap-2 max-sm:gap:0">
                             <div id="select-container" class="flex-1">
-                                <div class="relative dropdown z-[9900] w-full">
+                                <div class="relative dropdown w-full">
                                     <button type="button" class=" w-full dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 max-sm:px-2 py-1.5 pr-2 rounded-lg h-[45px] flex justify-between items-center gap-15 max-sm:gap-0 focus:outline-none focus:border-[#2B5BBB]">
                                         <span class="selected-option text-[16px] max-sm:text-[14px] text-[#AFAFAF]">선택하세요</span>
                                         <svg class="w-5 h-5 max-sm:w-4 max-sm:y-4 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1892,19 +2216,19 @@
                                     </button>
                                     
                                     <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap ">교사</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기간제</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교감</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">원감</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장전문직</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">행정실장</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육공무직</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강사</div>
-                                        <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반직</div>
-                                        <div id="toggleButton" class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap ">교사</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기간제</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">부장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교감</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">원감</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교장전문직</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">행정실장</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육공무직</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">강사</div>
+                                        <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반직</div>
+                                        <div id="toggleButton" class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">기타</div>
                                     </div>
                                 </div>
                             </div>
@@ -1915,22 +2239,21 @@
                     </div>
 
                     <!-- 12 -->
-                    <div class="w-full px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] py-[6px] flex items-center">
+                    <div
+                        class="w-full px-2 bg-[#F9F9F9] max-xl:bg-[#FFFFFF] border-b border-[#EFEFEF] py-[6px] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">
                             전공과목<span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
                         <div class="w-2/3 flex flex-col relative">
-                            <input
-                            type="text" placeholder="초등 or 유아 or 특수 or 상담"
-                            class="max-sm:placeholder:text-sm peer h-[45px] text-[16px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none placeholder-[#AFAFAF] focus:border-[#2B5BBB]"
-                            />
-                        
+                            <input type="text" placeholder="초등 or 유아 or 특수 or 상담"
+                                class="max-sm:placeholder:text-sm peer h-[45px] text-[16px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none placeholder-[#AFAFAF] focus:border-[#2B5BBB]" />
+
                             <!-- md 이상에서 보여지는 안내 문구 -->
                             <p class="text-[14px] font-semibold text-[#64748B] leading-[20px] block mt-1">
-                            ※ "교육" 또는 "전문" 생략해주세요. <br/>
-                            (초등교육/유아교육/특수교육/전문상담  <br/>→ 초등/유아/특수/상담)
+                                ※ "교육" 또는 "전문" 생략해주세요. <br />
+                                (초등교육/유아교육/특수교육/전문상담 <br />→ 초등/유아/특수/상담)
                             </p>
-                        
+
                             <!-- sm 이하에서 input 포커스 시 나타나는 말풍선 툴팁 -->
                             <!-- <div class="absolute bottom-[52px] left-0 bg-black text-white text-[13px] leading-[18px] px-3 py-2 rounded-lg opacity-90 max-w-[280px] hidden sm:max-md:block peer-focus:block z-[9999]"
                             >
@@ -1945,28 +2268,53 @@
 
                     <!-- 13 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] py-[6px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">학교구분
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">학교구분
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        <div class="relative dropdown z-[9900] w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                        <div class="relative dropdown w-2/3">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">유치원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">중학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">고등학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">특수학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">교육청</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학교</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">대학원</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">퇴직</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    유치원</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    초등학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    중학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    고등학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    특수학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    교육청</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대학교</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    대학원</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    퇴직</div>
                             </div>
                         </div>
                     </div>
@@ -1978,36 +2326,53 @@
 
                     <!-- 14 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929]">관리자 권한
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929]">관리자
+                            권한
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        <div class="relative dropdown z-[9900] w-2/3">
-                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                        <div class="relative dropdown w-2/3">
+                            <button type="button"
+                                class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
                                 <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
-                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">선택하세요</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">일반</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">관리자</div>
-                                <div class="dropdown-item px-3 py-3 cursor-pointer text-[16px] text-[#727272] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">최고관리자</div>
+                            <div
+                                class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    선택하세요</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    일반</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    관리자</div>
+                                <div
+                                    class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">
+                                    최고관리자</div>
                             </div>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
+                    <div
+                        class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
                     </div>
 
                     <!-- 15 -->
-                    <div class="px-2 bg-[#F9F9F9] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">NICE 번호
+                    <div
+                        class="px-2 bg-[#F9F9F9] max-xl:bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">NICE
+                            번호
                             <span class="text-[12px] font-semibold text-[#2B5BBB] block">*교원</span>
                         </label>
-                        <input
-                            placeholder="직무연수 희망자 필수입력"
-                            class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                        <input placeholder="직무연수 희망자 필수입력"
+                            class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]" />
                     </div>
                     <div
                         class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden">
@@ -2017,152 +2382,107 @@
                 <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
 
                 <!-- 버튼 -->
-                <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
-                    <div class="max-w-[576px] flex gap-2 items-center mx-auto">
-                        <button
-                            class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
-                            등록하기
-                        </button>
-                        <button type="button" onclick="window.location.href='user.html'"
-                            class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
-                            취소하기
-                        </button>
-                    </div>
+                <div class="flex justify-end gap-3 mt-8">
+                    <button
+                        class="editCancelBtn bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#4B5563] font-semibold py-2 px-6 rounded-md border border-[#D1D5DB]">
+                        취소하기
+                    </button>
+                    <button id="submitEditBtn"
+                        class="bg-[#2B5BBB] hover:bg-[#1d4691] text-white font-semibold py-2 px-6 rounded-md shadow-sm">
+                        수정하기
+                    </button>
                 </div>
-
             </form>
         </div>
     </div>
 
-    <!-- 이수증 슬라이드 패널 -->
-    <div id="certificateSlideOverlay" class="fixed inset-0 z-[999] hidden">
-        <div id="certificateSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-[999] transition-all duration-300 overflow-y-auto">
-            <div class="p-6">
-                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">이수증</h2>
-                <div class="text-[16px] text-[#555] font-medium mb-2">
-                    ※ 발급기관: <span class="text-[#000]">한국댄스스포츠협회</span>
-                </div>
-                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
-                <div class="printArea">
-                    <!-- 이수증 이미지 -->
-                    <img src="img/license-real.png" alt="이수증 이미지"
-                        class="w-full max-h-[600px] object-contain ㅗmb-4 rounded-md" />
-                </div>
-                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
-                <!-- 하단 버튼 영역 -->
-                <div class="flex justify-between">
-                    <button onclick="printClassArea('certificateSlidePanel')"
-                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
-                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
-                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
-                    </button>
-                    <button class="closeCertificateSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
-                        닫기
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 영수증 슬라이드 패널 -->
-    <div id="receiptSlideOverlay" class="fixed inset-0 z-[999] hidden">
-        <div id="receiptSlidePanel" class="fixed top-0 right-[-100%] w-full max-w-[600px] h-full bg-white shadow-lg z-[999] transition-all duration-300 overflow-y-auto">
-            <div class="p-6">
-                <h2 class="paperlogy text-[26px] max-md:text-[22px] font-medium mt-2 mb-2">영수증</h2>
-                <div class="text-[16px] text-[#555] font-medium mb-2">
-                    ※ 은행명: <span class="text-[#000]">기업은행</span>
-                </div>
-                <div class="border-t-[1px] border-[#DBDEE3] mb-3"></div>
-                <div class="printArea">
-                    <!-- 영수증 이미지 -->
-                    <img src="img/receipt-real.png" alt="영수증 이미지"
-                        class=" w-full max-h-[500px] object-contain mb-4 rounded-md" />
-                </div>
-                <div class="border-t-[1px] border-[#DBDEE3] mb-4"></div>
-
-                <!-- 하단 버튼 영역 -->
-                <div class="flex justify-between">
-                    <button onclick="printClassArea('receiptSlidePanel')"
-                            class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
-                        <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
-                        PDF<span class="inline-block max-sm:hidden text-[#EDF3FF]">다운로드</span>
-                    </button>
-                    <button class="closeReceiptSlide px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
-                        닫기
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 
     <script src="js/script.js"></script>
     <script>
-        // ✅  드롭다운 열고 닫기
+        // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.stopPropagation();
+
                 const dropdown = this.closest('.dropdown');
                 const menu = dropdown.querySelector('.dropdown-menu');
+                const clonedMenu = menu.cloneNode(true);
+
+                // 기존 열려있던 메뉴들 닫기
                 document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
+                document.querySelectorAll('.dropdown-menu-body').forEach(m => m.remove());
+
+                // 열기 상태면 새로 그려줌
                 if (menu.classList.contains('hidden')) {
+                    const rect = this.getBoundingClientRect();
                     dropdown.style.zIndex = '10';
-                }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
-                });
-                menu.classList.toggle('hidden');
 
-                // ✅ 드롭다운 열기
-                if (!menu.classList.contains('hidden')) {
-                    const rect = button.getBoundingClientRect();
-                    const parentRect = dropdown.getBoundingClientRect(); 
+                    // ✅ 드롭다운 메뉴 위치 계산 (스크롤 보정)
+                    clonedMenu.classList.remove('hidden');
+                    clonedMenu.classList.add('dropdown-menu-body');
+                    clonedMenu.style.position = 'absolute';
+                    clonedMenu.style.left = `${rect.left + window.scrollX}px`;
+                    clonedMenu.style.top = `${rect.bottom + window.scrollY}px`;
+                    clonedMenu.style.width = `${rect.width}px`;
+                    clonedMenu.style.zIndex = '9999';
+                    clonedMenu.style.background = 'white'; // 필요한 스타일
+                    clonedMenu.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)'; // 선택적
 
-                    menu.style.position = 'absolute';
-                    menu.style.left = `${rect.left - parentRect.left}px`;
-                    menu.style.top = `${rect.bottom - parentRect.top}px`;
-                    menu.style.width = `${rect.width}px`;
-                    menu.style.zIndex = '9999';
+                    dropdown.appendChild(clonedMenu); // ✅ body → dropdown 으로 바꿈
+                    clonedMenu.style.position = 'absolute';
+                    clonedMenu.style.left = '0px';
+                    clonedMenu.style.top = '100%';
+
+                    // ✅ 드롭다운 항목 클릭 시 반영
+                    clonedMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedText = this.textContent;
+                            dropdown.querySelector('.selected-option').textContent = selectedText;
+
+                            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
+                            if (hiddenInput) hiddenInput.value = selectedText;
+
+                            dropdown.style.zIndex = '0';
+                            clonedMenu.remove();
+                        });
+                    });
+                    clonedMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.addEventListener('click', function () {
+                            const selectedText = this.textContent;
+                            const value = this.getAttribute('data-value');
+                            const inputField = dropdown.querySelector('#customInput');
+                            const buttonText = dropdown.querySelector('.selected-option');
+                            const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
+
+                            if (value === '기타') {
+                                buttonText.textContent = '직접 입력 중...';
+                                if (inputField) inputField.classList.remove('hidden');
+                                if (hiddenInput) hiddenInput.value = ''; // 필요하면 초기화
+                            } else {
+                                buttonText.textContent = selectedText;
+                                if (inputField) inputField.classList.add('hidden');
+                                if (hiddenInput) hiddenInput.value = selectedText;
+                            }
+
+                            dropdown.style.zIndex = '0';
+                            clonedMenu.remove();
+                        });
+                    });
+                    
+
                 } else {
-                    // 리셋
-                    menu.style.position = '';
-                    menu.style.left = '';
-                    menu.style.top = '';
-                    menu.style.width = '';
-                    menu.style.zIndex = '';
+                    dropdown.style.zIndex = '0';
                 }
             });
         });
 
-        // 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
+        // ✅ 외부 클릭 시 드롭다운 닫기
         document.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.add('hidden');
-
-                
-            });
+            document.querySelectorAll('.dropdown-menu-body').forEach(menu => menu.remove());
             document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
         });
+
+
 
         // ✅  필터모달창 + 적용 후 선택옵션 
         document.addEventListener('DOMContentLoaded', function () {
@@ -2246,11 +2566,11 @@
             if (window.innerWidth >= 1024) {
                 const selectedFilters = document.getElementById('selectedFilters');
                 selectedFilters.innerHTML = '';
+                document.getElementById('name').value = '';
                 document.getElementById('year').value = '';
                 document.getElementById('semester').value = '';
-                document.getElementById('name').value = '';
-                document.getElementById('eduPlace').value = '';
                 document.getElementById('jobPosition').value = '';
+                document.getElementById('eduPlace').value = '';
                 document.getElementById('day').value = '';
                 document.getElementById('count').value = '';
             }
@@ -2288,53 +2608,38 @@
         });
 
 
-            // ✅ 회원정보 수정모달
-            document.addEventListener("DOMContentLoaded", function () {
-                const editModalBtns = document.querySelectorAll(".editModalBtn");      
-                const editCancelBtns = document.querySelectorAll(".editCancelBtn");    
-                const editModal = document.getElementById("editModal");
 
-                // 열기
-                editModalBtns.forEach((btn) => {
-                    btn.addEventListener("click", () => {
-                        editModal.classList.remove("hidden");
-                    });
-                });
 
-                // 닫기
-                editCancelBtns.forEach((btn) => {
-                    btn.addEventListener("click", () => {
-                        editModal.classList.add("hidden");
-                    });
-                });
+        // ✅ 회원수정 모달
+        document.addEventListener("DOMContentLoaded", function () {
+            const editModalBtns = document.querySelectorAll(".editModalBtn");
+            const editCancelBtns = document.querySelectorAll(".editCancelBtn");
+            const editModal = document.getElementById("editModal");
 
-                // 바깥 클릭 시 닫기
-                editModal.addEventListener("click", (e) => {
-                    if (e.target === editModal) {
-                        editModal.classList.add("hidden");
-                    }
+            // 열기
+            editModalBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    editModal.classList.remove("hidden");
+                    document.body.style.overflow = "hidden";
                 });
             });
 
-
-
-
-        // ✅  PDF저장 + 프린트 모달
-        function printClassArea(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-
-            const areas = modal.querySelectorAll('.printArea');
-            let printContents = '';
-            areas.forEach(area => {
-                printContents += area.innerHTML;
+            // 닫기
+            editCancelBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
+                });
             });
 
-            const originalContents = document.body.innerHTML;
-            document.body.innerHTML = printContents;
-            window.print();
-            document.body.innerHTML = originalContents;
-        }
+            // 바깥 클릭 시 닫기
+            editModal.addEventListener("click", (e) => {
+                if (e.target === editModal) {
+                    editModal.classList.add("hidden");
+                    document.body.style.overflow = "";
+                }
+            });
+        });
 
 
         // ✅  영수증 슬라이드
@@ -2350,7 +2655,7 @@
                     overlay.classList.remove("hidden");
                     slidePanel.classList.remove("right-[-100%]");
                     slidePanel.classList.add("right-0");
-                    document.body.classList.add("modal-open");
+                    document.body.classList.add("overflow-hidden");
                 });
             });
 
@@ -2358,7 +2663,7 @@
             closeButton.addEventListener("click", function () {
                 slidePanel.classList.remove("right-0");
                 slidePanel.classList.add("right-[-100%]");
-                document.body.classList.remove("modal-open");
+                document.body.classList.remove("overflow-hidden");
 
                 // 약간의 애니메이션 딜레이 후 오버레이 숨기기
                 setTimeout(() => {
@@ -2389,7 +2694,7 @@
                     overlay.classList.remove("hidden");
                     slidePanel.classList.remove("right-[-100%]");
                     slidePanel.classList.add("right-0");
-                    document.body.classList.add("modal-open");
+                    document.body.classList.add("overflow-hidden");
                 });
             });
 
@@ -2397,7 +2702,7 @@
             closeButton.addEventListener("click", function () {
                 slidePanel.classList.remove("right-0");
                 slidePanel.classList.add("right-[-100%]");
-                document.body.classList.remove("modal-open");
+                document.body.classList.remove("overflow-hidden");
 
                 // 약간의 애니메이션 딜레이 후 오버레이 숨기기
                 setTimeout(() => {
@@ -2413,6 +2718,632 @@
                 }
             });
         });
+
+
+        // ✅  PDF저장 + 프린트 모달 (세로 ) - 이수증, 영수증
+        function printClassArea(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+
+            // 고유 스타일 식별자
+            const styleId = `print-style-${modalId}-class`;
+            let printStyle = document.getElementById(styleId);
+
+            // 이미 존재하는 스타일이 있으면 제거
+            if (printStyle) {
+                document.head.removeChild(printStyle);
+            }
+
+            // 새 스타일 요소 생성
+            printStyle = document.createElement("style");
+            printStyle.id = styleId;
+            printStyle.innerHTML = `
+            @media print {
+                @page {
+                    size: A4 portrait;
+                    margin: 10mm;
+                }
+
+                html, body {
+                    width: 210mm !important;
+                    height: 297mm !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    font-family: Arial, sans-serif !important;
+                }
+
+                * {
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                    color-adjust: exact !important;
+                }
+
+                body > *:not(.print-container) {
+                    display: none !important;
+                }
+
+                .print-container {
+                    display: block !important;
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+                /* 이수증 스타일 */
+                .certificate-box {
+                    position: relative !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    overflow: hidden !important;
+                }
+
+                .certificate-box img {
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    opacity: 1 !important;
+                    z-index: 1 !important;
+                }
+
+                .certificate-inner {
+                    position: relative !important;
+                    z-index: 10 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    padding: 20mm !important;
+                    box-sizing: border-box !important;
+                }
+
+                .certificate-inner * {
+                    visibility: visible !important;
+                    position: relative !important;
+                    z-index: 10 !important;
+                    color: #000 !important;
+                }
+
+                .certificate-inner .certificate-info,
+                .certificate-inner .certificate-details {
+                    text-align: left !important;
+                    width: 100% !important;
+                }
+
+                .certificate-inner h1, 
+                .certificate-inner h2 {
+                    text-align: center !important;
+                    width: 100% !important;
+                }
+
+                /* 영수증 스타일 */
+                .receipt-box {
+                    position: relative !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    margin: 0 !important;
+                    padding: 20mm !important;
+                    box-sizing: border-box !important;
+                }
+
+                .receipt-inner {
+                    position: relative !important;
+                    z-index: 10 !important;
+                    width: 100% !important;
+                }
+
+                .receipt-box table {
+                    width: 100% !important;
+                    border-collapse: collapse !important;
+                }
+
+                .receipt-box table, 
+                .receipt-box th, 
+                .receipt-box td {
+                    border: 1px solid black !important;
+                    padding: 2mm !important;
+                }
+
+                button, 
+                .closeReceiptSlide, 
+                .closeCertificateSlide {
+                    display: none !important;
+                }
+            }
+            `;
+            document.head.appendChild(printStyle);
+
+            // 현재 body 백업
+            const originalBody = document.body.innerHTML;
+
+            // 프린트할 영역 수집 및 복제
+            const printContainer = document.createElement("div");
+            printContainer.className = "print-container";
+
+            // 이수증 또는 영수증 내용 복사
+            if (modalId === "certificateSlidePanel") {
+                const certificateBox = modal.querySelector(".certificate-box");
+                if (certificateBox) {
+                    // 깊은 복제로 모든 요소와 속성 복사
+                    const boxClone = certificateBox.cloneNode(true);
+
+                    // 배경 이미지 처리
+                    const backgroundImg = boxClone.querySelector("img");
+                    if (backgroundImg) {
+                        backgroundImg.style.position = "absolute";
+                        backgroundImg.style.top = "0";
+                        backgroundImg.style.left = "0";
+                        backgroundImg.style.width = "100%";
+                        backgroundImg.style.height = "100%";
+                        backgroundImg.style.objectFit = "cover";
+                        backgroundImg.style.opacity = "1";
+                        backgroundImg.style.zIndex = "1";
+                    }
+
+                    // 텍스트 정렬 조정
+                    const inner = boxClone.querySelector(".certificate-inner");
+                    if (inner) {
+                        // 날짜와 정보 요소들의 정렬 조정
+                        const infoElements = inner.querySelectorAll(
+                            ".certificate-info, .certificate-details"
+                        );
+                        infoElements.forEach((el) => {
+                            el.style.textAlign = "left";
+                            el.style.width = "100%";
+                        });
+
+                        // 제목은 가운데 정렬 유지
+                        const titleElements = inner.querySelectorAll("h1, h2");
+                        titleElements.forEach((el) => {
+                            el.style.textAlign = "center";
+                            el.style.width = "100%";
+                        });
+                    }
+
+                    printContainer.appendChild(boxClone);
+                }
+            } else if (modalId === "receiptSlidePanel") {
+                const receiptBox = modal.querySelector(".receipt-box");
+                if (receiptBox) {
+                    // 깊은 복제로 모든 요소와 속성 복사
+                    const boxClone = receiptBox.cloneNode(true);
+                    printContainer.appendChild(boxClone);
+                }
+            }
+
+            // 프린트 컨테이너를 body에 추가 (기존 내용 대체)
+            document.body.innerHTML = "";
+            document.body.appendChild(printContainer);
+
+            // 모든 요소가 렌더링될 시간을 더 충분히 확보
+            setTimeout(() => {
+                window.print();
+
+                // 원본 내용 복원
+                document.body.innerHTML = originalBody;
+
+                // 추가된 스타일 제거
+                const styleElement = document.getElementById(styleId);
+                if (styleElement) {
+                    document.head.removeChild(styleElement);
+                }
+
+                // 모달 다시 표시 및 상태 복원
+                const originalModal = document.getElementById(modalId);
+
+                if (originalModal) {
+                    if (modalId === "certificateSlidePanel") {
+                        const overlay = document.getElementById(
+                            "certificateSlideOverlay"
+                        );
+                        if (overlay) {
+                            overlay.classList.remove("hidden");
+                            originalModal.classList.remove("right-[-100%]");
+                            originalModal.classList.add("right-0");
+                        }
+                    } else if (modalId === "receiptSlidePanel") {
+                        const overlay = document.getElementById("receiptSlideOverlay");
+                        if (overlay) {
+                            overlay.classList.remove("hidden");
+                            originalModal.classList.remove("right-[-100%]");
+                            originalModal.classList.add("right-0");
+                        }
+                    }
+                }
+
+                // 이벤트 리스너 재설정
+                reattachEventListeners();
+            }, 1000);
+        }
+
+
+
+
+        //✅ 모든 이벤트 리스너 재설정 함수
+        function reattachEventListeners() {
+            // 드롭다운 기능 재설정
+            document.querySelectorAll(".dropdown-button").forEach((button) => {
+                // 기존 이벤트 리스너 제거 (중복 방지)
+                button.removeEventListener("click", handleDropdownClick);
+                button.addEventListener("click", handleDropdownClick);
+            });
+
+            // 드롭다운 옵션 클릭 이벤트 재설정
+            document.querySelectorAll(".dropdown-item").forEach((item) => {
+                // 기존 이벤트 리스너 제거 (중복 방지)
+                item.removeEventListener("click", handleDropdownItemClick);
+                item.addEventListener("click", handleDropdownItemClick);
+            });
+
+            // 각종 모달 이벤트 재설정
+            reattachModalEvents();
+
+            // 이수증 및 영수증 슬라이드 이벤트 재설정
+            reattachSlideEvents();
+
+            // 수료번호 인풋
+            setupCompletionInputEvents();
+
+            // 필터모달 재설정
+            initFilterModalEvents();
+            resetFiltersOnMd()
+
+        }
+
+        // 드롭다운 클릭 핸들러
+        function handleDropdownClick(e) {
+            e.stopPropagation();
+            const dropdown = this.closest(".dropdown");
+            const menu = dropdown.querySelector(".dropdown-menu");
+
+            document
+                .querySelectorAll(".dropdown")
+                .forEach((d) => (d.style.zIndex = "0"));
+
+            if (menu.classList.contains("hidden")) {
+                dropdown.style.zIndex = "10";
+            }
+
+            document.querySelectorAll(".dropdown-menu").forEach((m) => {
+                if (m !== menu) m.classList.add("hidden");
+            });
+
+            menu.classList.toggle("hidden");
+        }
+
+        // 드롭다운 아이템 클릭 핸들러
+        function handleDropdownItemClick() {
+            const dropdown = this.closest(".dropdown");
+            const selectedText = this.textContent.trim();
+            const buttonSpan = dropdown.querySelector(".selected-option");
+
+            buttonSpan.textContent = selectedText;
+
+            const hiddenInput = dropdown.parentElement.querySelector(
+                'input[type="hidden"]'
+            );
+            if (hiddenInput) {
+                hiddenInput.value = selectedText;
+            }
+
+            dropdown.querySelector(".dropdown-menu").classList.add("hidden");
+            dropdown.style.zIndex = "0";
+        }
+
+        // 모달 이벤트 리스너 재설정 함수
+        function reattachModalEvents() {
+            // 수정 모달 이벤트 재설정
+            const editModal = document.getElementById("editModal");
+            const openEditBtns = document.querySelectorAll(".editModalBtn");
+            const closeEditBtns = editModal?.querySelectorAll(".editCancelBtn");
+
+            if (openEditBtns.length > 0 && editModal) {
+                openEditBtns.forEach((openBtn) => {
+                    openBtn.removeEventListener("click", handleEditModalOpen);
+                    openBtn.addEventListener("click", handleEditModalOpen);
+                });
+
+                if (closeEditBtns) {
+                    closeEditBtns.forEach((btn) => {
+                        btn.removeEventListener("click", handleEditModalClose);
+                        btn.addEventListener("click", handleEditModalClose);
+                    });
+                }
+            }
+        }
+        // 모달 이벤트 핸들러 함수들
+        function handleInfoModalBackgroundClick(e) {
+            if (e.target === e.currentTarget) {
+                e.currentTarget.classList.add("hidden");
+                document.body.style.overflow = "";
+            }
+        }
+        function handleEditModalOpen(e) {
+            e.stopPropagation();
+            document.getElementById("editModal").classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
+
+        function handleEditModalClose() {
+            document.getElementById("editModal").classList.add("hidden");
+            document.body.style.overflow = "";
+        }
+
+        // 슬라이드 이벤트 리스너 재설정 함수
+        function reattachSlideEvents() {
+            // 영수증 슬라이드 이벤트 재설정
+            const receiptOverlay = document.getElementById("receiptSlideOverlay");
+            const receiptSlidePanel = document.getElementById("receiptSlidePanel");
+            const receiptOpenBtns = document.querySelectorAll(".openReceiptSlide");
+            const receiptCloseBtn =
+                receiptSlidePanel?.querySelector(".closeReceiptSlide");
+
+            if (receiptOpenBtns.length > 0 && receiptSlidePanel) {
+                receiptOpenBtns.forEach((btn) => {
+                    btn.removeEventListener("click", handleReceiptSlideOpen);
+                    btn.addEventListener("click", handleReceiptSlideOpen);
+                });
+
+                if (receiptCloseBtn) {
+                    receiptCloseBtn.removeEventListener(
+                        "click",
+                        handleReceiptSlideClose
+                    );
+                    receiptCloseBtn.addEventListener("click", handleReceiptSlideClose);
+                }
+
+                if (receiptOverlay) {
+                    receiptOverlay.removeEventListener(
+                        "click",
+                        handleReceiptOverlayClick
+                    );
+                    receiptOverlay.addEventListener("click", handleReceiptOverlayClick);
+                }
+            }
+
+            // 이수증 슬라이드 이벤트 재설정
+            const certOverlay = document.getElementById("certificateSlideOverlay");
+            const certSlidePanel = document.getElementById("certificateSlidePanel");
+            const certOpenBtns = document.querySelectorAll(".openCertificateSlide");
+            const certCloseBtn = certSlidePanel?.querySelector(
+                ".closeCertificateSlide"
+            );
+
+            if (certOpenBtns.length > 0 && certSlidePanel) {
+                certOpenBtns.forEach((btn) => {
+                    btn.removeEventListener("click", handleCertificateSlideOpen);
+                    btn.addEventListener("click", handleCertificateSlideOpen);
+                });
+
+                if (certCloseBtn) {
+                    certCloseBtn.removeEventListener(
+                        "click",
+                        handleCertificateSlideClose
+                    );
+                    certCloseBtn.addEventListener("click", handleCertificateSlideClose);
+                }
+
+                if (certOverlay) {
+                    certOverlay.removeEventListener(
+                        "click",
+                        handleCertificateOverlayClick
+                    );
+                    certOverlay.addEventListener(
+                        "click",
+                        handleCertificateOverlayClick
+                    );
+                }
+            }
+        }
+
+        function setupCompletionInputEvents() {
+            document.querySelectorAll('.completion-wrapper').forEach(wrapper => {
+                const input = wrapper.querySelector('.completion-input');
+                const button = wrapper.querySelector('.completion-btn');
+
+                // 기존 이벤트 제거 후 새 버튼으로 교체 (중복 방지)
+                const newButton = button.cloneNode(true);
+                button.replaceWith(newButton);
+
+                newButton.addEventListener('click', () => {
+                    const state = newButton.innerText.trim();
+
+                    if (state === '등록' || state === '저장') {
+                        const val = input.value.trim();
+
+                        if (val) {
+                            input.disabled = true;
+                            input.classList.remove('bg-white');
+                            input.classList.add('bg-[#F3F3F3]');
+                            newButton.innerText = '수정';
+                        } else {
+                            alert('값을 입력해주세요!');
+                        }
+                    } else if (state === '수정') {
+                        input.disabled = false;
+                        input.focus();
+                        input.classList.remove('bg-[#F3F3F3]');
+                        input.classList.add('bg-white');
+                        newButton.innerText = '저장';
+                    }
+                });
+            });
+        }
+
+        // 슬라이드 이벤트 핸들러 함수들
+        function handleReceiptSlideOpen() {
+            const overlay = document.getElementById("receiptSlideOverlay");
+            const slidePanel = document.getElementById("receiptSlidePanel");
+
+            overlay.classList.remove("hidden");
+            slidePanel.classList.remove("right-[-100%]");
+            slidePanel.classList.add("right-0");
+            document.body.classList.add("modal-open");
+        }
+
+        function handleReceiptSlideClose() {
+            const overlay = document.getElementById("receiptSlideOverlay");
+            const slidePanel = document.getElementById("receiptSlidePanel");
+
+            slidePanel.classList.remove("right-0");
+            slidePanel.classList.add("right-[-100%]");
+            document.body.classList.remove("modal-open");
+
+            setTimeout(() => {
+                overlay.classList.add("hidden");
+            }, 300);
+        }
+
+        function handleReceiptOverlayClick(e) {
+            const slidePanel = document.getElementById("receiptSlidePanel");
+            if (!slidePanel.contains(e.target)) {
+                handleReceiptSlideClose();
+            }
+        }
+
+        function handleCertificateSlideOpen() {
+            const overlay = document.getElementById("certificateSlideOverlay");
+            const slidePanel = document.getElementById("certificateSlidePanel");
+
+            overlay.classList.remove("hidden");
+            slidePanel.classList.remove("right-[-100%]");
+            slidePanel.classList.add("right-0");
+            document.body.classList.add("modal-open");
+        }
+
+        function handleCertificateSlideClose() {
+            const overlay = document.getElementById("certificateSlideOverlay");
+            const slidePanel = document.getElementById("certificateSlidePanel");
+
+            slidePanel.classList.remove("right-0");
+            slidePanel.classList.add("right-[-100%]");
+            document.body.classList.remove("modal-open");
+
+            setTimeout(() => {
+                overlay.classList.add("hidden");
+            }, 300);
+        }
+
+        function handleCertificateOverlayClick(e) {
+            const slidePanel = document.getElementById("certificateSlidePanel");
+            if (!slidePanel.contains(e.target)) {
+                handleCertificateSlideClose();
+            }
+        }
+
+
+        function initFilterModalEvents() {
+            const filterButton = document.getElementById("filterButton");
+            const filterModal = document.getElementById("filterModal");
+            const modalBackdrop = document.getElementById("modalBackdrop");
+            const closeButton = document.getElementById("closeButton");
+            const confirmButton = document.getElementById("confirmButton");
+            const cancelButton = document.getElementById("cancelButton");
+
+            if (filterButton && filterModal) {
+                filterButton.addEventListener("click", function () {
+                filterModal.classList.remove("hidden");
+                modalBackdrop.classList.remove("hidden");
+                document.body.classList.add("overflow-hidden");
+                });
+
+                function closeFilterModal() {
+                filterModal.classList.add("hidden");
+                modalBackdrop.classList.add("hidden");
+                document.body.classList.remove("overflow-hidden");
+                }
+
+                if (closeButton)
+                closeButton.addEventListener("click", closeFilterModal);
+                if (cancelButton)
+                cancelButton.addEventListener("click", closeFilterModal);
+                if (modalBackdrop)
+                modalBackdrop.addEventListener("click", closeFilterModal);
+
+                if (confirmButton) {
+                confirmButton.addEventListener("click", function () {
+                    const year = document.getElementById('year').value;
+                    const semester = document.getElementById('semester').value;
+                    const name = document.getElementById("name").value;
+                    const eduPlace = document.getElementById("eduPlace").value;
+                    const jobPosition = document.getElementById('jobPosition').value;
+                    const day = document.getElementById("day").value;
+                    const count = document.getElementById("count").value;
+
+                    const selectedFilters = document.getElementById("selectedFilters");
+                    if (selectedFilters) {
+                    selectedFilters.innerHTML = "";
+
+                    const filters = {
+                        년도: year,
+                        학기: semester,
+                        과정명: name,
+                        직무: jobPosition,
+                        교육장소: eduPlace,
+                        요일: day,
+                        회차: count,
+                    };
+
+                    for (const key in filters) {
+                        if (filters[key]) {
+                        const tag = document.createElement("div");
+                        tag.className =
+                            "bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-2 text-base";
+                        tag.innerHTML = `
+                            ${filters[key]} <span class="cursor-pointer text-[#2B5BBB] text-base remove-tag">✕</span>
+                        `;
+                        selectedFilters.appendChild(tag);
+
+                        tag
+                            .querySelector(".remove-tag")
+                            .addEventListener("click", () => {
+                            tag.remove();
+                            });
+                        }
+                    }
+                    }
+
+                    closeFilterModal();
+                });
+                }
+            }
+        }
+
+        // 필터 리셋 함수
+        function resetFiltersOnMd() {
+            if (window.innerWidth >= 1024) {
+                const selectedFilters = document.getElementById("selectedFilters");
+                if (selectedFilters) {
+                    selectedFilters.innerHTML = "";
+                }
+                const yearInput = document.getElementById("year");
+                const semesterInput = document.getElementById("semester");
+                const nameInput = document.getElementById("name");
+                const eduPlaceInput = document.getElementById("eduPlace");
+                const dayInput = document.getElementById("day");
+                const jobPositionInput = document.getElementById("jobPosition");
+                const countInput = document.getElementById("count");
+
+                if (yearInput) yearInput.value = "";
+                if (semesterInput) semesterInput.value = "";
+                if (nameInput) nameInput.value = "";
+                if (eduPlaceInput) eduPlaceInput.value = "";
+                if (dayInput) dayInput.value = "";
+                if (jobPositionInput) jobPositionInput.value = "";
+                if (countInput) countInput.value = "";
+            }
+        }
+
+        // 문서 로드 시 모든 이벤트 리스너 초기화
+        document.addEventListener("DOMContentLoaded", initFilterModalEvents);
+
+
 
 
     </script>
