@@ -147,47 +147,55 @@
             </div>
         </nav>
         <!-- 모바일 전용 배너 -->
-        <div id="mobile-banner" class="flex fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md overflow-hidden transition-all duration-300 h-auto">
-            <div class="banner-container flex transition-transform duration-300 ease-in-out">
-                <!-- Clone of last item -->
-                <div class="notice banner-item text-white flex-shrink-0 w-full">
-                    <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
-                        <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
-                    </a>
-                </div>
+        <div id="mobile-banner" class="fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md overflow-hidden transition-all duration-300 h-[35px]">
+            
+            <div class="relative w-full h-full">
+            <!-- <div class="banner-container flex transition-transform duration-300 ease-in-out"> -->
+                <div class="banner-container absolute top-0 left-0 w-full h-full flex items-center transition-transform duration-300 ease-in-out">
 
-                <!-- 여기부터 모바일배너 아이템 시작 -->
-                <div class="shoes banner-item text-white flex-shrink-0 w-full">   
-                    <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
-                        <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
-                    </a>
-                </div>
-                <div class="deposit banner-item text-white flex-shrink-0 w-full">
-                    <a href="student-pay.html" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
-                        <span class="date text-white text-sm pl-1">25.02.01</span><span class="text-white text-sm pl-1">최근 수강 입금자</span> | <span class="class-name text-white text-sm">라틴2종 파티대비A</span> <span class="user-name text-white text-sm pl-1">김민수</span> 
-                    </a>
-                </div>
-                <div class="membership banner-item text-white flex-shrink-0 w-full">
-                    <a href="user.html" class="text-sm"> <!-- 회원관리 페이지 이동 -->
-                        <span class="date text-white text-sm pl-1">25.03.12</span><span class="text-white text-sm pl-1">신규 가입자</span> | <span class="membership-type text-white text-sm">교원</span> <span class="user-name text-white text-sm pl-1">이수지</span> 
-                    </a>
-                </div>
-                <div class="notice banner-item text-white flex-shrink-0 w-full">
-                    <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
-                        <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
-                    </a>
-                </div>
-                <!-- 여기까지 모바일배너 아이템 -->
+               
+                    <!-- Clone of last item -->
+                    <div class="notice banner-item text-white flex-shrink-0 w-full">
+                        <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
+                        </a>
+                    </div>
 
-                <!-- Clone of first item -->
-                <div class="shoes banner-item text-white flex-shrink-0 w-full">   
-                    <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
-                        <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
-                    </a>
-                </div>
-                
+                    <!-- 여기부터 모바일배너 아이템 시작 -->
+                    <div class="shoes banner-item text-white flex-shrink-0 w-full">   
+                        <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
+                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
+                        </a>
+                    </div>
+                    <div class="deposit banner-item text-white flex-shrink-0 w-full">
+                        <a href="student-pay.html" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.02.01</span><span class="text-white text-sm pl-1">최근 수강 입금자</span> | <span class="class-name text-white text-sm">라틴2종 파티대비A</span> <span class="user-name text-white text-sm pl-1">김민수</span> 
+                        </a>
+                    </div>
+                    <div class="membership banner-item text-white flex-shrink-0 w-full">
+                        <a href="user.html" class="text-sm"> <!-- 회원관리 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.03.12</span><span class="text-white text-sm pl-1">신규 가입자</span> | <span class="membership-type text-white text-sm">교원</span> <span class="user-name text-white text-sm pl-1">이수지</span> 
+                        </a>
+                    </div>
+                    <div class="notice banner-item text-white flex-shrink-0 w-full">
+                        <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
+                        </a>
+                    </div>
+                    <!-- 여기까지 모바일배너 아이템 -->
+
+                    <!-- Clone of first item -->
+                    <div class="shoes banner-item text-white flex-shrink-0 w-full">   
+                        <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
+                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
+                        </a>
+                    </div>
+
+                    <button id="mbanner-toggle" class="absolute right-2 top-1/2 -translate-y-1/2">▼</button>
+
             </div>
-            <button id="mbanner-toggle" class="text-[13px] text-white pr-3 max-lg:pr-0">▼</button>
+            <!-- <button id="mbanner-toggle" class="text-[13px] text-white pr-3 max-lg:pr-0">▼</button> -->
+
         </div>
     </header>
     <!-- 사이드 메뉴 -->
@@ -530,7 +538,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="max-lg:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px] mx-auto">
-        <div class="w-full h-full px-6 max-sm:pt-[10px] pb-[100px]">
+        <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px]">
             <h1 class="mt-[50px] h1-title font-normal paperlogy">대시보드</h1>           
             <div class="w-full max-sm:pt-6 mt-5">
                 <div class="overflow-x-auto">
