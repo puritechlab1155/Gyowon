@@ -363,33 +363,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// ✅ 모바일 배너 슬라이드, 스와이프 기능
+
+// ✅ 모바일 배너 슬라이드 + 스와이프 + 드롭다운 통합
 const mobileBannerContainer = document.querySelector('#mobile-banner .banner-container');
-let banners = document.querySelectorAll('#mobile-banner .banner-item');
+let banners;
 let currentIndex = 1;
 let touchStartX = 0;
 let touchEndX = 0;
 let autoSlideInterval;
+const itemWidthPercentage = 100;
+
+function updateBanners() {
+    banners = document.querySelectorAll('#mobile-banner .banner-container .banner-item');
+}
 
 // 슬라이드 복제 (앞뒤)
 function cloneSlides() {
-    const first = banners[0];
-    const last = banners[banners.length - 1];
-    const firstClone = first.cloneNode(true);
-    const lastClone = last.cloneNode(true);
-    mobileBannerContainer.appendChild(firstClone);
-    mobileBannerContainer.insertBefore(lastClone, first);
-    banners = document.querySelectorAll('#mobile-banner .banner-item');
+    const originalBanners = Array.from(document.querySelectorAll('#mobile-banner .banner-container .banner-item:not(.clone)'));
+    mobileBannerContainer.innerHTML = ''; // 슬라이드 영역만 초기화
+
+    if (originalBanners.length > 0) {
+        const first = originalBanners[0];
+        const last = originalBanners[originalBanners.length - 1];
+        const firstClone = first.cloneNode(true);
+        firstClone.classList.add('clone');
+        const lastClone = last.cloneNode(true);
+        lastClone.classList.add('clone');
+
+        mobileBannerContainer.appendChild(lastClone);
+        originalBanners.forEach(banner => mobileBannerContainer.appendChild(banner));
+        mobileBannerContainer.appendChild(firstClone);
+    }
+    updateBanners();
 }
 
 // 슬라이드 이동
 function showBanner(index, animate = true) {
-    if (!animate) {
-        mobileBannerContainer.style.transition = "none";
-    } else {
-        mobileBannerContainer.style.transition = "transform 0.3s ease";
-    }
-    mobileBannerContainer.style.transform = `translateX(-${index * 100}%)`;
+    if (!banners || banners.length === 0) return;
+    mobileBannerContainer.style.transition = animate ? "transform 0.3s ease" : "none";
+    mobileBannerContainer.style.transform = `translateX(-${index * itemWidthPercentage}%)`;
     currentIndex = index;
 }
 
@@ -401,12 +413,13 @@ function showPrevBanner() {
     showBanner(currentIndex - 1);
 }
 
-// 트랜지션 종료 후 위치 조정 (루프 처리)
-function handleTransitionEnd() {http://127.0.0.1:5501/student-pay.html
-    if (currentIndex === banners.length - 1) {
-        showBanner(1, false); // 마지막 복제 → 첫번째
-    } else if (currentIndex === 0) {
-        showBanner(banners.length - 2, false); // 첫 복제 → 마지막
+// 루프 처리
+function handleTransitionEnd() {
+    if (!banners || banners.length === 0) return;
+    if (currentIndex >= banners.length - 1) {
+        showBanner(1, false);
+    } else if (currentIndex <= 0) {
+        showBanner(banners.length - 2, false);
     }
 }
 
@@ -429,42 +442,54 @@ function handleTouchEnd() {
 }
 
 // 초기 설정
-cloneSlides();
-showBanner(currentIndex);
+function initializeBanner() {
+    cloneSlides();
+    updateBanners();
 
-// 자동 슬라이드
-autoSlideInterval = setInterval(showNextBanner, 3000);
+    const initialShoesIndex = Array.from(banners).findIndex(
+        banner => banner.classList.contains('shoes') && !banner.classList.contains('clone')
+    );
+
+    if (initialShoesIndex !== -1) {
+        showBanner(initialShoesIndex + 1, false);
+    } else {
+        showBanner(1, false);
+    }
+
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(showNextBanner, 3000);
+}
+
+// 드롭다운 기능
+document.addEventListener('DOMContentLoaded', function () {
+    initializeBanner();
+
+    const toggleBtn = document.getElementById('mbanner-toggle');
+    const dropdown = document.getElementById('mobile-banner-dropdown');
+
+    if (toggleBtn && dropdown) {
+        toggleBtn.addEventListener('click', function () {
+            const isOpen = !dropdown.classList.contains('max-h-0');
+            if (isOpen) {
+                dropdown.classList.add('max-h-0', 'py-0');
+                dropdown.classList.remove('py-2');
+                dropdown.style.maxHeight = null;
+                toggleBtn.innerText = '▼';
+            } else {
+                dropdown.classList.remove('max-h-0', 'py-0');
+                dropdown.classList.add('py-2');
+                dropdown.style.maxHeight = '1200px';
+                toggleBtn.innerText = '▲';
+            }
+        });
+    }
+});
 
 // 이벤트 연결
 mobileBannerContainer.addEventListener('transitionend', handleTransitionEnd);
 mobileBannerContainer.addEventListener('touchstart', handleTouchStart);
 mobileBannerContainer.addEventListener('touchmove', handleTouchMove);
 mobileBannerContainer.addEventListener('touchend', handleTouchEnd);
-
-
-
-// 모바일 배너 드롭다운 기능
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtn = document.getElementById('mbanner-toggle');
-    const dropdown = document.getElementById('mobile-banner-dropdown');
-    
-    if (toggleBtn && dropdown) {
-        toggleBtn.addEventListener('click', function() {
-            if (dropdown.classList.contains('max-h-0')) {
-                dropdown.classList.remove('max-h-0', 'py-0');
-                dropdown.classList.add('max-h-[500px]', 'py-2');
-                toggleBtn.innerText = '▲';
-            } else {
-                dropdown.classList.add('max-h-0', 'py-0');
-                dropdown.classList.remove('max-h-[500px]', 'py-2');
-                toggleBtn.innerText = '▼';
-            }
-        });
-    }
-});
-
-
-
 
 
 
