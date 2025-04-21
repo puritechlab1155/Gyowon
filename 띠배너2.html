@@ -32,88 +32,115 @@
                             <!-- pc전용 배너 -->
                             <div class="relative flex items-center sm:w-[330px] max-md:w-[300px] lg:w-[450px] xl:w-[590px] h-10 border-2 rounded-lg banner-border max-md:hidden px-3 justify-between">
                                 <!-- pc전용 문구 변화 -->
-                                <div class="flex-1 overflow-hidden">
-                                    <div class="w-full h-full flex items-center banner-container pl-3 max-lg:pl-0">
+                                <div class="flex-1 overflow-hidden bg-pink-100">
+                                    <div class="w-full h-full flex items-center banner-container pl-2 max-lg:pl-0">
                                         
                                         <!-- 1. 최근댄스화 주문 -->
-                                        <div class="banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
-                                            <div class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold"><span class="text-sm font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
-                                                <span class="product-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
+                                        <div class="banner-text text-sm font-semibold opacity-100 transition-opacity duration-500" >
+                                            <div class="shoes flex items-center justify-center max-lg:px-1" style="grid-template-columns: 45% 25% 20% 10%;">
+                                                <div class="grid grid-cols-4 items-center"> 
+                                                    <span class="date text-center text-sm font-semibold col-span-1 whitespace-nowrap bg-blue-100">
+                                                        25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                                    </span>
+                                                    <span class="text-sm text-center font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화 주문</span>
+                                                    <span class="product-name text-center text-sm text-[#2B5BBB] font-semibold col-span-1  bg-blue-100">연습화 240</span>
+                                                    <span class="user-name text-center text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        
                                         <!-- 2. 최근 수강입금자 문구 -->
                                         <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                            <div class="deposit flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold"><span class="text-sm font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
-                                                <span class="class-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
+                                            <div class="deposit flex items-center justify-center max-lg:px-1"  style="grid-template-columns: 45% 25% 20% 10%;">
+                                                <div class="grid grid-cols-4 items-center"> 
+                                                    <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                        25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                                    </span>
+                                                    <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span class="max-lg:hidden text-sm font-semibold">자</span></span>
+                                                    <span class="class-name text-sm text-[#2B5BBB] font-semibold col-span-1">라틴2종 파티대비A</span>
+                                                    <span class="user-name text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        
                                         <!-- 3. 신규 가입자 문구 -->
                                         <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                            <div class="membership flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold">신규 가입자</span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
-                                                <span class="membership-type text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
+                                            <div class="membership flex items-center justify-center max-lg:px-1"  style="grid-template-columns: 45% 25% 20% 10%;">
+                                                <div class="grid grid-cols-4 items-center" > 
+                                                    <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                        25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                                    </span>
+                                                    <span class="text-sm font-semibold col-span-1">신규 가입자</span>
+                                                    <span class="membership-type text-sm text-[#2B5BBB] font-semibold col-span-1">교원</span>
+                                                    <span class="user-name text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        
                                         <!-- 4. 최근 게시된 공지 -->
                                         <div class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                            <div class="notice flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-lgidden max-lg:hidden">사항</span></span> 
-                                                <span class="notice-name text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
+                                            <div class="notice flex items-center justify-center max-lg:px-1"  style="grid-template-columns: 45% 25% 20% 10%;">
+                                                <div class="grid grid-cols-4 items-center" > 
+                                                    <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                        25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                                    </span>
+                                                    <span class="text-sm font-semibold col-span-1">최근 공지<span class="max-lg:hidden text-sm font-semibold">사항</span></span>
+                                                    <span class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2">홈페이지 리뉴얼 관련 안내</span>
+                                                </div>
                                             </div>
                                         </div>
-
+                                
                                     </div>
                                 </div>
 
                                 <!-- 드롭다운 -->
-                                <div class="relative flex-shrink-0 pl-2">
-                                    <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-3 max-lg:pr-0">▼</button>
+                                <div class="relative flex-shrink-0">
+                                    <button id="dropdown-toggle" class="text-[13px] text-gray-500 pr-2 max-lg:pr-0">▼</button>
                                     
                                     <ul id="dropdown-menu" class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden z-10 xl:mt-1">
-                                        <!-- 1. 최근댄스화 주문 -->
-                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
-                                            <div class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold"><span class="text-sm font-semibold max-sm:hidden">최근 </span>댄스화 주문</span> 
-                                                <span class="product-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화 240</span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
-                                            </div>
-                                        </li>
-                                        <!-- 2. 최근 수강입금자 문구 -->
-                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
-                                            <div class="deposit flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold"><span class="text-sm font-semibold max-sm:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
-                                                <span class="class-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종 파티대비A </span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
-                                            </div>
-                                        </li>
-                                        <!-- 3. 신규 가입자 문구 -->
-                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
-                                            <div class="membership flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold">신규 가입자</span> 
-                                                <span class="membership-type text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span> 
-                                                <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
-                                            </div>
-                                        </li>
-                                        <!-- 4. 최근 게시된 공지 -->
-                                        <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg">
-                                            <div class="notice flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1"> 
-                                                <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                                <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-lg:hidden">사항</span></span> 
-                                                <span class="notice-name text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지 리뉴얼 관련 안내</span> 
-                                            </div>
-                                        </li>
+                                    <!-- 공통 스타일: grid 4col -->
+                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
+                                        <div class="grid grid-cols-4 gap-2 items-center max-lg:px-1" style="grid-template-columns: 25% 20% 25% 30%;">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화 주문</span>
+                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold col-span-1">연습화 240</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                        <div class="grid grid-cols-4 gap-2 items-center max-lg:px-1" style="grid-template-columns: 25% 20% 25% 30%;">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span class="max-lg:hidden text-sm font-semibold">자</span></span>
+                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold col-span-1">라틴2종 파티대비A</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                        <div class="grid grid-cols-4 gap-2 items-center max-lg:px-1" style="grid-template-columns: 25% 20% 25% 30%;">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1">신규 가입자</span>
+                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold col-span-1">교원</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-lg:hidden">홍길동</span>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg">
+                                        <div class="grid grid-cols-4 gap-2 items-center max-lg:px-1" style="grid-template-columns: 25% 20% 25% 30%;">
+                                        <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                            25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                        </span>
+                                        <span class="text-sm font-semibold col-span-1">최근 공지<span class="max-lg:hidden text-sm font-semibold">사항</span></span>
+                                        <span class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2">홈페이지 리뉴얼 관련 안내</span>
+                                        </div>
+                                    </li>
                                     </ul>
                                 </div>
                             </div>

@@ -37,7 +37,7 @@ function initializeMenu() {
     }
 }
 
-// 메뉴 열기
+// ✅  메뉴 열기
 function openMenu() {
     sideMenu.classList.remove('-translate-x-full');
     sideMenu.classList.add('translate-x-0');
@@ -55,7 +55,7 @@ function openMenu() {
 
 }
 
-// 메뉴 닫기
+// ✅ 메뉴 닫기
 function closeMenu() {
     sideMenu.classList.add('-translate-x-full');
     sideMenu.classList.remove('translate-x-0');
@@ -68,7 +68,7 @@ function closeMenu() {
 }
 
 
-// 스위치 클릭 시 토글 기능
+// ✅ 스위치 클릭 시 토글 기능
 function toggleSideMenu() {
     if (switchElement.checked) {
         closeMenu();
@@ -93,7 +93,6 @@ document.addEventListener('click', (event) => {
         closeMenu();
     }
 });
-
 
 document.addEventListener('click', (event) => {
     if (
@@ -402,30 +401,57 @@ function showPrevBanner() {
 }
 
 // 트랜지션 종료 후 위치 조정 (루프 처리)
-function handleTransitionEnd() {http://127.0.0.1:5501/student-pay.html
-    if (currentIndex === banners.length - 1) {
-        showBanner(1, false); // 마지막 복제 → 첫번째
-    } else if (currentIndex === 0) {
-        showBanner(banners.length - 2, false); // 첫 복제 → 마지막
+function handleTransitionEnd() {
+    if (currentIndex >= banners.length - 1) {
+        showBanner(1, false); // 처음 클론 다음 슬라이드로 이동
+    } else if (currentIndex <= 0) {
+        showBanner(banners.length - 2, false); // 마지막 클론 이전으로 이동
     }
 }
 
+
 // 터치 이벤트
+
 function handleTouchStart(event) {
+    // 버튼 클릭 시 슬라이드 기능 비활성화
+    if (event.target === document.getElementById('mbanner-toggle') || 
+        event.target.closest('#mbanner-toggle')) {
+        return; // 버튼 클릭 시 터치 이벤트 처리 중단
+    }
+    
     clearInterval(autoSlideInterval);
     touchStartX = event.touches[0].clientX;
 }
+
 function handleTouchMove(event) {
+    // 버튼 클릭 시 슬라이드 기능 비활성화
+    if (event.target === document.getElementById('mbanner-toggle') || 
+        event.target.closest('#mbanner-toggle') || touchStartX === 0) {
+        return;
+    }
+    
     touchEndX = event.touches[0].clientX;
 }
-function handleTouchEnd() {
+
+function handleTouchEnd(event) {
+    // 버튼 클릭 시 슬라이드 기능 비활성화
+    if (event.target === document.getElementById('mbanner-toggle') || 
+        event.target.closest('#mbanner-toggle') || touchStartX === 0) {
+        return;
+    }
+    
     const diffX = touchStartX - touchEndX;
     if (diffX > 50) {
         showNextBanner();
     } else if (diffX < -50) {
         showPrevBanner();
     }
+    
     autoSlideInterval = setInterval(showNextBanner, 3000);
+    
+    // 변수 초기화
+    touchStartX = 0;
+    touchEndX = 0;
 }
 
 // 초기 설정
@@ -442,30 +468,25 @@ mobileBannerContainer.addEventListener('touchmove', handleTouchMove);
 mobileBannerContainer.addEventListener('touchend', handleTouchEnd);
 
 
-
-
-
-// 모바일 배너 버튼 
-const banner = document.getElementById("mobile-banner");
-const toggleBtn = document.getElementById("mbanner-toggle");
-
-let isExpanded = true;
-
-toggleBtn.addEventListener("click", () => {
-    if (isExpanded) {
-        banner.style.height = "0px";
-        banner.style.paddingTop = "0";
-        banner.style.paddingBottom = "0";
-        toggleBtn.innerText = "▲";
-    } else {
-        banner.style.height = "auto";
-        banner.style.paddingTop = "0.5rem";  // py-2 = 0.5rem 상하
-        banner.style.paddingBottom = "0.5rem";
-        toggleBtn.innerText = "▼";
+// 모바일 배너 드롭다운 기능
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('mbanner-toggle');
+    const dropdown = document.getElementById('mobile-banner-dropdown');
+    
+    if (toggleBtn && dropdown) {
+        toggleBtn.addEventListener('click', function() {
+            if (dropdown.classList.contains('max-h-0')) {
+                dropdown.classList.remove('max-h-0', 'py-0');
+                dropdown.classList.add('max-h-[500px]', 'py-2');
+                toggleBtn.innerText = '▲';
+            } else {
+                dropdown.classList.add('max-h-0', 'py-0');
+                dropdown.classList.remove('max-h-[500px]', 'py-2');
+                toggleBtn.innerText = '▼';
+            }
+        });
     }
-    isExpanded = !isExpanded;
 });
-
 
 
 
