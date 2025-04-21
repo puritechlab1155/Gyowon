@@ -362,6 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 // ✅ 모바일 배너 슬라이드, 스와이프 기능
 const mobileBannerContainer = document.querySelector('#mobile-banner .banner-container');
 let banners = document.querySelectorAll('#mobile-banner .banner-item');
@@ -401,57 +402,30 @@ function showPrevBanner() {
 }
 
 // 트랜지션 종료 후 위치 조정 (루프 처리)
-function handleTransitionEnd() {
-    if (currentIndex >= banners.length - 1) {
-        showBanner(1, false); // 처음 클론 다음 슬라이드로 이동
-    } else if (currentIndex <= 0) {
-        showBanner(banners.length - 2, false); // 마지막 클론 이전으로 이동
+function handleTransitionEnd() {http://127.0.0.1:5501/student-pay.html
+    if (currentIndex === banners.length - 1) {
+        showBanner(1, false); // 마지막 복제 → 첫번째
+    } else if (currentIndex === 0) {
+        showBanner(banners.length - 2, false); // 첫 복제 → 마지막
     }
 }
 
-
 // 터치 이벤트
-
 function handleTouchStart(event) {
-    // 버튼 클릭 시 슬라이드 기능 비활성화
-    if (event.target === document.getElementById('mbanner-toggle') || 
-        event.target.closest('#mbanner-toggle')) {
-        return; // 버튼 클릭 시 터치 이벤트 처리 중단
-    }
-    
     clearInterval(autoSlideInterval);
     touchStartX = event.touches[0].clientX;
 }
-
 function handleTouchMove(event) {
-    // 버튼 클릭 시 슬라이드 기능 비활성화
-    if (event.target === document.getElementById('mbanner-toggle') || 
-        event.target.closest('#mbanner-toggle') || touchStartX === 0) {
-        return;
-    }
-    
     touchEndX = event.touches[0].clientX;
 }
-
-function handleTouchEnd(event) {
-    // 버튼 클릭 시 슬라이드 기능 비활성화
-    if (event.target === document.getElementById('mbanner-toggle') || 
-        event.target.closest('#mbanner-toggle') || touchStartX === 0) {
-        return;
-    }
-    
+function handleTouchEnd() {
     const diffX = touchStartX - touchEndX;
     if (diffX > 50) {
         showNextBanner();
     } else if (diffX < -50) {
         showPrevBanner();
     }
-    
     autoSlideInterval = setInterval(showNextBanner, 3000);
-    
-    // 변수 초기화
-    touchStartX = 0;
-    touchEndX = 0;
 }
 
 // 초기 설정
@@ -466,6 +440,7 @@ mobileBannerContainer.addEventListener('transitionend', handleTransitionEnd);
 mobileBannerContainer.addEventListener('touchstart', handleTouchStart);
 mobileBannerContainer.addEventListener('touchmove', handleTouchMove);
 mobileBannerContainer.addEventListener('touchend', handleTouchEnd);
+
 
 
 // 모바일 배너 드롭다운 기능
