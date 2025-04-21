@@ -32,6 +32,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChosunGs';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
 
 
 @supports (-webkit-touch-callout: none) {
@@ -65,14 +73,26 @@ a * {
     pointer-events: none;
 }
 
+.font-shinmyeongjo{
+    font-family: 'Nanum Myeongjo', serif;
+}
+.font-shinmyeongjo-bold{
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700; 
+}
 
+.font-chosun {
+    font-family: 'ChosunGs';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
 
 .paperlogy {
     font-family: 'Paperlogy', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-weight: 100;
 }
 
 .h1-title {
