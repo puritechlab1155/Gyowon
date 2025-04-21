@@ -259,14 +259,19 @@ a * {
     /* 영수증 - 기존 높이 유지 및 미세 조정 */
     .receipt-box {
         width: 100% !important;
-        max-width: 794px !important;
+        max-width:700px !important;
         box-sizing: border-box !important;
         margin: 0 auto !important;
         page-break-inside: avoid !important;
-        transform: scale(0.95) !important;
+        transform: scale(0.70) !important;
         /* 95%로 약간 축소하여 여백 확보 */
         transform-origin: top center !important;
     }
+    .receipt-box .grid-six > div:last-child {
+        display: none !important;
+    }
+
+    
 
     /* 이수증 - 특별히 높이 관련 속성 유지 (원본 값 중요) */
     .certificate-box {
