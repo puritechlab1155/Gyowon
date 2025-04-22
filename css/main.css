@@ -32,15 +32,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'ChosunGs';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
-
 
 @supports (-webkit-touch-callout: none) {
     .Paperlogy-text {
@@ -73,20 +64,6 @@ a * {
     pointer-events: none;
 }
 
-.font-shinmyeongjo{
-    font-family: 'Nanum Myeongjo', serif;
-}
-.font-shinmyeongjo-bold{
-    font-family: 'Nanum Myeongjo', serif;
-    font-weight: 700; 
-}
-
-.font-chosun {
-    font-family: 'ChosunGs';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
 
 .paperlogy {
     font-family: 'Paperlogy', sans-serif;
@@ -263,7 +240,7 @@ a * {
         box-sizing: border-box !important;
         margin: 0 auto !important;
         page-break-inside: avoid !important;
-        transform: scale(0.70) !important;
+        transform: scale(0.85) !important;
         /* 95%로 약간 축소하여 여백 확보 */
         transform-origin: top center !important;
     }
@@ -297,6 +274,10 @@ a * {
         /* 여백 줄임 */
         display: block !important;
     }
+    .certificate-box .detail,
+    .certificate-info {
+        margin-left: 40px;
+    }
 
     .certificate-inner {
         margin: 0 auto !important;
@@ -314,7 +295,7 @@ a * {
         flex-wrap: wrap !important;
         justify-content: space-between !important;
         align-items: flex-start !important;
-        gap: 5px !important;
+        gap: 10px !important;
         transform: scale(0.95) !important;
         /* 약간 축소 */
         transform-origin: top center !important;
