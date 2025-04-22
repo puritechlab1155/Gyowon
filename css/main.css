@@ -68,7 +68,11 @@ input {
     -moz-appearance: none;    /* Firefox */
     appearance: none;         /* 표준 */
   }
-
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 .paperlogy {
     font-family: 'Paperlogy', sans-serif;
     -webkit-font-smoothing: antialiased;
