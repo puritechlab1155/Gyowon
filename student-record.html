@@ -10,239 +10,247 @@
 </head>
 
 <body class="bg-[#F7F7F7] overflow-auto">
-    <header class="relative z-[20]">
+    <header class="relative z-[100]">
         <nav class="bg-white">
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
                     <!-- 왼쪽 영역 -->
-                    <div class="w-64 pr-36 max-xl:pr-4 max-xl:w-40 max-sm:w-36 flex justify-start h-16 items-center gap-x-4 max-xl:gap-x-2 pl-8 max-xl:pl-4">
+                    <div
+                        class="w-64 pr-40 max-lg:pr-4 max-xl:w-40 max-sm:w-36 flex justify-start h-16 items-center gap-x-4 pl-8 max-lg:pl-4">
                         <ul>
                             <li class="flex flex-col items-center">
+                                <!-- <div class="font-bold text-xs text-center">MENU</div> -->
                                 <!-- 스위치 -->
-                                <input id="s1" type="checkbox" class="hidden"/>
-                                <span class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
-                                    <span class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
+                                <input id="s1" type="checkbox" class="hidden" />
+                                <span
+                                    class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
+                                    <span
+                                        class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
                                 </span>
                             </li>
                         </ul>
-                        <div class="font-bold text-center text-[#2B5BBB] bg-[#EDF3FF] text-lg rounded-[15px] px-3 py-0.5">cms</div>
+                        <div
+                            class="font-bold text-center text-[#2B5BBB] bg-[#EDF3FF] text-lg rounded-[15px] px-3 py-0.5">
+                            cms</div>
                     </div>
 
                     <!-- 오른쪽 영역 -->
-                    <div class="flex justify-between items-center w-full max-md:justify-end pl-2 pl-2">
+                    <div class="flex justify-between items-center w-full max-md:justify-end">
                         <!-- pc전용 배너 -->
-                        <div class="relative flex items-center max-xl:w-[330px] w-[590px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between">
+                        <div
+                            class="relative flex items-center sm:w-[330px] max-md:w-[300px] lg:w-[450px] xl:w-[590px] h-10 border-2 rounded-lg banner-border max-md:hidden px-3 justify-between">
                             <!-- pc전용 문구 변화 -->
-                            <div class="flex-1 overflow-hidden z-[700]">
-                                <div class="w-full h-full flex items-center banner-container pl-1 max-xl:pl-0 ">
-                                    
+                            <div class="flex-1 overflow-hidden">
+                                <div class="w-full h-full flex items-center banner-container pl-3 max-lg:pl-0">
+
                                     <!-- 1. 최근댄스화 주문 -->
-                                    <div class="w-full banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
-                                        <div class="shoes grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
-                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>댄스화 주문</span> 
-                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
-                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                    <div
+                                        class="banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
+                                        <div
+                                            class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold"><span
+                                                    class="text-sm font-semibold max-sm:hidden">최근 </span>댄스화 주문</span>
+                                            <span
+                                                class="product-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화
+                                                240</span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
                                         </div>
                                     </div>
                                     <!-- 2. 최근 수강입금자 문구 -->
-                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="deposit grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
-                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
-                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A </span> 
-                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                    <div
+                                        class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div
+                                            class="deposit flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold"><span
+                                                    class="text-sm font-semibold max-sm:hidden">최근 </span>수강 입금<span
+                                                    class="text-sm font-semibold max-lg:hidden">자</span></span>
+                                            <span
+                                                class="class-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종
+                                                파티대비A </span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
                                         </div>
                                     </div>
                                     <!-- 3. 신규 가입자 문구 -->
-                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="membership grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">  
-                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                            <span class="text-sm font-semibold">신규 가입자</span> 
-                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span> 
-                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                    <div
+                                        class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div
+                                            class="membership flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold">신규 가입자</span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
+                                            <span
+                                                class="membership-type text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span>
                                         </div>
                                     </div>
                                     <!-- 4. 최근 게시된 공지 -->
-                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="notice grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_22%_55%_0%]">  
-                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
-                                            <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-xl:hidden max-xl:hidden">사항</span></span> 
-                                            <span class="notice-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span> 
+                                    <div
+                                        class="banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div
+                                            class="notice flex items-center max-lg:space-x-2 space-x-5 justify-center max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold">최근 공지<span
+                                                    class="text-sm font-semibold max-lgidden max-lg:hidden">사항</span></span>
+                                            <span
+                                                class="notice-name text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지
+                                                리뉴얼 관련 안내</span>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
-
                             <!-- 드롭다운 -->
-                            <div class="relative flex-shrink-0">
-                                <button id="dropdown-toggle" class="text-[13px] text-gray-400 pr-2 max-xl:pr-0">▼</button>
-                                
-                                <ul id="dropdown-menu" class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[330px] w-[590px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
-                                <!-- 공통 스타일: grid 4col -->
-                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                    <a href="#">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap ">
-                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
-                                            </span>
-                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화 주문</span>
-                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold col-span-1">연습화 240</span>
-                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                            <div class="relative flex-shrink-0 pl-2">
+                                <button id="dropdown-toggle"
+                                    class="text-[13px] text-gray-500 pr-3 max-lg:pr-0">▼</button>
+
+                                <ul id="dropdown-menu"
+                                    class="absolute right-[-13px] top-[34px] w-[100%] sm:w-[330px] min-w-[300px] lg:w-[450px] xl:w-[590px] bg-white shadow-lg rounded-lg hidden xl:mt-1">
+                                    <!-- 1. 최근댄스화 주문 -->
+                                    <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-t-lg">
+                                        <div
+                                            class="shoes flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold"><span
+                                                    class="text-sm font-semibold max-sm:hidden">최근 </span>댄스화 주문</span>
+                                            <span
+                                                class="product-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">연습화
+                                                240</span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
                                         </div>
-                                    </a>
-                                </li>
-                            
-                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                    <a href="student-pay.html">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
-                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
-                                            </span>
-                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span class="max-xl:hidden text-sm font-semibold">자</span></span>
-                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A</span>
-                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                                    </li>
+                                    <!-- 2. 최근 수강입금자 문구 -->
+                                    <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                        <div
+                                            class="deposit flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold"><span
+                                                    class="text-sm font-semibold max-sm:hidden">최근 </span>수강 입금<span
+                                                    class="text-sm font-semibold max-lg:hidden">자</span></span>
+                                            <span
+                                                class="class-name text-sm text-[#2B5BBB] sm:inline-block font-semibold">라틴2종
+                                                파티대비A </span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
                                         </div>
-                                    </a>
-                                </li>
-                            
-                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                    <a href="user.html">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                            <span class="date text-sm font-semibold whitespace-nowrap">
-                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
-                                            </span>
+                                    </li>
+                                    <!-- 3. 신규 가입자 문구 -->
+                                    <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer">
+                                        <div
+                                            class="membership flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
                                             <span class="text-sm font-semibold">신규 가입자</span>
-                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span>
-                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                            <span
+                                                class="membership-type text-sm text-[#2B5BBB] sm:inline-block font-semibold">교원</span>
+                                            <span class="user-name text-sm font-semibold max-lg:hidden">홍길동</span>
                                         </div>
-                                    </a>
-                                </li>
-                            
-                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg sm:px-4">
-                                    <a href="#">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                        <span class="date text-sm font-semibold whitespace-nowrap">
-                                            25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
-                                        </span>
-                                        <span class="text-sm font-semibold">최근 공지<span class="max-xl:hidden text-sm font-semibold">사항</span></span>
-                                        <span class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2 truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span>
+                                    </li>
+                                    <!-- 4. 최근 게시된 공지 -->
+                                    <li class="px-4 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg">
+                                        <div
+                                            class="notice flex items-center max-lg:space-x-2 space-x-5 justify-between max-lg:px-1">
+                                            <span class="date text-sm font-semibold">25.01.06 <span
+                                                    class="time text-sm font-semibold max-xl:hidden">|
+                                                    00:03:19</span></span>
+                                            <span class="text-sm font-semibold">최근 공지<span
+                                                    class="text-sm font-semibold max-lg:hidden">사항</span></span>
+                                            <span
+                                                class="notice-name text-sm text-[#2B5BBB] sm:inline-block font-semibold xl:inline-block">홈페이지
+                                                리뉴얼 관련 안내</span>
                                         </div>
-                                    </a>
-                                </li>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <!-- 오른쪽 버튼 -->
                         <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
-                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
+                            <a href="#"
+                                class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
                                 로그아웃
                             </a>
                             <a href="#" id="goBackButton"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 뒤로가기
                             </a>
-                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                            <a href="#"
+                                class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 홈페이지로 가기
                             </a>
                             <a href="#" class="md:hidden block">
-                                <svg width="24" class="w-7 h-7"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
-                                    <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#292929"/>
+                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
+                                    <path
+                                        d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z"
+                                        fill="#292929" />
                                 </svg>
                             </a>
                             <a href="#" class="md:hidden block">
-                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
-                                    <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z" fill="#292929"/>
+                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
+                                    <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z"
+                                        fill="#292929" />
                                 </svg>
                             </a>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- 모바일 전용 배너 -->
-        <div id="mobile-banner" class="fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md transition-all duration-300 h-[35px]">          
-            <div class="relative w-full h-full">
-            <!-- <div class="banner-container flex transition-transform duration-300 ease-in-out"> -->
-                <div class="banner-container absolute top-0 left-0 w-full h-full flex items-center transition-transform duration-300 ease-in-out">
-                    
-                    <!-- 여기부터 모바일배너 아이템 시작 -->
-                    <div class="shoes banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">   
-                        <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
-                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
-                        </a>
-                    </div>
-                    <div class="deposit banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
-                        <a href="student-pay.html" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.02.01</span><span class="text-white text-sm pl-1">최근 수강 입금자</span> | <span class="class-name text-white text-sm">라틴2종 파티대비A</span> <span class="user-name text-white text-sm pl-1">김민수</span> 
-                        </a>
-                    </div>
-                    <div class="membership banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
-                        <a href="user.html" class="text-sm"> <!-- 회원관리 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.03.12</span><span class="text-white text-sm pl-1">신규 가입자</span> | <span class="membership-type text-white text-sm">교원</span> <span class="user-name text-white text-sm pl-1">이수지</span> 
-                        </a>
-                    </div>
-                    <div class="notice banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
-                        <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
-                        </a>
-                    </div>
-                   
-                </div>
-                <div class="relative w-full h-full">
-                    <!-- ✕ 버튼 추가 -->
-                    <button id="mbanner-close" class="absolute left-0 top-1/2 -translate-y-1/2 text-[13px] text-white pl-4 z-[1001]">✕</button>
-                
-                    <!-- ▼ 버튼은 오른쪽 -->
-                    <button id="mbanner-toggle" class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
-                </div>
-            </div>
-            <!-- 드롭다운 배너 영역 -->
-            <div id="mobile-banner-dropdown" class="absolute left-0 w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out max-h-0 w-full px-4 py-0 mt-2 bg-blue-500 text-white box-border">
-                <!-- 배너 내용 -->
-                <div class="shoes banner-item flex-shrink-0 py-1 w-full">
-                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
-                        <span>
-                            <span class="date text-sm">25.01.06</span>
-                            <span class="pl-1 text-sm">댄스화 주문 |</span>
-                            <span class="product-name text-sm">연습화 240</span>
-                            <span class="user-name text-sm pl-1">홍길동</span>
-                        </span>
+        <div id="mobile-banner"
+            class="flex fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md overflow-hidden transition-all duration-300 h-auto">
+            <div class="banner-container flex transition-transform duration-300 ease-in-out">
+                <!-- 배너 아이템들 -->
+                <div class="shoes banner-item text-white flex-shrink-0 w-full">
+                    <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
+                        <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화
+                            주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span
+                            class="user-name text-white text-sm pl-1">홍길동</span>
                     </a>
                 </div>
-                <div class="deposit banner-item flex-shrink-0 w-full py-1">
-                    <a href="student-pay.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
-                        <span>
-                            <span class="date text-sm">25.02.01</span>
-                            <span class="pl-1 text-sm">최근 수강 입금자 |</span>
-                            <span class="class-name text-sm">라틴2종 파티대비A</span>
-                            <span class="user-name text-sm pl-1">김민수</span>
-                        </span>
+                <div class="deposit banner-item text-white flex-shrink-0 w-full">
+                    <a href="#" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
+                        <span class="date text-white text-sm pl-1">25.02.01</span><span
+                            class="text-white text-sm pl-1">최근 수강 입금자</span> | <span
+                            class="class-name text-white text-sm">라틴2종 파티대비A</span> <span
+                            class="user-name text-white text-sm pl-1">김민수</span>
                     </a>
                 </div>
-                <div class="membership banner-item flex-shrink-0 w-full py-1">
-                    <a href="user.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
-                        <span>
-                            <span class="date text-sm">25.03.12</span>
-                            <span class="pl-1 text-sm">신규 가입자 |</span>
-                            <span class="membership-type text-sm">교원</span>
-                            <span class="user-name text-sm pl-1">이수지</span>
-                        </span>
+                <div class="membership banner-item text-white flex-shrink-0 w-full">
+                    <a href="#" class="text-sm"> <!-- 회원관리 페이지 이동 -->
+                        <span class="date text-white text-sm pl-1">25.03.12</span><span
+                            class="text-white text-sm pl-1">신규 가입자</span> | <span
+                            class="membership-type text-white text-sm">교원</span> <span
+                            class="user-name text-white text-sm pl-1">이수지</span>
                     </a>
                 </div>
-                <div class="notice banner-item flex-shrink-0 w-full py-1">
-                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
-                        <span>
-                            <span class="date text-sm">25.04.05</span>
-                            <span class="pl-1 text-sm">최근 공지사항 |</span>
-                            <span class="notice-name text-sm">홈페이지 리뉴얼 안내</span>
-                        </span>
+                <div class="notice banner-item text-white flex-shrink-0 w-full">
+                    <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
+                        <span class="date text-white text-sm pl-1">25.04.05</span><span
+                            class="text-white text-sm pl-1">최근 공지사항</span> | <span
+                            class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span>
                     </a>
                 </div>
             </div>
+            <button id="mbanner-toggle" class="text-[13px] text-white pr-3 max-lg:pr-0">▼</button>
         </div>
-    </header>    <!-- 사이드 메뉴 -->
+    </header>
+    <!-- 사이드 메뉴 -->
     <div id="side-menu"
         class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
         <ul class="p-4 pb-20">
@@ -641,7 +649,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content"
-        class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+        class="ml-64 max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
             <h1 class="mt-[50px] h1-title border-gray-300 font-normal paperlogy">과정출석부</h1>
             <div class="flex justify-start flex-col max-md:justify-start mb-2">
@@ -859,42 +867,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between lg:mt-5 max-sm:flex-col-reverse max-sm:gap-3 ">
-                    <!-- left-content -->
-                    <div class="left-content flex items-center justify-between max-md:justify-start gap-2">
-                        <div class="relative group">
-                            <button
-                                class="openBasicDataModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                기초자료
-                            </button>
-                            <div
-                                class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                                PDF, Excel<br />다운로드
-                            </div>
-                        </div>
 
-                        <!-- 과정출석부 버튼 -->
-                        <div class="relative group">
-                            <button
-                                class="openAttendanceModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                과정출석부
-                            </button>
-                            <div
-                                class="pointer-events-none text-center  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                                PDF, Excel<br />다운로드
-                            </div>
-                        </div>
 
-                        <!-- 명찰 버튼 -->
-                        <div class="relative group">
-                            <button
-                                class="openNameTagModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                명찰
-                            </button>
-                            <div
-                                class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                                PDF<br />다운로드
-                            </div>
+
+            </div>                
+            <!-- // 처음엔 숨긴 후 옵션 선택후 나타나기 -->
+            <div class="flex justify-end max-sm:flex-col-reverse max-sm:gap-3 pb-5">
+                <!-- left-content -->
+                <div class="left-content flex items-center justify-end gap-2">
+                    <!-- 기초자료 버튼 -->
+                    <div class="relative group">
+                        <button
+                            class="openBasicDataModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                            기초자료
+                        </button>
+                        <div
+                            class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            PDF, Excel<br />다운로드
+                        </div>
+                    </div>
+
+                    <!-- 과정출석부 버튼 -->
+                    <div class="relative group">
+                        <button
+                            class="openAttendanceModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                            과정출석부
+                        </button>
+                        <div
+                            class="pointer-events-none text-center  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            PDF, Excel<br />다운로드
+                        </div>
+                    </div>
+
+                    <!-- 명찰 버튼 -->
+                    <div class="relative group">
+                        <button
+                            class="openNameTagModal bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-lg:px-5 max-sm:text-sm max-sm:py-2.5 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
+                            명찰
+                        </button>
+                        <div
+                            class="pointer-events-none text-center absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 min-w-[120px] rounded bg-black text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            PDF<br />다운로드
                         </div>
                     </div>
                 </div>
@@ -1556,240 +1569,6 @@
                                     <td class="border px-2 py-2 text-center">농협</td>
                                     <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
                                 </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">1</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">김복녀</td>
-                                    <td class="border px-2 py-2 text-center">1970-10-30</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center"></td>
-                                    <td class="border px-2 py-2 text-center">010-7422-7631</td>
-                                    <td class="border px-2 py-2 text-center">기업</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">2</td>
-                                    <td class="border px-2 py-2 text-center">광주하남</td>
-                                    <td class="border px-2 py-2 text-center">태천초</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교사</td>
-                                    <td class="border px-2 py-2 text-center">공립</td>
-                                    <td class="border px-2 py-2 text-center">유아교육</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">미입금</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">3</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">4</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">5</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">6</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">1</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">김복녀</td>
-                                    <td class="border px-2 py-2 text-center">1970-10-30</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center"></td>
-                                    <td class="border px-2 py-2 text-center">010-7422-7631</td>
-                                    <td class="border px-2 py-2 text-center">기업</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">2</td>
-                                    <td class="border px-2 py-2 text-center">광주하남</td>
-                                    <td class="border px-2 py-2 text-center">태천초</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교사</td>
-                                    <td class="border px-2 py-2 text-center">공립</td>
-                                    <td class="border px-2 py-2 text-center">유아교육</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">미입금</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">3</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">4</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">5</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">6</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">1</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">김복녀</td>
-                                    <td class="border px-2 py-2 text-center">1970-10-30</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center">일반</td>
-                                    <td class="border px-2 py-2 text-center"></td>
-                                    <td class="border px-2 py-2 text-center">010-7422-7631</td>
-                                    <td class="border px-2 py-2 text-center">기업</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">2</td>
-                                    <td class="border px-2 py-2 text-center">광주하남</td>
-                                    <td class="border px-2 py-2 text-center">태천초</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교사</td>
-                                    <td class="border px-2 py-2 text-center">공립</td>
-                                    <td class="border px-2 py-2 text-center">유아교육</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">미입금</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">3</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">4</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">5</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2 text-center">6</td>
-                                    <td class="border px-2 py-2 text-center">본청</td>
-                                    <td class="border px-2 py-2 text-center">서울디자인고</td>
-                                    <td class="border px-2 py-2 text-center">가나다</td>
-                                    <td class="border px-2 py-2 text-center">1984-10-30</td>
-                                    <td class="border px-2 py-2 text-center">교육공무원</td>
-                                    <td class="border px-2 py-2 text-center">사립</td>
-                                    <td class="border px-2 py-2 text-center">역사</td>
-                                    <td class="border px-2 py-2 text-center">010-1234-1234</td>
-                                    <td class="border px-2 py-2 text-center">농협</td>
-                                    <td class="border px-2 py-2 h-[80px] w-[80px]"></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1917,529 +1696,9 @@
                                     <td class="border px-2 py-2"></td>
                                 </tr>
                                 <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">1</td>
-                                    <td class="border px-2 py-2">일반</td>
-                                    <td class="border px-2 py-2">김복녀</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
                                     <td class="border px-2 py-2">2</td>
                                     <td class="border px-2 py-2">태전초</td>
                                     <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">2</td>
-                                    <td class="border px-2 py-2">태전초</td>
-                                    <td class="border px-2 py-2">김희정</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                    <td class="border px-2 py-2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="border px-2 py-2">3</td>
-                                    <td class="border px-2 py-2">서울응암초</td>
-                                    <td class="border px-2 py-2">이애희</td>
                                     <td class="border px-2 py-2"></td>
                                     <td class="border px-2 py-2"></td>
                                     <td class="border px-2 py-2"></td>
@@ -2515,7 +1774,7 @@
                 <div class="namatag-box flex justify-center mx-auto min-w-[1300px]">
                     <div class="namatag-box-flex flex flex-wrap justify-start gap-2 w-fit mx-auto">
                         <!-- Name Tag 1 -->
-                        <div class="w-[400px] h-[300px] border text-center shadow-sm">
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
                             <div
                                 class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">
                                 한국댄스스포츠협회</div>
@@ -2528,7 +1787,7 @@
                                 일반</div>
                         </div>
                         <!-- Name Tag 2 -->
-                        <div class="w-[400px] h-[300px] border text-center shadow-sm">
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
                             <div
                                 class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">
                                 한국댄스스포츠협회</div>
@@ -2541,7 +1800,7 @@
                                 태천초</div>
                         </div>
                         <!-- Name Tag 3 -->
-                        <div class="w-[400px] h-[300px] border text-center shadow-sm">
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
                             <div
                                 class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">
                                 한국댄스스포츠협회</div>
@@ -2554,7 +1813,7 @@
                                 서울응암초</div>
                         </div>
                         <!-- Additional Name Tags as needed -->
-                        <div class="w-[400px] h-[300px] border text-center shadow-sm">
+                        <div class="w-[400px] h-[250px] border text-center shadow-sm">
                             <div
                                 class="bg-yellow-300 flex items-center justify-center h-[20%] font-semibold text-[25px]">
                                 한국댄스스포츠협회</div>
@@ -2806,7 +2065,6 @@
     </div>
 
 
-
     <!-- 이수증 슬라이드 패널 -->
     <div id="certificateSlideOverlay" class="fixed inset-0 z-[999] hidden">
         <div id="certificateSlidePanel"
@@ -2818,7 +2076,7 @@
                 </div>
                 <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
                 <div
-                    class="printArea screen-layout overflow-x-auto overflow-auto no-scrollbar">
+                    class="printArea screen-layout overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
                     <div class="relative bg-white certificate-box min-w-[450px] max-w-[450px]">
                         <img src="img/certificate-bg.png" alt="이수증 배경"
                             class="absolute inset-0 w-full h-full object-cover z-0" />
@@ -2830,7 +2088,7 @@
                                 (전국) 유초중등교원 특수분야연수기관 (지정번호: 경기-교육-2024-08 )
                             </p>
 
-                            <div class="text-left mb-6 grid grid-cols-2 gap-x-6 detail">
+                            <div class="text-left mb-6 grid grid-cols-2 gap-x-6">
                                 <!-- 나머지는 한 줄 전체 사용 -->
                                 <div class="col-span-2 text-[12px] mb-2">
                                     <span class="font-semibold text-[14px]">이수번호 :</span>
@@ -2904,58 +2162,58 @@
                     ※ 은행명: <span class="text-[#000]">기업은행</span>
                 </div>
                 <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
-                <div class="printArea overflow-x-auto overflow-auto no-scrollbar">
-                    <div class="relative bg-white receipt-box max-h-[500px] max-w-[550px] min-w-[550px] p-8">
+                <div class="printArea overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
+                    <div class="relative bg-white receipt-box max-h-[500px] max-w-[500px] min-w-[550px] p-8">
                         <div class="w-full border-2 border-black text-[14px]">
                             <div class="col-span-6">
-                                <h1 class="text-center text-2xl font-bold mt-8 mb-8">영 수 증</h1>
+                                <h1 class="text-center text-2xl font-bold mt-8 mb-8 font-shinmyeongjo">영 수 증</h1>
                             </div>
                             <div class="col-span-6">
                                 <div class="flex items-center justify-start mb-2 w-32 ml-4">
-                                    <div class="border-b border-black flex-grow mr-2 text-center">
-                                        <span class=" text-[16px]">김복녀</span>
+                                    <div class="border-b border-black flex-grow mr-2">
+                                        <span class="font-shinmyeongjo text-[16px]">김복녀</span>
                                     </div>
-                                    <p class="w-10 font-semibold ">귀하</p>
+                                    <p class="w-10 font-semibold font-shinmyeongjo">귀하</p>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-7 border-b border-t border-black grid-six">
-                                <div class="row-span-4 border-r border-black px-2 py-2 font-semibold text-left text-[15px]  text-center flex items-center justify-center col-span-1">공급자</div>
-                                <div class="border-b border-r border-black px-2 py-1 font-semibold text-left text-[15px] text-center flex items-center justify-center col-span-2">사업자 등록번호</div>
-                                <div class="border-b border-black px-2 py-1 text-[15px]  flex items-center col-span-4">000-0000-0000</div>
-                                <div class="border-b border-r border-black px-2 py-1 font-semibold text-left text-[15px]  text-center flex items-center justify-center col-span-2">상 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;호</div>
-                                <div class="border-b border-black px-2 py-1 text-[15px]  flex items-center col-span-4">서울초중등댄스스포츠교육연구회</div>
-                                <div class="border-b border-r border-black px-2 py-1 font-semibold text-left text-[15px]  text-center flex items-center justify-center col-span-2">성 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;명</div>
-                                <div class="border-b border-black px-2 py-1 text-[15px]  flex items-center col-span-4">김남현</div>
-                                <div class="border-r border-black px-2 py-1 font-semibold text-left text-[15px]  text-center flex items-center justify-center col-span-2">사업장 소재지</div>
-                                <div class="border-black px-2 py-1 text-[15px] flex items-center col-span-4">서울특별시 강남대로 42길 13, 호성빌딩 B1</div>
+                            <div class="grid grid-cols-6 border-b border-t border-black grid-six">
+                                <div class="row-span-4 border-r border-black px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo text-center flex items-center justify-center col-span-1">공급자</div>
+                                <div class="border-b border-r border-black px-2 py-1 font-bold text-left text-[15px] font-shinmyeongjo-bold text-center flex items-center justify-center col-span-2">사업자 등록번호</div>
+                                <div class="border-b border-black px-2 py-1 text-[15px] font-shinmyeongjo flex items-center col-span-3">000-0000-0000</div>
+                                <div class="border-b border-r border-black px-2 py-1 font-semibold text-left text-[15px] font-shinmyeongjo text-center flex items-center justify-center col-span-2">상 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;호</div>
+                                <div class="border-b border-black px-2 py-1 text-[15px] font-shinmyeongjo flex items-center col-span-3">서울초중등댄스스포츠교육연구회</div>
+                                <div class="border-b border-r border-black px-2 py-1 font-semibold text-left text-[15px] font-shinmyeongjo text-center flex items-center justify-center col-span-2">성 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;명</div>
+                                <div class="border-b border-black px-2 py-1 text-[15px] font-shinmyeongjo flex items-center col-span-3">김남현</div>
+                                <div class="border-r border-black px-2 py-1 font-semibold text-left text-[15px] font-shinmyeongjo text-center flex items-center justify-center col-span-2">사업장 소재지</div>
+                                <div class="border-black px-2 py-1 text-[15px] font-shinmyeongjo flex items-center col-span-3">서울특별시 강남대로 42길 13, 호성빌딩 B1</div>
                                 <div></div>
                             </div>
                             
                             <div class="flex border-b border-black">
-                                <div colspan="2" class="border-black border-r px-2 py-2 font-semibold text-left text-[15px]  w-1/3 text-center flex items-center justify-center">성 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;함</div>
-                                <div colspan="4" class="px-2 py-2 text-[15px]  w-2/3 flex items-center">김복녀</div>
+                                <div colspan="2" class="border-black border-r px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo w-1/3 text-center flex items-center justify-center">성 &nbsp; &nbsp; &nbsp; &nbsp;함</div>
+                                <div colspan="4" class="px-2 py-2 text-[15px] font-shinmyeongjo w-2/3 flex items-center">김복녀</div>
                             </div>
                             <div class="flex border-b border-black">
-                                <div colspan="2" class="border-black border-r px-2 py-2 font-semibold text-left text-[15px]  w-1/3 text-center flex items-center justify-center">직 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;장</div>
-                                <div colspan="4" class="px-2 py-2 text-[15px]  w-2/3 flex items-center">서울디자인고등학교</div>
+                                <div colspan="2" class="border-black border-r px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo w-1/3 text-center flex items-center justify-center">직 &nbsp; &nbsp; &nbsp; &nbsp;장</div>
+                                <div colspan="4" class="px-2 py-2 text-[15px] font-shinmyeongjo w-2/3 flex items-center">서울디자인고등학교</div>
                             </div>
                             <div class="flex border-b border-black">
-                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px]  w-1/3 text-center flex items-center justify-center">연 수 과 정</div>
-                                <div colspan="4" class="px-2 py-2 text-[15px]  w-2/3 flex items-center">희망을 키우는 웰빙댄스 초중급Ⅱ</div>
+                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo w-1/3 text-center flex items-center justify-center">연 수 과 정</div>
+                                <div colspan="4" class="px-2 py-2 text-[15px] font-shinmyeongjo w-2/3 flex items-center">희망을 키우는 웰빙댄스 초중급Ⅱ</div>
                             </div>
                             <div class="flex border-b border-black">
-                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px]  w-1/3 text-center flex items-center justify-center">수 &nbsp; 강 &nbsp; 비</div>
-                                <div colspan="4" class="px-2 py-2 text-[15px]  w-2/3 flex items-center">120,000원</div>
+                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo w-1/3 text-center flex items-center justify-center">수 &nbsp; 강 &nbsp; 비</div>
+                                <div colspan="4" class="px-2 py-2 text-[15px] font-shinmyeongjo w-2/3 flex items-center">120,000원</div>
                             </div>
                             <div class="flex border-b border-black">
-                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px]  w-1/3 text-center flex items-center justify-center">연 수 기 간</div>
-                                <div colspan="4" class="px-2 py-2 text-[15px]  w-2/3 flex items-center">2025.08.04 ~ 2025.08.08</div>
+                                <div colspan="2" class="border-r border-black px-2 py-2 font-semibold text-left text-[15px] font-shinmyeongjo w-1/3 text-center flex items-center justify-center">연 수 기 간</div>
+                                <div colspan="4" class="px-2 py-2 text-[15px] font-shinmyeongjo w-2/3 flex items-center">2025.08.04 ~ 2025.08.08</div>
                             </div>
                             <div class="col-span-6">
                                 <div class="text-center mt-8">
-                                    <p class="text-[15px] ">상기 연수비를 납입하였음을 확인합니다.</p>
-                                    <p class="mb-4 text-[15px] ">(직무연수 수강료)</p>
-                                    <p class="mb-4 text-[15px] ">2025년 04월 10일</p>
+                                    <p class="text-[15px] font-shinmyeongjo">상기 연수비를 납입하였음을 확인합니다.</p>
+                                    <p class="mb-4 text-[15px] font-shinmyeongjo">(직무연수 수강료)</p>
+                                    <p class="mb-4 text-[15px] font-shinmyeongjo">2025년 04월 10일</p>
                                     <div class="w-[300px] mx-auto mb-4">
                                         <img src="img/receipt-bottom.png" alt="한국댄스스포츠연수원장 직인">
                                     </div>
@@ -2980,8 +2238,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 

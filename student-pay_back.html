@@ -2614,27 +2614,66 @@
     <script src="js/script.js"></script>
     
     <!-- SheetJS 라이브러리 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx-style@0.8.13/dist/xlsx.full.min.js"></script> -->
-    
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
     <script>
+        // 엑셀 다운로드 관련
+        document.getElementById('downloadExcel').addEventListener('click', async function () {
+            try {
+                // 시트 데이터 구성 (새로운 이미지 기준)
+                const sheetData = [
+                    [null, "번호", "구분/종목", "과정명", "성명", "학교명", "연수장소", "연수기간", "수강일", "시간", "입금내역", "수강현황"], // 첫 번째 행 
+                    [7721, 194, "자율", "Jan.25", "홍길동", "조남초", "서울디자인고", "2025.04.09 - 2025.04.14", "매주수요일", "0차", "2025.04.17", "대기 수강확정 수강취소 수강연기 환불 연기금사용 라인댄스 (자율)꿈을펼치는 라인댄스초중급 2025-04-09~2025-07-14 140000 자율 2025-04-30 30 0 (자율)꿈을펼치는 라인댄스초중급 ( 수강신청, 입금완료&nbsp;순으로 선착순 마감)&nbsp;"],
+                    ["", "", "라인댄스", "꿈을펼치는 라인댄스초중급", "", "", "", "", "", "", "수강료 : 140000 원", "&nbsp; &nbsp;&nbsp;☞&nbsp;&nbsp;전국 유&middot;초&middot;중등 교원 및 교육전문직 대상(현재 재직자)"],
+                    ["", "", "", "2025-1-C03091107", "", "", "", "", "", "", "입금: 기업 영수증", "&nbsp; &nbsp; ☞&nbsp; 서울디자인고 4층 체육관 / 권선초 체육관&nbsp;"],
+                    ["", "", "", "", "", "", "", "", "", "", "인턴도우미50%", "&nbsp; &nbsp;&nbsp;☞&nbsp; 연수기간:&nbsp;4.9. ~ 7.12 매주 수요일 17:50~19:30"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp; ☞&nbsp; 4.9 (수) 17:50&nbsp;개강"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp;&nbsp;☞&nbsp; 연수 내용:&nbsp;라인댄스 초중급 작품"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp;&nbsp;☞&nbsp; 준비물&nbsp;댄스화, 개인음료, 스트레칭 수건"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp;&nbsp;☞&nbsp;&nbsp;댄스화&nbsp;구매&nbsp;원하시는&nbsp;경우, 연수&nbsp;시작전&nbsp;&#39;홈피 댄스화 신청&#39;&nbsp;에서 사이즈를 미리 주문해주세요."],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp;&nbsp;☞&nbsp;&nbsp;연습화 8만원 -&nbsp;입금 계좌: 기업 010 6661 9191&nbsp; 교원댄스"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp; ☞&nbsp; 7. 12(토)/ 7.14(월) 라인댄스3급 자격시험 응시 가능"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp;&nbsp;&nbsp; ☞&nbsp; 유익하고 행복한 연수되시기를 바랍니다.&nbsp; &nbsp; &nbsp; &nbsp;"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "0"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "※ 직무연수는&nbsp;수강신청과 입금 완료 순으로 선착순 마감됩니다."],
+                    ["", "", "", "", "", "", "", "", "", "", "", "※&nbsp;수강신청과 함께 반드시 연수비 입금 완료 하셔야 수강 완료 됩니다.&nbsp;"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "※&nbsp;연수비 입금은 성명과 학교명 7자이내로 1명씩 입금바람&nbsp;[농협&nbsp;421012-52- 145151&nbsp;예금주-교원연수원]"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "※&nbsp;연수취소시 :&nbsp;홈피에서 양식을 다운받아&nbsp;개강 전일까지"],
+                    ["", "", "", "", "", "", "", "", "", "", "", "&nbsp; &nbsp;미리 메일로 (kmr0724@hanmail.net)전송하셔야 전액 환불됩니다. > 서울디자인고 16703 3573 2 1학기 0 매주수요일 확인 수정 DELETE vyRzipv67w88p9ba8T3UwLp50zKSeukHUdnC7vhQ 7721 삭제"],
+                ];
 
-    // 엑셀 다운로드 관련
-    document.getElementById('downloadExcel').addEventListener('click', async function () {
-    try {
-        const simpleData = [["이름", "나이"], ["홍길동", 30]];
-        const simpleWS = XLSX.utils.aoa_to_sheet(simpleData);
-        const simpleWB = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(simpleWB, simpleWS, "간단한시트");
-        XLSX.writeFile(simpleWB, "간단한_엑셀_style.xlsx", { bookType: 'xlsx', type: 'array' });
-    } catch (error) {
-        console.error("간단한 엑셀 (xlsx-style) 생성 오류:", error);
-        alert("간단한 엑셀 (xlsx-style) 생성 중 오류 발생");
-    }
-});
+                // 워크시트 생성
+                const worksheet = XLSX.utils.aoa_to_sheet(sheetData);
+
+                // 병합 설정
+                const merges = [
+                    { s: { r: 1, c: 0 }, e: { r: sheetData.length - 1, c: 0 } }, // 1열 전체병합
+                    { s: { r: 1, c: 1 }, e: { r: 17, c: 1 } },
+                    { s: { r: 1, c: 4 }, e: { r: sheetData.length - 1, c: 4 } }, // "성명" 열 ("홍길동") 병합
+                    { s: { r: 1, c: 5 }, e: { r: sheetData.length - 1, c: 5 } }, // "학교명" 열 ("조남초") 병합
+                    { s: { r: 1, c: 6 }, e: { r: sheetData.length - 1, c: 6 } }, // "연수장소" 열 ("서울디자인고") 병합
+                    { s: { r: 1, c: 7 }, e: { r: sheetData.length - 1, c: 7 } }, // "연수기간" 열 ("2025.04.09 - 2025.04.14") 병합
+                    { s: { r: 1, c: 8 }, e: { r: sheetData.length - 1, c: 8 } }, // "수강일" 열 ("매주수요일") 병합
+                    { s: { r: 1, c: 9 }, e: { r: sheetData.length - 1, c: 9 } }, // "시간" 열 ("0차") 병합
+                    { s: { r: 1, c: 10 }, e: { r: 1, c: 11 } },            // "입금내역"과 "수강현황" 병합 (첫 번째 데이터 행의 긴 텍스트)
+                ];
+                worksheet['!merges'] = merges;
+
+                // 워크북 생성 및 시트 추가
+                const workbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(workbook, worksheet, "연수정보");
+
+                // 다운로드
+                XLSX.writeFile(workbook, "연수정보_엑셀.xlsx");
+            } catch (error) {
+                alert("엑셀 생성 중 오류 발생");
+                console.error(error);
+            }
+        });
+        
 
 
-
-// ✅ 드롭다운 열고 닫기
+        // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.stopPropagation();
