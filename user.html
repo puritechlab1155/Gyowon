@@ -189,7 +189,7 @@
                             <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
                         </a>
                     </div>
-                   
+                
                 </div>
                 <div class="relative w-full h-full">
                     <!-- ✕ 버튼 추가 -->
@@ -643,7 +643,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content"
-        class="ml-64 max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+        class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
             <h1 class="mt-[50px] h1-title font-normal paperlogy">회원관리</h1>
             <div
@@ -653,15 +653,15 @@
                     class="drop-shadow flex bg-[#FEFEFE] space-x-11 max-xl:pl-5 max-xl:pr-5 pl-10 pr-10 pt-1 text-center rounded-[12px] max-lg:rounded-none max-lg:w-full">
                     <div class="tab-box max-xl:flex-1">
                         <button
-                            class="tab px-4 py-2 text-[#2B5BBB] border-[#2B5BBB] font-semibold text-lg border-b-4 hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
+                            class="tab px-3 py-2 text-[#2B5BBB] border-[#2B5BBB] font-semibold text-lg border-b-4 hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">전체</button>
                     </div>
                     <div class="tab-box max-xl:flex-1">
                         <button
-                            class="tab px-4 py-2 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
+                            class="tab px-3 py-2 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">일반</button>
                     </div>
                     <div class="tab-box max-xl:flex-1">
                         <button
-                            class="tab px-4 py-2 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
+                            class="tab px-3 py-2 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">교원</button>
                     </div>
                 </div>
                 <!-- right-content (탭들) -->
@@ -1968,7 +1968,7 @@
                 </div>
                 <div class="border-t-[1px] border-[#DBDEE3] mb-2"></div>
                 <div
-                    class="printArea screen-layout overflow-x-auto flex justify-center item-center overflow-auto no-scrollbar">
+                    class="printArea screen-layout overflow-x-auto overflow-auto no-scrollbar">
                     <div class="relative bg-white certificate-box min-w-[450px] max-w-[450px]">
                         <img src="img/certificate-bg.png" alt="이수증 배경"
                             class="absolute inset-0 w-full h-full object-cover z-0" />
@@ -2229,7 +2229,7 @@
                             class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">생년월일
                             <span class="text-[#2B5BBB]">*</span></label>
                         <input type="date" placeholder="YYYY-MM-DD"
-                            class="w-2/3 text-[16px] bg-[#F3F3F3] px-3 py-2 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
+                            class="w-2/3 h-[45px] text-[16px] bg-[#F3F3F3] px-3 py-2 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
                         <!-- <input id="birthday" type="text" placeholder="YYYY-MM-DD" class="w-2/3 text-[16px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]"/> -->
 
                     </div>
@@ -2277,7 +2277,7 @@
                         <div class="w-2/3 py-2">
                             <div class="flex gap-2 mb-2">
                                 <input type="text" placeholder="우편번호" disabled id="zonecode"
-                                    class="max-sm:placeholder:text-sm w-full h-[45px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
+                                    class="max-sm:placeholder:text-sm w-full h-[45px] bg-[#F3F3F3] border border-[#DBDEE3] px-3 py-1.5 rounded-lg text-[16px] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
                                 <button id="search-btn"
                                     class="bg-[#EDF3FF] text-[16px] text-[#2B5BBB] px-4 py-2 max-sm:px-1 max-sm:min-w-[90px] max-sm:text-[14px] min-w-[140px] rounded-lg border border-[#DBDEE3] focus:outline-none hover:#D3E1FB hover:bg-[#D3E1FB]">우편번호찾기</button>
                             </div>
@@ -2287,7 +2287,7 @@
                             </div>
                             <div>
                                 <input type="text" placeholder="상세주소" id="roadAddressDetail"
-                                    class="max-sm:placeholder:text-sm w-full h-[45px] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
+                                    class="max-sm:placeholder:text-sm w-full h-[45px] bg-[#F3F3F3] border border-[#DBDEE3] px-3 py-1.5 rounded-lg text-[16px] placeholder-[#AFAFAF] focus:outline-none focus:border-[#2B5BBB]" />
                             </div>
                         </div>
                     </div>
