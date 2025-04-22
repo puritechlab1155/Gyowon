@@ -63,7 +63,11 @@ a {
 a * {
     pointer-events: none;
 }
-
+input {
+    -webkit-appearance: none; /* Safari, older iOS */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* 표준 */
+  }
 
 .paperlogy {
     font-family: 'Paperlogy', sans-serif;
