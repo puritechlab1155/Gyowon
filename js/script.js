@@ -460,12 +460,14 @@ function initializeBanner() {
     autoSlideInterval = setInterval(showNextBanner, 3000);
 }
 
-// 드롭다운 기능
+// 드롭다운, X버튼 기능
 document.addEventListener('DOMContentLoaded', function () {
     initializeBanner();
 
     const toggleBtn = document.getElementById('mbanner-toggle');
     const dropdown = document.getElementById('mobile-banner-dropdown');
+    const closeBtn = document.getElementById('mbanner-close');
+    const bannerWrapper = document.getElementById('mobile-banner');
 
     if (toggleBtn && dropdown) {
         toggleBtn.addEventListener('click', function () {
@@ -481,6 +483,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 dropdown.style.maxHeight = '1200px';
                 toggleBtn.innerText = '▲';
             }
+        });
+    }
+
+    if (closeBtn && bannerWrapper) {
+        closeBtn.addEventListener('click', () => {
+            bannerWrapper.style.display = 'none';
+            clearInterval(autoSlideInterval);
         });
     }
 });

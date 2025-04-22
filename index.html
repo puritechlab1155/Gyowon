@@ -190,16 +190,21 @@
                             <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
                         </a>
                     </div>
-                    <!-- <button id="mbanner-toggle" class="absolute right-2 top-1/2 -translate-y-1/2">▼</button> -->
-                    
+                   
                 </div>
-                <button id="mbanner-toggle" class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
+                <div class="relative w-full h-full">
+                    <!-- ✕ 버튼 추가 -->
+                    <button id="mbanner-close" class="absolute left-0 top-1/2 -translate-y-1/2 text-[13px] text-white pl-4 z-[1001]">✕</button>
+                
+                    <!-- ▼ 버튼은 오른쪽 -->
+                    <button id="mbanner-toggle" class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
+                </div>
             </div>
             <!-- 드롭다운 배너 영역 -->
             <div id="mobile-banner-dropdown" class="absolute left-0 w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out max-h-0 w-full px-4 py-0 mt-2 bg-blue-500 text-white box-border">
                 <!-- 배너 내용 -->
                 <div class="shoes banner-item flex-shrink-0 py-1 w-full">
-                    <a href="#" class="text-sm flex items-center justify-between truncate overflow-hidden whitespace-nowrap">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.01.06</span>
                             <span class="pl-1 text-sm">댄스화 주문 |</span>
@@ -209,7 +214,7 @@
                     </a>
                 </div>
                 <div class="deposit banner-item flex-shrink-0 w-full py-1">
-                    <a href="student-pay.html" class="text-sm flex items-center justify-between truncate overflow-hidden whitespace-nowrap">
+                    <a href="student-pay.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.02.01</span>
                             <span class="pl-1 text-sm">최근 수강 입금자 |</span>
@@ -218,8 +223,8 @@
                         </span>
                     </a>
                 </div>
-                <div class="membership banner-item flex-shrink-0 w-full py-1 ">
-                    <a href="user.html" class="text-sm flex items-center justify-between truncate overflow-hidden whitespace-nowrap">
+                <div class="membership banner-item flex-shrink-0 w-full py-1">
+                    <a href="user.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.03.12</span>
                             <span class="pl-1 text-sm">신규 가입자 |</span>
@@ -228,8 +233,8 @@
                         </span>
                     </a>
                 </div>
-                <div class="notice banner-item flex-shrink-0 w-full py-1 ">
-                    <a href="#" class="text-sm flex items-center justify-between truncate overflow-hidden whitespace-nowrap">
+                <div class="notice banner-item flex-shrink-0 w-full py-1">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.04.05</span>
                             <span class="pl-1 text-sm">최근 공지사항 |</span>
