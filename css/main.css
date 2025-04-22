@@ -72,9 +72,10 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-family: 'Pretendard Variable', sans-serif;
   }
 .paperlogy {
-    font-family: 'Paperlogy', sans-serif;
+    font-family: 'Paperlogy', 'Pretendard Variable', sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
