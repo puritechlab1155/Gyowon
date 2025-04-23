@@ -1583,9 +1583,18 @@
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
                     엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
-                <button id="printTable">
+                <!-- <button id="printTable">
                     테이블 인쇄
+                </button> -->
+                <!-- <button id="viewJsonData">
+                    JSON 데이터 보기
+                </button> -->
+
+                <button id="printExcelData">
+                    엑셀 데이터 인쇄
                 </button>
+
+
                 <button onclick="printLandscape('basicDataModal')"
                     class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
                     <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
@@ -2248,27 +2257,79 @@
     <script src="js/script.js"></script>
 
     <!-- SheetJS 라이브러리 -->
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script> -->
+
+
+    <!-- SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <!-- FileSaver saveAs 이용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <!-- 엑셀 cell style 적용 -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.min.js"></script>
+
 
     <script>
         // 엑셀다운
         document.addEventListener('DOMContentLoaded', function() {
-            const downloadButton = document.getElementById('downloadExcel');
-            const excelTable = document.getElementById('exceltable');
-            const printButton = document.getElementById('printTable');
+            const printExcelDataButton = document.getElementById('printExcelData');
 
-            // 다운
-            downloadButton.addEventListener('click', function() {
-                var wb = XLSX.utils.table_to_book(excelTable, { sheet: "시트명", raw: true });
-                XLSX.writeFile(wb, ('과정출석부_기초자료.xlsx'));
-            });
+            printExcelDataButton.addEventListener('click', function() {
+                // 가상의 엑셀 데이터 (실제로는 XLSX.utils.sheet_to_json()으로 변환된 데이터 사용)
+                const excelData = [
+                    { "순번": 1, "소속명": "일반", "직장명": "일반", "성명": "김복녀", "생년월일": "1970-10-30", "직급": "일반", "설립": "일반", "과목": "", "연락처": "010-7422-7631", "입금처": "기업", "서명": "" },
+                    { "순번": 2, "소속명": "광주하나님", "직장명": "태천초", "성명": "가나다", "생년월일": "1984-10-30", "직급": "교사", "설립": "공립", "과목": "유아교육", "연락처": "010-1234-1234", "입금처": "마감입금", "서명": "" },
+                    { "순번": 3, "소속명": "본청", "직장명": "서울디자인고", "성명": "가나다", "생년월일": "1984-10-30", "직급": "교육공무원", "설립": "사립", "과목": "역사", "연락처": "010-1234-1234", "입금처": "농협", "서명": "" },
+                    { "순번": 4, "소속명": "본청", "직장명": "서울디자인고", "성명": "가나다", "생년월일": "1984-10-30", "직급": "교육공무원", "설립": "사립", "과목": "역사", "연락처": "010-1234-1234", "입금처": "농협", "서명": "" },
+                    { "순번": 5, "소속명": "본청", "직장명": "서울디자인고", "성명": "가나다", "생년월일": "1984-10-30", "직급": "교육공무원", "설립": "사립", "과목": "역사", "연락처": "010-1234-1234", "입금처": "농협", "서명": "" },
+                    { "순번": 6, "소속명": "본청", "직장명": "서울디자인고", "성명": "가나다", "생년월일": "1984-10-30", "직급": "교육공무원", "설립": "사립", "과목": "역사", "연락처": "010-1234-1234", "입금처": "농협", "서명": "" }
+                ];
 
-            // 프린트
-            printButton.addEventListener('click', function() {
-                window.print();
+                // 엑셀 데이터를 HTML 테이블로 변환하는 함수
+                function convertJsonToTable(jsonData) {
+                    let tableHTML = '<table>';
+                    if (jsonData.length > 0) {
+                        // 헤더 생성
+                        tableHTML += '<thead><tr>';
+                        for (const key in jsonData[0]) {
+                            tableHTML += `<th>${key}</th>`;
+                        }
+                        tableHTML += '</tr></thead><tbody>';
+
+                        // 데이터 행 생성
+                        jsonData.forEach(item => {
+                            tableHTML += '<tr>';
+                            for (const key in item) {
+                                tableHTML += `<td>${item[key]}</td>`;
+                            }
+                            tableHTML += '</tr>';
+                        });
+                        tableHTML += '</tbody>';
+                    } else {
+                        tableHTML += '<p>엑셀 데이터가 없습니다.</p>';
+                    }
+                    tableHTML += '</table>';
+                    return tableHTML;
+                }
+
+                // HTML 테이블 생성
+                const tableToPrint = convertJsonToTable(excelData);
+
+                // 새 창을 열어 HTML 테이블 표시 및 인쇄
+                const printWindow = window.open('', '_blank');
+                if (printWindow) {
+                    printWindow.document.write('<html><head><title>엑셀 데이터 인쇄</title><style>table {border-collapse: collapse;width: 100%;}th, td {border: 1px solid black;padding: 8px;text-align: left;}</style></head><body>');
+                    printWindow.document.write(tableToPrint);
+
+                    printWindow.document.close();
+                    printWindow.print();
+                } else {
+                    alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.');
+                }
             });
         });
-   
+        
+        
+
         // 드롭다운 클릭 핸들러
         function handleDropdownClick(e) {
             e.stopPropagation();

@@ -1583,9 +1583,12 @@
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
                     엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
                 </button>
-                <button id="printTable">
+                <!-- <button id="printTable">
                     테이블 인쇄
-                </button>
+                </button> -->
+                <!-- <button id="viewJsonData">
+                    JSON 데이터 보기
+                </button> -->
                 <button onclick="printLandscape('basicDataModal')"
                     class="bg-[#A40B0D] hover bg-[#8E2F2A] text-white py-2 px-6 max-sm:px-4 rounded-md flex items-center gap-1">
                     <img src="img/pdf.png" alt="pdf 아이콘" class="w-5 h-5" />
@@ -2248,27 +2251,97 @@
     <script src="js/script.js"></script>
 
     <!-- SheetJS 라이브러리 -->
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script> -->
+
+
+    <!-- SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <!-- FileSaver saveAs 이용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <!-- 엑셀 cell style 적용 -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.min.js"></script>
+
 
     <script>
         // 엑셀다운
-        document.addEventListener('DOMContentLoaded', function() {
-            const downloadButton = document.getElementById('downloadExcel');
-            const excelTable = document.getElementById('exceltable');
-            const printButton = document.getElementById('printTable');
+        document.addEventListener('DOMContentLoaded', function() { // HTML 문서가 완전히 로드된 후 실행
+            const downloadButton = document.getElementById('downloadExcel'); // 'downloadExcel' 아이디를 가진 버튼 요소 가져오기
+            const excelTable = document.getElementById('exceltable'); // 'exceltable' 아이디를 가진 테이블 요소 가져오기
 
-            // 다운
-            downloadButton.addEventListener('click', function() {
-                var wb = XLSX.utils.table_to_book(excelTable, { sheet: "시트명", raw: true });
-                XLSX.writeFile(wb, ('과정출석부_기초자료.xlsx'));
+            downloadButton.addEventListener('click', function() { // 다운로드 버튼 클릭 이벤트 리스너 추가
+                // 1. 엑셀 파일 다운로드
+                var wb = XLSX.utils.table_to_book(excelTable, { sheet: "시트명", raw: true }); // 테이블 데이터를 SheetJS 워크북 객체로 변환
+                XLSX.writeFile(wb, ('과정출석부_기초자료.xlsx')); // 워크북 객체를 엑셀 파일로 다운로드
+
+                // 2. JSON 데이터 변환
+                const jsonData = getTableDataAsJson(excelTable); // 테이블 데이터를 JSON 형식으로 변환하는 함수 호출
+                console.log("테이블 데이터 (JSON):"); // 콘솔에 JSON 데이터 출력 시작 메시지 표시
+                console.log(JSON.stringify(jsonData, null, 2)); // JSON 데이터를 보기 좋게 포맷하여 콘솔에 출력
+
+                // 3. JSON 데이터를 기반으로 인쇄
+                printJsonData(jsonData); // 변환된 JSON 데이터를 인쇄하는 함수 호출
             });
 
-            // 프린트
-            printButton.addEventListener('click', function() {
-                window.print();
-            });
+            function getTableDataAsJson(table) { // 테이블 데이터를 JSON 형식으로 변환하는 함수
+                const headers = []; // 테이블 헤더를 저장할 배열
+                const data = []; // 테이블 데이터를 저장할 배열
+                const thead = table.querySelector('thead'); // 테이블 헤더 요소 가져오기
+                const tbody = table.querySelector('tbody'); // 테이블 본문 요소 가져오기
+
+                if (thead) { // 테이블 헤더가 존재하는 경우
+                    thead.querySelectorAll('th').forEach(th => { // 각 헤더 셀을 순회하며
+                        headers.push(th.textContent.trim()); // 텍스트 내용을 가져와 공백을 제거하고 배열에 추가
+                    });
+                }
+
+                if (tbody) { // 테이블 본문이 존재하는 경우
+                    tbody.querySelectorAll('tr').forEach(tr => { // 각 행을 순회하며
+                        const rowData = {}; // 각 행의 데이터를 저장할 객체
+                        tr.querySelectorAll('td').forEach((td, index) => { // 각 데이터 셀을 순회하며
+                            rowData[headers[index] || `column${index + 1}`] = td.textContent.trim(); // 헤더가 있으면 해당 키 사용, 없으면 기본 키 사용
+                        });
+                        data.push(rowData); // 행 데이터를 배열에 추가
+                    });
+                }
+
+                return data; // JSON 형식으로 변환된 데이터 배열 반환
+            }
+
+            function printJsonData(jsonData) { // JSON 데이터를 기반으로 인쇄하는 함수
+                let printContents = '<html><head><title>인쇄</title></head><body>'; // 인쇄될 HTML 콘텐츠 시작
+                //printContents += '<h1>테이블 데이터</h1>'; // 제목 추가
+                printContents += '<table border="1">'; // 테두리가 있는 테이블 시작
+                if (jsonData.length > 0) { // 데이터가 있는 경우
+                    printContents += '<thead><tr>'; // 테이블 헤더 행 시작
+                    for (const key in jsonData[0]) { // 첫 번째 객체의 키를 순회하며
+                        printContents += '<th>${key}</th>'; // 테이블 헤더 셀 추가
+                    }
+                    printContents += '</tr></thead><tbody>'; // 테이블 헤더 행 닫고 테이블 본문 시작
+                    jsonData.forEach(item => { // 각 데이터 객체를 순회하며
+                        printContents += '<tr>'; // 테이블 데이터 행 시작
+                        for (const key in item) { // 각 키-값 쌍을 순회하며
+                            printContents += '<td>${item[key]}</td>'; // 테이블 데이터 셀 추가
+                        }
+                        printContents += '</tr>'; // 테이블 데이터 행 닫기
+                    });
+                    printContents += '</tbody>'; // 테이블 본문 닫기
+                } else { // 데이터가 없는 경우
+                    printContents += '<p>데이터가 없습니다.</p>'; // 메시지 표시
+                }
+                printContents += '</table></html>'; // 테이블과 HTML 콘텐츠 닫기
+
+                const printWindow = window.open('', '_blank'); // 새 빈 창 열기
+                if (printWindow) { // 새 창이 성공적으로 열린 경우
+                    printWindow.document.write(printContents); // 새 창의 문서에 HTML 콘텐츠 쓰기
+                    printWindow.document.close(); // 문서 쓰기 완료
+                    printWindow.print(); // 새 창 인쇄
+                } else { // 새 창을 열지 못한 경우 (팝업 차단 등)
+                    alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.'); // 경고 메시지 표시
+                }
+            }
         });
-   
+        
+        
         // 드롭다운 클릭 핸들러
         function handleDropdownClick(e) {
             e.stopPropagation();
