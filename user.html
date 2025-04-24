@@ -668,7 +668,7 @@
                 <div
                     class="right-content flex justify-between text-lg space-x-2 max-md:space-x-0 max-lg:w-full max-sm:flex-col max-md:gap-4">
                     <div class="excel-button flex justify-between space-x-2 max-sm:justify-start max-sm:w-[50%]">
-                        <button type="button" data-target-table-id="targetTable" data-filename="회원관리_정보"
+                        <button type="button" data-target-table-id="targetTable" data-filename="회원관리정보"
                             class="excel-button bg-[#117841] text-[#EDF3FF] flex items-center justify-center max-sm:px-3 px-6 py-2.5 max-xl:px-5 rounded-lg hover:bg-[#359F66] focus:outline-none whitespace-nowrap">
                             <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 mr-1" />
                             <span class="text-[#EDF3FF] max-sm:text-sm block max-sm:hidden">엑셀 다운로드</span>
@@ -3409,26 +3409,30 @@
             excelButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const targetTableId = this.dataset.targetTableId;
-                    const filename = this.dataset.filename;
+                    const baseFilename = this.dataset.filename;
                     const table = document.getElementById(targetTableId);
 
-                    if (table && filename === '회원관리_정보') {
+                    const today = new Date();
+                    const year = today.getFullYear();
+                    const month = String(today.getMonth() + 1).padStart(2, '0');
+                    const day = String(today.getDate()).padStart(2, '0');
+                    const formattedDate = `${year}${month}${day}`;
+                    const filename = `${formattedDate}_${baseFilename}`;
+
+                    if (table && baseFilename === '회원관리정보') {
                         const extractedData = extractSpecificTableData(table, [2, 3, 4, 11, 5]); // 0-based index
                         if (extractedData.length > 0) {
                             const headers = ["성명", "성별", "생년월일", "연락처", "근무지역"];
                             exportDataToExcel(extractedData, headers, filename);
-                            printExtractedData(extractedData, headers);
                         } else {
                             alert('테이블에 데이터가 없습니다.');
                         }
-                    } else if (table) { // 기존 테이블 엑셀 다운로드 및 인쇄 기능 (전체 데이터)
+                    } else if (table) { // 기존 테이블 엑셀 다운로드 기능 (전체 데이터)
                         exportTableToExcel(table, filename);
-                        printTable(table);
-                    } else if (this.dataset.targetDivId) { // div 기반 데이터 엑셀 다운로드 및 인쇄 기능 (기존 코드 유지)
+                    } else if (this.dataset.targetDivId) { // div 기반 데이터 엑셀 다운로드 기능 (기존 코드 유지)
                         const divContainer = document.getElementById(this.dataset.targetDivId);
                         if (divContainer) {
                             const divData = exportDivDataToExcel(divContainer, filename);
-                            printDivData(divData);
                         } else {
                             console.error(`ID가 '${this.dataset.targetDivId}'인 div 컨테이너를 찾을 수 없습니다.`);
                         }
@@ -3460,41 +3464,11 @@
                 XLSX.writeFile(workbook, filename + '.xlsx');
             }
 
-            function printExtractedData(data, headers) {
-                let printContents = `<html><head><title>회원관리 정보 인쇄</title><style>
-                    table { border-collapse: collapse; width: 100%; margin: 0 auto; }
-                    th, td { border: 1px solid black; padding: 8px; text-align: center; }
-                    th { background-color: #f2f2f2; font-weight: bold; }
-                </style></head><body>`;
-                printContents += `<table><thead><tr>`;
-                headers.forEach(header => {
-                    printContents += `<th>${header}</th>`;
-                });
-                printContents += `</tr></thead><tbody>`;
-                data.forEach(row => {
-                    printContents += `<tr>`;
-                    row.forEach(cellData => {
-                        printContents += `<td>${cellData}</td>`;
-                    });
-                    printContents += `</tr>`;
-                });
-                printContents += `</tbody></table></html>`;
 
-                const printWindow = window.open('', '_blank');
-                if (printWindow) {
-                    printWindow.document.write(printContents);
-                    printWindow.document.close();
-                    printWindow.print();
-                } else {
-                    alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.');
-                }
-            }
-
-            // 기존 함수 유지 (exportTableToExcel, exportDivDataToExcel, getTableDataAsJson, printTable, printDivData)
-            // ...
         });
 
-         // 드롭다운 클릭 핸들러
+        
+        // 드롭다운 클릭 핸들러
         function handleDropdownClick(e) {
             e.stopPropagation();
             const dropdown = this.closest(".dropdown");

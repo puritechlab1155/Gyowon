@@ -1571,7 +1571,7 @@
             <div class="border-t-[2px] border-[#2B5BBB] mt-10 mb-5"></div>
 
             <div class="flex justify-end gap-3">
-                <button type="button" data-table-id="table1" data-filename="출석부_기초자료"
+                <button type="button" data-table-id="table1" data-filename="기초자료"
                     class="excel-button bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
                     엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
@@ -1743,7 +1743,7 @@
             <div class="border-t-[2px] border-[#2B5BBB] mt-10 mb-5"></div>
 
             <div class="flex justify-end gap-3">
-                <button type="button" data-table-id="table2" data-filename="과정출석부_자료"
+                <button type="button" data-table-id="table2" data-filename="과정출석부"
                     class="excel-button bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
                     엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
@@ -1799,7 +1799,7 @@
             <div class="border-t-[2px] border-[#2B5BBB] mt-10 mb-5"></div>
 
             <div class="flex justify-end gap-3">
-                <button type="button" data-target-div-id="nametagContainer" data-filename="출석부_명찰"
+                <button type="button" data-target-div-id="nametagContainer" data-filename="명찰"
                     class="excel-button bg-[#117841] hover:bg-[#359F66] text-[#EDF3FF] py-2 px-5 rounded-md flex items-center gap-1">
                     <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5" />
                     엑셀<span class="block max-sm:hidden text-[#EDF3FF]">다운로드</span>
@@ -2232,21 +2232,26 @@
                 button.addEventListener('click', function() { // 버튼 클릭 시 실행될 함수
                     const tableId = this.dataset.tableId; // 클릭된 버튼의 'data-table-id' 속성 값을 가져옴 (테이블 ID)
                     const targetDivId = this.dataset.targetDivId; // 클릭된 버튼의 'data-target-div-id' 속성 값을 가져옴 (div 컨테이너 ID)
-                    const filename = this.dataset.filename; // 클릭된 버튼의 'data-filename' 속성 값을 가져옴 (다운로드 파일 이름)
+                    const baseFilename = this.dataset.filename; // 클릭된 버튼의 'data-filename' 속성 값을 가져옴 (기본 파일 이름)
+
+                    const today = new Date();
+                    const year = today.getFullYear();
+                    const month = String(today.getMonth() + 1).padStart(2, '0');
+                    const day = String(today.getDate()).padStart(2, '0');
+                    const formattedDate = `${year}${month}${day}`;
+                    const filename = `${formattedDate}_${baseFilename}`; // 업데이트된 날짜를 파일명 앞에 추가
 
                     if (tableId) { // 'data-table-id' 속성이 있는 경우 (테이블 기반 데이터)
                         const table = document.getElementById(tableId); // 해당 ID의 테이블 요소를 가져옴
                         if (table) { // 테이블이 존재하는 경우
                             exportTableToExcel(table, filename); // 테이블 데이터를 엑셀 파일로 다운로드
-                            printTable(table); // 테이블 데이터를 인쇄
                         } else { // 테이블이 존재하지 않는 경우 에러 메시지 출력
                             console.error(`ID가 '${tableId}'인 테이블을 찾을 수 없습니다.`);
                         }
                     } else if (targetDivId) { // 'data-target-div-id' 속성이 있는 경우 (div 기반 데이터)
                         const divContainer = document.getElementById(targetDivId); // 해당 ID의 div 컨테이너 요소를 가져옴
                         if (divContainer) { // div 컨테이너가 존재하는 경우
-                            const divData = exportDivDataToExcel(divContainer, filename); // div 내의 데이터를 엑셀 파일로 다운로드하고 추출한 데이터 반환
-                            printDivData(divData); // 추출한 div 데이터를 인쇄
+                            exportDivDataToExcel(divContainer, filename); // div 내의 데이터를 엑셀 파일로 다운로드
                         } else { // div 컨테이너가 존재하지 않는 경우 에러 메시지 출력
                             console.error(`ID가 '${targetDivId}'인 div 컨테이너를 찾을 수 없습니다.`);
                         }
@@ -2259,7 +2264,7 @@
                 XLSX.writeFile(wb, filename + '.xlsx'); // 워크북 객체를 지정된 파일 이름으로 다운로드
             }
 
-            function exportDivDataToExcel(divContainer, filename) { // div 컨테이너 요소를 받아 엑셀 파일로 다운로드하고 데이터 반환하는 함수
+            function exportDivDataToExcel(divContainer, filename) { // div 컨테이너 요소를 받아 엑셀 파일로 다운로드하는 함수
                 const data = []; // 엑셀에 저장할 데이터를 담을 배열
                 const header = ["협회", "이름", "직장명"]; // 엑셀 파일의 헤더 행
 
@@ -2275,100 +2280,14 @@
 
                 const worksheet = XLSX.utils.aoa_to_sheet(data); // 데이터를 SheetJS 워크시트 객체로 변환 (Array of Arrays)
                 const workbook = XLSX.utils.book_new(); // 새로운 워크북 객체 생성
-                XLSX.utils.book_append_sheet(workbook, worksheet, "참가자 명단"); // 워크시트를 워크북에 추가, 시트 이름 설정
+                XLSX.utils.book_append_sheet(workbook, worksheet, "명찰"); // 워크시트를 워크북에 추가, 시트 이름 설정
                 XLSX.writeFile(workbook, filename + '.xlsx'); // 워크북 객체를 지정된 파일 이름으로 다운로드
-
-                return data; // 추출한 데이터 배열 반환
             }
 
-            function getTableDataAsJson(table) { // 테이블 요소를 받아 JSON 형식의 데이터로 변환하는 함수
-                const headers = []; // 테이블 헤더를 저장할 배열
-                const data = []; // 테이블 데이터를 저장할 배열
-                const thead = table.querySelector('thead'); // 테이블 헤더 요소 가져오기
-                const tbody = table.querySelector('tbody'); // 테이블 본문 요소 가져오기
-
-                if (thead) { // 테이블 헤더가 존재하는 경우
-                    thead.querySelectorAll('th').forEach(th => { // 각 헤더 셀을 순회하며
-                        headers.push(th.textContent.trim()); // 텍스트 내용을 가져와 공백을 제거하고 배열에 추가
-                    });
-                }
-
-                if (tbody) { // 테이블 본문이 존재하는 경우
-                    tbody.querySelectorAll('tr').forEach(tr => { // 각 행을 순회하며
-                        const rowData = {}; // 각 행의 데이터를 저장할 객체
-                        tr.querySelectorAll('td').forEach((td, index) => { // 각 데이터 셀을 순회하며
-                            rowData[headers[index] || `column${index + 1}`] = td.textContent.trim(); // 헤더가 있으면 해당 키 사용, 없으면 기본 키 사용
-                        });
-                        data.push(rowData); // 행 데이터를 배열에 추가
-                    });
-                }
-                return data; // JSON 형식으로 변환된 데이터 배열 반환
-            }
-
-            function printTable(table) { // 테이블 요소를 받아 인쇄하는 함수
-                const jsonData = getTableDataAsJson(table); // 테이블 데이터를 JSON 형식으로 변환
-                let printContents = `<html><head><title>과정출석부 기초자료</title><style>
-                    table { border-collapse: collapse; width: 100%; border: 1px solid black; }
-                    thead { background-color: #EDF3FF; color: #2B5BBB; }
-                    th, td { padding: 5px; }
-                </style></head><body>`; // 인쇄될 HTML 콘텐츠 생성
-                printContents += `<table border="1">`; // 테이블 시작 태그 추가
-                if (jsonData.length > 0) { // 데이터가 있는 경우
-                    printContents += `<thead><tr>`; // 테이블 헤더 행 시작
-                    for (const key in jsonData[0]) { // 첫 번째 객체의 키를 순회하며
-                        printContents += `<th>${key}</th>`; // 각 키를 헤더 셀로 추가
-                    }
-                    printContents += `</tr></thead><tbody>`; // 테이블 헤더 행 닫고 테이블 본문 시작
-                    jsonData.forEach(item => { // 각 데이터 객체를 순회하며
-                        printContents += `<tr>`; // 테이블 데이터 행 시작
-                        for (const key in item) { // 각 키-값 쌍을 순회하며
-                            printContents += `<td>${item[key]}</td>`; // 각 값을 데이터 셀로 추가
-                        }
-                        printContents += `</tr>`; // 테이블 데이터 행 닫기
-                    });
-                    printContents += `</tbody>`; // 테이블 본문 닫기
-                } else { // 데이터가 없는 경우
-                    printContents += `<p>데이터가 없습니다.</p>`; // 데이터 없음 메시지 추가
-                }
-                printContents += `</table></html>`; // 테이블 닫고 HTML 닫기
-
-                const printWindow = window.open('', '_blank'); // 새 빈 창 열기
-                if (printWindow) { // 새 창이 성공적으로 열린 경우
-                    printWindow.document.write(printContents); // 새 창의 문서에 HTML 콘텐츠 쓰기
-                    printWindow.document.close(); // 문서 쓰기 완료
-                    printWindow.print(); // 새 창 인쇄
-                } else { // 새 창을 열지 못한 경우 (팝업 차단 등)
-                    alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.'); // 경고 메시지 표시
-                }
-            }
-
-            function printDivData(data) { // div 데이터를 받아 인쇄하는 함수
-                let printContents = `<html><head><title>참가자 명찰 인쇄</title><style>
-                    table { border-collapse: collapse; width: 100%; border: 1px solid black; }
-                    thead { background-color: #EDF3FF; color: #2B5BBB; }
-                    th, td { border: 1px solid black; padding: 5px; text-align: center;}
-                    th:nth-child(1), td:nth-child(1) { width: 40%; } /* 협회 열 */
-                    th:nth-child(2), td:nth-child(2) { width: 30%; } /* 이름 열 */
-                    th:nth-child(3), td:nth-child(3) { width: 30%; } /* 직장명 열 */
-                </style></head><body>`;
-                printContents += `<table><thead><tr><th>협회</th><th>이름</th><th>직장명</th></tr></thead><tbody>`;
-                data.slice(1).forEach(item => { // 헤더를 제외한 데이터 순회
-                    printContents += `<tr><td>${item[0]}</td><td>${item[1]}</td><td>${item[2]}</td></tr>`;
-                });
-                printContents += `</tbody></table></html>`;
-
-                const printWindow = window.open('', '_blank');
-                if (printWindow) {
-                    printWindow.document.write(printContents);
-                    printWindow.document.close();
-                    printWindow.print();
-                } else {
-                    alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.');
-                }
-            }
+            // function getTableDataAsJson(table) { ... } // printTable 함수에서 사용되므로 제거
+            // function printTable(table) { ... } // 인쇄 기능 제거
+            // function printDivData(data) { ... } // 인쇄 기능 제거
         });
-
-
 
         // 드롭다운 클릭 핸들러
         function handleDropdownClick(e) {

@@ -1126,7 +1126,7 @@
 
                         <!-- 테이블 본문 부분 -->
                         <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table
+                            <table id="excelTable"
                                 class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[120px] border-b">
@@ -2614,27 +2614,97 @@
     <script src="js/script.js"></script>
     
     <!-- SheetJS 라이브러리 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx-style@0.8.13/dist/xlsx.full.min.js"></script> -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>    
+
     <script>
 
-    // 엑셀 다운로드 관련
-    document.getElementById('downloadExcel').addEventListener('click', async function () {
-    try {
-        const simpleData = [["이름", "나이"], ["홍길동", 30]];
-        const simpleWS = XLSX.utils.aoa_to_sheet(simpleData);
-        const simpleWB = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(simpleWB, simpleWS, "간단한시트");
-        XLSX.writeFile(simpleWB, "간단한_엑셀_style.xlsx", { bookType: 'xlsx', type: 'array' });
-    } catch (error) {
-        console.error("간단한 엑셀 (xlsx-style) 생성 오류:", error);
-        alert("간단한 엑셀 (xlsx-style) 생성 중 오류 발생");
-    }
-});
+    // 엑셀 다운로드 
+    document.addEventListener('DOMContentLoaded', function() {
+        const downloadButton = document.getElementById('downloadExcel');
+        const excelTable = document.getElementById('excelTable');
+
+        downloadButton.addEventListener('click', function() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const formattedDate = `${year}${month}${day}`;
+            const filename = `${formattedDate}_과정별참가자.xlsx`;
+
+            // 엑셀 헤더 순서에 맞게 정의
+            const headers = [null, "번호", "직무 · 종목", "과정명", "이름", "직장명", "교육장소", "연수기간", "요일", "회차", "입금내역", "수강현황"];
+            const exportData = [headers]; // 헤더를 먼저 추가
+
+            const tbody = excelTable.querySelector('tbody');
+            if (tbody) {
+                tbody.querySelectorAll('tr').forEach(row => {
+                    const cells = row.querySelectorAll('td');
+
+                    const 직무 = cells[2]?.querySelector(':nth-child(1)')?.textContent.trim() || '';
+                    const 종목 = cells[2]?.querySelector(':nth-child(2)')?.textContent.trim() || '';
+                    const 연수기간 = cells[7]?.textContent.trim().replace(/\s*<br\s*\/?>\s*/gi, ' - ').replace(/\s+/g, ' ') || '';
+                    const 요일 = cells[8]?.textContent.trim() || '';
+                    const 회차 = cells[9]?.textContent.trim() || '';
+                    const 입금내역_div = cells[10]?.querySelectorAll('div');
+                    const 입금내역_내용들 = Array.from(입금내역_div || []).map(div => div.textContent.trim()).filter(text => text !== '');
+                    const 수강현황 = cells[11]?.querySelector('.selected-option')?.textContent.trim() || '';
+
+                    const 공통_데이터 = {
+                        1: cells[1]?.textContent.trim() || '', // 번호
+                        3: cells[3]?.textContent.trim() || '', // 과정명
+                        4: cells[4]?.textContent.trim() || '', // 이름
+                        5: cells[5]?.textContent.trim() || '', // 직장명
+                        6: cells[6]?.textContent.trim() || '', // 교육장소
+                        7: 연수기간, // 연수기간
+                        8: 요일,     // 요일
+                        9: 회차,     // 회차
+                        11: 수강현황 // 수강현황
+                    };
+
+                    // 직무 행 추가
+                    const 직무_rowData = [null]; // 첫 번째 null
+                    직무_rowData[2] = 직무;
+                    for (let i = 3; i <= 11; i++) {
+                        직무_rowData[i] = 공통_데이터[i] || '';
+                    }
+                    exportData.push(직무_rowData);
+
+                    // 종목이 있는 경우 종목 행 추가
+                    if (종목) {
+                        const 종목_rowData = [null]; // 첫 번째 null
+                        종목_rowData[2] = 종목;
+                        for (let i = 3; i <= 11; i++) {
+                            종목_rowData[i] = 공통_데이터[i] || '';
+                        }
+                        exportData.push(종목_rowData);
+                    }
+
+                    // 입금내역 내용별 행 추가
+                    입금내역_내용들.forEach(내용 => {
+                        const 입금_rowData = [null]; // 첫 번째 null
+                        for (let i = 1; i <= 11; i++) {
+                            입금_rowData[i] = 공통_데이터[i] || '';
+                        }
+                        입금_rowData[10] = 내용; // 입금내역 내용
+                        exportData.push(입금_rowData);
+                    });
+                });
+            }
+
+            // 워크시트 생성
+            const worksheet = XLSX.utils.aoa_to_sheet(exportData);
+
+            // 워크북 생성 및 시트 추가
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, "참가자 정보");
+
+            // 다운로드
+            XLSX.writeFile(workbook, filename);
+        });
+    });
 
 
-
-// ✅ 드롭다운 열고 닫기
+        // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function (e) {
                 e.stopPropagation();
