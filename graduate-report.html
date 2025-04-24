@@ -950,13 +950,13 @@
                 <!-- right-content (엑셀버튼) // 처음엔 숨긴 후 옵션 선택후 나타나기 -->
                 <div
                     class="right-content flex justify-end text-lg max-sm:space-x-1 space-x-2 max-sm:justify-start">
-                    <button
-                        class="bg-[#117841] text-[#EDF3FF] flex items-center justify-center max-sm:px-3 px-6 py-2.5 max-xl:px-5 rounded-lg hover:bg-[#359F66] focus:outline-none whitespace-nowrap">
+                    <button data-target-table="reportTable" data-filename="연수보고자명단" data-headers="번호,소속교육지원청,직장명,설립별,이름,생년월일,직급,연수시간,연수성적,평정학점"
+                        class="excel-download-button bg-[#117841] text-[#EDF3FF] flex items-center justify-center max-sm:px-3 px-6 py-2.5 max-xl:px-5 rounded-lg hover:bg-[#359F66] focus:outline-none whitespace-nowrap">
                         <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 mr-1" />
                         <span class="text-[#EDF3FF] max-sm:text-sm block">연수보고자명단</span> <!-- 확인불가 -->
                     </button>
-                    <button
-                        class="bg-[#117841] text-[#EDF3FF] flex items-center justify-center max-sm:px-3 px-6 py-2.5 max-xl:px-5 rounded-lg hover:bg-[#359F66] focus:outline-none whitespace-nowrap">
+                    <button data-target-table="reportTable" data-filename="보고용출석부" data-headers="번호,소속교육지원청,직장명,설립별,이름,생년월일,직급,연수시간,연수성적,평정학점"
+                        class="excel-download-button bg-[#117841] text-[#EDF3FF] flex items-center justify-center max-sm:px-3 px-6 py-2.5 max-xl:px-5 rounded-lg hover:bg-[#359F66] focus:outline-none whitespace-nowrap">
                         <img src="img/exel.png" alt="엑셀 아이콘" class="w-5 h-5 mr-1" />
                         <span class="text-[#EDF3FF] max-sm:text-sm block">보고용출석부</span>
                     </button>
@@ -990,7 +990,7 @@
 
                         <!-- 테이블 본문 부분 -->
                         <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                            <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
@@ -1003,7 +1003,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>   
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">부장</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">16</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                     <tr class="bg-[#F8F8F8] h-[80px] border-b">
@@ -1017,7 +1017,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>   
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">교육전문직</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">16</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
@@ -1031,7 +1031,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>  
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">퇴직</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">24</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                     <tr class="bg-[#F8F8F8] h-[80px] border-b">
@@ -1045,7 +1045,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>  
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">기간제</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">16</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
@@ -1059,7 +1059,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>  
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">지방공무원</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">16</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                     <tr class="bg-[#F8F8F8] h-[80px] border-b">
@@ -1073,7 +1073,7 @@
                                         <td class="px-2 py-2 w-[16%] text-[#727272] leading-tight">1987-12-02</td>
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">-</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">24</td>
-                                        <th class="px-1 py-2 w-[9%] text-[#727272]">무</th>
+                                        <td class="px-1 py-2 w-[9%] text-[#727272]">무</td>
                                         <td class="px-2 py-2 w-[9%] text-[#727272]">0</td>
                                     </tr>
                                 </tbody>
@@ -2091,7 +2091,104 @@
     </div>
 
     <script src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
     <script>
+        // 엑셀 다운 인쇄
+        document.addEventListener('DOMContentLoaded', function() {
+    const excelDownloadButtons = document.querySelectorAll('.excel-download-button');
+
+    excelDownloadButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTableId = this.dataset.targetTable;
+            const filename = this.dataset.filename;
+            const table = document.getElementById(targetTableId);
+            const customHeaders = this.dataset.headers ? this.dataset.headers.split(',') : null;
+
+            if (table) {
+                const dataForExport = exportTableData(table); // 엑셀 export를 위한 데이터 추출
+                const headersForExport = customHeaders || getTableHeaders(table); // 엑셀 export를 위한 헤더 결정
+
+                exportDataToExcel(dataForExport, headersForExport, filename);
+                printData(dataForExport, headersForExport, filename); // 인쇄 기능 호출
+            } else {
+                console.error(`ID가 '${targetTableId}'인 테이블을 찾을 수 없습니다.`);
+            }
+        });
+    });
+
+    function getTableHeaders(table) {
+        const headers = [];
+        const thead = table.querySelector('thead');
+        const tbody = table.querySelector('tbody');
+
+        if (thead) {
+            thead.querySelectorAll('th').forEach(th => {
+                headers.push(th.textContent.trim());
+            });
+        } else if (tbody && tbody.rows.length > 0) {
+            tbody.rows[0].querySelectorAll('td').forEach((td, index) => {
+                headers.push(`컬럼 ${index + 1}`);
+            });
+        }
+        return headers;
+    }
+
+    function exportTableData(table) {
+        const data = [];
+        const tbody = table.querySelector('tbody');
+
+        if (tbody) {
+            tbody.querySelectorAll('tr').forEach(row => {
+                const rowData = [];
+                row.querySelectorAll('td').forEach(cell => {
+                    rowData.push(cell.textContent.trim());
+                });
+                data.push(rowData);
+            });
+        }
+        return data;
+    }
+
+    function exportDataToExcel(data, headers, filename) {
+        const worksheetData = [headers, ...data];
+        const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, filename);
+        XLSX.writeFile(workbook, filename + '.xlsx');
+    }
+
+    function printData(data, headers, title) {
+        let printContents = `<html><head><title>${title} 인쇄</title><style>
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid black; padding: 8px; text-align: center; }
+            th { background-color: #f2f2f2; font-weight: bold; }
+        </style></head><body>`;
+        printContents += `<table><thead><tr>`;
+        headers.forEach(header => {
+            printContents += `<th>${header}</th>`;
+        });
+        printContents += `</tr></thead><tbody>`;
+        data.forEach(row => {
+            printContents += `<tr>`;
+            row.forEach(cellData => {
+                printContents += `<td>${cellData}</td>`;
+            });
+            printContents += `</tr>`;
+        });
+        printContents += `</tbody></table></html>`;
+
+        const printWindow = window.open('', '_blank');
+        if (printWindow) {
+            printWindow.document.write(printContents);
+            printWindow.document.close();
+            printWindow.print();
+        } else {
+            alert('새 창을 열 수 없습니다. 팝업 차단을 해제해주세요.');
+        }
+    }
+});
 
         // ✅ 드롭다운 열고 닫기
         document.querySelectorAll('.dropdown-button').forEach(button => {
