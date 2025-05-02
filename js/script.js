@@ -136,12 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
         'dashboard': 'dashboardLink',
         'user': 'userLink',
         'training': 'trainingLink',
-        'student': 'studentLink',
-        'graduate': 'graduateLink',
-        'qualify': 'qualifyLink',
-        'admin': 'adminLink',
-        'mail': 'mailLink',
-        'setting': 'settingLink',
+        'student': 'studentLink',  //수강자관리
+        'graduate': 'graduateLink', //수료자
+        'qualify': 'qualifyLink', //자격관리
+        'admin': 'adminLink', //관리자 게시판
+        'mail': 'mailLink', //문자관리
+        'setting': 'settingLink', //설정
     };
 
     const currentPage = window.location.pathname.split('/').pop(); // ex) userList.html
