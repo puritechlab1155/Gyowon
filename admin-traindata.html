@@ -363,8 +363,7 @@
                     </li>
                     <li>
                         <a href="student-record.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">과정
-                            출석부</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">과정출석부</a>
                     </li>
                     <li>
                         <a href="student-statistics.html"
@@ -491,12 +490,12 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             공문</a>
                     </li>
-                    <!-- <li>
-                        <a href="admin.html"
+                    <li>
+                        <a href="admin-traindata.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             자료실</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
                     </li>
@@ -679,12 +678,12 @@
                         <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed drop-shadow ">
                             <thead>
                                 <tr class="bg-[#FEFEFE] h-[70px]">
-                                    <th class="px-2 py-2 font-semibold w-[4%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[8%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[16%]">제목</th>
-                                    <th class="px-2 py-2 font-semibold w-[8%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[12%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[12%]">관리</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
+                                    <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">등록일</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
                                 </tr>
                             </thead>
                         </table>
@@ -694,22 +693,22 @@
                             <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[8%] text-[#727272]">연수자료</td>
-                                        <td class="w-[16%] text-[#2B5BBB]">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수자료</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="admin-traindata-detail.html">2023 2학기 연수자료</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[8%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[12%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[12%]">
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
+                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[15%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-traindata-create.html'" 
+                                                <button type="button" onclick="window.location.href='admin-traindata-create.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
                                                     </span>
                                                 </button>
-                                                <button
+                                                <button type="button"
                                                     class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
@@ -720,22 +719,22 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[4%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[8%] text-[#727272]">연수자료</td>
-                                        <td class="w-[16%] text-[#2B5BBB]">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수자료</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="admin-traindata-detail.html">2022 2학기 연수공문</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[8%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[12%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[12%]">
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
+                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[15%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-traindata-create.html'" 
+                                                <button type="button" onclick="window.location.href='admin-traindata-create.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
                                                     </span>
                                                 </button>
-                                                <button
+                                                <button type="button"
                                                     class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
@@ -862,44 +861,6 @@
 
     <script src="js/script.js"></script>
     <script>
-
-        // ✅ 드롭다운 열고 닫기
-        document.querySelectorAll('.dropdown-button').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
-                if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '10';
-                }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
-                });
-                menu.classList.toggle('hidden');
-            });
-        });
-
-        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
-
 
         // ✅  삭제모달
         document.addEventListener('DOMContentLoaded', () => {
