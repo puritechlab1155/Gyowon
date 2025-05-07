@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 연수공문</title>
+    <title>교원관리자 | 연수공문 등록</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
 
 </head>
 
@@ -189,7 +190,7 @@
                             <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
                         </a>
                     </div>
-                   
+                
                 </div>
                 <div class="relative w-full h-full">
                     <!-- ✕ 버튼 추가 -->
@@ -449,10 +450,10 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
                     </li>
                 </ul> -->
-            <!-- </li> -->
-                <li class="py-1 relative group ">
+            <!-- </li>
+            <li class="py-1 relative group "> -->
                 <!-- 관리자 게시판 항목 -->
-                <a href="#" id="adminLink"
+                <!-- <a href="#" id="adminLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -473,25 +474,25 @@
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a>
+                </a> -->
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <ul
+                <!-- <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
-                        <a href="admin-chats.html"
+                        <a href="admin-board.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
                     </li>
                     <li>
-                        <a href="admin-agency.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관
                             지정서</a>
                     </li>
                     <li>
-                        <a href="admin-trainsch.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             공문</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             자료실</a>
@@ -548,8 +549,8 @@
                     <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">구인・구직</a>
-                    </li> -->
-                </ul>
+                    </li>
+                </ul> -->
             <!-- </li>
             <li class="py-1 relative group "> -->
                 <!-- 문자관리 항목 -->
@@ -633,306 +634,492 @@
             </li>
         </ul>
     </div>
-
+    
     <!-- 컨텐츠 영역 -->
-    <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+    <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">연수공문</h1>
-            <span class="text-[14px] font-semibold text-[#64748B] ">
-                ※ 연수공문을 관리하는 페이지입니다.
-            </span>
-            <div class="pt-5 pb-5">
-                <div class="max-xl:flex max-xl:flex-col">
-                    <div class="w-full gap-2 flex justify-end">
-                        <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-trainsch-create.html'"
-                                class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                등록하기
-                            </button> 
+            <!-- 폼1 -->
+            <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
+                <div class="flex justify-between items-end mb-2">
+                    <h2 class="mt-[50px] h1-title font-normal paperlogy">연수공문 등록</h2>
+                </div>
+                <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
+                <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:p-0 p-10 bg-[#FFFFFF]">
+                    <!-- Row Template -->
+
+                    <!-- 오픈상태 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                        <div class="w-2/3 flex gap-0">
+                            <input type="radio" name="post" id="open" value="공개"
+                                class="hidden peer/open" />
+                            <label for="open" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/open:bg-[#EDF3FF] peer-checked/open:text-[#2B5BBB] peer-checked/open:border-[#2B5BBB]
+                                    rounded-l-lg">
+                                    공개
+                            </label>
+                            <input type="radio" name="post" id="close" value="비공개"
+                                class="hidden peer/close" />
+                            <label for="close" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/close:bg-[#EDF3FF] peer-checked/close:text-[#2B5BBB] peer-checked/close:border-[#2B5BBB]
+                                    rounded-r-lg">
+                                    비공개
+                            </label>
                         </div>
-                        <!-- right-content (탭들) -->
-                        <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
-                            <div
-                                class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
-                                <div
-                                    class="flex justify-between space-x-2">
-                                    <input type="text" placeholder="제목 검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
-                                    focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full
-                                    h-[50px] max-sm:h-[45px]" />
-                                    <button
-                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none  flex justify-center items-center gap-2">
-                                        <span class="text-[#EDF3FF]">검색</span>
-                                    </button>
-                                </div>
+                    </div>
+                    <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
+
+                    <!-- 카테고리 -->
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center">
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">카테고리</label>
+                        <div class="relative dropdown w-2/3">
+                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                                <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수공문</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">연수일정</div>
                             </div>
                         </div>
                     </div>
+                    <div class="px-2 pt-4 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
                     
-                </div>
-            </div>
+                    <!-- 게시판명 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
+                        <input type="text" placeholder="제목을 입력하세요"
+                        class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
+                    </div>
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:bg-[#F9F9F9]">
+                        <label class="w-1/3 px-2 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
+                        <input type="text" placeholder="작성자를 입력하세요"
+                        class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
+                    </div>
 
+                    <!-- 내용 -->
+                    <div class="bg-[#F9F9F9] col-span-2 px-2 h-[60px] flex items-center max-xl:col-span-1 max-sm:flex-col max-sm:h-[100px] max-xl:bg-[#FEFEFE]">
+                        <div class="w-1/6 max-xl:w-1/4 max-sm:justify-start max-sm:w-full">
+                            <label class="p-4 x-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] flex items-center py-4 xl:hidden">내용</label>
+                        </div>
+                        <div
+                            class="w-5/6 max-xl:w-3/4 max-sm:w-full max-xl:justify-end max-sm:gap-1 max-xl:justify-start flex gap-2">
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/bold.png" alt="글씨 굵게하기 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5 bject-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/underline.png" alt="밑줄 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/strikethrough.png" alt="중간선 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <div class="relative">
+                                <button id="colorToggleBtn" type="button"
+                                    class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                    <img src="img/training-mgmt/color.png" alt="글자색 버튼"
+                                        class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                                </button>
+                                <div id="colorPalette"
+                                    class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                                    <!-- X 닫기 버튼 -->
+                                    <div class="flex justify-end mb-2">
+                                        <button id="closePaletteBtn" type="button"
+                                            class="text-gray-500 hover:text-gray-700 text-sm">✕</button>
+                                    </div>
+                                    <ul class="array-box title-color flex flex-col gap-2">
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-red-500"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-orange-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-yellow-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-green-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-blue-400"></div>
+                                            </button>
+                                        </div>
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-purple-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-pink-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-gray-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-black"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div
+                                                    class="circle-color w-6 h-6 rounded-full bg-white border border-gray-300">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <button id="bgToggleBtn" type="button"
+                                    class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                    <img src="img/training-mgmt/bg-color.png" alt="글자 배경색 버튼"
+                                        class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                                </button>
 
-            <div class="w-full">
-                <div class="overflow-x-auto">
-                    <div class="min-w-[1400px]">
-                        <!-- 테이블 헤더 부분 -->
-                        <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed drop-shadow ">
-                            <thead>
-                                <tr class="bg-[#FEFEFE] h-[70px]">
-                                    <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
-                                </tr>
-                            </thead>
-                        </table>
-
-                        <!-- 테이블 본문 부분 -->
-                        <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수공문</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-trainsch-detail.html">2023 2학기 연수공문</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-trainsch-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수일정</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-trainsch-detail.html">2023 2학기 연수공문</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-trainsch-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <div id="bgColorPalette"
+                                    class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                                    <div class="flex justify-end mb-2">
+                                        <button id="closeBgPaletteBtn" type="button"
+                                            class="text-gray-500 hover:text-gray-700 text-sm">✕</button>
+                                    </div>
+                                    <ul class="array-box bg-color flex flex-col gap-2">
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-red-300"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-orange-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-yellow-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-green-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-blue-300"></div>
+                                            </button>
+                                        </div>
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-purple-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-pink-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-gray-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-teal-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-indigo-200"></div>
+                                            </button>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/left-align.png" alt="왼쪽 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/center-align.png" alt="가운데 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/right-align.png" alt="오른쪽 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                            </button>
                         </div>
                     </div>
+                    <div id="colorPalette"
+                        class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                        <ul class="array-box title-color flex flex-col gap-2">
+                            <div class="g-15 flex gap-2">
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-red-500"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-orange-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-yellow-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-green-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-blue-400"></div>
+                                </button>
+                            </div>
+                            <div class="g-15 flex gap-2">
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-purple-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-pink-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-gray-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-black"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-white border border-gray-300">
+                                    </div>
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 max-xl:col-span-1 max-xl:flex max-xl:flex-col px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[500px] w-full grid grid-cols-6">
+                        <label class="col-span-1 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center py-4 max-xl:hidden">내용</label>
+                        <div class="col-span-5 flex items-center h-full">
+                            <div class="w-full bg-[#FFFFFF] border border-[#EFEFEF] rounded-xl h-[480px] flex items-center">
+                                <textarea
+                                    class="w-full h-full px-4 py-4 text-[16px] text-[#292929] rounded-xl resize-none focus:outline-none focus:border-[#2B5BBB] placeholder-[#AFAFAF]"
+                                    placeholder="내용을 입력하세요"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 파일 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center py-2">
+                        <label class="w-[45%] max-xl:w-1/6 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">파일</label>
+                        <div class="flex items-end space-x-2 w-full">
+                            <ul id="fileList" class="space-y-1 text-sm text-gray-700 ml-2 "></ul>
+                            <label class="px-3 py-1 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
+                                파일추가
+                                <input type="file" class="hidden" id="fileInput" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] py-2 flex items-start justify-center max-xl:hidden">
+                    </div>
+                    
                 </div>
-            </div>
-
-            <!-- 페이지네이션 -->
-            <div class="flex justify-center items-center mt-4 mt-[100px]">
-                <!-- 이전 / 다음 버튼 그룹 -->
-                <div class="flex items-center space-x-3 max-lg:space-x-1">
-                    <button
-                        class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
-                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
-                            <path
-                                d="M0.68629 9.89949L10.5858 19.799L12 18.3848L3.51471 9.8995L12 1.41421L10.5858 -6.18172e-08L0.68629 9.89949Z" />
-                        </svg>
-                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold ml-2">이전</span>
-                    </button>
-
-                    <!-- 페이지 번호들 -->
-                    <div class="flex space-x-2 max-lg:space-x-2">
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            1
+                <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
+                <!-- 버튼 -->
+                <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
+                    <div class="max-w-[576px] flex gap-2 items-center mx-auto">
+                        <button type="button" onclick="window.location.href='admin-document.html'"
+                            class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
+                            등록하기
                         </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            2
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:text-[#EDF3FF]">
-                            3
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            4
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            5
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            6
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            7
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            8
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            9
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            10
+                        <button type="button" onclick="window.location.href='admin-document.html'"
+                            class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
+                            취소하기
                         </button>
                     </div>
-                    <!-- 다음 버튼 -->
-                    <button
-                        class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
-                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold mr-2">다음</span>
-                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
-                            <path
-                                d="M11.3137 10.1005L1.41423 0.201019L2.07232e-05 1.61523L8.48529 10.1005L1.68643e-08 18.5858L1.41421 20L11.3137 10.1005Z" />
-                        </svg>
-
-                    </button>
                 </div>
-            </div>
-            <!-- TOP버튼 -->
-            <button id="topButton"
-                class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
-                TOP
-            </button>
+
+            </form>
         </div>
+        <!-- TOP버튼 -->
+        <button id="topButton" 
+            class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+            TOP
+        </button>
     </div>
 
-
-    <!-- 삭제 모달 -->
-    <div id="deleteConfirmModal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
-        <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
-            <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
-
-            <h1 class="paperlogy text-[22px] font-medium mb-3">게시글 삭제하기</h1>
-
-            <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 글이 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
-                <br /> 계속하시겠습니까?
-            </p>
-
-            <div class="flex justify-between gap-3">
-                <button id="deleteConfirmBtn"
-                    class="bg-[#2B5BBB] text-white flex-1 py-2.5 rounded-md hover:bg-[#1e4bb6] transition">
-                    예
-                </button>
-                <button id="deleteCancelBtn"
-                    class="bg-[#ADADAD] text-white flex-1 py-2.5 rounded-md hover:bg-[#8e8e8e] transition">
-                    취소
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <script src="js/script.js"></script>
     <script>
+        // ✅  드롭다운 열고 닫기
+        function setupDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
 
-        // ✅ 드롭다운 열고 닫기
-        document.querySelectorAll('.dropdown-button').forEach(button => {
-            button.addEventListener('click', function (e) {
+            dropdowns.forEach((dropdown) => {
+                const button = dropdown.querySelector(".dropdown-button");
+                const menu = dropdown.querySelector(".dropdown-menu");
+                const options = dropdown.querySelectorAll(".dropdown-item");
+                const selectedText = dropdown.querySelector(".selected-option");
+
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation();
+
+                    // 모든 드롭다운 닫고 z-index 초기화
+                    closeAllDropdowns();
+
+                    // 현재 드롭다운만 열고 z-index 높임
+                    menu.classList.remove("hidden");
+                    menu.classList.add("z-[500]");
+                });
+
+                // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
+                menu.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // 항목 선택 시 처리
+                options.forEach((option) => {
+                    option.addEventListener("click", function () {
+                        selectedText.textContent = this.textContent;
+                        selectedText.style.color = "#202020";
+                        selectedText.parentElement.style.backgroundColor = "#FFFFFF";
+                        menu.classList.add("hidden");
+                        menu.classList.remove("z-[500]");
+                    });
+                });
+            });
+        }
+
+        // ✅  드롭다운 옵션 클릭 시 텍스트 변경
+        function closeAllDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach((dropdown) => {
+                const menu = dropdown.querySelector(".dropdown-menu");
+                if (menu) menu.classList.add("hidden");
+                menu.classList.remove("z-[500]");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setupDropdowns();
+
+            // 바깥 클릭 시 드롭다운 닫기
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+        });
+
+        // ✅ 인풋 옵션
+        document.addEventListener("DOMContentLoaded", function () {
+            setupDropdowns(); 
+            
+            // input 이벤트 리스너도 그대로 유지
+            const inputs = document.querySelectorAll("input");
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    if (input.value.trim() !== "") {
+                        input.classList.remove("bg-[#F3F3F3]");
+                        input.classList.add("bg-[#FFFFFF]");
+                    } else {
+                        input.classList.remove("bg-[#EFEFEF]");
+                        input.classList.add("bg-[#FFFFFF]");
+                    }
+                });
+            });
+
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+        });
+
+
+        // ✅ 컬러팔레트
+        document.addEventListener("DOMContentLoaded", function () {
+            // 글자색
+            const toggleBtn = document.getElementById("colorToggleBtn");
+            const closeBtn = document.getElementById("closePaletteBtn");
+            const palette = document.getElementById("colorPalette");
+
+            // 배경색
+            const bgToggleBtn = document.getElementById("bgToggleBtn");
+            const bgCloseBtn = document.getElementById("closeBgPaletteBtn");
+            const bgPalette = document.getElementById("bgColorPalette");
+
+            // 글자색 팔레트 위치 설정
+            palette.style.position = "absolute";
+            palette.style.left = `${toggleBtn.offsetLeft - 40}px`;
+
+            // 배경색 팔레트 위치 설정 추가
+            bgPalette.style.position = "absolute";
+            bgPalette.style.left = `${bgToggleBtn.offsetLeft - 40}px`;
+
+            toggleBtn.addEventListener("click", function (e) {
                 e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
-                if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '10';
+                palette.classList.toggle("hidden");
+
+                // 배경색 팔레트는 닫기
+                if (!palette.classList.contains("hidden")) {
+                    bgPalette.classList.add("hidden");
                 }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
+            });
+
+            closeBtn.addEventListener("click", function () {
+                palette.classList.add("hidden");
+            });
+
+            palette.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+
+            bgToggleBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                bgPalette.classList.toggle("hidden");
+
+                // 글자색 팔레트는 닫기
+                if (!bgPalette.classList.contains("hidden")) {
+                    palette.classList.add("hidden");
+                }
+            });
+
+            bgCloseBtn.addEventListener("click", function () {
+                bgPalette.classList.add("hidden");
+            });
+
+            bgPalette.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+
+            // 바깥 클릭 시 모든 팔레트 닫기
+            document.addEventListener("click", function () {
+                palette.classList.add("hidden");
+                bgPalette.classList.add("hidden");
+            });
+        });
+
+        // ✅ 파일추가
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+
+        // 파일 저장용 배열
+        let selectedFiles = [];
+
+        fileInput.addEventListener('change', function (e) {
+            const files = Array.from(e.target.files);
+            selectedFiles = selectedFiles.concat(files); // 기존 파일 유지 + 새로 추가
+            renderFileList();
+            fileInput.value = ''; // 같은 파일 다시 선택 가능하게 초기화
+        });
+
+        function renderFileList() {
+            fileList.innerHTML = ''; // 기존 목록 초기화
+
+            selectedFiles.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center px-2 py-1 text-[12px] bg-gray-100 border rounded-md';
+
+                const span = document.createElement('span');
+                span.textContent = file.name;
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.innerHTML = 'x';
+                deleteBtn.className = 'text-red-500 ml-2 text-[25px]';
+                deleteBtn.addEventListener('click', () => {
+                    selectedFiles.splice(index, 1);
+                    renderFileList(); 
                 });
-                menu.classList.toggle('hidden');
+
+                li.appendChild(span);
+                li.appendChild(deleteBtn);
+                fileList.appendChild(li);
             });
-        });
-
-        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
-
-
-        // ✅  삭제모달
-        document.addEventListener('DOMContentLoaded', () => {
-            const deleteModal = document.getElementById('deleteConfirmModal');
-            const deleteCancelBtn = document.getElementById('deleteCancelBtn');
-            const deleteConfirmBtn = document.getElementById('deleteConfirmBtn');
-            const deleteButtons = document.querySelectorAll('.deleteButton');
-
-            let targetButton = null;
-
-            deleteButtons.forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    targetButton = e.currentTarget;
-                    deleteModal.classList.remove('hidden');
-                    document.body.style.overflow = "hidden";
-                });
-            });
-
-            deleteCancelBtn.addEventListener('click', () => {
-                deleteModal.classList.add('hidden');
-                document.body.style.overflow = "";
-                targetButton = null;
-            });
-
-            deleteConfirmBtn.addEventListener('click', () => {
-                deleteModal.classList.add('hidden');
-                if (targetButton) {
-                    console.log('삭제 확인!', targetButton);
-                    // 예시로 해당 행 삭제: targetButton.closest('tr')?.remove();
-                }
-                targetButton = null;
-            });
-        });
+        }
 
     </script>
 </body>

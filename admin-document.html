@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 기관지정서</title>
+    <title>교원관리자 | 연수공문</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -491,41 +491,46 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             공문</a>
                     </li>
-                    <li>
-                        <a href="admin-traindata.html"
+                    <!-- <li>
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
                             자료실</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
-                    </li> -->
+                    </li>
                     <li>
-                        <a href="admin-cancel.html"
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">환불
+                            처리 등록</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/연기/환불관리</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">5인 이상 연수 신청</a>
-                    </li> -->
+                    </li>
                     <li>
-                        <a href="admin-notice.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
                     </li>
                     <li>
-                        <a href="admin-freeboard.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자유게시판</a>
                     </li>
                     <li>
-                        <a href="admin-faq.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">Q&A</a>
                     </li>
                     <li>
-                        <a href="admin-shoes.html"
+                        <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화
                             주문 / 조회 관리</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="admin.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드
                             관리</a>
@@ -632,15 +637,15 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">기관지정서</h1>
+            <h1 class="mt-[50px] h1-title font-normal paperlogy">연수공문</h1>
             <span class="text-[14px] font-semibold text-[#64748B] ">
-                ※ 기관지정서 관리하는 페이지 입니다.
+                ※ 연수공문을 관리하는 페이지입니다.
             </span>
             <div class="pt-5 pb-5">
                 <div class="max-xl:flex max-xl:flex-col">
                     <div class="w-full gap-2 flex justify-end">
                         <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-agency-create.html'"
+                            <button onclick="window.location.href='admin-document-create.html'"
                                 class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 등록하기
                             </button> 
@@ -690,15 +695,15 @@
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">지정서 승인</td>
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수공문</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-document-detail.html">2023 2학기 연수공문</a>
                                         </td>
                                         <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
                                         <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
                                         <td class="px-2 py-2 w-[15%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-agency-create.html'" 
+                                                <button type="button" onclick="window.location.href='admin-document-create.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
@@ -716,21 +721,21 @@
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">기관지정서</td>
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수일정</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-document-detail.html">2023 2학기 연수공문</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">홍길동</td>
+                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
                                         <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
                                         <td class="px-2 py-2 w-[15%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-agency-create.html'" 
+                                                <button type="button" onclick="window.location.href='admin-document-create.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
                                                     </span>
                                                 </button>
-                                                <button
+                                                <button type="button"
                                                     class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
@@ -740,7 +745,6 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    
                                 </tbody>
                             </table>
                         </div>
@@ -833,10 +837,10 @@
         <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
             <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
 
-            <h1 class="paperlogy text-[22px] font-medium mb-3">지정서 삭제하기</h1>
+            <h1 class="paperlogy text-[22px] font-medium mb-3">게시글 삭제하기</h1>
 
             <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 지정서가 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
+                해당 글이 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
                 <br /> 계속하시겠습니까?
             </p>
 
