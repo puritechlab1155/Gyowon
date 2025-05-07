@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교원관리자 | 기관지정서 등록</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body class="bg-[#F7F7F7] overflow-auto">
+    <header class="relative z-[20]">
+        <nav class="bg-white">
+            <div class="bg-white w-full max-auto fixed">
+                <div class="flex justify-between items-center h-16">
+                    <!-- 왼쪽 영역 -->
+                    <div class="w-64 pr-36 max-xl:pr-4 max-xl:w-40 max-sm:w-36 flex justify-start h-16 items-center gap-x-4 max-xl:gap-x-2 pl-8 max-xl:pl-4">
+                        <ul>
+                            <li class="flex flex-col items-center">
+                                <!-- 스위치 -->
+                                <input id="s1" type="checkbox" class="hidden"/>
+                                <span class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
+                                    <span class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="font-bold text-center text-[#2B5BBB] bg-[#EDF3FF] text-lg rounded-[15px] px-3 py-0.5">lms</div>
+                    </div>
+
+                    <!-- 오른쪽 영역 -->
+                    <div class="flex justify-between items-center w-full max-md:justify-end pl-2 pl-2">
+                        <!-- pc전용 배너 -->
+                        <div class="relative flex items-center max-xl:w-[330px] w-[590px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between">
+                            <!-- pc전용 문구 변화 -->
+                            <div class="flex-1 overflow-hidden z-[700]">
+                                <div class="w-full h-full flex items-center banner-container pl-1 max-xl:pl-0 ">
+                                    
+                                    <!-- 1. 최근댄스화 주문 -->
+                                    <div class="w-full banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
+                                        <div class="shoes grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>댄스화 주문</span> 
+                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
+                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <!-- 2. 최근 수강입금자 문구 -->
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="deposit grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
+                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A </span> 
+                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <!-- 3. 신규 가입자 문구 -->
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="membership grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">  
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold">신규 가입자</span> 
+                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span> 
+                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <!-- 4. 최근 게시된 공지 -->
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="notice grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_22%_55%_0%]">  
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-xl:hidden max-xl:hidden">사항</span></span> 
+                                            <span class="notice-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 드롭다운 -->
+                            <div class="relative flex-shrink-0">
+                                <button id="dropdown-toggle" class="text-[13px] text-gray-400 pr-2 max-xl:pr-0">▼</button>
+                                
+                                <ul id="dropdown-menu" class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[330px] w-[590px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
+                                <!-- 공통 스타일: grid 4col -->
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="#">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap ">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화 주문</span>
+                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold col-span-1">연습화 240</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="student-pay.html">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span class="max-xl:hidden text-sm font-semibold">자</span></span>
+                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="user.html">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold">신규 가입자</span>
+                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span>
+                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg sm:px-4">
+                                    <a href="#">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                        <span class="date text-sm font-semibold whitespace-nowrap">
+                                            25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                        </span>
+                                        <span class="text-sm font-semibold">최근 공지<span class="max-xl:hidden text-sm font-semibold">사항</span></span>
+                                        <span class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2 truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 오른쪽 버튼 -->
+                        <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
+                                로그아웃
+                            </a>
+                            <a href="#" id="goBackButton"
+                                class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                                뒤로가기
+                            </a>
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                                홈페이지로 가기
+                            </a>
+                            <a href="#" class="md:hidden block">
+                                <svg width="24" class="w-7 h-7"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
+                                    <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#292929"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="md:hidden block">
+                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
+                                    <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z" fill="#292929"/>
+                                </svg>
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 모바일 전용 배너 -->
+        <div id="mobile-banner" class="fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md transition-all duration-300 h-[35px]">          
+            <div class="relative w-full h-full">
+            <!-- <div class="banner-container flex transition-transform duration-300 ease-in-out"> -->
+                <div class="banner-container absolute top-0 left-0 w-full h-full flex items-center transition-transform duration-300 ease-in-out">
+                    
+                    <!-- 여기부터 모바일배너 아이템 시작 -->
+                    <div class="shoes banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">   
+                        <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
+                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
+                        </a>
+                    </div>
+                    <div class="deposit banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                        <a href="student-pay.html" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.02.01</span><span class="text-white text-sm pl-1">최근 수강 입금자</span> | <span class="class-name text-white text-sm">라틴2종 파티대비A</span> <span class="user-name text-white text-sm pl-1">김민수</span> 
+                        </a>
+                    </div>
+                    <div class="membership banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                        <a href="user.html" class="text-sm"> <!-- 회원관리 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.03.12</span><span class="text-white text-sm pl-1">신규 가입자</span> | <span class="membership-type text-white text-sm">교원</span> <span class="user-name text-white text-sm pl-1">이수지</span> 
+                        </a>
+                    </div>
+                    <div class="notice banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                        <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
+                            <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="relative w-full h-full">
+                    <!-- ✕ 버튼 추가 -->
+                    <button id="mbanner-close" class="absolute left-0 top-1/2 -translate-y-1/2 text-[13px] text-white pl-4 z-[1001]">✕</button>
+                
+                    <!-- ▼ 버튼은 오른쪽 -->
+                    <button id="mbanner-toggle" class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
+                </div>
+            </div>
+            <!-- 드롭다운 배너 영역 -->
+            <div id="mobile-banner-dropdown" class="absolute left-0 w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out max-h-0 w-full px-4 py-0 mt-2 bg-blue-500 text-white box-border">
+                <!-- 배너 내용 -->
+                <div class="shoes banner-item flex-shrink-0 py-1 w-full">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                        <span>
+                            <span class="date text-sm">25.01.06</span>
+                            <span class="pl-1 text-sm">댄스화 주문 |</span>
+                            <span class="product-name text-sm">연습화 240</span>
+                            <span class="user-name text-sm pl-1">홍길동</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="deposit banner-item flex-shrink-0 w-full py-1">
+                    <a href="student-pay.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                        <span>
+                            <span class="date text-sm">25.02.01</span>
+                            <span class="pl-1 text-sm">최근 수강 입금자 |</span>
+                            <span class="class-name text-sm">라틴2종 파티대비A</span>
+                            <span class="user-name text-sm pl-1">김민수</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="membership banner-item flex-shrink-0 w-full py-1">
+                    <a href="user.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                        <span>
+                            <span class="date text-sm">25.03.12</span>
+                            <span class="pl-1 text-sm">신규 가입자 |</span>
+                            <span class="membership-type text-sm">교원</span>
+                            <span class="user-name text-sm pl-1">이수지</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="notice banner-item flex-shrink-0 w-full py-1">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                        <span>
+                            <span class="date text-sm">25.04.05</span>
+                            <span class="pl-1 text-sm">최근 공지사항 |</span>
+                            <span class="notice-name text-sm">홈페이지 리뉴얼 안내</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 사이드 메뉴 -->
+    <div id="side-menu"
+        class="fixed top-[64px] z-[600] overflow-y-auto scrollbar-hidden left-0 top-16 bottom-0 bg-[#FEFEFE] w-64 transform -translate-x-full transition-transform duration-300 h-screen">
+        <ul class="p-4 pb-20">
+            <li class="py-1">
+                <a href="index.html" id="dashboardLink"
+                    class="mainLink flex gap-3 block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]">
+                    <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9 3H4C3.44772 3 3 3.44772 3 4V9C3 9.55228 3.44772 10 4 10H9C9.55228 10 10 9.55228 10 9V4C10 3.44772 9.55228 3 9 3Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path
+                            d="M20 3H15C14.4477 3 14 3.44772 14 4V9C14 9.55228 14.4477 10 15 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path
+                            d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path
+                            d="M9 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V15C10 14.4477 9.55228 14 9 14Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    대시보드
+                </a>
+            </li>
+            <li class="py-1">
+                <a href="user.html" id="userLink"
+                    class="mainLink flex gap-3 block px-4 py-3 rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]">
+                    <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17 21V19C17 17.9391 16.6313 16.9217 15.9749 16.1716C15.3185 15.4214 14.4283 15 13.5 15H6.5C5.57174 15 4.6815 15.4214 4.02513 16.1716C3.36875 16.9217 3 17.9391 3 19V21"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10 11C12.2091 11 14 9.20914 14 7C14 4.79086 12.2091 3 10 3C7.79086 3 6 4.79086 6 7C6 9.20914 7.79086 11 10 11Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M22 20.9999V18.9999C21.9993 18.1136 21.7044 17.2527 21.1614 16.5522C20.6184 15.8517 19.8581 15.3515 19 15.1299"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M17 3.12988C17.8604 3.35018 18.623 3.85058 19.1676 4.55219C19.7122 5.2538 20.0078 6.11671 20.0078 7.00488C20.0078 7.89305 19.7122 8.75596 19.1676 9.45757C18.623 10.1592 17.8604 10.6596 17 10.8799"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    회원관리
+                </a>
+            </li>
+            <li class="py-1 relative group">
+                <!-- 연수 항목 -->
+                <a href="#" id="trainingLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.1791 3.48399C18.489 3.1741 18.9093 3 19.3476 3C19.7858 3 20.2061 3.1741 20.516 3.48399C20.8259 3.79388 21 4.21418 21 4.65243C21 5.09068 20.8259 5.51099 20.516 5.82088L13.1159 13.221L10 14L10.779 10.8841L18.1791 3.48399Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M7 17.1968H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M10 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V12"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        연수
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="training-01.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리</a>
+                    </li>
+                    <li>
+                        <a href="training-end-01.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">종료된 연수</a>
+                    </li>
+                    <li>
+                        <a href="training-before-2020-01.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리(~2020)</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수기록</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="py-1 relative group">
+                <!-- 수강자관리 항목 -->
+                <a href="#" id="studentLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18 21V19C18 17.9391 17.5786 16.9217 16.8284 16.1716C16.0783 15.4214 15.0609 15 14 15H7C5.93913 15 4.92172 15.4214 4.17157 16.1716C3.42143 16.9217 3 17.9391 3 19V21"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M10.5 11C12.7091 11 14.5 9.20914 14.5 7C14.5 4.79086 12.7091 3 10.5 3C8.29086 3 6.5 4.79086 6.5 7C6.5 9.20914 8.29086 11 10.5 11Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.5 11.5L19 13L22 9" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        수강자 관리
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="student-pay.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강자입금관리</a>
+                    </li>
+                    <li>
+                        <a href="student-record.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">과정
+                            출석부</a>
+                    </li>
+                    <li>
+                        <a href="student-statistics.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강인원통계</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="py-1 relative group">
+                <!-- 수료자 항목 -->
+                <a href="#" id="graduateLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.21 14.0088L7 22L12 19.3684L17 22L15.79 14" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        수료자
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="graduate.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자
+                            관리</a>
+                    </li>
+                    <li>
+                        <a href="graduate-report.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수료자
+                            보고서</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li class="py-1 relative group "> -->
+                <!-- 자격관리 항목 -->
+                <!-- <a href="#" id="qualifyLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] active:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 11L12 14L21 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        자격관리
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a> -->
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <!-- <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="qualify.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격등록</a>
+                    </li>
+                    <li>
+                        <a href="qualify.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격입금관리</a>
+                    </li>
+                    <li>
+                        <a href="qualify.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격출석부</a>
+                    </li>
+                    <li>
+                        <a href="qualify.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">합격공지</a>
+                    </li>
+                    <li>
+                        <a href="qualify.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
+                    </li>
+                </ul> -->
+            <!-- </li>
+            <li class="py-1 relative group "> -->
+                <!-- 관리자 게시판 항목 -->
+                <!-- <a href="#" id="adminLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 4H18C18.5304 4 19.0391 4.19901 19.4142 4.55324C19.7893 4.90748 20 5.38792 20 5.88889V19.1111C20 19.6121 19.7893 20.0925 19.4142 20.4468C19.0391 20.801 18.5304 21 18 21H6C5.46957 21 4.96086 20.801 4.58579 20.4468C4.21071 20.0925 4 19.6121 4 19.1111V5.88889C4 5.38792 4.21071 4.90748 4.58579 4.55324C4.96086 4.19901 5.46957 4 6 4H8"
+                                stroke="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8.25 3H15.75C15.8881 3 16 3.11193 16 3.25V5.75C16 5.88807 15.8881 6 15.75 6H8.25C8.11193 6 8 5.88807 8 5.75V3.25C8 3.11193 8.11193 3 8.25 3Z"
+                                stroke="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M7 11H17" stroke="stroke-current" stroke-width="2" stroke-linecap="round" />
+                            <path d="M7 15H17" stroke="stroke-current" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        관리자 게시판
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a> -->
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <!-- <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="admin-board.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관
+                            지정서</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
+                            공문</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
+                            자료실</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">환불
+                            처리 등록</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/연기/환불관리</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">5인 이상 연수 신청</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자유게시판</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">Q&A</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화
+                            주문 / 조회 관리</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드
+                            관리</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업
+                            관리</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상
+                            관리</a>
+                    </li>
+                    <li>
+                        <a href="admin.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">구인・구직</a>
+                    </li>
+                </ul> -->
+            <!-- </li>
+            <li class="py-1 relative group "> -->
+                <!-- 문자관리 항목 -->
+                <!-- <a href="#" id="mailLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 5H20C20.5477 5 21 5.45228 21 6V18C21 18.5477 20.5477 19 20 19H4C3.45228 19 3 18.5477 3 18V6C3 5.45228 3.45228 5 4 5Z"
+                                stroke="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 6L12 13L3 6" stroke="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        문자관리
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a> -->
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <!-- <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="mail.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
+                            그룹</a>
+                    </li>
+                    <li>
+                        <a href="mail.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
+                            보내기</a>
+                    </li>
+                    <li>
+                        <a href="mail.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
+                            기록</a>
+                    </li>
+                </ul> -->
+            <!-- </li> -->
+            <li class="py-1 relative group mb-10">
+                <!-- 설정 항목 -->
+                <a href="#" id="settingLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.887 12.5308L21.243 13.7383C21.4934 13.9473 21.6607 14.239 21.7146 14.5606C21.7685 14.8823 21.7055 15.2126 21.537 15.4918L19.902 18.2848C19.7751 18.4986 19.594 18.6751 19.377 18.7963C19.1574 18.9178 18.9109 18.9823 18.66 18.9838C18.5043 18.9848 18.3494 18.9615 18.201 18.9148L16.4655 18.3418C16.1615 18.5368 15.8455 18.7113 15.5175 18.8653L15.153 20.6248C15.0855 20.9485 14.9053 21.2377 14.6445 21.4408C14.3803 21.6476 14.0528 21.7568 13.7175 21.7498H10.332C9.99658 21.7568 9.6691 21.6476 9.40496 21.4408C9.14468 21.2374 8.96502 20.9483 8.89796 20.6248L8.53196 18.8653C8.20826 18.7093 7.89419 18.5339 7.59146 18.3403L5.84996 18.9148C5.70146 18.9615 5.54661 18.9848 5.39096 18.9838C5.14055 18.982 4.89457 18.9176 4.67546 18.7963C4.45862 18.6755 4.27751 18.4996 4.15046 18.2863L2.45696 15.4918C2.2809 15.2101 2.21363 14.8738 2.26775 14.5461C2.32187 14.2183 2.49368 13.9215 2.75096 13.7113L4.10546 11.9998V11.4688L2.74946 10.2613C2.49905 10.0524 2.33174 9.76065 2.27781 9.43901C2.22388 9.11736 2.2869 8.78703 2.45546 8.50782L4.14896 5.71482C4.27581 5.50102 4.45693 5.32456 4.67396 5.20332C4.89307 5.08208 5.13905 5.01762 5.38946 5.01582C5.54371 5.00609 5.69853 5.02026 5.84846 5.05782L7.55546 5.65782C7.86046 5.46282 8.17646 5.28832 8.50346 5.13432L8.86946 3.37482C8.93652 3.05138 9.11618 2.76222 9.37646 2.55882C9.6406 2.35204 9.96808 2.24288 10.3035 2.24982H13.6605C13.9958 2.24288 14.3233 2.35204 14.5875 2.55882C14.85 2.76432 15.03 3.05382 15.0945 3.37482L15.4605 5.13432C15.7855 5.28932 16.099 5.46432 16.401 5.65932L18.144 5.08632C18.3374 5.02339 18.5418 5.0013 18.7442 5.02144C18.9467 5.04158 19.1427 5.10351 19.32 5.20332C19.5375 5.32632 19.7175 5.50332 19.845 5.71332L21.537 8.50782C21.7154 8.78716 21.7861 9.12187 21.7358 9.4495C21.6856 9.77713 21.5179 10.0753 21.264 10.2883L19.887 11.4613V12.5308Z"
+                                stroke="stroke-current" stroke-width="2" />
+                            <path
+                                d="M15.75 12C15.75 12.9946 15.3549 13.9484 14.6517 14.6517C13.9484 15.3549 12.9946 15.75 12 15.75C11.0054 15.75 10.0516 15.3549 9.34835 14.6517C8.64509 13.9484 8.25 12.9946 8.25 12C8.25 11.0054 8.64509 10.0516 9.34835 9.34835C10.0516 8.64509 11.0054 8.25 12 8.25C12.9946 8.25 13.9484 8.64509 14.6517 9.34835C15.3549 10.0516 15.75 11.0054 15.75 12Z"
+                                stroke="stroke-current" stroke-width="2" />
+                        </svg>
+                        설정
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <!-- <li>
+                        <a href="setting.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">권리자
+                            권한 관리</a>
+                    </li> -->
+                    <li>
+                        <a href="setting-board.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">게시판
+                            관리</a>
+                    </li>
+                    <!-- <li>
+                        <a href="setting.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인
+                            로그</a>
+                    </li> -->
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- 컨텐츠 영역 -->
+    <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 max-w-[1520px]">
+        <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
+            <!-- 폼1 -->
+            <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
+                <div class="flex justify-between items-end mb-2">
+                    <h2 class="mt-[50px] h1-title font-normal paperlogy">기관지정서 등록</h2>
+                </div>
+                <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
+                <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:p-0 p-10 bg-[#FFFFFF]">
+                    <!-- Row Template -->
+
+                    <!-- 오픈상태 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                        <div class="w-2/3 flex gap-0">
+                            <input type="radio" name="gender" id="training-01" value="공개"
+                                class="hidden peer/training-01" />
+                            <label for="training-01" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/training-01:bg-[#EDF3FF] peer-checked/training-01:text-[#2B5BBB] peer-checked/training-01:border-[#2B5BBB]
+                                    rounded-l-lg">
+                                    공개
+                            </label>
+                            <input type="radio" name="gender" id="training-02" value="비공개"
+                                class="hidden peer/training-02" />
+                            <label for="training-02" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/training-02:bg-[#EDF3FF] peer-checked/training-02:text-[#2B5BBB] peer-checked/training-02:border-[#2B5BBB]
+                                    rounded-r-lg">
+                                    비공개
+                            </label>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
+
+                    <!-- 카테고리 -->
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center">
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">카테고리</label>
+                        <div class="relative dropdown w-2/3">
+                            <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 py-1.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                                <span class="selected-option text-[16px] max-sm:text-sm text-[#AFAFAF]">선택하세요</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- 드롭다운 옵션 -->
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">1</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">2</div>
+                                <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-4 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
+                    
+                    <!-- 게시판명 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
+                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
+                        <input type="text" placeholder="제목을 입력하세요"
+                        class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
+                    </div>
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:bg-[#F9F9F9]">
+                        <label class="w-1/3 px-2 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
+                        <input type="text" placeholder="작성자를 입력하세요"
+                        class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
+                    </div>
+
+                    <!-- 내용 -->
+                    <div class="bg-[#F9F9F9] col-span-2 px-2 h-[60px] flex items-center max-xl:col-span-1 max-sm:flex-col max-sm:h-[100px] max-xl:bg-[#FEFEFE]">
+                        <div class="w-1/6 max-xl:w-1/4 max-sm:justify-start max-sm:w-full">
+                            <label class="p-4 x-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] flex items-center py-4 xl:hidden">내용</label>
+                        </div>
+                        <div
+                            class="w-5/6 max-xl:w-3/4 max-sm:w-full max-xl:justify-end max-sm:gap-1 max-xl:justify-start flex gap-2">
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/bold.png" alt="글씨 굵게하기 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5 bject-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/underline.png" alt="밑줄 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/strikethrough.png" alt="중간선 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <div class="relative">
+                                <button id="colorToggleBtn" type="button"
+                                    class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                    <img src="img/training-mgmt/color.png" alt="글자색 버튼"
+                                        class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                                </button>
+                                <div id="colorPalette"
+                                    class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                                    <!-- X 닫기 버튼 -->
+                                    <div class="flex justify-end mb-2">
+                                        <button id="closePaletteBtn" type="button"
+                                            class="text-gray-500 hover:text-gray-700 text-sm">✕</button>
+                                    </div>
+                                    <ul class="array-box title-color flex flex-col gap-2">
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-red-500"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-orange-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-yellow-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-green-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-blue-400"></div>
+                                            </button>
+                                        </div>
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-purple-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-pink-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-gray-400"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-black"></div>
+                                            </button>
+                                            <button type="button" class="pop-list">
+                                                <div
+                                                    class="circle-color w-6 h-6 rounded-full bg-white border border-gray-300">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <button id="bgToggleBtn" type="button"
+                                    class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                    <img src="img/training-mgmt/bg-color.png" alt="글자 배경색 버튼"
+                                        class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                                </button>
+
+                                <div id="bgColorPalette"
+                                    class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                                    <div class="flex justify-end mb-2">
+                                        <button id="closeBgPaletteBtn" type="button"
+                                            class="text-gray-500 hover:text-gray-700 text-sm">✕</button>
+                                    </div>
+                                    <ul class="array-box bg-color flex flex-col gap-2">
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-red-300"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-orange-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-yellow-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-green-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-blue-300"></div>
+                                            </button>
+                                        </div>
+                                        <div class="g-15 flex gap-2">
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-purple-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-pink-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-gray-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-teal-200"></div>
+                                            </button>
+                                            <button type="button" class="bg-pop-list">
+                                                <div class="circle-color w-6 h-6 rounded-full bg-indigo-200"></div>
+                                            </button>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/left-align.png" alt="왼쪽 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/center-align.png" alt="가운데 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5  object-contain" />
+                            </button>
+                            <button
+                                class="rounded-lg bg-[#EFEFEF] hover:bg-[#ECECEC] px-2 py-2 flex items-center justify-center">
+                                <img src="img/training-mgmt/right-align.png" alt="오른쪽 정렬 버튼"
+                                    class="w-6 h-6 max-xl:w-5 max-xl:h-5 object-contain" />
+                            </button>
+                        </div>
+                    </div>
+                    <div id="colorPalette"
+                        class="style-pop absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-md p-2 hidden z-[10]">
+                        <ul class="array-box title-color flex flex-col gap-2">
+                            <div class="g-15 flex gap-2">
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-red-500"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-orange-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-yellow-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-green-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-blue-400"></div>
+                                </button>
+                            </div>
+                            <div class="g-15 flex gap-2">
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-purple-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-pink-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-gray-400"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-black"></div>
+                                </button>
+                                <button type="button" class="pop-list">
+                                    <div class="circle-color w-6 h-6 rounded-full bg-white border border-gray-300">
+                                    </div>
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 max-xl:col-span-1 max-xl:flex max-xl:flex-col px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[500px] w-full grid grid-cols-6">
+                        <label class="col-span-1 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center py-4 max-xl:hidden">내용</label>
+                        <div class="col-span-5 flex items-center h-full">
+                            <div class="w-full bg-[#FFFFFF] border border-[#EFEFEF] rounded-xl h-[480px] flex items-center">
+                                <textarea
+                                    class="w-full h-full px-4 py-4 text-[16px] text-[#292929] rounded-xl resize-none focus:outline-none focus:border-[#2B5BBB] placeholder-[#AFAFAF]"
+                                    placeholder="내용을 입력하세요"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 파일 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center py-2">
+                        <label class="w-[15%] xl:w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">파일</label>
+                        <div class="flex items-end space-x-2 w-full">
+                            <ul id="fileList" class="space-y-1 text-sm text-gray-700 ml-2 "></ul>
+                            <label class="px-3 py-1 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
+                                파일추가
+                                <input type="file" class="hidden" id="fileInput" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] py-2 flex items-start justify-center max-xl:hidden">
+                    </div>
+                    
+                </div>
+                <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
+                <!-- 버튼 -->
+                <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
+                    <div class="max-w-[576px] flex gap-2 items-center mx-auto">
+                        <button type="button" onclick="window.location.href='admin-agency.html'"
+                            class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
+                            등록하기
+                        </button>
+                        <button type="button" onclick="window.location.href='admin-agency.html'"
+                            class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
+                            취소하기
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- TOP버튼 -->
+        <button id="topButton" 
+            class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+            TOP
+        </button>
+    </div>
+
+    <script>
+        // ✅  드롭다운 열고 닫기
+        function setupDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach((dropdown) => {
+                const button = dropdown.querySelector(".dropdown-button");
+                const menu = dropdown.querySelector(".dropdown-menu");
+                const options = dropdown.querySelectorAll(".dropdown-item");
+                const selectedText = dropdown.querySelector(".selected-option");
+
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation();
+
+                    // 모든 드롭다운 닫고 z-index 초기화
+                    closeAllDropdowns();
+
+                    // 현재 드롭다운만 열고 z-index 높임
+                    menu.classList.remove("hidden");
+                    menu.classList.add("z-[500]");
+                });
+
+                // 드롭다운 내 메뉴 클릭 시 닫히지 않도록
+                menu.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // 항목 선택 시 처리
+                options.forEach((option) => {
+                    option.addEventListener("click", function () {
+                        selectedText.textContent = this.textContent;
+                        selectedText.style.color = "#202020";
+                        selectedText.parentElement.style.backgroundColor = "#FFFFFF";
+                        menu.classList.add("hidden");
+                        menu.classList.remove("z-[500]");
+                    });
+                });
+            });
+        }
+
+        // ✅  드롭다운 옵션 클릭 시 텍스트 변경
+        function closeAllDropdowns() {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach((dropdown) => {
+                const menu = dropdown.querySelector(".dropdown-menu");
+                if (menu) menu.classList.add("hidden");
+                menu.classList.remove("z-[500]");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setupDropdowns();
+
+            // 바깥 클릭 시 드롭다운 닫기
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+        });
+
+        // ✅ 인풋 옵션
+        document.addEventListener("DOMContentLoaded", function () {
+            setupDropdowns(); 
+            
+            // input 이벤트 리스너도 그대로 유지
+            const inputs = document.querySelectorAll("input");
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    if (input.value.trim() !== "") {
+                        input.classList.remove("bg-[#F3F3F3]");
+                        input.classList.add("bg-[#FFFFFF]");
+                    } else {
+                        input.classList.remove("bg-[#EFEFEF]");
+                        input.classList.add("bg-[#FFFFFF]");
+                    }
+                });
+            });
+
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+        });
+
+
+        // ✅ 컬러팔레트
+        document.addEventListener("DOMContentLoaded", function () {
+            // 글자색
+            const toggleBtn = document.getElementById("colorToggleBtn");
+            const closeBtn = document.getElementById("closePaletteBtn");
+            const palette = document.getElementById("colorPalette");
+
+            // 배경색
+            const bgToggleBtn = document.getElementById("bgToggleBtn");
+            const bgCloseBtn = document.getElementById("closeBgPaletteBtn");
+            const bgPalette = document.getElementById("bgColorPalette");
+
+            // 글자색 팔레트 위치 설정
+            palette.style.position = "absolute";
+            palette.style.left = `${toggleBtn.offsetLeft - 40}px`;
+
+            // 배경색 팔레트 위치 설정 추가
+            bgPalette.style.position = "absolute";
+            bgPalette.style.left = `${bgToggleBtn.offsetLeft - 40}px`;
+
+            toggleBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                palette.classList.toggle("hidden");
+
+                // 배경색 팔레트는 닫기
+                if (!palette.classList.contains("hidden")) {
+                    bgPalette.classList.add("hidden");
+                }
+            });
+
+            closeBtn.addEventListener("click", function () {
+                palette.classList.add("hidden");
+            });
+
+            palette.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+
+            bgToggleBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                bgPalette.classList.toggle("hidden");
+
+                // 글자색 팔레트는 닫기
+                if (!bgPalette.classList.contains("hidden")) {
+                    palette.classList.add("hidden");
+                }
+            });
+
+            bgCloseBtn.addEventListener("click", function () {
+                bgPalette.classList.add("hidden");
+            });
+
+            bgPalette.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+
+            // 바깥 클릭 시 모든 팔레트 닫기
+            document.addEventListener("click", function () {
+                palette.classList.add("hidden");
+                bgPalette.classList.add("hidden");
+            });
+        });
+
+        // ✅ 파일추가
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+
+        // 파일 저장용 배열
+        let selectedFiles = [];
+
+        fileInput.addEventListener('change', function (e) {
+            const files = Array.from(e.target.files);
+            selectedFiles = selectedFiles.concat(files); // 기존 파일 유지 + 새로 추가
+            renderFileList();
+            fileInput.value = ''; // 같은 파일 다시 선택 가능하게 초기화
+        });
+
+        function renderFileList() {
+            fileList.innerHTML = ''; // 기존 목록 초기화
+
+            selectedFiles.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center px-2 py-1 text-[12px] bg-gray-100 border rounded-md';
+
+                const span = document.createElement('span');
+                span.textContent = file.name;
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.innerHTML = 'x';
+                deleteBtn.className = 'text-red-500 ml-2 text-[25px]';
+                deleteBtn.addEventListener('click', () => {
+                    selectedFiles.splice(index, 1);
+                    renderFileList(); 
+                });
+
+                li.appendChild(span);
+                li.appendChild(deleteBtn);
+                fileList.appendChild(li);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
