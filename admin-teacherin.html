@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 댄스화주문 / 조회</title>
+    <title>교원관리자 | 강사안내</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -618,50 +618,60 @@
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">댄스화주문 / 조회</h1>
+            <h1 class="mt-[50px] h1-title font-normal paperlogy">강사안내</h1>
             <div class="pt-5 pb-5">
                 <div class="max-xl:flex max-xl:flex-col">
-                    <div class="w-full gap-2 flex justify-end">
-                        <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-shoes-create.html'"
+                    <div class="w-full flex items-center justify-between max-lg:mt-[20px] max-2xl:flex-col max-2xl:items-stretch max-2xl:gap-5 max-lg:flex-col-reverse">
+                        <div class="left-content drop-shadow flex bg-[#FEFEFE] space-x-11 max-sm:space-xß-5 max-2xl:self-start max-sm:pl-5 max-sm:pr-5 pl-10 pr-10 pt-1 text-center rounded-[12px] max-lg:rounded-none max-lg:w-full">
+                            <div class="tab-box max-lg:flex-1">
+                                <button class="tab px-4 py-2 text-[#2B5BBB] border-[#2B5BBB] font-semibold text-lg border-b-4 hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">
+                                협회소속</button>
+                            </div>
+                            <div class="tab-box max-lg:flex-1">
+                                <button onclick="location.href='admin-teacherout.html'"
+                                class="tab px-4 py-2 text-[#AFAFAF] text-lg border-b-4 border-transparent hover:text-[#2B5BBB] hover:border-[#2B5BBB] hover:font-semibold focus:text-[#2B5BBB] focus:border-[#2B5BBB] focus:font-semibold focus:outline-none">
+                                초빙강사</button>
+                            </div>
+                        </div>
+                        <!-- right-content (탭들) -->
+                        <div class="right-content flex justify-end text-lg space-x-2">
+                            <button onclick="window.location.href='admin-teacherin-create.html'"
                                 class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 등록하기
                             </button> 
-                        </div>
-                        <!-- right-content (탭들) -->
-                        <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
                             <div
-                                class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
+                                class=" flex justify-between items-center space-x-2 max-lg:gap-2">
                                 <div
                                     class="flex justify-between space-x-2">
                                     <input type="text" placeholder="제목 검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
                                     focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full
-                                    h-[50px] max-sm:h-[45px]"/>
+                                    h-[50px] max-sm:h-[45px]" />
                                     <button
-                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none  flex justify-center items-center gap-2">
+                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none flex justify-center items-center gap-2">
                                         <span class="text-[#EDF3FF]">검색</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
 
             <div class="w-full">
                 <div class="overflow-x-auto">
-                    <div class="min-w-[1000px]">
+                    <div class="min-w-[1200px]">
                         <!-- 테이블 헤더 부분 -->
                         <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
                                 <tr class="text-[18px] h-[60px]">
                                     <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[30%]">파일</th>
-                                    <th class="px-2 py-2 font-semibold w-[20%]">주문자</th>
-                                    <th class="px-2 py-2 font-semibold w-[20%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[20%]">관리</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">카테고리</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">사진</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
+                                    <th class="px-2 py-2 font-semibold w-[25%]">종목</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">등록일</th>
+                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
                                 </tr>
                             </thead>
                         </table>
@@ -669,16 +679,33 @@
                         <!-- 테이블 본문 부분 -->
                         <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                             <tbody>
-                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                    <td class="w-[30%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline editModalBtn" href="admin-shoes-detail.html">연습화 230 주문합니다.</a>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-1.png" alt="강사사진"/>
+                                        </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[20%]">김이름</td>
-                                    <td class="w-[20%] text-[#2B5BBB]">25.04.08</td>
-                                    <td class="px-2 py-2 w-[20%]">
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">김남현</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start gap-2">
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                댄스스포츠
+                                            </div>
+                                            <div
+                                                class="bg-[#AFE7E0] text-[16px] text-[#292929] font-semibold border border-[#AFE7E0] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                웰빙댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
                                         <div class="flex justify-center gap-2 px-2">
-                                            <button type="button" onclick="window.location.href='admin-shoes-create.html'" 
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
                                                     <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
@@ -694,16 +721,37 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                    <td class="w-[30%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline editModalBtn" href="admin-shoes-detail.html">댄스화 주문합니다. (사이즈 문의 포함)</a>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-2.png" alt="강사사진"/>
+                                        </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[20%]">백이름</td>
-                                    <td class="w-[20%] text-[#2B5BBB]">25.04.08</td>
-                                    <td class="px-2 py-2 w-[20%]">
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">강순실</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start  gap-2">
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                댄스스포츠
+                                            </div>
+                                            <div
+                                                class="bg-[#AFE7E0] text-[16px] text-[#292929] font-semibold border border-[#AFE7E0] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                웰빙댄스
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
                                         <div class="flex justify-center gap-2 px-2">
-                                            <button type="button" onclick="window.location.href='admin-shoes-create.html'" 
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
                                                     <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
@@ -719,16 +767,159 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                    <td class="w-[30%] text-[#2B5BBB]">
-                                        <a class="font-semibold hover:underline editModalBtn" href="admin-shoes-detail.html">댄스화 주문</a>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-3.png" alt="강사사진"/>
+                                        </div>
                                     </td>
-                                    <td class="px-2 py-2 w-[20%]">송이름</td>
-                                    <td class="w-[20%] text-[#2B5BBB]">25.04.08</td>
-                                    <td class="px-2 py-2 w-[20%]">
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">김민지</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start  gap-2">
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                댄스스포츠
+                                            </div>
+                                            <div
+                                                class="bg-[#AFE7E0] text-[16px] text-[#292929] font-semibold border border-[#AFE7E0] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                웰빙댄스
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
                                         <div class="flex justify-center gap-2 px-2">
-                                            <button type="button" onclick="window.location.href='admin-shoes-create.html'" 
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-4.png" alt="강사사진"/>
+                                        </div>
+                                    </td>
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">강성자</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start  gap-2">
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                댄스스포츠
+                                            </div>
+                                            <div
+                                                class="bg-[#AFE7E0] text-[16px] text-[#292929] font-semibold border border-[#AFE7E0] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                웰빙댄스
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-5.png" alt="강사사진"/>
+                                        </div>
+                                    </td>
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">최보경</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start  gap-2">
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[150px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">협회소속</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">
+                                        <div class="flex justify-center items-center">
+                                            <img class="object-contain h-[130px] w-full" src="img/teacherin-6.png" alt="강사사진"/>
+                                        </div>
+                                    </td>
+                                    <td class="w-[15%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-teacherin-detail.html">장봉애</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[25%] text-[#727272]">
+                                        <div class="flex items-center justify-start  gap-2">
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1 whitespace-nowrap">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="w-[10%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-teacherin-create.html'" 
                                                 class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                 <span class="inline-block align-middle">
                                                     <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
@@ -746,6 +937,7 @@
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -835,10 +1027,10 @@
         <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
             <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
 
-            <h1 class="paperlogy text-[22px] font-medium mb-3">게시글 삭제하기</h1>
+            <h1 class="paperlogy text-[22px] font-medium mb-3">강사 삭제하기</h1>
 
             <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 글이 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
+                해당 강사의 정보가 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
                 <br /> 계속하시겠습니까?
             </p>
 
