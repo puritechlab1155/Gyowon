@@ -17,91 +17,60 @@
             <div class="bg-white w-full max-auto fixed">
                 <div class="flex justify-between items-center h-16">
                     <!-- 왼쪽 영역 -->
-                    <div
-                        class="w-64 pr-36 max-xl:pr-4 max-xl:w-40 max-sm:w-36 flex justify-start h-16 items-center gap-x-4 max-xl:gap-x-2 pl-8 max-xl:pl-4">
+                    <div class="w-64 pr-36 max-xl:pr-4 max-xl:w-40 max-sm:w-36 flex justify-start h-16 items-center gap-x-4 max-xl:gap-x-2 pl-8 max-xl:pl-4">
                         <ul>
                             <li class="flex flex-col items-center">
                                 <!-- 스위치 -->
-                                <input id="s1" type="checkbox" class="hidden" />
-                                <span
-                                    class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
-                                    <span
-                                        class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
+                                <input id="s1" type="checkbox" class="hidden"/>
+                                <span class="switch w-11 h-5 max-sm:w-9 max-sm:h-4 bg-gray-300 rounded-full relative cursor-pointer transition-all duration-300">
+                                    <span class="dot absolute top-0.5 left-0.5  w-4 h-4 max-sm:w-3 max-sm:h-3 bg-white rounded-full transition-all duration-300"></span>
                                 </span>
                             </li>
                         </ul>
-                        <div
-                            class="font-bold text-center text-[#2B5BBB] bg-[#EDF3FF] text-lg rounded-[15px] px-3 py-0.5">
-                            lms</div>
+                        <div class="font-bold text-center text-[#2B5BBB] bg-[#EDF3FF] text-lg rounded-[15px] px-3 py-0.5">lms</div>
                     </div>
 
                     <!-- 오른쪽 영역 -->
                     <div class="flex justify-between items-center w-full max-md:justify-end pl-2 pl-2">
                         <!-- pc전용 배너 -->
-                        <div
-                            class="relative flex items-center max-xl:w-[330px] w-[590px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between">
+                        <div class="relative flex items-center max-xl:w-[330px] w-[590px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between">
                             <!-- pc전용 문구 변화 -->
                             <div class="flex-1 overflow-hidden z-[700]">
                                 <div class="w-full h-full flex items-center banner-container pl-1 max-xl:pl-0 ">
-
+                                    
                                     <!-- 1. 최근댄스화 주문 -->
-                                    <div
-                                        class="w-full banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
-                                        <div
-                                            class="shoes grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">
-                                            <span class="date text-sm font-semibold">25.01.06 <span
-                                                    class="time text-sm font-semibold max-xl:hidden">|
-                                                    00:03:19</span></span>
-                                            <span class="text-sm font-semibold"><span
-                                                    class="text-sm font-semibold max-xl:hidden">최근 </span>댄스화 주문</span>
-                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold">연습화
-                                                240</span>
+                                    <div class="w-full banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
+                                        <div class="shoes grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>댄스화 주문</span> 
+                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
                                             <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
                                         </div>
                                     </div>
                                     <!-- 2. 최근 수강입금자 문구 -->
-                                    <div
-                                        class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div
-                                            class="deposit grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">
-                                            <span class="date text-sm font-semibold">25.01.06 <span
-                                                    class="time text-sm font-semibold max-xl:hidden">|
-                                                    00:03:19</span></span>
-                                            <span class="text-sm font-semibold"><span
-                                                    class="text-sm font-semibold max-xl:hidden">최근 </span>수강 입금<span
-                                                    class="text-sm font-semibold max-lg:hidden">자</span></span>
-                                            <span
-                                                class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종
-                                                파티대비A </span>
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="deposit grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
+                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A </span> 
                                             <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
                                         </div>
                                     </div>
                                     <!-- 3. 신규 가입자 문구 -->
-                                    <div
-                                        class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div
-                                            class="membership grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">
-                                            <span class="date text-sm font-semibold">25.01.06 <span
-                                                    class="time text-sm font-semibold max-xl:hidden">|
-                                                    00:03:19</span></span>
-                                            <span class="text-sm font-semibold">신규 가입자</span>
-                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span>
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="membership grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">  
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold">신규 가입자</span> 
+                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span> 
                                             <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
                                         </div>
                                     </div>
                                     <!-- 4. 최근 게시된 공지 -->
-                                    <div
-                                        class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div
-                                            class="notice grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_22%_55%_0%]">
-                                            <span class="date text-sm font-semibold">25.01.06 <span
-                                                    class="time text-sm font-semibold max-xl:hidden">|
-                                                    00:03:19</span></span>
-                                            <span class="text-sm font-semibold">최근 공지<span
-                                                    class="text-sm font-semibold max-xl:hidden max-xl:hidden">사항</span></span>
-                                            <span
-                                                class="notice-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">홈페이지
-                                                리뉴얼 관련 안내</span>
+                                    <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
+                                        <div class="notice grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_22%_55%_0%]">  
+                                            <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
+                                            <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-xl:hidden max-xl:hidden">사항</span></span> 
+                                            <span class="notice-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span> 
                                         </div>
                                     </div>
                                 </div>
@@ -110,183 +79,132 @@
 
                             <!-- 드롭다운 -->
                             <div class="relative flex-shrink-0">
-                                <button id="dropdown-toggle"
-                                    class="text-[13px] text-gray-400 pr-2 max-xl:pr-0">▼</button>
-
-                                <ul id="dropdown-menu"
-                                    class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[330px] w-[590px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
-                                    <!-- 공통 스타일: grid 4col -->
-                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                        <a href="#">
-                                            <div
-                                                class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                                <span class="date text-sm font-semibold col-span-1 whitespace-nowrap ">
-                                                    25.01.06 <span class="time text-sm font-semibold max-xl:hidden">|
-                                                        00:03:19</span>
-                                                </span>
-                                                <span class="text-sm font-semibold col-span-1"><span
-                                                        class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화
-                                                    주문</span>
-                                                <span
-                                                    class="product-name text-sm text-[#2B5BBB] font-semibold col-span-1">연습화
-                                                    240</span>
-                                                <span
-                                                    class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                        <a href="student-pay.html">
-                                            <div
-                                                class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                                <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
-                                                    25.01.06 <span class="time text-sm font-semibold max-xl:hidden">|
-                                                        00:03:19</span>
-                                                </span>
-                                                <span class="text-sm font-semibold col-span-1"><span
-                                                        class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span
-                                                        class="max-xl:hidden text-sm font-semibold">자</span></span>
-                                                <span
-                                                    class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종
-                                                    파티대비A</span>
-                                                <span
-                                                    class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                        <a href="user.html">
-                                            <div
-                                                class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                                <span class="date text-sm font-semibold whitespace-nowrap">
-                                                    25.01.06 <span class="time text-sm font-semibold max-xl:hidden">|
-                                                        00:03:19</span>
-                                                </span>
-                                                <span class="text-sm font-semibold">신규 가입자</span>
-                                                <span
-                                                    class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span>
-                                                <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg sm:px-4">
-                                        <a href="#">
-                                            <div
-                                                class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
-                                                <span class="date text-sm font-semibold whitespace-nowrap">
-                                                    25.01.06 <span class="time text-sm font-semibold max-xl:hidden">|
-                                                        00:03:19</span>
-                                                </span>
-                                                <span class="text-sm font-semibold">최근 공지<span
-                                                        class="max-xl:hidden text-sm font-semibold">사항</span></span>
-                                                <span
-                                                    class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2 truncate overflow-hidden whitespace-nowrap">홈페이지
-                                                    리뉴얼 관련 안내</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                <button id="dropdown-toggle" class="text-[13px] text-gray-400 pr-2 max-xl:pr-0">▼</button>
+                                
+                                <ul id="dropdown-menu" class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[330px] w-[590px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
+                                <!-- 공통 스타일: grid 4col -->
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="#">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap ">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold ">최근 </span>댄스화 주문</span>
+                                            <span class="product-name text-sm text-[#2B5BBB] font-semibold col-span-1">연습화 240</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="student-pay.html">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold col-span-1"><span class="max-sm:hidden text-sm font-semibold">최근 </span>수강 입금<span class="max-xl:hidden text-sm font-semibold">자</span></span>
+                                            <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A</span>
+                                            <span class="user-name text-sm font-semibold col-span-1 max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
+                                    <a href="user.html">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                            <span class="date text-sm font-semibold whitespace-nowrap">
+                                                25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                            </span>
+                                            <span class="text-sm font-semibold">신규 가입자</span>
+                                            <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span>
+                                            <span class="user-name text-sm font-semibold max-xl:hidden">홍길동</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            
+                                <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg sm:px-4">
+                                    <a href="#">
+                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                        <span class="date text-sm font-semibold whitespace-nowrap">
+                                            25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
+                                        </span>
+                                        <span class="text-sm font-semibold">최근 공지<span class="max-xl:hidden text-sm font-semibold">사항</span></span>
+                                        <span class="notice-name text-sm text-[#2B5BBB] font-semibold col-span-2 truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span>
+                                        </div>
+                                    </a>
+                                </li>
                                 </ul>
                             </div>
                         </div>
                         <!-- 오른쪽 버튼 -->
                         <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
-                            <a href="#"
-                                class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
                                 로그아웃
                             </a>
                             <a href="#" id="goBackButton"
                                 class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 뒤로가기
                             </a>
-                            <a href="#"
-                                class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
                                 홈페이지로 가기
                             </a>
                             <a href="#" class="md:hidden block">
-                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
-                                    <path
-                                        d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z"
-                                        fill="#292929" />
+                                <svg width="24" class="w-7 h-7"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
+                                    <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#292929"/>
                                 </svg>
                             </a>
                             <a href="#" class="md:hidden block">
-                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
-                                    <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z"
-                                        fill="#292929" />
+                                <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
+                                    <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z" fill="#292929"/>
                                 </svg>
                             </a>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
         </nav>
         <!-- 모바일 전용 배너 -->
-        <div id="mobile-banner"
-            class="fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md transition-all duration-300 h-[35px]">
+        <div id="mobile-banner" class="fixed top-[64px] z-[1000] md:hidden w-full bg-blue-500 text-white text-sm text-center py-2 px-4 left-0 shadow-md transition-all duration-300 h-[35px]">          
             <div class="relative w-full h-full">
-                <!-- <div class="banner-container flex transition-transform duration-300 ease-in-out"> -->
-                <div
-                    class="banner-container absolute top-0 left-0 w-full h-full flex items-center transition-transform duration-300 ease-in-out">
-
+            <!-- <div class="banner-container flex transition-transform duration-300 ease-in-out"> -->
+                <div class="banner-container absolute top-0 left-0 w-full h-full flex items-center transition-transform duration-300 ease-in-out">
+                    
                     <!-- 여기부터 모바일배너 아이템 시작 -->
-                    <div
-                        class="shoes banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                    <div class="shoes banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">   
                         <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
-                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1">
-                                댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span
-                                class="user-name text-white text-sm pl-1">홍길동</span>
+                            <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
                         </a>
                     </div>
-                    <div
-                        class="deposit banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                    <div class="deposit banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
                         <a href="student-pay.html" class="text-sm"> <!-- 수강자 입금관리 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.02.01</span><span
-                                class="text-white text-sm pl-1">최근 수강 입금자</span> | <span
-                                class="class-name text-white text-sm">라틴2종 파티대비A</span> <span
-                                class="user-name text-white text-sm pl-1">김민수</span>
+                            <span class="date text-white text-sm pl-1">25.02.01</span><span class="text-white text-sm pl-1">최근 수강 입금자</span> | <span class="class-name text-white text-sm">라틴2종 파티대비A</span> <span class="user-name text-white text-sm pl-1">김민수</span> 
                         </a>
                     </div>
-                    <div
-                        class="membership banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                    <div class="membership banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
                         <a href="user.html" class="text-sm"> <!-- 회원관리 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.03.12</span><span
-                                class="text-white text-sm pl-1">신규 가입자</span> | <span
-                                class="membership-type text-white text-sm">교원</span> <span
-                                class="user-name text-white text-sm pl-1">이수지</span>
+                            <span class="date text-white text-sm pl-1">25.03.12</span><span class="text-white text-sm pl-1">신규 가입자</span> | <span class="membership-type text-white text-sm">교원</span> <span class="user-name text-white text-sm pl-1">이수지</span> 
                         </a>
                     </div>
-                    <div
-                        class="notice banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
+                    <div class="notice banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
                         <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
-                            <span class="date text-white text-sm pl-1">25.04.05</span><span
-                                class="text-white text-sm pl-1">최근 공지사항</span> | <span
-                                class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span>
+                            <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
                         </a>
                     </div>
-
+                
                 </div>
                 <div class="relative w-full h-full">
                     <!-- ✕ 버튼 추가 -->
-                    <button id="mbanner-close"
-                        class="absolute left-0 top-1/2 -translate-y-1/2 text-[13px] text-white pl-4 z-[1001]">✕</button>
-
+                    <button id="mbanner-close" class="absolute left-0 top-1/2 -translate-y-1/2 text-[13px] text-white pl-4 z-[1001]">✕</button>
+                
                     <!-- ▼ 버튼은 오른쪽 -->
-                    <button id="mbanner-toggle"
-                        class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
+                    <button id="mbanner-toggle" class="absolute right-0 top-1/2 -translate-y-1/2 text-[13px] text-white pr-4">▼</button>
                 </div>
             </div>
             <!-- 드롭다운 배너 영역 -->
-            <div id="mobile-banner-dropdown"
-                class="absolute left-0 w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out max-h-0 w-full px-4 py-0 mt-2 bg-blue-500 text-white box-border">
+            <div id="mobile-banner-dropdown" class="absolute left-0 w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out max-h-0 w-full px-4 py-0 mt-2 bg-blue-500 text-white box-border">
                 <!-- 배너 내용 -->
                 <div class="shoes banner-item flex-shrink-0 py-1 w-full">
-                    <a href="#"
-                        class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.01.06</span>
                             <span class="pl-1 text-sm">댄스화 주문 |</span>
@@ -296,8 +214,7 @@
                     </a>
                 </div>
                 <div class="deposit banner-item flex-shrink-0 w-full py-1">
-                    <a href="student-pay.html"
-                        class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                    <a href="student-pay.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.02.01</span>
                             <span class="pl-1 text-sm">최근 수강 입금자 |</span>
@@ -307,8 +224,7 @@
                     </a>
                 </div>
                 <div class="membership banner-item flex-shrink-0 w-full py-1">
-                    <a href="user.html"
-                        class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                    <a href="user.html" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.03.12</span>
                             <span class="pl-1 text-sm">신규 가입자 |</span>
@@ -318,8 +234,7 @@
                     </a>
                 </div>
                 <div class="notice banner-item flex-shrink-0 w-full py-1">
-                    <a href="#"
-                        class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
+                    <a href="#" class="text-sm flex items-center justify-center truncate overflow-hidden whitespace-nowrap">
                         <span>
                             <span class="date text-sm">25.04.05</span>
                             <span class="pl-1 text-sm">최근 공지사항 |</span>
@@ -412,10 +327,6 @@
                         <a href="training-before-2020-01.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리(~2020)</a>
                     </li>
-                    <li>
-                        <a href="#"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수기록</a>
-                    </li>
                 </ul>
             </li>
             <li class="py-1 relative group">
@@ -492,9 +403,9 @@
                     </li>
                 </ul>
             </li>
-            <!-- <li class="py-1 relative group "> -->
+            <li class="py-1 relative group ">
                 <!-- 자격관리 항목 -->
-                <!-- <a href="#" id="qualifyLink"
+                <a href="#" id="licenseLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] active:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -510,32 +421,32 @@
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a> -->
+                </a>
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <!-- <ul
+                <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
-                        <a href="qualify.html"
+                        <a href="license-regist.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격등록</a>
                     </li>
                     <li>
-                        <a href="qualify.html"
+                        <a href="license-pay.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격입금관리</a>
                     </li>
                     <li>
-                        <a href="qualify.html"
+                        <a href="license-record.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격출석부</a>
                     </li>
                     <li>
-                        <a href="qualify.html"
+                        <a href="license-notice.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">합격공지</a>
                     </li>
                     <li>
-                        <a href="qualify.html"
+                        <a href="license-check.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
                     </li>
-                </ul> -->
-            <!-- </li> -->
+                </ul>
+            </li>
                 <li class="py-1 relative group ">
                 <!-- 관리자 게시판 항목 -->
                 <a href="#" id="adminLink"
@@ -568,73 +479,66 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
                     </li>
                     <li>
-                        <a href="admin-agency.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관
-                            지정서</a>
-                    </li>
-                    <li>
-                        <a href="admin-document.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
-                            공문</a>
-                    </li>
-                    <li>
-                        <a href="admin-traindata.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수
-                            자료실</a>
-                    </li>
-                    <!-- <li>
-                        <a href="admin.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격시험자료</a>
-                    </li> -->
-                    <li>
-                        <a href="admin-cancel.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/연기/환불관리</a>
-                    </li>
-                    <!-- <li>
-                        <a href="admin.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">5인 이상 연수 신청</a>
-                    </li> -->
-                    <li>
                         <a href="admin-notice.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
                     </li>
                     <li>
-                        <a href="admin-freeboard.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자유게시판</a>
+                        <a href="admin-trainsch.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수일정</a>
+                    </li>
+                    <li>
+                        <a href="admin-teacher.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">강사소개</a>
+                    </li>
+                    <li>
+                        <a href="admin-location.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수장소</a>
+                    </li>
+                    <li>
+                        <a href="admin-traindata.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수자료실</a>
+                    </li>
+                    <li>
+                        <a href="admin-agency.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관지정서</a>
+                    </li>
+                    <li>
+                        <a href="admin-cancel.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/연기/환불관리</a>
                     </li>
                     <li>
                         <a href="admin-faq.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자주묻는 질문</a>
+                    </li>
+                    <li>
+                        <a href="admin-qna.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">Q&A</a>
                     </li>
                     <li>
                         <a href="admin-shoes.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화
-                            주문 / 조회 관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문 / 조회 관리</a>
                     </li>
                     <li>
                         <a href="admin-slider.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드
-                            관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
                     </li>
                     <li>
                         <a href="admin-popup.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업
-                            관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
                     </li>
                     <li>
                         <a href="admin-video.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상
-                            관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
                     </li>
                     <li>
                         <a href="admin-joboffer.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">구인・구직</a>
                     </li>
                 </ul>
-            <!-- </li>
-            <li class="py-1 relative group "> -->
+            </li>
+            <li class="py-1 relative group ">
                 <!-- 문자관리 항목 -->
-                <!-- <a href="#" id="mailLink"
+                <a href="#" id="snsLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -651,26 +555,26 @@
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a> -->
+                </a>
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <!-- <ul
+                <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
-                        <a href="mail.html"
+                        <a href="sns-group.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
                             그룹</a>
                     </li>
                     <li>
-                        <a href="mail.html"
+                        <a href="sns-send.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
                             보내기</a>
                     </li>
                     <li>
-                        <a href="mail.html"
+                        <a href="sns-log.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
                             기록</a>
                     </li>
-                </ul> -->
+                </ul>
             <!-- </li> -->
             <li class="py-1 relative group mb-10">
                 <!-- 설정 항목 -->
@@ -695,21 +599,18 @@
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
                 <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <!-- <li>
-                        <a href="setting.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">권리자
-                            권한 관리</a>
-                    </li> -->
                     <li>
-                        <a href="setting-board.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">게시판
-                            관리</a>
+                        <a href="setting-role.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">권리자권한 관리</a>
                     </li>
-                    <!-- <li>
-                        <a href="setting.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인
-                            로그</a>
-                    </li> -->
+                    <li>
+                        <a href="setting-menu.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">메뉴 관리</a>
+                    </li>
+                    <li>
+                        <a href="setting-log.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인 로그</a>
+                    </li>
                 </ul>
             </li>
         </ul>
