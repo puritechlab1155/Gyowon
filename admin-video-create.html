@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 영상 등록</title>
+    <title>교원관리자 | 영상등록</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/script.js" defer></script>
@@ -622,7 +622,7 @@
             <!-- 폼1 -->
             <form class="create-top mt-[30px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
                 <div class="flex justify-between items-end mb-2">
-                    <h2 class="mt-[50px] h1-title font-normal paperlogy">영상 등록</h2>
+                    <h2 class="mt-[50px] h1-title font-normal paperlogy">영상등록</h2>
                 </div>
                 <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
                 <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:p-0 p-10 bg-[#FFFFFF]">
@@ -633,19 +633,19 @@
                         <label
                             class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
                         <div class="w-2/3 flex gap-0">
-                            <input type="radio" name="gender" id="training-01" value="공개"
-                                class="hidden peer/training-01" />
-                            <label for="training-01" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border 
+                            <input type="radio" name="post" id="open" value="공개"
+                                class="hidden peer/open" />
+                            <label for="open" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border 
                                     border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
-                                    peer-checked/training-01:bg-[#EDF3FF] peer-checked/training-01:text-[#2B5BBB] peer-checked/training-01:border-[#2B5BBB]
+                                    peer-checked/open:bg-[#EDF3FF] peer-checked/open:text-[#2B5BBB] peer-checked/open:border-[#2B5BBB]
                                     rounded-l-lg">
                                     공개
                             </label>
-                            <input type="radio" name="gender" id="training-02" value="비공개"
-                                class="hidden peer/training-02" />
-                            <label for="training-02" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
+                            <input type="radio" name="post" id="close" value="비공개"
+                                class="hidden peer/close" />
+                            <label for="close" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
                                     border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
-                                    peer-checked/training-02:bg-[#EDF3FF] peer-checked/training-02:text-[#2B5BBB] peer-checked/training-02:border-[#2B5BBB]
+                                    peer-checked/close:bg-[#EDF3FF] peer-checked/close:text-[#2B5BBB] peer-checked/close:border-[#2B5BBB]
                                     rounded-r-lg">
                                     비공개
                             </label>
@@ -674,21 +674,20 @@
                     <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
 
                     <!-- 파일 -->
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center py-2 col-span-2 max-xl:col-span-1">
-                        <label class="w-[18%] max-xl:w-1/6 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">파일</label>
-                        <div class="flex items-end space-x-2 w-full ">
-                            <ul id="fileList" class="space-y-1 text-sm text-gray-700 ml-2 "></ul>
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] flex items-center py-2 max-lg:bg-[#FFFFFF] h-[60px]">
+                        <label class="w-[48%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">변경 이미지</label>
+                        <div class="flex items-end w-full max-xl:w-2/3">
+                            <ul id="fileList" class="space-y-1 text-sm text-gray-700"></ul>
                             <label class="px-3 py-1 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
-                                파일추가
+                                사진선택
                                 <input type="file" class="hidden" id="fileInput" />
                             </label>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] py-2 flex items-start justify-center max-xl:hidden">
-                    </div>
-                    
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] py-2 flex items-start justify-center max-xl:hidden"></div>
                 </div>
                 <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
+                
                 <!-- 버튼 -->
                 <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
                     <div class="max-w-[576px] flex gap-2 items-center mx-auto">
