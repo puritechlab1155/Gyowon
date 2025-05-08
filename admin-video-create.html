@@ -645,7 +645,7 @@
                     <!-- 오픈상태 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
                         <label
-                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
                         <div class="w-2/3 flex gap-0">
                             <input type="radio" name="gender" id="training-01" value="공개"
                                 class="hidden peer/training-01" />
@@ -669,19 +669,19 @@
 
                     <!-- 게시판명 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
+                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
                         <input type="text" placeholder="제목을 입력하세요"
                         class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
                     </div>
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#FEFEFE]">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
+                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
                         <input type="text" placeholder="작성자를 입력하세요"
                         class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
                     </div>
 
                     <!-- 영상 URL -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center max-xl:bg-[#F9F9F9]">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">영상 URL</label>
+                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">영상 URL</label>
                         <div class="relative dropdown w-2/3">
                             <input type="text" placeholder="영상 URL을 입력하세요"
                         class="max-sm:placeholder:text-sm w-full h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
@@ -691,7 +691,7 @@
 
                     <!-- 파일 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] flex items-center py-2 max-lg:bg-[#FFFFFF]">
-                        <label class="w-[48%] max-xl:w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">썸네일</label>
+                        <label class="w-[48%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">썸네일</label>
                         <div class="flex items-end w-full max-xl:w-2/3">
                             <ul id="fileList" class="space-y-1 text-sm text-gray-700"></ul>
                             <label class="px-3 py-1 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
@@ -707,11 +707,11 @@
                 <!-- 버튼 -->
                 <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
                     <div class="max-w-[576px] flex gap-2 items-center mx-auto">
-                        <button type="button" onclick="window.location.href='admin-agency.html'"
+                        <button type="button" onclick="window.location.href='admin-video.html'"
                             class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
                             등록하기
                         </button>
-                        <button type="button" onclick="window.location.href='admin-agency.html'"
+                        <button type="button" onclick="window.location.href='admin-video.html'"
                             class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
                             취소하기
                         </button>
@@ -783,93 +783,6 @@
             // 바깥 클릭 시 드롭다운 닫기
             document.addEventListener("click", function () {
                 closeAllDropdowns();
-            });
-        });
-
-        // ✅ 인풋 옵션
-        document.addEventListener("DOMContentLoaded", function () {
-            setupDropdowns(); 
-            
-            // input 이벤트 리스너도 그대로 유지
-            const inputs = document.querySelectorAll("input");
-            inputs.forEach(input => {
-                input.addEventListener("input", () => {
-                    if (input.value.trim() !== "") {
-                        input.classList.remove("bg-[#F3F3F3]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    } else {
-                        input.classList.remove("bg-[#EFEFEF]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    }
-                });
-            });
-
-            document.addEventListener("click", function () {
-                closeAllDropdowns();
-            });
-        });
-
-
-        // ✅ 컬러팔레트
-        document.addEventListener("DOMContentLoaded", function () {
-            // 글자색
-            const toggleBtn = document.getElementById("colorToggleBtn");
-            const closeBtn = document.getElementById("closePaletteBtn");
-            const palette = document.getElementById("colorPalette");
-
-            // 배경색
-            const bgToggleBtn = document.getElementById("bgToggleBtn");
-            const bgCloseBtn = document.getElementById("closeBgPaletteBtn");
-            const bgPalette = document.getElementById("bgColorPalette");
-
-            // 글자색 팔레트 위치 설정
-            palette.style.position = "absolute";
-            palette.style.left = `${toggleBtn.offsetLeft - 40}px`;
-
-            // 배경색 팔레트 위치 설정 추가
-            bgPalette.style.position = "absolute";
-            bgPalette.style.left = `${bgToggleBtn.offsetLeft - 40}px`;
-
-            toggleBtn.addEventListener("click", function (e) {
-                e.stopPropagation();
-                palette.classList.toggle("hidden");
-
-                // 배경색 팔레트는 닫기
-                if (!palette.classList.contains("hidden")) {
-                    bgPalette.classList.add("hidden");
-                }
-            });
-
-            closeBtn.addEventListener("click", function () {
-                palette.classList.add("hidden");
-            });
-
-            palette.addEventListener("click", function (e) {
-                e.stopPropagation();
-            });
-
-            bgToggleBtn.addEventListener("click", function (e) {
-                e.stopPropagation();
-                bgPalette.classList.toggle("hidden");
-
-                // 글자색 팔레트는 닫기
-                if (!bgPalette.classList.contains("hidden")) {
-                    palette.classList.add("hidden");
-                }
-            });
-
-            bgCloseBtn.addEventListener("click", function () {
-                bgPalette.classList.add("hidden");
-            });
-
-            bgPalette.addEventListener("click", function (e) {
-                e.stopPropagation();
-            });
-
-            // 바깥 클릭 시 모든 팔레트 닫기
-            document.addEventListener("click", function () {
-                palette.classList.add("hidden");
-                bgPalette.classList.add("hidden");
             });
         });
 

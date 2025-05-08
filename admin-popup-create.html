@@ -645,7 +645,7 @@
                     <!-- 오픈상태 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
                         <label
-                            class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
                         <div class="w-2/3 flex gap-0">
                             <input type="radio" name="post" id="open" value="공개"
                                 class="hidden peer/open" />
@@ -669,12 +669,12 @@
                     
                     <!-- 게시판명 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
+                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
                         <input type="text" placeholder="제목을 입력하세요"
                         class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
                     </div>
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9]">
-                        <label class="w-1/3 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
+                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">작성자</label>
                         <input type="text" placeholder="작성자를 입력하세요"
                         class="max-sm:placeholder:text-sm w-2/3 h-[45px] text-[16px] placeholder-[#AFAFAF] bg-[#F3F3F3] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"/>
                     </div>
@@ -682,7 +682,7 @@
                     <!-- 내용 -->
                     <div class="bg-[#F9F9F9] col-span-2 px-2 h-[60px] flex items-center max-xl:col-span-1 max-sm:flex-col max-sm:h-[100px] max-xl:bg-[#FEFEFE]">
                         <div class="w-1/6 max-xl:w-1/4 max-sm:justify-start max-sm:w-full">
-                            <label class="p-4 x-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929] flex items-center py-4 xl:hidden">내용</label>
+                            <label class="p-4 x-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] flex items-center py-4 xl:hidden">내용</label>
                         </div>
                         <div
                             class="w-5/6 max-xl:w-3/4 max-sm:w-full max-xl:justify-end max-sm:gap-1 max-xl:justify-start flex gap-2">
@@ -863,7 +863,7 @@
                         </ul>
                     </div>
                     <div class="col-span-2 max-xl:col-span-1 max-xl:flex max-xl:flex-col px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[500px] w-full grid grid-cols-6">
-                        <label class="col-span-1 px-4 max-sm:px-0 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center py-4 max-xl:hidden">내용</label>
+                        <label class="col-span-1 px-4 max-sm:px-2 text-[18px] max-sm:text-[15px] font-bold text-[#292929] flex items-center py-4 max-xl:hidden">내용</label>
                         <div class="col-span-5 flex items-center h-full">
                             <div class="w-full bg-[#FFFFFF] border border-[#EFEFEF] rounded-xl h-[480px] flex items-center">
                                 <textarea
@@ -876,7 +876,7 @@
 
                     <!-- 파일 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center py-2">
-                        <label class="w-[45%] max-xl:w-1/6 px-4 max-sm:px-0 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">파일</label>
+                        <label class="w-[45%] max-xl:w-1/6 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">파일</label>
                         <div class="flex items-end space-x-2 w-full">
                             <ul id="fileList" class="space-y-1 text-sm text-gray-700 ml-2 "></ul>
                             <label class="px-3 py-1 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
@@ -893,11 +893,11 @@
                 <!-- 버튼 -->
                 <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
                     <div class="max-w-[576px] flex gap-2 items-center mx-auto">
-                        <button type="button" onclick="window.location.href='admin-document.html'"
+                        <button type="button" onclick="window.location.href='admin-popup.html'"
                             class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
                             등록하기
                         </button>
-                        <button type="button" onclick="window.location.href='admin-document.html'"
+                        <button type="button" onclick="window.location.href='admin-popup.html'"
                             class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
                             취소하기
                         </button>
@@ -967,29 +967,6 @@
             setupDropdowns();
 
             // 바깥 클릭 시 드롭다운 닫기
-            document.addEventListener("click", function () {
-                closeAllDropdowns();
-            });
-        });
-
-        // ✅ 인풋 옵션
-        document.addEventListener("DOMContentLoaded", function () {
-            setupDropdowns(); 
-            
-            // input 이벤트 리스너도 그대로 유지
-            const inputs = document.querySelectorAll("input");
-            inputs.forEach(input => {
-                input.addEventListener("input", () => {
-                    if (input.value.trim() !== "") {
-                        input.classList.remove("bg-[#F3F3F3]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    } else {
-                        input.classList.remove("bg-[#EFEFEF]");
-                        input.classList.add("bg-[#FFFFFF]");
-                    }
-                });
-            });
-
             document.addEventListener("click", function () {
                 closeAllDropdowns();
             });

@@ -637,9 +637,9 @@
     <div id="main-content"
         class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">회원관리</h1>
+            <!-- <h1 class="mt-[50px] h1-title font-normal paperlogy">회원관리</h1> -->
             <div
-                class="pt-5 pb-5 w-full flex items-center justify-between max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center max-lg:gap-4 ">
+                class="pt-5 pb-5 w-full flex items-center justify-between max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center max-lg:gap-4 max-lg:pt-[50px]">
                 <!-- left-content (탭들) -->
                 <div
                     class="drop-shadow flex bg-[#FEFEFE] space-x-11 max-xl:pl-5 max-xl:pr-5 pl-10 pr-10 pt-1 text-center rounded-[12px] max-lg:rounded-none max-lg:w-full">
@@ -708,783 +708,10 @@
                             </thead>
                         </table>
                         <!-- 테이블 본문 부분 // 엑셀로 전달되는 테이블 -->
-                        <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            
-                            <table id="targetTable" 
-                                class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18119</td>
-                                        <td class="w-[7%] text-[#727272]">hong hong</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1984-06-28</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">가평교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">다산가람초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">기간제</td>
-                                        <td class="w-[7%] text-[#727272]">영양</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18115</td>
-                                        <td class="w-[7%] text-[#727272]">mizsong922</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1954-12-05</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교육공무직</td>
-                                        <td class="w-[7%] text-[#727272]">교무행정지원사</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01045854512</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18114</td>
-                                        <td class="w-[7%] text-[#727272]">sol10004ok</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1990-05-10</td>
-                                        <td class="w-[5%] text-[#727272]">경기</td>
-                                        <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">신화초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교사</td>
-                                        <td class="w-[7%] text-[#727272]">도덕윤리</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01084562542</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18106</td>
-                                        <td class="w-[7%] text-[#727272]">ilovesohi</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1968-01-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">양산교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">고은초</td>
-                                        <td class="w-[5%] text-[#727272]">사립</td>
-                                        <td class="w-[6%] text-[#727272]">교원</td>
-                                        <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047528098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">238</td>
-                                        <td class="w-[7%] text-[#727272]">spssspss</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1988-06-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] ext-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">방화사회복지관</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01057527848</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">231</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18119</td>
-                                        <td class="w-[7%] text-[#727272]">hong hong</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1984-06-28</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">가평교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">다산가람초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">기간제</td>
-                                        <td class="w-[7%] text-[#727272]">영양</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18115</td>
-                                        <td class="w-[7%] text-[#727272]">mizsong922</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1954-12-05</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교육공무직</td>
-                                        <td class="w-[7%] text-[#727272]">교무행정지원사</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01045854512</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18114</td>
-                                        <td class="w-[7%] text-[#727272]">sol10004ok</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1990-05-10</td>
-                                        <td class="w-[5%] text-[#727272]">경기</td>
-                                        <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">신화초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교사</td>
-                                        <td class="w-[7%] text-[#727272]">도덕윤리</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01084562542</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18106</td>
-                                        <td class="w-[7%] text-[#727272]">ilovesohi</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1968-01-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">양산교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">고은초</td>
-                                        <td class="w-[5%] text-[#727272]">사립</td>
-                                        <td class="w-[6%] text-[#727272]">교원</td>
-                                        <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047528098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">238</td>
-                                        <td class="w-[7%] text-[#727272]">spssspss</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1988-06-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] ext-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">방화사회복지관</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01057527848</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">231</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18119</td>
-                                        <td class="w-[7%] text-[#727272]">hong hong</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1984-06-28</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">가평교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">다산가람초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">기간제</td>
-                                        <td class="w-[7%] text-[#727272]">영양</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18115</td>
-                                        <td class="w-[7%] text-[#727272]">mizsong922</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1954-12-05</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교육공무직</td>
-                                        <td class="w-[7%] text-[#727272]">교무행정지원사</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01045854512</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18114</td>
-                                        <td class="w-[7%] text-[#727272]">sol10004ok</td>
-                                        <td class="w-[6%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1990-05-10</td>
-                                        <td class="w-[5%] text-[#727272]">경기</td>
-                                        <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">신화초</td>
-                                        <td class="w-[5%] text-[#727272]">공립</td>
-                                        <td class="w-[6%] text-[#727272]">교사</td>
-                                        <td class="w-[7%] text-[#727272]">도덕윤리</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01084562542</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">18106</td>
-                                        <td class="w-[7%] text-[#727272]">ilovesohi</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1968-01-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] text-[#727272]">양산교육지원청</td>
-                                        <td class="w-[9%] text-[#727272]">고은초</td>
-                                        <td class="w-[5%] text-[#727272]">사립</td>
-                                        <td class="w-[6%] text-[#727272]">교원</td>
-                                        <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047528098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
-                                                    </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
+                        <table id="targetTable" 
+                            class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                            <tbody>
+                                <tr
                                     class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
                                     <td class="w-[4%] text-[#727272]">18119</td>
                                     <td class="w-[7%] text-[#727272]">hong hong</td>
@@ -2102,167 +1329,938 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr
+                                    class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">18119</td>
+                                    <td class="w-[7%] text-[#727272]">hong hong</td>
+                                    <td class="w-[6%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">남</td>
+                                    <td class="w-[7%] text-[#727272]">1984-06-28</td>
+                                    <td class="w-[5%] text-[#727272]">서울</td>
+                                    <td class="w-[10%] text-[#727272]">가평교육지원청</td>
+                                    <td class="w-[9%] text-[#727272]">다산가람초</td>
+                                    <td class="w-[5%] text-[#727272]">공립</td>
+                                    <td class="w-[6%] text-[#727272]">기간제</td>
+                                    <td class="w-[7%] text-[#727272]">영양</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">18115</td>
+                                    <td class="w-[7%] text-[#727272]">mizsong922</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">여</td>
+                                    <td class="w-[7%] text-[#727272]">1954-12-05</td>
+                                    <td class="w-[5%] text-[#727272]">서울</td>
+                                    <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
+                                    <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
+                                    <td class="w-[5%] text-[#727272]">공립</td>
+                                    <td class="w-[6%] text-[#727272]">교육공무직</td>
+                                    <td class="w-[7%] text-[#727272]">교무행정지원사</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01045854512</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">18114</td>
+                                    <td class="w-[7%] text-[#727272]">sol10004ok</td>
+                                    <td class="w-[6%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">여</td>
+                                    <td class="w-[7%] text-[#727272]">1990-05-10</td>
+                                    <td class="w-[5%] text-[#727272]">경기</td>
+                                    <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
+                                    <td class="w-[9%] text-[#727272]">신화초</td>
+                                    <td class="w-[5%] text-[#727272]">공립</td>
+                                    <td class="w-[6%] text-[#727272]">교사</td>
+                                    <td class="w-[7%] text-[#727272]">도덕윤리</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01084562542</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">18106</td>
+                                    <td class="w-[7%] text-[#727272]">ilovesohi</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">여</td>
+                                    <td class="w-[7%] text-[#727272]">1968-01-26</td>
+                                    <td class="w-[5%] text-[#727272]">서울</td>
+                                    <td class="w-[10%] text-[#727272]">양산교육지원청</td>
+                                    <td class="w-[9%] text-[#727272]">고은초</td>
+                                    <td class="w-[5%] text-[#727272]">사립</td>
+                                    <td class="w-[6%] text-[#727272]">교원</td>
+                                    <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01047528098</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18119</td>
+                                <td class="w-[7%] text-[#727272]">hong hong</td>
+                                <td class="w-[6%] text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1984-06-28</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">가평교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">다산가람초</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">기간제</td>
+                                <td class="w-[7%] text-[#727272]">영양</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-2">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18115</td>
+                                <td class="w-[7%] text-[#727272]">mizsong922</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1954-12-05</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">교육공무직</td>
+                                <td class="w-[7%] text-[#727272]">교무행정지원사</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01045854512</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18114</td>
+                                <td class="w-[7%] text-[#727272]">sol10004ok</td>
+                                <td class="w-[6%] text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1990-05-10</td>
+                                <td class="w-[5%] text-[#727272]">경기</td>
+                                <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">신화초</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">교사</td>
+                                <td class="w-[7%] text-[#727272]">도덕윤리</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01084562542</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18106</td>
+                                <td class="w-[7%] text-[#727272]">ilovesohi</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1968-01-26</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">양산교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">고은초</td>
+                                <td class="w-[5%] text-[#727272]">사립</td>
+                                <td class="w-[6%] text-[#727272]">교원</td>
+                                <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047528098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">238</td>
+                                <td class="w-[7%] text-[#727272]">spssspss</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1988-06-26</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] ext-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">방화사회복지관</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01057527848</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">235</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                <td class="w-[5%] text-[#727272]">전북</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047587098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">231</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1989-02-05</td>
+                                <td class="w-[5%] text-[#727272]">인천</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">연수원</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01096785558</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">235</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                <td class="w-[5%] text-[#727272]">전북</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047587098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18119</td>
+                                <td class="w-[7%] text-[#727272]">hong hong</td>
+                                <td class="w-[6%] text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">정솔비</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1984-06-28</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">가평교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">다산가람초</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">기간제</td>
+                                <td class="w-[7%] text-[#727272]">영양</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold" href="#">01066542154</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-2">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18115</td>
+                                <td class="w-[7%] text-[#727272]">mizsong922</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김혜경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1954-12-05</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">강서양천교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">성동글로벌경영고</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">교육공무직</td>
+                                <td class="w-[7%] text-[#727272]">교무행정지원사</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01045854512</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18114</td>
+                                <td class="w-[7%] text-[#727272]">sol10004ok</td>
+                                <td class="w-[6%] text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">우희은</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1990-05-10</td>
+                                <td class="w-[5%] text-[#727272]">경기</td>
+                                <td class="w-[10%] text-[#727272]">구리남양주교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">신화초</td>
+                                <td class="w-[5%] text-[#727272]">공립</td>
+                                <td class="w-[6%] text-[#727272]">교사</td>
+                                <td class="w-[7%] text-[#727272]">도덕윤리</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01084562542</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-[#F8F8F8] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">18106</td>
+                                <td class="w-[7%] text-[#727272]">ilovesohi</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김은정</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1968-01-26</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] text-[#727272]">양산교육지원청</td>
+                                <td class="w-[9%] text-[#727272]">고은초</td>
+                                <td class="w-[5%] text-[#727272]">사립</td>
+                                <td class="w-[6%] text-[#727272]">교원</td>
+                                <td class="w-[7%] text-[#727272]">정보컴퓨터</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047528098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">238</td>
+                                <td class="w-[7%] text-[#727272]">spssspss</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1988-06-26</td>
+                                <td class="w-[5%] text-[#727272]">서울</td>
+                                <td class="w-[10%] ext-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">방화사회복지관</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01057527848</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">235</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                <td class="w-[5%] text-[#727272]">전북</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047587098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">231</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">남</td>
+                                <td class="w-[7%] text-[#727272]">1989-02-05</td>
+                                <td class="w-[5%] text-[#727272]">인천</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">연수원</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01096785558</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                <td class="w-[4%] text-[#727272]">235</td>
+                                <td class="w-[7%] text-[#727272]">jane0304</td>
+                                <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                    <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                </td>
+                                <td class="w-[4%] text-[#727272]">여</td>
+                                <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                <td class="w-[5%] text-[#727272]">전북</td>
+                                <td class="w-[10%] text-[#727272]">-</td>
+                                <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                <td class="w-[5%] text-[#727272]">-</td>
+                                <td class="w-[6%] text-[#727272]">-</td>
+                                <td class="w-[7%] text-[#727272]">-</td>
+                                <td class="w-[8%] text-[#727272]">
+                                    <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                        href="#">01047587098</a>
+                                </td>
+                                <td class="w-[12%] text-[#727272]">
+                                    <div class="flex justify-center gap-2 px-3">
+                                        <button
+                                            class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                            <span class="inline-block align-middle">
+                                                <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                            </span>
+                                        </button>
+                                        <button onclick="location.href='user-apply.html'"
+                                            class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                            <div class="flex justify-center items-center">
+                                                <span class="inline-block align-middle mr-1">
+                                                    <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
+                                                </span>
+                                                <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
 
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">238</td>
-                                        <td class="w-[7%] text-[#727272]">spssspss</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1988-06-26</td>
-                                        <td class="w-[5%] text-[#727272]">서울</td>
-                                        <td class="w-[10%] ext-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">방화사회복지관</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01057527848</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                <tr
+                                    class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">238</td>
+                                    <td class="w-[7%] text-[#727272]">spssspss</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">김진철</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">남</td>
+                                    <td class="w-[7%] text-[#727272]">1988-06-26</td>
+                                    <td class="w-[5%] text-[#727272]">서울</td>
+                                    <td class="w-[10%] ext-[#727272]">-</td>
+                                    <td class="w-[9%] text-[#727272]">방화사회복지관</td>
+                                    <td class="w-[5%] text-[#727272]">-</td>
+                                    <td class="w-[6%] text-[#727272]">-</td>
+                                    <td class="w-[7%] text-[#727272]">-</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01057527848</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
                                                     </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">235</td>
+                                    <td class="w-[7%] text-[#727272]">jane0304</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">여</td>
+                                    <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                    <td class="w-[5%] text-[#727272]">전북</td>
+                                    <td class="w-[10%] text-[#727272]">-</td>
+                                    <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                    <td class="w-[5%] text-[#727272]">-</td>
+                                    <td class="w-[6%] text-[#727272]">-</td>
+                                    <td class="w-[7%] text-[#727272]">-</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01047587098</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
                                                     </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">231</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">남</td>
-                                        <td class="w-[7%] text-[#727272]">1989-02-05</td>
-                                        <td class="w-[5%] text-[#727272]">인천</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">연수원</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01096785558</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">231</td>
+                                    <td class="w-[7%] text-[#727272]">jane0304</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">김광오</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">남</td>
+                                    <td class="w-[7%] text-[#727272]">1989-02-05</td>
+                                    <td class="w-[5%] text-[#727272]">인천</td>
+                                    <td class="w-[10%] text-[#727272]">-</td>
+                                    <td class="w-[9%] text-[#727272]">연수원</td>
+                                    <td class="w-[5%] text-[#727272]">-</td>
+                                    <td class="w-[6%] text-[#727272]">-</td>
+                                    <td class="w-[7%] text-[#727272]">-</td>
+                                    <td class="w-[8%]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01096785558</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
                                                     </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
-                                        <td class="w-[4%] text-[#727272]">235</td>
-                                        <td class="w-[7%] text-[#727272]">jane0304</td>
-                                        <td class="w-[6%] font-bold text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
-                                        </td>
-                                        <td class="w-[4%] text-[#727272]">여</td>
-                                        <td class="w-[7%] text-[#727272]">1974-10-26</td>
-                                        <td class="w-[5%] text-[#727272]">전북</td>
-                                        <td class="w-[10%] text-[#727272]">-</td>
-                                        <td class="w-[9%] text-[#727272]">삼성화재</td>
-                                        <td class="w-[5%] text-[#727272]">-</td>
-                                        <td class="w-[6%] text-[#727272]">-</td>
-                                        <td class="w-[7%] text-[#727272]">-</td>
-                                        <td class="w-[8%] text-[#727272]">
-                                            <a class="text-[#2B5BBB] font-semibold hover:underline"
-                                                href="#">01047587098</a>
-                                        </td>
-                                        <td class="w-[12%] text-[#727272]">
-                                            <div class="flex justify-center gap-2 px-3">
-                                                <button
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-[#F8F8F8] text-[#727272] text-[18px] font-normal h-[70px] border-b border-gray-300">
+                                    <td class="w-[4%] text-[#727272]">235</td>
+                                    <td class="w-[7%] text-[#727272]">jane0304</td>
+                                    <td class="w-[6%] font-bold text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline openInfoModal" href="#">황민경</a>
+                                    </td>
+                                    <td class="w-[4%] text-[#727272]">여</td>
+                                    <td class="w-[7%] text-[#727272]">1974-10-26</td>
+                                    <td class="w-[5%] text-[#727272]">전북</td>
+                                    <td class="w-[10%] text-[#727272]">-</td>
+                                    <td class="w-[9%] text-[#727272]">삼성화재</td>
+                                    <td class="w-[5%] text-[#727272]">-</td>
+                                    <td class="w-[6%] text-[#727272]">-</td>
+                                    <td class="w-[7%] text-[#727272]">-</td>
+                                    <td class="w-[8%] text-[#727272]">
+                                        <a class="text-[#2B5BBB] font-semibold hover:underline"
+                                            href="#">01047587098</a>
+                                    </td>
+                                    <td class="w-[12%] text-[#727272]">
+                                        <div class="flex justify-center gap-2 px-3">
+                                            <button
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-2 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-[22px] h-[22px]" />
+                                                </span>
+                                            </button>
+                                            <button onclick="location.href='user-apply.html'"
+                                                class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
+                                                <div class="flex justify-center items-center">
+                                                    <span class="inline-block align-middle mr-1">
+                                                        <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
                                                     </span>
-                                                </button>
-                                                <button onclick="location.href='user-apply.html'"
-                                                    class="bg-[#E7F0FD] flex justify-center items-center align-middle space-x-1 hover:bg-[#D3E1FB] px-2 py-1.5 rounded-lg">
-                                                    <div class="flex justify-center items-center">
-                                                        <span class="inline-block align-middle mr-1">
-                                                            <img src="img/note.png" alt="노트 아이콘" class="w-5 h-5" />
-                                                        </span>
-                                                        <span class="font-semibold text-[#2b5bbb]">과목신청</span>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                                    <span class="font-semibold text-[#2b5bbb]">과목신청</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        </div>
+                        
                     </div>
                 </div>
             </div>
