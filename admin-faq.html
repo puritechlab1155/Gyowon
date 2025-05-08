@@ -652,11 +652,11 @@
 
             <div class="w-full">
                 <div class="overflow-x-auto">
-                    <div class="min-w-[1400px]">
+                    <div class="min-w-[1000px]">
                         <!-- 테이블 헤더 부분 -->
-                        <table class="w-full rounded-[12px] overflow-hidden text-center table-fixed drop-shadow ">
+                        <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
-                                <tr class="bg-[#FEFEFE] h-[70px]">
+                                <tr class="text-[18px] h-[60px]">
                                     <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
                                     <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
                                     <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
@@ -668,169 +668,168 @@
                         </table>
 
                         <!-- 테이블 본문 부분 -->
-                        <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">회원가입</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">학교가 변경되었습니다. 어떻게 수정하나요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">연수신청</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">	연수 신청시 error가 발생하면 어떻게 하나요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">준비사항</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">댄스화는 꼭 있어야 하나요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">변경/취소</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">연수 취소시 연수비 환불은 어떻게 되나요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">서류자격증</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">지도자 자격시험을 보려면 어떻게 해야 하나요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">기타</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">직무연수란 무엇인가요?</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-faq-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                            <tbody>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">회원가입</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">학교가 변경되었습니다. 어떻게 수정하나요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">연수신청</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">	연수 신청시 error가 발생하면 어떻게 하나요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">준비사항</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">댄스화는 꼭 있어야 하나요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">변경/취소</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">연수 취소시 연수비 환불은 어떻게 되나요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">서류자격증</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">지도자 자격시험을 보려면 어떻게 해야 하나요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">기타</td>
+                                    <td class="w-[30%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-faq-detail.html">직무연수란 무엇인가요?</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">관리자</td>
+                                    <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[15%]">
+                                        <div class="flex justify-center gap-2 px-2">
+                                            <button type="button" onclick="window.location.href='admin-faq-create.html'" 
+                                                class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                </span>
+                                            </button>
+                                            <button type="button"
+                                                class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                <span class="inline-block align-middle">
+                                                    <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                        class="w-6 h-6" />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
             </div>
