@@ -630,9 +630,8 @@
 
                     <!-- 오픈상태 -->
                     <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
-                        <label
-                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
-                        <div class="w-full max-xl:w-2/3 flex gap-0">
+                        <label class="shrink-0 w-[27%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                        <div class="flex-grow max-xl:w-2/3">
                             공개
                         </div>
                     </div>
@@ -640,8 +639,8 @@
 
                     <!-- 장소명 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center">
-                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">장소</label>
-                        <div class="w-full max-xl:w-2/3 flex gap-0">
+                        <label class="shrink-0 w-[27%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">장소</label>
+                        <div class="flex-grow max-xl:w-2/3">
                             서울명원초등학교
                         </div>
                     </div>
@@ -649,39 +648,58 @@
                     </div>
 
                     <!-- 주소 -->
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center max-xl:bg-[#F9F9F9]">
-                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">주소</label>
-                        <div class="w-full max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9] col-span-2 max-xl:col-span-1">
+                        <label class="shrink-0 w-[13%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">주소</label>
+                        <div class="flex-grow max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
                             <span class="inline-block min-w-full truncate">
                                 [05268] 서울 강동구 명일로 364 (명일동, 서울명원초등학교)
                             </span>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9]">
-                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">주소 URL</label>
-                        <div class="w-full max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9] col-span-2 max-xl:col-span-1">
+                        <label class="shrink-0 w-[13%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">주소 URL</label>
+                        <div class="flex-grow min-w-0 max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                            <span class="inline-block min-w-full truncate">
+                                https://map.kakao.com/?urlX=533247.0&urlY=1125518.0&name=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EB%AA%85%EC%9D%BC%EB%A1%9C%20364&map_type=TYPE_MAP&from=roughmap
+                            </span>
+                        </div>
+                    </div>
+                    <!-- <div class="px-2 bg-[#FEFEFE] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9] col-span-2 max-xl:col-span-1">
+                        <label class="w-[22%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">주소 URL</label>
+                        <div class="flex-grow max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
                             <span class="inline-block min-w-full truncate">
                             https://map.kakao.com/?urlX=533247.0&urlY=1125518.0&name=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EB%AA%85%EC%9D%BC%EB%A1%9C%20364&map_type=TYPE_MAP&from=roughmap
                             </span>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- 대중교통 정보 -->
-                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center max-xl:bg-[#FEFEFE]">
-                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] whitespace-nowrap">지하철 이용시</label>
-                        <div class="w-full max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#FEFEFE] col-span-2 max-xl:col-span-1">
+                        <label class="shrink-0 w-[13%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] whitespace-nowrap">지하철 이용시</label>
+                        <div class="flex-grow max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
                             <span class="inline-block min-w-full truncate">
                                 5호선 고덕역 5번출구 도보 5분 5호선 명일역 4번출구 도보 10분
                             </span>
                         </div>
                     </div>
-                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#FEFEFE]">
-                        <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] ">버스 이용시</label>
-                        <div class="w-full max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                    <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#FEFEFE] col-span-2 max-xl:col-span-1">
+                        <label class="shrink-0 w-[13%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] ">버스 이용시</label>
+                        <div class="flex-grow max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
                             <span class="inline-block min-w-full truncate">
                                 5호선 명일역에서 버스로 환승하여 명성교회(명일요고앞)에서 하차하여 도보 5분
                             </span>
                         </div>
+                    </div>
+                    <!-- 참조 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center col-span-2 max-xl:col-span-1">
+                        <label class="shrink-0 w-[13%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">참조 URL</label>
+                        <div class="flex-grow max-xl:w-2/3 h-[45px] bg-[#F3F3F3] px-3 pt-2 rounded-lg border border-[#DBDEE3] text-[16px] overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden">
+                            <span class="inline-block min-w-full truncate">
+                                https://cafe.daum.net/td.or.kr/Ubao/2
+                            </span>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden ">
                     </div>
 
                 </div>

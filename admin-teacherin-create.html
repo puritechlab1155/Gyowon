@@ -716,24 +716,64 @@
                     </div>
 
                     <!-- 경력 -->
-                    <div class="bg-[#F9F9F9] border-b border-[#EFEFEF] col-span-2 p-2 flex items-center max-xl:col-span-1 max-sm:flex-col max-xl:p-3 max-xl:bg-[#FFFFFF]">
+                    <!-- <div class="bg-[#F9F9F9] border-b border-[#EFEFEF] col-span-2 p-2 flex items-center max-xl:col-span-1 max-sm:flex-col max-xl:p-3 max-xl:bg-[#FFFFFF]">
                             <label class="w-1/6 max-xl:w-1/3 max-sm:w-full px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-xl:mb-2">경력 - 이전</label>
                             <textarea placeholder="과거 경력을 입력해주세요"
-                            class="w-5/6 max-sm:w-full max-xl:w-2/3 min-h-[200px] placeholder-[#AFAFAF] bg-[#F3F3F3] p-2 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]">과거 경력을 입력해주세요 ( • 로 구분해서주세요. )
+                            class="w-5/6 max-sm:w-full max-xl:w-2/3 min-h-[250px] placeholder-[#AFAFAF] bg-[#F3F3F3] p-2 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]"> ------이 내용은 모두 삭제하고 새로 작성해주세요 -----
+과거 경력을 입력해주세요 ( • 로 구분해주세요. )
 
 [예시] 
 • OO대학교 체육교육학
-• OO팀 지도 및 수상 </textarea>
+• OO팀 지도 및 수상 
+----------------------------------------------------- </textarea>
                     </div>
-                    <!-- 내용 -->
+                    
                     <div class="bg-[#F9F9F9] border-b border-[#EFEFEF] col-span-2 p-2 flex items-center max-xl:col-span-1 max-sm:flex-col max-xl:bg-[#FFFFFF]">
                         <label class="w-1/6 max-xl:w-1/3 max-sm:w-full px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-xl:mb-2">경력 - 현재</label>
                         <textarea placeholder="과거 경력을 입력해주세요"
-                            class="w-5/6 max-sm:w-full max-xl:w-2/3 min-h-[200px] placeholder-[#AFAFAF] bg-[#F3F3F3] p-2 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]">현재 경력을 입력해주세요 
-( • 로 구분해서주세요. )
+                            class="w-5/6 max-sm:w-full max-xl:w-2/3 min-h-[200px] placeholder-[#AFAFAF] bg-[#F3F3F3] p-2 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB]">현재 경력을 입력해주세요 ( • 로 구분해서주세요. )
 
 [예시] 
 • 교원직무연수 강사 </textarea>
+                    </div> -->
+
+                    <div class="bg-[#F9F9F9] border-t border-[#EFEFEF] p-2 flex items-center max-sm:flex-col max-xl:p-3 max-xl:bg-[#FFFFFF]">
+                        <label class="w-1/3 max-sm:w-full px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-xl:mb-2">
+                            경력 - 이전
+                        </label>
+                        
+                        <div class="w-2/3 max-sm:w-full max-xl:w-2/3">
+                        <!-- Input + Button 묶음 -->
+                        <div class="flex gap-2">
+                            <input id="careerInputPast"  type="text" placeholder="과거 경력을 하나씩 입력하세요."
+                            class="flex-grow p-2 border border-[#DBDEE3] rounded-md focus:outline-none focus:border-[#2B5BBB]" />
+                            <button type="button" onclick="addCareer('Past')" class="shrink-0 px-4 py-2 bg-[#2B5BBB] text-white rounded-md">
+                            추가
+                            </button>
+                        </div>
+                        <!-- 경력리스트 -->
+                        <ul id="careerListPast" class="w-full space-y-2 cursor-move"></ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F9F9F9] border-b border-[#EFEFEF] p-2 flex items-center max-sm:flex-col max-xl:p-3 max-xl:bg-[#FFFFFF]">
+                        <label class="w-1/3 max-sm:w-full px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929] max-xl:mb-2">
+                            경력 - 현재
+                        </label>
+                        
+                        <div class="w-2/3 max-sm:w-full max-xl:w-2/3">
+                        <!-- Input + Button 묶음 -->
+                        <div class="flex gap-2">
+                            <input id="careerInputCurrent" type="text" placeholder="현재 경력을 하나씩 입력하세요."
+                            class="flex-grow p-2 border border-[#DBDEE3] rounded-md focus:outline-none focus:border-[#2B5BBB]" />
+                            <button type="button" onclick="addCareer('Current')" class="shrink-0 px-4 py-2 bg-[#2B5BBB] text-white rounded-md">
+                            추가
+                            </button>
+                        </div>
+                        
+                        <!-- 경력리스트 -->
+                        <ul id="careerListCurrent" class="w-full space-y-2 cursor-move"></ul>
+                        </div>
                     </div>
 
 
@@ -772,6 +812,8 @@
             TOP
         </button>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
     <script>
         // ✅  드롭다운 열고 닫기
@@ -896,7 +938,7 @@
         });
 
 
-        // ✅ 댄스스포츠 옵션선택
+        // ✅ 댄스스포츠 옵션선택창 뜨기
         document.addEventListener("DOMContentLoaded", () => {
             const dancesportCheckbox = document.getElementById("dancesportCheckbox");
             const dancesportOption = document.querySelector(".dancesport-option");
@@ -910,43 +952,153 @@
             });
         });
 
-        // ✅ 파일추가
+        // ✅ 사진파일추가
         const fileInput = document.getElementById('fileInput');
         const fileList = document.getElementById('fileList');
 
-        // 파일 저장용 배열
         let selectedFiles = [];
 
         fileInput.addEventListener('change', function (e) {
             const files = Array.from(e.target.files);
-            selectedFiles = selectedFiles.concat(files); // 기존 파일 유지 + 새로 추가
+
+            // 이미지 파일만 필터링
+            const imageFiles = files.filter(file => file.type.startsWith('image/'));
+
+            if (imageFiles.length === 0) {
+                alert("이미지 파일만 업로드 가능합니다.");
+                return;
+            }
+
+            // 하나만 업로드 가능하므로 가장 첫 번째 이미지로 설정
+            selectedFiles = [imageFiles[0]];
+
             renderFileList();
-            fileInput.value = ''; // 같은 파일 다시 선택 가능하게 초기화
+            fileInput.value = ''; // 초기화
         });
 
         function renderFileList() {
-            fileList.innerHTML = ''; // 기존 목록 초기화
+            fileList.innerHTML = ''; // 초기화
 
             selectedFiles.forEach((file, index) => {
                 const li = document.createElement('li');
                 li.className = 'flex justify-between items-center px-2 py-1 text-[12px] bg-gray-100 border rounded-md';
 
+                // 미리보기 이미지
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                img.alt = file.name;
+                img.className = 'w-48 h-48 object-cover mr-2 rounded';
+
+                // 파일명 (선택사항)
                 const span = document.createElement('span');
                 span.textContent = file.name;
+                span.className = 'truncate w-[100px]';
 
+                // 삭제 버튼
                 const deleteBtn = document.createElement('button');
                 deleteBtn.innerHTML = 'x';
                 deleteBtn.className = 'text-red-500 ml-2 text-[25px]';
                 deleteBtn.addEventListener('click', () => {
                     selectedFiles.splice(index, 1);
-                    renderFileList(); 
+                    renderFileList();
                 });
 
-                li.appendChild(span);
+                // 이미지와 이름을 담을 div
+                const fileInfoDiv = document.createElement('div');
+                fileInfoDiv.className = 'flex items-center';
+                fileInfoDiv.appendChild(img);
+                fileInfoDiv.appendChild(span);
+
+                li.appendChild(fileInfoDiv);
                 li.appendChild(deleteBtn);
                 fileList.appendChild(li);
             });
         }
+
+        // ✅ 경력추가       
+        function addCareer(type) {
+            const input = document.getElementById(`careerInput${type}`);
+            const list = document.getElementById(`careerList${type}`);
+            
+            let value = input.value.trim();
+            if (!value) return;
+
+            // 줄바꿈 제거
+            value = value.replace(/[\r\n\u2028\u2029]+/g, ' ').replace(/\s+/g, ' ');
+
+            const li = document.createElement('li');
+            li.className = 'flex items-center justify-between p-2 bg-white border rounded-md mt-2';
+            li.innerHTML = `
+                <span>• ${value}</span>
+                <button class="text-red-500" onclick="this.parentElement.remove()">삭제</button>
+            `;
+
+            list.appendChild(li);
+            input.value = '';
+        }
+
+        // Past 입력 필드에 이벤트 리스너 설정
+        function setupPastInput() {
+            const input = document.getElementById('careerInputPast');
+            
+            // keydown 대신 keypress 사용 (IME 확정 후 발생)
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addCareer('Past');
+                }
+            });
+            
+            // compositionend 이벤트 추가 (한글 입력 완료 후)
+            input.addEventListener('compositionend', function(e) {
+                if (e.data && e.data.endsWith('\n')) {
+                    e.preventDefault();
+                    // 줄바꿈 제거하고 추가
+                    input.value = input.value.replace(/[\r\n\u2028\u2029]+/g, '');
+                    setTimeout(() => addCareer('Past'), 10);
+                }
+            });
+        }
+
+        // Current 입력 필드에 이벤트 리스너 설정
+        function setupCurrentInput() {
+            const input = document.getElementById('careerInputCurrent');
+            
+            // keydown 대신 keypress 사용
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addCareer('Current');
+                }
+            });
+            
+            // compositionend 이벤트 추가
+            input.addEventListener('compositionend', function(e) {
+                if (e.data && e.data.endsWith('\n')) {
+                    e.preventDefault();
+                    // 줄바꿈 제거하고 추가
+                    input.value = input.value.replace(/[\r\n\u2028\u2029]+/g, '');
+                    setTimeout(() => addCareer('Current'), 10);
+                }
+            });
+        }
+
+        // 페이지 로드 시 이벤트 설정
+        document.addEventListener('DOMContentLoaded', function() {
+            setupPastInput();
+            setupCurrentInput();
+            
+            // 드래그 앤 드롭 활성화
+            new Sortable(document.getElementById('careerListPast'), {
+                animation: 150,
+                ghostClass: 'bg-gray-100'
+            });
+
+            new Sortable(document.getElementById('careerListCurrent'), {
+                animation: 150,
+                ghostClass: 'bg-gray-100'
+            });
+        });
 
     </script>
 </body>
