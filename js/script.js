@@ -139,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'student': 'studentLink',  //수강자관리
         'graduate': 'graduateLink', //수료자
         'license': 'licenseLink', //자격관리
-        'admin': 'adminLink', //관리자 게시판
+        'admin': 'adminLink', //게시판관리
+        'site': 'siteLink', //게시판관리
         'sns': 'snsLink', //문자관리
         'setting': 'settingLink', //설정
     };
