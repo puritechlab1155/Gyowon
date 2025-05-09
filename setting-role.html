@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 기관지정서</title>
+    <title>교원관리자 | 사이트 권한관리</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -557,7 +557,7 @@
             <!-- </li> -->
             <li class="py-1 relative group">
                 <!-- 설정 항목 -->
-                <a href="#" id="settingLink"
+                <a href="#" id="siteLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -578,19 +578,19 @@
                 <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
-                        <a href="setting-slider.html"
+                        <a href="site-slider.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
                     </li>
                     <li>
-                        <a href="setting-phto.html"
+                        <a href="site-photo.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
                     </li>
                     <li>
-                        <a href="setting-popup.html"
+                        <a href="site-popup.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
                     </li>
                     <li>
-                        <a href="setting-video.html"
+                        <a href="site-video.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
                     </li>
                 </ul>
@@ -638,11 +638,11 @@
     <!-- 콘텐츠 영역 -->
     <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">기관지정서</h1>
-            <span class="text-[14px] font-semibold text-[#64748B] ">
+            <h1 class="mt-[50px] h1-title font-normal paperlogy pb-5">사이트 권한관리</h1>
+            <!-- <span class="text-[14px] font-semibold text-[#64748B] ">
                 ※ 기관지정서 관리하는 페이지 입니다.
-            </span>
-            <div class="pt-5 pb-5">
+            </span> -->
+            <!-- <div class="pt-5 pb-5">
                 <div class="max-xl:flex max-xl:flex-col">
                     <div class="w-full gap-2 flex justify-end">
                         <div class="left-content flex justify-end text-lg space-x-2 ">
@@ -651,7 +651,6 @@
                                 등록하기
                             </button> 
                         </div>
-                        <!-- right-content (탭들) -->
                         <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
                             <div
                                 class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
@@ -668,9 +667,8 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-            </div>
+            </div> -->
 
 
             <div class="w-full">
@@ -680,12 +678,22 @@
                         <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
                                 <tr class="text-[18px] h-[60px]">
-                                    <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">레벨</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">권한명</th>
+                                    <th class="px-2 py-2 font-semibold w-[45%]">
+                                        <div class="flex justify-between px-2">
+                                            <span class="font-semibold">&nbsp;회원&nbsp;</span>
+                                            <span class="font-semibold">&nbsp;연수&nbsp;</span>
+                                            <span class="font-semibold">수강자</span>
+                                            <span class="font-semibold">수료자</span>
+                                            <span class="font-semibold">게시판</span>
+                                            <span class="font-semibold">사이트</span>
+                                            <span class="font-semibold">설정</span>
+                                        </div>
+                                    </th>
+                                    <th class="px-2 py-2 font-semibold w-[8%]">회원수</th>
+                                    <th class="px-2 py-2 font-semibold w-[7%]">수정일</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%]">관리</th>
                                 </tr>
                             </thead>
                         </table>
@@ -695,16 +703,26 @@
                             <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">지정서 승인</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">1</td>
+                                        <td class="w-[10%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">최고관리자</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
+                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
+                                            <div class="flex justify-between px-4">
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-2 py-2 w-[8%] text-[#727272]">1</td>
+                                        <td class="w-[7%]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[10%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-agency-create.html'" 
+                                                <button type="button" onclick="window.location.href='setting-role-edit.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
@@ -721,22 +739,32 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">기관지정서</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">2</td>
+                                        <td class="w-[10%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">슈퍼관리자</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">홍길동</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
+                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
+                                            <div class="flex justify-between px-4">
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-2 py-2 w-[8%] text-[#727272]">1</td>
+                                        <td class="w-[7%]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[10%]">
                                             <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-agency-create.html'" 
+                                                <button type="button" onclick="window.location.href='setting-role-edit.html'" 
                                                     class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
                                                     </span>
                                                 </button>
-                                                <button
+                                                <button type="button"
                                                     class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
                                                     <span class="inline-block align-middle">
                                                         <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
@@ -746,7 +774,114 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">3</td>
+                                        <td class="w-[10%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">일반관리자</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
+                                            <div class="flex justify-between px-4">
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-2 py-2 w-[8%] text-[#727272]">5</td>
+                                        <td class="w-[7%]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[10%]">
+                                            <div class="flex justify-center gap-2 px-2">
+                                                <button type="button" onclick="window.location.href='setting-role-edit.html'" 
+                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                </button>
+                                                <button type="button"
+                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                            class="w-6 h-6" />
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">4</td>
+                                        <td class="w-[10%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">슈퍼유저</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
+                                            <div class="flex justify-between px-4">
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-2 py-2 w-[8%] text-[#727272]">10</td>
+                                        <td class="w-[7%]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[10%]">
+                                            <div class="flex justify-center gap-2 px-2">
+                                                <button type="button" onclick="window.location.href='setting-role-edit.html'" 
+                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                </button>
+                                                <button type="button"
+                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                            class="w-6 h-6" />
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">5</td>
+                                        <td class="w-[10%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">일반유저</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
+                                            <div class="flex justify-between px-4">
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-2 py-2 w-[8%] text-[#727272]">5230</td>
+                                        <td class="w-[7%]">25.04.08</td>
+                                        <td class="px-2 py-2 w-[10%]">
+                                            <div class="flex justify-center gap-2 px-2">
+                                                <button type="button" onclick="window.location.href='setting-role-edit.html'" 
+                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
+                                                    </span>
+                                                </button>
+                                                <button type="button"
+                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
+                                                    <span class="inline-block align-middle">
+                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
+                                                            class="w-6 h-6" />
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -555,6 +555,46 @@
                     </li>
                 </ul> -->
             <!-- </li> -->
+            <li class="py-1 relative group">
+                <!-- 설정 항목 -->
+                <a href="#" id="siteLink"
+                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
+                    onclick="toggleSubMenu(event)">
+                    <span class="flex items-center gap-3 text-inherit">
+                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V15" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 7H22" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 5.01013L5.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 5.01013L8.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11 5.01013L11.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0822 18.3651C22.576 18.6689 22.5457 19.4082 22.0371 19.4658L19.4705 19.7568L18.3193 22.0691C18.0911 22.5273 17.386 22.3029 17.2695 21.735L16.0142 15.619C15.9157 15.139 16.3471 14.837 16.7644 15.0937L22.0822 18.3651Z" stroke="stroke-current" stroke-width="1.5"/>
+                        </svg>
+                        사이트 관리
+                    </span>
+                    <img src="img/dropDown.png" alt="Arrow"
+                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
+                </a>
+                <!-- 서브 메뉴 (기본적으로 숨김) -->
+                <ul
+                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="site-slider.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
+                    </li>
+                    <li>
+                        <a href="site-photo.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
+                    </li>
+                    <li>
+                        <a href="site-popup.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
+                    </li>
+                    <li>
+                        <a href="site-video.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
+                    </li>
+                </ul>
+            </li>
             <li class="py-1 relative group mb-10">
                 <!-- 설정 항목 -->
                 <a href="#" id="settingLink"
@@ -581,22 +621,6 @@
                     <li>
                         <a href="setting-chats.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
-                    </li>
-                    <li>
-                        <a href="setting-slider.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-phto.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-popup.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-video.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
                     </li>
                     <li>
                         <a href="setting-log.html"
@@ -639,7 +663,7 @@
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
+                                            superadmin
                                         </td>
                                         <td class="px-2 py-2 w-[30%] text-[#727272]">220.116.48.246</td>
                                         <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
@@ -647,7 +671,7 @@
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">abcdefg</a>
+                                            abcdefg
                                         </td>
                                         <td class="px-2 py-2 w-[30%] text-[#727272]">220.116.48.246</td>
                                         <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
@@ -655,7 +679,7 @@
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">edfsefe</a>
+                                            edfsefe
                                         </td>
                                         <td class="px-2 py-2 w-[30%] text-[#727272]">118.221.204.136</td>
                                         <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
@@ -663,7 +687,7 @@
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">honey01</a>
+                                            honey01
                                         </td>
                                         <td class="px-2 py-2 w-[30%] text-[#727272]">211.252.21.48</td>
                                         <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
@@ -671,7 +695,7 @@
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">human</a>
+                                            human
                                         </td>
                                         <td class="px-2 py-2 w-[30%] text-[#727272]">221.145.99.138</td>
                                         <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
