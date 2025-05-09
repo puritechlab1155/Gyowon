@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 기관지정서</title>
+    <title>교원관리자 | 이미지 콘텐츠 수정</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
 
 </head>
 
@@ -402,9 +403,9 @@
                     </li>
                 </ul>
             </li>
-            <!-- <li class="py-1 relative group "> -->
+            <li class="py-1 relative group ">
                 <!-- 자격관리 항목 -->
-                <!-- <a href="#" id="licenseLink"
+                <a href="#" id="licenseLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] focus:text-[#2B5BBB] active:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -420,9 +421,9 @@
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a> -->
+                </a>
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <!-- <ul
+                <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
                         <a href="license-regist.html"
@@ -445,7 +446,7 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자격증조회</a>
                     </li>
                 </ul>
-            </li> -->
+            </li>
                 <li class="py-1 relative group ">
                 <!-- 관리자 게시판 항목 -->
                 <a href="#" id="adminLink"
@@ -465,7 +466,7 @@
                             <path d="M7 11H17" stroke="stroke-current" stroke-width="2" stroke-linecap="round" />
                             <path d="M7 15H17" stroke="stroke-current" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        게시판 관리
+                        관리자 게시판
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
@@ -474,15 +475,19 @@
                 <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
+                        <a href="admin-chats.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
+                    </li>
+                    <li>
                         <a href="admin-notice.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">공지사항</a>
                     </li>
                     <li>
-                        <a href="admin-trainsch.html"
+                        <a href="setting-slider.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수일정</a>
                     </li>
                     <li>
-                        <a href="admin-teacherin.html"
+                        <a href="admin-teacher.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">강사소개</a>
                     </li>
                     <li>
@@ -498,6 +503,10 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">기관지정서</a>
                     </li>
                     <li>
+                        <a href="admin-cancel.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연기취소/연기/환불관리</a>
+                    </li>
+                    <li>
                         <a href="admin-faq.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">자주묻는 질문</a>
                     </li>
@@ -510,14 +519,26 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문 / 조회 관리</a>
                     </li>
                     <li>
+                        <a href="admin-slider.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
+                    </li>
+                    <li>
+                        <a href="admin-popup.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
+                    </li>
+                    <li>
+                        <a href="admin-video.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
+                    </li>
+                    <li>
                         <a href="admin-joboffer.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">구인・구직</a>
                     </li>
                 </ul>
             </li>
-            <!-- <li class="py-1 relative group "> -->
+            <li class="py-1 relative group ">
                 <!-- 문자관리 항목 -->
-                <!-- <a href="#" id="snsLink"
+                <a href="#" id="snsLink"
                     class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
                     onclick="toggleSubMenu(event)">
                     <span class="flex items-center gap-3 text-inherit">
@@ -534,9 +555,9 @@
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a> -->
+                </a>
                 <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <!-- <ul
+                <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
                         <a href="sns-group.html"
@@ -553,48 +574,8 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">문자
                             기록</a>
                     </li>
-                </ul> -->
-            <!-- </li> -->
-            <li class="py-1 relative group">
-                <!-- 설정 항목 -->
-                <a href="#" id="settingLink"
-                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
-                    onclick="toggleSubMenu(event)">
-                    <span class="flex items-center gap-3 text-inherit">
-                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V15" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M2 7H22" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5 5.01013L5.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 5.01013L8.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M11 5.01013L11.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0822 18.3651C22.576 18.6689 22.5457 19.4082 22.0371 19.4658L19.4705 19.7568L18.3193 22.0691C18.0911 22.5273 17.386 22.3029 17.2695 21.735L16.0142 15.619C15.9157 15.139 16.3471 14.837 16.7644 15.0937L22.0822 18.3651Z" stroke="stroke-current" stroke-width="1.5"/>
-                        </svg>
-                        사이트 관리
-                    </span>
-                    <img src="img/dropDown.png" alt="Arrow"
-                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a>
-                <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <ul
-                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <li>
-                        <a href="setting-slider.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-phto.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-popup.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-video.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
-                    </li>
                 </ul>
-            </li>
+            <!-- </li> -->
             <li class="py-1 relative group mb-10">
                 <!-- 설정 항목 -->
                 <a href="#" id="settingLink"
@@ -619,230 +600,134 @@
                 <ul
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
-                        <a href="setting-chats.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
+                        <a href="setting-role.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">권리자권한 관리</a>
+                    </li>
+                    <li>
+                        <a href="setting-menu.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">메뉴 관리</a>
                     </li>
                     <li>
                         <a href="setting-log.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인 로그</a>
                     </li>
-                    <li>
-                        <a href="setting-role.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">관리자권한 관리</a>
-                    </li>
                 </ul>
             </li>
         </ul>
     </div>
-
+    
     <!-- 콘텐츠 영역 -->
-    <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
+    <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">기관지정서</h1>
-            <span class="text-[14px] font-semibold text-[#64748B] ">
-                ※ 기관지정서 관리하는 페이지 입니다.
-            </span>
-            <div class="pt-5 pb-5">
-                <div class="max-xl:flex max-xl:flex-col">
-                    <div class="w-full gap-2 flex justify-end">
-                        <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-agency-create.html'"
-                                class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                등록하기
-                            </button> 
+            <!-- 폼1 -->
+            <form class="create-top mt-[30px] max-md:mt-[50px] max-w-[1200px] w-full mx-auto max-xl:w-[90%] max-sm:w-[100%]">
+                <div class="flex justify-between items-end mb-2">
+                    <h2 class="h1-title font-normal paperlogy">이미지 콘텐츠 수정</h2>
+                </div>
+                <div class="border-t-[2px] border-[#2B5BBB] mb-5"></div>
+                
+                <div class="grid grid-cols-2 gap-x-0 gap-y-0 text-left max-xl:grid-cols-1 mx-auto max-sm:p-0 p-10 bg-[#FFFFFF]">
+                    <!-- Row Template -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">오픈상태</label>
+                        <div class="w-2/3 flex gap-0">
+                            <input type="radio" name="post" id="open" value="공개" 
+                                class="hidden peer/open" checked/>
+                            <label for="open" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/open:bg-[#EDF3FF] peer-checked/open:text-[#2B5BBB] peer-checked/open:border-[#2B5BBB]
+                                    rounded-l-lg">
+                                    공개
+                            </label>
+                            <input type="radio" name="post" id="close" value="비공개"
+                                class="hidden peer/close" />
+                            <label for="close" class="flex-1 text-center cursor-pointer px-4 py-2 text-[16px] border-t border-b border-r 
+                                    border-[#B5B5B5] text-[#B5B5B5] bg-[#F3F3F3] 
+                                    peer-checked/close:bg-[#EDF3FF] peer-checked/close:text-[#2B5BBB] peer-checked/close:border-[#2B5BBB]
+                                    rounded-r-lg">
+                                    비공개
+                            </label>
                         </div>
-                        <!-- right-content (탭들) -->
-                        <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
-                            <div
-                                class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
-                                <div
-                                    class="flex justify-between space-x-2">
-                                    <input type="text" placeholder="제목 검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
-                                    focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full
-                                    h-[50px] max-sm:h-[45px]" />
-                                    <button
-                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none  flex justify-center items-center gap-2">
-                                        <span class="text-[#EDF3FF]">검색</span>
-                                    </button>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden"></div>
+
+                    <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">제목</label>
+                        <div class="w-2/3">
+                            <input
+                            class="w-2/3 inline-block w-full truncate bg-[#F3F3F3] h-[45px] px-3 py-1.5 rounded-lg border border-[#DBDEE3] placeholder-[#AFAFAF] text-[16px] focus:outline-none focus:border-[#2B5BBB overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hidden" value="2025 댄스스포츠 지도자 자격 연수"/>
+                        </div>
+                    </div>
+                    <div class="px-2 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center">
+                        <label
+                            class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">날짜</label>
+                        <div class="w-2/3 ">
+                            <input type="date" value="2025-12-25"
+                            class="appearance-none inline-block w-full bg-[#F3F3F3] h-[45px] px-3 py-1.5 rounded-lg border border-[#DBDEE3] text-[16px] focus:outline-none focus:border-[#2B5BBB overflow-x-auto"/>
+                        </div>
+                    </div>
+                    <!-- 기존 이미지 -->
+                    <div class="px-2 bg-[#F9F9F9] border-b border-t border-[#EFEFEF] flex items-center col-span-2 max-xl:col-span-1">
+                        <label
+                            class="shrink-0 w-[16%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">이미지</label>
+                        <div id="imageContainer" class="flex-grow h-[300px] max-sm:h-[150px] max-xl:w-2/3 flex flex-col gap-1 pt-4 pb-4 bg-[#F3F3F3] border border-[#DBDEE3] rounded-lg ">
+                            <img src="img/photo-1.jpg" class="h-full w-auto object-contain self-start slider-preview-image" alt="콘텐츠 이미지">
                         </div>
                     </div>
                     
-                </div>
-            </div>
-
-
-            <div class="w-full">
-                <div class="overflow-x-auto">
-                    <div class="min-w-[1000px]">
-                        <!-- 테이블 헤더 부분 -->
-                        <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
-                            <thead>
-                                <tr class="text-[18px] h-[60px]">
-                                    <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
-                                </tr>
-                            </thead>
-                        </table>
-
-                        <!-- 테이블 본문 부분 -->
-                        <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">지정서 승인</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-agency-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">기관지정서</td>
-                                        <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">홍길동</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-agency-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
+                    <!-- 변경 이미지 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] flex items-center py-2 ">
+                        <label class="shrink-0 w-[32%] max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">이미지 변경</label>
+                        <div class="flex-grow flex items-center max-xl:w-2/3  max-sm:items-start max-sm:flex-col py-2 gap-2">
+                            <label class="px-3 py-2 border border-gray-300 bg-gray-50 text-[16px] text-gray-800 rounded shadow-sm cursor-pointer whitespace-nowrap">
+                                사진선택
+                                <input type="file" class="hidden" id="fileInput" />
+                            </label>
+                            <span class="font-semibold whitespace-nowrap tracking-tight"> [ 최소사이즈 : 450 * 450 ] </span>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 페이지네이션 -->
-            <div class="flex justify-center items-center mt-4 mt-[100px]">
-                <!-- 이전 / 다음 버튼 그룹 -->
-                <div class="flex items-center space-x-3 max-lg:space-x-1">
-                    <button
-                        class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
-                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
-                            <path
-                                d="M0.68629 9.89949L10.5858 19.799L12 18.3848L3.51471 9.8995L12 1.41421L10.5858 -6.18172e-08L0.68629 9.89949Z" />
-                        </svg>
-                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold ml-2">이전</span>
-                    </button>
-
-                    <!-- 페이지 번호들 -->
-                    <div class="flex space-x-2 max-lg:space-x-2">
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            1
+                <div class="border-t-[2px] border-[#2B5BBB] mt-5"></div>
+                <!-- 버튼 -->
+                <div class="max-w-[1190px] container mt-[64px] mb-[50px] max-sm:mt-[20px] ">
+                    <div class="max-w-[576px] flex gap-2 items-center justify-center max-sm:justify-end mx-auto">
+                        <button type="button"
+                            class="deleteButton bg-[#FFEFF1] hover:bg-[#FFDFE3] px-4 py-2.5 max-sm:px-2.5 rounded-lg flex items-center border border-red-400">
+                            <img src="img/training-mgmt/delete.png" alt="삭제 아이콘" class="w-6 h-6"/>
+                            <span class="px-2 text-red-600 block max-lg:hidden">삭제하기</span>
                         </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            2
+                        <button type="button" onclick="window.location.href='setting-photo.html'" 
+                            class="px-16 max-sm:px-6 py-2.5 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
+                            수정완료
                         </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:text-[#EDF3FF]">
-                            3
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            4
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF] focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            5
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            6
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            7
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            8
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            9
-                        </button>
-                        <button
-                            class="w-12 h-12 max-sm:w-8 max-sm:h-8 max-lg:hidden flex items-center justify-center text-[#727272] font-medium rounded-md hover:bg-[#2B5BBB] hover:text-[#EDF3FF]  focus:bg-[#2B5BBB] focus:text-[#EDF3FF]">
-                            10
+                        <button type="button" onclick="window.location.href='setting-photo.html'"
+                            class="px-16 max-sm:px-6 py-2.5 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
+                            돌아가기
                         </button>
                     </div>
-                    <!-- 다음 버튼 -->
-                    <button
-                        class="px-2 py-4 max-sm:py-2 max-sm:px-2 text-[#727272] rounded-md flex items-center justify-center group">
-                        <span class="hidden lg:inline-block group-hover:text-[#2B5BBB] group-hover:font-semibold mr-2">다음</span>
-                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 fill-[#727272] group-hover:fill-[#2B5BBB]">
-                            <path
-                                d="M11.3137 10.1005L1.41423 0.201019L2.07232e-05 1.61523L8.48529 10.1005L1.68643e-08 18.5858L1.41421 20L11.3137 10.1005Z" />
-                        </svg>
-
-                    </button>
                 </div>
-            </div>
-            <!-- TOP버튼 -->
-            <button id="topButton"
-                class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
-                TOP
-            </button>
-        </div>
-    </div>
 
+            </form>
+        </div>
+        <!-- TOP버튼 -->
+        <button id="topButton" 
+            class="font-bold fixed bottom-5 right-5 bg-[#FEFEFE] border-[#EFEFEF] text-[#2B5BBB] p-4 rounded-lg shadow-lg hover:bg-[#EDF3FF] transition-all">
+            TOP
+        </button>
+    </div>
 
     <!-- 삭제 모달 -->
     <div id="deleteConfirmModal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
         <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
             <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
 
-            <h1 class="paperlogy text-[22px] font-medium mb-3">지정서 삭제하기</h1>
+            <h1 class="paperlogy text-[22px] font-medium mb-3">콘텐츠 삭제하기</h1>
 
             <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 지정서가 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
+                해당 이미지 콘텐츠의 내용이 모두 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
                 <br /> 계속하시겠습니까?
             </p>
 
@@ -860,48 +745,29 @@
     </div>
 
 
-
-
-    <script src="js/script.js"></script>
     <script>
 
-        // ✅ 드롭다운 열고 닫기
-        document.querySelectorAll('.dropdown-button').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
-                if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '10';
+        // ✅ 파일추가
+        document.addEventListener('DOMContentLoaded', function () {
+            const fileInput = document.getElementById('fileInput');
+            const imageTag = document.querySelector('.slider-preview-image'); // 클래스 선택자로 수정
+
+            fileInput.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (event) {
+                        imageTag.src = event.target.result;
+                    };
+
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('이미지 파일을 선택해주세요.');
                 }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
-                });
-                menu.classList.toggle('hidden');
             });
         });
-
-        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
-
 
         // ✅  삭제모달
         document.addEventListener('DOMContentLoaded', () => {
@@ -930,7 +796,6 @@
                 deleteModal.classList.add('hidden');
                 if (targetButton) {
                     console.log('삭제 확인!', targetButton);
-                    // 예시로 해당 행 삭제: targetButton.closest('tr')?.remove();
                 }
                 targetButton = null;
             });

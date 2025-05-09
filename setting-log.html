@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교원관리자 | 기관지정서</title>
+    <title>교원관리자 | 로그인 로그</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -555,46 +555,6 @@
                     </li>
                 </ul> -->
             <!-- </li> -->
-            <li class="py-1 relative group">
-                <!-- 설정 항목 -->
-                <a href="#" id="settingLink"
-                    class="mainLink flex justify-between items-center px-4 py-3 block rounded-lg text-[#727272] hover:bg-[#EDF3FF] hover:text-[#292929] active:text-[#2B5BBB] focus:text-[#2B5BBB]"
-                    onclick="toggleSubMenu(event)">
-                    <span class="flex items-center gap-3 text-inherit">
-                        <svg class="subIconSvg stroke-current" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V15" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M2 7H22" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5 5.01013L5.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 5.01013L8.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M11 5.01013L11.01 4.99902" stroke="stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0822 18.3651C22.576 18.6689 22.5457 19.4082 22.0371 19.4658L19.4705 19.7568L18.3193 22.0691C18.0911 22.5273 17.386 22.3029 17.2695 21.735L16.0142 15.619C15.9157 15.139 16.3471 14.837 16.7644 15.0937L22.0822 18.3651Z" stroke="stroke-current" stroke-width="1.5"/>
-                        </svg>
-                        사이트 관리
-                    </span>
-                    <img src="img/dropDown.png" alt="Arrow"
-                        class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
-                </a>
-                <!-- 서브 메뉴 (기본적으로 숨김) -->
-                <ul
-                    class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <li>
-                        <a href="setting-slider.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-phto.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-popup.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
-                    </li>
-                    <li>
-                        <a href="setting-video.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
-                    </li>
-                </ul>
-            </li>
             <li class="py-1 relative group mb-10">
                 <!-- 설정 항목 -->
                 <a href="#" id="settingLink"
@@ -623,6 +583,22 @@
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">운영자 소통</a>
                     </li>
                     <li>
+                        <a href="setting-slider.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">슬라이드 관리</a>
+                    </li>
+                    <li>
+                        <a href="setting-phto.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">이미지 콘텐츠 관리</a>
+                    </li>
+                    <li>
+                        <a href="setting-popup.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">팝업관리</a>
+                    </li>
+                    <li>
+                        <a href="setting-video.html"
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">영상관리</a>
+                    </li>
+                    <li>
                         <a href="setting-log.html"
                             class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">로그인 로그</a>
                     </li>
@@ -638,39 +614,7 @@
     <!-- 콘텐츠 영역 -->
     <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
         <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">기관지정서</h1>
-            <span class="text-[14px] font-semibold text-[#64748B] ">
-                ※ 기관지정서 관리하는 페이지 입니다.
-            </span>
-            <div class="pt-5 pb-5">
-                <div class="max-xl:flex max-xl:flex-col">
-                    <div class="w-full gap-2 flex justify-end">
-                        <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-agency-create.html'"
-                                class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                등록하기
-                            </button> 
-                        </div>
-                        <!-- right-content (탭들) -->
-                        <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
-                            <div
-                                class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
-                                <div
-                                    class="flex justify-between space-x-2">
-                                    <input type="text" placeholder="제목 검색" class="bg-[#FEFEFE] text-[#AFAFAF] placeholder-[#AFAFAF] border border-[#DBDEE3] 
-                                    focus:outline-none focus:border-[#2B5BBB] rounded-[8px] max-xl:px-2 px-4 max-lg:w-full
-                                    h-[50px] max-sm:h-[45px]" />
-                                    <button
-                                        class="bg-[#2B5BBB] w-16 py-2 px-3 max-sm:h-[45px] max-xl:px-1 rounded-lg hover:bg-[#648DDF] focus:outline-none  flex justify-center items-center gap-2">
-                                        <span class="text-[#EDF3FF]">검색</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+            <h1 class="mt-[50px] h1-title font-normal paperlogy pb-5">로그인 로그</h1>
 
 
             <div class="w-full">
@@ -681,11 +625,9 @@
                             <thead>
                                 <tr class="text-[18px] h-[60px]">
                                     <th class="px-2 py-2 font-semibold w-[10%]">번호</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[30%]">제목</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">이름</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">등록일</th>
-                                    <th class="px-2 py-2 font-semibold w-[15%]">관리</th>
+                                    <th class="px-2 py-2 font-semibold w-[30%]">아이디</th>
+                                    <th class="px-2 py-2 font-semibold w-[30%]">ip</th>
+                                    <th class="px-2 py-2 font-semibold w-[30%]">접속일</th>
                                 </tr>
                             </thead>
                         </table>
@@ -696,57 +638,44 @@
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">지정서 승인</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">최고관리자</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button type="button" onclick="window.location.href='admin-agency-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button type="button"
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
+                                        <td class="px-2 py-2 w-[30%] text-[#727272]">220.116.48.246</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
                                         <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">기관지정서</td>
                                         <td class="w-[30%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">2024 동계 직무번호(경기)</a>
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">abcdefg</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">홍길동</td>
-                                        <td class="w-[15%] text-[#2B5BBB]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[15%]">
-                                            <div class="flex justify-center gap-2 px-2">
-                                                <button onclick="window.location.href='admin-agency-create.html'" 
-                                                    class="editModalBtn bg-[#FFF3E5] flex justify-center items-center align-middle hover:bg-[#FFECBA] p-3 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/pen.png" alt="수정 아이콘" class="w-5 h-5" />
-                                                    </span>
-                                                </button>
-                                                <button
-                                                    class="deleteButton bg-[#FFEFF1] flex justify-center items-center align-middle hover:bg-[#FFDFE3] p-2.5 rounded-lg">
-                                                    <span class="inline-block align-middle">
-                                                        <img src="img/training-mgmt/delete.png" alt="삭제 아이콘"
-                                                            class="w-6 h-6" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </td>
+                                        <td class="px-2 py-2 w-[30%] text-[#727272]">220.116.48.246</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
                                     </tr>
-                                    
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">edfsefe</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[30%] text-[#727272]">118.221.204.136</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
+                                    </tr>
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">honey01</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[30%] text-[#727272]">211.252.21.48</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
+                                    </tr>
+                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                        <td class="px-2 py-2 w-[10%] text-[#727272]">333</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">
+                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">human</a>
+                                        </td>
+                                        <td class="px-2 py-2 w-[30%] text-[#727272]">221.145.99.138</td>
+                                        <td class="w-[30%] text-[#2B5BBB]">25.04.08 07:29:16</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
