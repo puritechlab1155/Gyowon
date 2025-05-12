@@ -648,7 +648,7 @@
                 <div class="max-xl:flex max-xl:flex-col">
                     <div class="w-full gap-2 flex justify-end">
                         <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button id="openModalBtn"
+                            <button id="openAddModalBtn"
                                 class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
                                 추가하기
                             </button> 
@@ -675,7 +675,7 @@
 
             <div class="w-full">
                 <div class="overflow-x-auto">
-                    <div class="min-w-[1000px]">
+                    <div class="min-w-[1200px]">
                         <!-- 테이블 헤더 부분 -->
                         <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
@@ -967,48 +967,48 @@
         </div>
     </div>
 
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
+    <div id="addModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
         <div class="bg-white p-6 rounded-lg w-[90%] max-w-3xl shadow-lg max-h-[90vh] overflow-y-auto">
             <h2 class="paperlogy mb-4 h1-title"> 관리자 그룹 추가</h2>
             <div class="flex items-center gap-2 mb-4">
-                <span class="whitespace-nowrap text-xl">권한명:</span>
-                <input type="text" id="roleName" placeholder="권한명 입력하세요" class="flex-1 border p-2 rounded focus:outline-none focus:border-[#2B5BBB]">
+                <span class="whitespace-nowrap text-lg flex-shrink-0 p-2 bg-[#2B5BBB] text-white rounded-lg">권한명</span> :
+                <input type="text" id="roleName" placeholder="권한명 입력하세요" class="flex-grow border p-2 rounded focus:outline-none focus:border-[#2B5BBB] min-w-0 rounded-lg">
             </div>
             <!-- <input type="number" id="roleLevel" placeholder="레벨 입력 (숫자)" class="w-full border p-2 rounded mb-4"> -->
         
-            <div class="overflow-x-auto">
-                <table class="w-full text-left text-sm">
+            <div class="overflow-y-auto max-h-[350px]">
+                <table class="w-full text-left text-sm ">
                     <thead>
                     <tr class="bg-gray-100 text-[#2B5BBB] text-[16px]">
-                        <th class="px-4 py-2 w-[40%] text-center font-bold">대상</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold text-[#4CAF50]">전체</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold">읽기</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold">쓰기</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold">수정</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold">삭제</th>
-                        <th class="px-2 py-2 w-[10%] text-center font-bold"></th>
+                        <th class="px-4 py-2 w-[40%] text-center font-bold max-md:w-[20%]">대상</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold text-[#4CAF50] max-md:w-[10%]">전체</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold max-md:w-[10%]">읽기</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold max-md:w-[10%]">쓰기</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold max-md:w-[10%]">수정</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold max-md:w-[10%]">삭제</th>
+                        <th class="px-1 py-2 w-[10%] text-center font-bold block max-md:hidden"></th>
                     </tr>
                     </thead>
                     <tbody>
                         <!-- 회원 -->
                         <tr class="bg-[#FEFEFE] h-[50px] border-b">
-                            <td class="px-2 py-2 font-semibold text-[18px] text-center w-[40%]">회원</td>
-                            <td class="px-2 py-2 font-semibold text-[18px] text-center w-[10%]">
+                            <td class="max-md:w-[20%] px-2 py-2 font-semibold text-[18px] text-center w-[40%]">회원</td>
+                            <td class="max-md:w-[10%] px-2 py-2 font-semibold text-[18px] text-center w-[10%]">
                                 <input type="checkbox" id="user-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td class="px-2 py-2 text-center">
+                            <td class="max-md:w-[10%] px-2 py-2 text-center">
                                 <input type="checkbox" class="user-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td class="px-2 py-2 text-center">
+                            <td class="max-md:w-[10%] px-2 py-2 text-center">
                                 <input type="checkbox" class="user-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td class="px-2 py-2 text-center">
+                            <td class="max-md:w-[10%] px-2 py-2 text-center">
                                 <input type="checkbox" class="user-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td class="px-2 py-2 text-center">
+                            <td class="max-md:w-[10%] px-2 py-2 text-center">
                                 <input type="checkbox" class="user-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td class="px-2 py-2 text-center"></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                 
                         <!-- 연수 -->
@@ -1028,7 +1028,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="training-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                 
                         <!-- 수강자 -->
@@ -1048,7 +1048,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="student-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                         <!-- 수료자 -->
                         <tr class="bg-[#F9F9F9] h-[50px] border-b">
@@ -1067,7 +1067,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="graduate-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                         <!-- 게시판 -->
                         <tr class="bg-[#FEFEFE] h-[50px] border-b">
@@ -1086,7 +1086,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="admin-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                         <!-- 사이트= -->
                         <tr class="bg-[#F9F9F9] h-[50px] border-b">
@@ -1105,7 +1105,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="site-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                         <!-- 설정 -->
                         <tr class="bg-[#FEFEFE] h-[50px] border-b">
@@ -1124,7 +1124,7 @@
                             <td class="px-2 py-2 text-center">
                                 <input type="checkbox" class="setting-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
                             </td>
-                            <td></td>
+                            <td class="px-2 py-2 text-center block max-md:hidden"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1242,8 +1242,8 @@
         });
 
 
-    const openModalBtn = document.getElementById("openModalBtn");
-    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("openAddModalBtn");
+    const modal = document.getElementById("addModal");
     const cancelBtn = document.getElementById("cancelBtn");
 
     openModalBtn.onclick = () => {

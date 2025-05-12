@@ -676,7 +676,7 @@
                     </div>
                     <div class="px-2 pt-4 bg-[#FFFFFF] border-b border-t border-[#EFEFEF] h-[60px] flex items-center px-4 max-xl:hidden "></div>
 
-                    <!-- 카테고리 -->
+                    <!-- 종목 -->
                     <div class="px-2 bg-[#F9F9F9] border-b border-[#EFEFEF] flex justify-start items-center col-span-2 max-xl:col-span-1 ">
                         <label class="w-1/6 max-xl:w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">종목</label>
                         <div class="relative dropdown w-5/6 max-xl:w-2/3 flex justify-start items-center max-xl:grid max-xl:grid-cols-2 max-sm:gap-1 gap-3 pt-2 pb-2 max-xl:pb-0">
@@ -698,15 +698,15 @@
                             </div>
                             <div class="max-sm:hidden block"></div>
                             <div class="max-xl:col-span-1 w-full max-xl:justify-start max-sm:col-span-2 flex max-xl:pb-4 dancesport-option hidden">
-                                <div class="relative dropdown w-[140px] max-sm:w-full">
-                                    <button type="button" class="dropdown-button bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 pr-2 rounded-lg h-[45px] max- w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
-                                        <span class="selected-option text-[16px] text-[#AFAFAF] ">선택하세요</span>
+                                <div class="relative dropdown w-[150px] max-sm:w-full">
+                                    <button type="button" class="dropdown-button w-[140px] max-sm:w-full bg-[#FEFEFE] border border-[#DBDEE3] text-[#727272] px-3 pr-2 rounded-lg h-[45px] max- w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                                        <span class="selected-option text-[#AFAFAF]">선택하세요</span>
                                         <svg class="w-5 h-5 text-[#292929] pl-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <!-- 드롭다운 옵션 -->
-                                    <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                                    <div class="dropdown-menu absolute left-0 w-[150px] max-sm:w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                         <div class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">라틴</div>
                                         <div class="dropdown-item px-2 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">모던•스탠다드</div>
                                     </div>
@@ -719,22 +719,23 @@
                     <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center">
                         <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">이름</label>
                         <input type="text" placeholder="이름을 입력하세요"
-                        class="w-2/3 h-[45px] bg-[#FFFFFF] px-3 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
+                        class="w-2/3 h-[45px] bg-[#FFFFFF] px-2 py-1.5 rounded-lg border border-[#DBDEE3] focus:outline-none focus:border-[#2B5BBB]"/>
                     </div>
-                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] h-[60px] flex items-center max-xl:bg-[#F9F9F9]">
+                    <!-- 카테고리 -->
+                    <div class="px-2 bg-[#FFFFFF] border-b border-[#EFEFEF] max-xl:h-[60px] flex items-center max-xl:bg-[#F8F8F8]">
                         <label class="w-1/3 px-4 max-sm:px-2 text-[18px] max-sm:text-[16px] font-bold text-[#292929]">카테고리</label>
-                        <div class="relative w-2/3">
-                            <button type="button" class="bg-[#F3F3F3] border border-[#DBDEE3] text-[#727272] px-3 pt-0.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
-                                <span class="selected-option text-[16px] text-[#292929]">초빙강사</span>
-                                <!-- <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="relative dropdown w-2/3">
+                            <button type="button" class="dropdown-button bg-[#FEFEFE] border border-[#DBDEE3] text-[#727272] px-2 pt-0.5 pr-2 rounded-lg h-[45px] w-full flex justify-between items-center 0 focus:outline-none focus:border-[#2B5BBB]">
+                                <span class="selected-option text-[#AFAFAF]">선택하세요</span>
+                                <svg class="w-5 h-5 text-[#292929]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg> -->
+                                </svg>
                             </button>
                             <!-- 드롭다운 옵션 -->
-                            <!-- <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
+                            <div class="dropdown-menu absolute left-0 w-full bg-[#FEFEFE] border border-[#DBDEE3] rounded-md shadow-lg hidden max-h-[250px] overflow-y-auto">
                                 <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">협회소속</div>
                                 <div class="dropdown-item px-3 py-2 cursor-pointer text-[#727272] text-[16px] hover:bg-[#E7F0FD] hover:text-[#292929] whitespace-nowrap">초빙강사</div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
 
@@ -769,7 +770,7 @@
                         <!-- Input + Button 묶음 -->
                         <div class="flex gap-2">
                             <input id="careerInputPast" type="text" placeholder="과거 경력을 하나씩 입력하세요."
-                            class="flex-grow p-2 border border-[#DBDEE3] rounded-lg focus:outline-none focus:border-[#2B5BBB]"/>
+                            class="flex-grow p-2 border border-[#DBDEE3] rounded-lg focus:outline-none focus:border-[#2B5BBB] min-w-0"/>
                             <button type="button" onclick="addCareer('Past')" class="shrink-0 px-4 py-2 bg-[#2B5BBB] text-white rounded-lg">
                             추가
                             </button>
@@ -788,7 +789,7 @@
                         <!-- Input + Button 묶음 -->
                         <div class="flex gap-2">
                             <input id="careerInputCurrent" type="text" placeholder="현재 경력을 하나씩 입력하세요."
-                            class="flex-grow p-2 border border-[#DBDEE3] rounded-lg focus:outline-none focus:border-[#2B5BBB]" />
+                            class="flex-grow p-2 border border-[#DBDEE3] rounded-lg focus:outline-none focus:border-[#2B5BBB] min-w-0" />
                             <button type="button" onclick="addCareer('Current')" class="shrink-0 px-4 py-2 bg-[#2B5BBB] text-white rounded-lg ">
                             추가
                             </button>
@@ -816,11 +817,11 @@
                 <!-- 버튼 -->
                 <div class="max-w-[1190px] container mt-[64px] mb-[50px]">
                     <div class="max-w-[576px] flex gap-2 items-center mx-auto">
-                        <button type="button" onclick="window.location.href='admin-faq.html'"
+                        <button type="button" onclick="window.location.href='admin-teacherout.html'"
                             class="max-w-[282px] w-full px-5 py-2 text-white bg-[#2B5BBB] rounded-[10px] hover:bg-[#648DDF]">
                             등록하기
                         </button>
-                        <button type="button" onclick="window.location.href='admin-faq.html'"
+                        <button type="button" onclick="window.location.href='admin-teacherout.html'"
                             class="max-w-[282px] w-full px-5 py-2 bg-[#F5F5F5] rounded-[10px] hover:bg-[#EBEBEB] border border-[#DBDEE3]">
                             취소하기
                         </button>
