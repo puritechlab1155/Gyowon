@@ -31,7 +31,7 @@
                     <!-- 오른쪽 영역 -->
                     <div class="flex justify-between items-center w-full">
                         <div class="flex items-center"> 
-                            <h1 class="font-normal paperlogy text-[#2B5BBB] max-md:font-normal rounded-lg px-2 h1-title max-md:px-0 max-sm:text-[20px] max-sm:tracking-tighter">수강인원통계</h1>
+                            <h1 class="font-normal paperlogy text-[#2B5BBB] max-md:font-normal rounded-lg pl-6 h1-title max-xl:pl-0 max-sm:text-[20px] max-sm:tracking-tighter">수강인원통계</h1>
                         </div>
                         <!-- pc전용 배너 -->
                         <div class="relative flex items-center max-lg:justify-end max-xl:w-[300px] max-2xl:w-[460px] w-[530px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between ">
@@ -778,548 +778,546 @@
                         </table>
 
                         <!-- 테이블 본문 부분 -->
-                        <div class="">
-                            <table class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody> <!-- !!!!!!!! 직무 · 종목 : 서울은 서울직무인지 경기직무인지 확인 불가(우선 서울로 작업) !!!!!!!! -->
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">4</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">15</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">모던2급자격 퀵스텝</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">16</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴심화 룸바</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">11</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴2급자격 자이브</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">2</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴2급자격 자이브</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">17</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">5</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">3</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">4</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
-                                                    댄스스포츠
-                                                </div>
-                                            </div> 
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">2</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                        <table class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                            <tbody> <!-- !!!!!!!! 직무 · 종목 : 서울은 서울직무인지 경기직무인지 확인 불가(우선 서울로 작업) !!!!!!!! -->
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주금요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">22</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">3</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    서울
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">명원초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">8</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">4</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">라인댄스중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">라인댄스심화</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">9</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">2</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">15</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">명원초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">2</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">모던2급자격 퀵스텝</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">16</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
-                                                    라인댄스
-                                                </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-[#F8F8F8] h-[60px] border-b">
-                                        <td class="px-2 w-[17%] text-[#727272] border-r">
-                                            <div class="flex justify-center items-center gap-3">
-                                                <div
-                                                    class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
-                                                    자율
-                                                </div>
-                                                <div
-                                                    class="bg-[#4EC3E8] text-[16px] text-[#FEFEFE] border border-[#4EC3E8] rounded-lg text-center px-3 py-1">
-                                                    필라테스
-                                                </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴심화 룸바</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">11</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
                                             </div>
-                                        </td>
-                                        <td class="px-2 w-[17%] text-[#727272] text-left border-r">필라테스초중급</td>
-                                        <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
-                                        <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
-                                        <td class="px-2 w-[7%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
-                                        </td>
-                                    </tr>
-                                    <tr class="h-[60px] border-b bg-[#EDF3FF]">
-                                        <td class="px-2 w-[57%] text-[#727272] border-r" colspan="5">합계 (환불, 취소, 연기된 회원은 포함되지 않음)</td>
-                                        
-                                        <td class="px-2 w-[7%] text-[#727272] border-r paidTotal">187</td>
-                                        <th class="px-2 w-[7%] text-[#727272] border-r unpaidTotal">8</th>
-                                        <!-- <td class="px-2 w-[7%] text-[#2B5BBB] font-semibold studentTotal">195</td> -->
-                                        <td class="px-2 w-[7%] text-[#2B5BBB] font-semibold studentTotal"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴2급자격 자이브</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">2</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">라틴2급자격 자이브</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">17</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">5</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 모던초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">3</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">4</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4E9DFB] text-[16px] text-[#FEFEFE] border border-[#4E9DFB] rounded-lg text-center px-3 py-1">
+                                                댄스스포츠
+                                            </div>
+                                        </div> 
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라틴초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">2</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주금요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">22</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">3</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                서울
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">명원초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">8</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">라인댄스중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">12</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">1</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">라인댄스심화</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">권선초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">9</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">2</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">명원초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주화요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">2</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">연촌초</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">남수원중</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주월요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#8B98F5] text-[16px] text-[#FEFEFE] border border-[#8B98F5] rounded-lg text-center px-3 py-1">
+                                                라인댄스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">꿈을펼치는 라인댄스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주수요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[60px] border-b">
+                                    <td class="px-2 w-[17%] text-[#727272] border-r">
+                                        <div class="flex justify-center items-center gap-3">
+                                            <div
+                                                class="bg-[#FEFEFE] text-[16px] text-[#2B5BBB] border border-[#2B5BBB] rounded-lg text-center px-3 py-1">
+                                                자율
+                                            </div>
+                                            <div
+                                                class="bg-[#4EC3E8] text-[16px] text-[#FEFEFE] border border-[#4EC3E8] rounded-lg text-center px-3 py-1">
+                                                필라테스
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 w-[17%] text-[#727272] text-left border-r">필라테스초중급</td>
+                                    <td class="px-2 w-[12%] text-[#727272] border-r">서울디자인고</td>
+                                    <td class="px-2 w-[10%] text-[#727272] border-r">매주목요일</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r">0</td>   
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paid">1</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaid">0</th>
+                                    <td class="px-2 w-[7%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline studentNumber" href="student-pay.html"></a>
+                                    </td>
+                                </tr>
+                                <tr class="h-[60px] border-b bg-[#EDF3FF]">
+                                    <td class="px-2 w-[57%] text-[#727272] border-r" colspan="5">합계 (환불, 취소, 연기된 회원은 포함되지 않음)</td>
+                                    
+                                    <td class="px-2 w-[7%] text-[#727272] border-r paidTotal">187</td>
+                                    <th class="px-2 w-[7%] text-[#727272] border-r unpaidTotal">8</th>
+                                    <!-- <td class="px-2 w-[7%] text-[#2B5BBB] font-semibold studentTotal">195</td> -->
+                                    <td class="px-2 w-[7%] text-[#2B5BBB] font-semibold studentTotal"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

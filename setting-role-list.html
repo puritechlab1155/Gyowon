@@ -32,7 +32,7 @@
                     <!-- 오른쪽 영역 -->
                     <div class="flex justify-between items-center w-full">
                         <div class="flex items-center"> 
-                            <h1 class="font-normal paperlogy text-[#2B5BBB] max-md:font-normal rounded-lg px-2 h1-title max-md:px-0 ">사이트권한 관리</h1>
+                            <h1 class="font-normal paperlogy text-[#2B5BBB] max-md:font-normal rounded-lg pl-6 h1-title max-xl:pl-0">사이트권한 관리</h1>
                         </div>
                         <!-- pc전용 배너 -->
                         <div class="relative flex items-center max-lg:justify-end max-xl:w-[300px] max-2xl:w-[460px] w-[530px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between ">
@@ -691,64 +691,62 @@
                                 </tr>
                             </thead>
                         </table>
-
                         <!-- 테이블 본문 부분 -->
-                        <div class="max-sm:max-h-[250px] max-h-[500px] overflow-y-auto">
-                            <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
-                                <tbody>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">1</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
-                                        <td class="w-[20%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">김이름</td>
-                                        <td class="w-[15%] text-[#727272]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">2</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
-                                        <td class="w-[20%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">kmr0724</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">김이랑</td>
-                                        <td class="w-[15%] text-[#727272]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">3</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
-                                        <td class="w-[20%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">nayj1004</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">나영주</td>
-                                        <td class="w-[15%] text-[#727272]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">4</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
-                                        <td class="w-[20%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">tanggo</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">김남현</td>
-                                        <td class="w-[20%] text-[#727272]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
-                                    </tr>
-                                    <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">5</td>
-                                        <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
-                                        <td class="w-[20%] text-[#2B5BBB]">
-                                            <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
-                                        </td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">송이름</td>
-                                        <td class="w-[15%] text-[#727272]">25.04.08</td>
-                                        <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
+                            <tbody>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">1</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
+                                    <td class="w-[20%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">김이름</td>
+                                    <td class="w-[15%] text-[#727272]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">2</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
+                                    <td class="w-[20%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">kmr0724</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">김이랑</td>
+                                    <td class="w-[15%] text-[#727272]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">3</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
+                                    <td class="w-[20%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">nayj1004</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">나영주</td>
+                                    <td class="w-[15%] text-[#727272]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
+                                </tr>
+                                <tr class="bg-[#F8F8F8] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">4</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
+                                    <td class="w-[20%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">tanggo</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">김남현</td>
+                                    <td class="w-[20%] text-[#727272]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
+                                </tr>
+                                <tr class="bg-[#FEFEFE] h-[80px] border-b">
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">5</td>
+                                    <td class="px-2 py-2 w-[15%] text-[#727272]">일반관리자</td>
+                                    <td class="w-[20%] text-[#2B5BBB]">
+                                        <a class="font-semibold hover:underline editModalBtn" href="admin-agency-detail.html">superadmin</a>
+                                    </td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">송이름</td>
+                                    <td class="w-[15%] text-[#727272]">25.04.08</td>
+                                    <td class="px-2 py-2 w-[20%] text-[#727272]">010-1234-5678</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
             </div>
