@@ -67,13 +67,13 @@ input {
     -webkit-appearance: none; /* Safari, older iOS */
     -moz-appearance: none;    /* Firefox */
     appearance: none;         /* 표준 */
-  }
-  input[type="checkbox"] {
+}
+input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     font-family: 'Pretendard Variable', sans-serif;
-  }
+}
 .paperlogy {
     font-family: 'Paperlogy', 'Pretendard Variable', sans-serif !important;
     -webkit-font-smoothing: antialiased;

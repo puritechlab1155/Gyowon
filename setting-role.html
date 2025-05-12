@@ -642,16 +642,16 @@
             <!-- <span class="text-[14px] font-semibold text-[#64748B] ">
                 ※ 기관지정서 관리하는 페이지 입니다.
             </span> -->
-            <!-- <div class="pt-5 pb-5">
+            <div class="pt-5 pb-5">
                 <div class="max-xl:flex max-xl:flex-col">
                     <div class="w-full gap-2 flex justify-end">
                         <div class="left-content flex justify-end text-lg space-x-2 ">
-                            <button onclick="window.location.href='admin-agency-create.html'"
+                            <button id="openModalBtn"
                                 class="bg-[#EDF3FF] text-[#2B5BBB] text-[18px] max-sm:text-sm max-sm:py-2.5 max-sm:px-4 px-6 py-2 rounded-lg hover:bg-[#D3E1FB] border border-[#2B5BBB] focus:outline-none whitespace-nowrap">
-                                등록하기
+                                추가하기
                             </button> 
                         </div>
-                        <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
+                        <!-- <div class="right-content flex justify-end text-lg max-2xl:space-x-1 space-x-2">
                             <div
                                 class=" flex justify-between items-center space-x-2 max-lg:gap-2 max-lg:w-full">
                                 <div
@@ -665,10 +665,10 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-            </div> -->
+            </div>
 
 
             <div class="w-full">
@@ -678,17 +678,17 @@
                         <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
                                 <tr class="text-[18px] h-[60px]">
-                                    <th class="px-2 py-2 font-semibold w-[10%]">레벨</th>
+                                    <th class="px-2 py-2 font-semibold w-[5%]">레벨</th>
                                     <th class="px-2 py-2 font-semibold w-[10%]">권한명</th>
-                                    <th class="px-2 py-2 font-semibold w-[45%]">
-                                        <div class="flex justify-between px-2">
-                                            <span class="font-semibold">&nbsp;회원&nbsp;</span>
-                                            <span class="font-semibold">&nbsp;연수&nbsp;</span>
-                                            <span class="font-semibold">수강자</span>
-                                            <span class="font-semibold">수료자</span>
-                                            <span class="font-semibold">게시판</span>
-                                            <span class="font-semibold">사이트</span>
-                                            <span class="font-semibold">설정</span>
+                                    <th class="px-2 py-2 font-semibold w-[50%]">
+                                        <div class="flex ">
+                                            <span class="font-semibold flex-1 text-center">&nbsp;회원&nbsp;</span>
+                                            <span class="font-semibold flex-1 text-center">&nbsp;연수&nbsp;</span>
+                                            <span class="font-semibold flex-1 text-center">수강자</span>
+                                            <span class="font-semibold flex-1 text-center">수료자</span>
+                                            <span class="font-semibold flex-1 text-center">게시판</span>
+                                            <span class="font-semibold flex-1 text-center">사이트</span>
+                                            <span class="font-semibold flex-1 text-center">설정</span>
                                         </div>
                                     </th>
                                     <th class="px-2 py-2 font-semibold w-[8%]">회원수</th>
@@ -703,19 +703,19 @@
                             <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                                 <tbody>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">1</td>
+                                        <td class="px-2 py-2 w-[5%] text-[#727272]">1</td>
                                         <td class="w-[10%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">최고관리자</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
-                                            <div class="flex justify-between px-4">
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
+                                        <td class="px-2 py-2 w-[50%] text-[#727272]">
+                                            <div class="flex">
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
                                             </div>
                                         </td>
                                         <td class="px-2 py-2 w-[8%] text-[#727272]">1</td>
@@ -739,19 +739,19 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">2</td>
+                                        <td class="px-2 py-2 w-[5%] text-[#727272]">2</td>
                                         <td class="w-[10%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">슈퍼관리자</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
-                                            <div class="flex justify-between px-4">
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                        <td class="px-2 py-2 w-[50%] text-[#727272]">
+                                            <div class="flex ">
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
                                             </div>
                                         </td>
                                         <td class="px-2 py-2 w-[8%] text-[#727272]">1</td>
@@ -775,19 +775,19 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">3</td>
+                                        <td class="px-2 py-2 w-[5%] text-[#727272]">3</td>
                                         <td class="w-[10%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">일반관리자</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
-                                            <div class="flex justify-between px-4">
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                        <td class="px-2 py-2 w-[50%] text-[#727272]">
+                                            <div class="flex ">
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
                                             </div>
                                         </td>
                                         <td class="px-2 py-2 w-[8%] text-[#727272]">5</td>
@@ -811,19 +811,19 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                        <td class="px-2 py-2 w-[10%] text-[#727272]">4</td>
+                                        <td class="px-2 py-2 w-[5%] text-[#727272]">4</td>
                                         <td class="w-[10%] text-[#2B5BBB]">
                                             <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">슈퍼유저</a>
                                         </td>
-                                        <td class="px-2 py-2 w-[45%] text-[#727272]">
-                                            <div class="flex justify-between px-4">
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#16A34A]">O</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                        <td class="px-2 py-2 w-[50%] text-[#727272]">
+                                            <div class="flex">
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#FB923C] flex-1 text-center">△</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#16A34A] flex-1 text-center">O</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
                                             </div>
                                         </td>
                                         <td class="px-2 py-2 w-[8%] text-[#727272]">10</td>
@@ -852,14 +852,14 @@
                                             <a class="font-semibold hover:underline editModalBtn" href="setting-role-list.html">일반유저</a>
                                         </td>
                                         <td class="px-2 py-2 w-[45%] text-[#727272]">
-                                            <div class="flex justify-between px-4">
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
-                                                <span class="font-semibold text-[#EF4444]">X</span>
+                                            <div class="flex">
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
+                                                <span class="font-semibold text-[#EF4444] flex-1 text-center">X</span>
                                             </div>
                                         </td>
                                         <td class="px-2 py-2 w-[8%] text-[#727272]">5230</td>
@@ -967,6 +967,176 @@
         </div>
     </div>
 
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg w-[90%] max-w-3xl shadow-lg max-h-[90vh] overflow-y-auto">
+            <h2 class="paperlogy mb-4 h1-title"> 관리자 그룹 추가</h2>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="whitespace-nowrap text-xl">권한명:</span>
+                <input type="text" id="roleName" placeholder="권한명 입력하세요" class="flex-1 border p-2 rounded focus:outline-none focus:border-[#2B5BBB]">
+            </div>
+            <!-- <input type="number" id="roleLevel" placeholder="레벨 입력 (숫자)" class="w-full border p-2 rounded mb-4"> -->
+        
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                    <tr class="bg-gray-100 text-[#2B5BBB] text-[16px]">
+                        <th class="px-4 py-2 w-[40%] text-center font-bold">대상</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold text-[#4CAF50]">전체</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold">읽기</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold">쓰기</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold">수정</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold">삭제</th>
+                        <th class="px-2 py-2 w-[10%] text-center font-bold"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 회원 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center w-[40%]">회원</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center w-[10%]">
+                                <input type="checkbox" id="user-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="user-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="user-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="user-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="user-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center"></td>
+                        </tr>
+                
+                        <!-- 연수 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">연수</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="training-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="training-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="training-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="training-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="training-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                
+                        <!-- 수강자 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px]  text-center">수강자</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="student-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="student-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="student-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="student-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="student-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- 수료자 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">수료자</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="graduate-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="graduate-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="graduate-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="graduate-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="graduate-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- 게시판 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">게시판</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="admin-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="admin-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="admin-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="admin-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="admin-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- 사이트= -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">사이트</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="site-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="site-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="site-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="site-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="site-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- 설정 -->
+                        <tr class="bg-[#FEFEFE] h-[50px] border-b">
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">설정</td>
+                            <td class="px-2 py-2 font-semibold text-[18px] text-center">
+                                <input type="checkbox" id="setting-total" class="text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="setting-read text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="setting-write text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="setting-edit text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            <td class="px-2 py-2 text-center">
+                                <input type="checkbox" class="setting-delete text-center w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="flex justify-end gap-2 mt-6">
+            <button id="cancelBtn" class="bg-gray-300 px-4 py-2 rounded">취소</button>
+            <button id="addRoleBtn" class="bg-[#2B5BBB] text-white px-4 py-2 rounded">추가</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 삭제 모달 -->
     <div id="deleteConfirmModal"
@@ -974,10 +1144,10 @@
         <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
             <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
 
-            <h1 class="paperlogy text-[22px] font-medium mb-3">지정서 삭제하기</h1>
+            <h1 class="paperlogy text-[22px] font-medium mb-3">관리자 그룹 삭제하기</h1>
 
             <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 지정서가 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
+                해당 관리자 그룹이 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
                 <br /> 계속하시겠습니까?
             </p>
 
@@ -1070,6 +1240,53 @@
                 targetButton = null;
             });
         });
+
+
+    const openModalBtn = document.getElementById("openModalBtn");
+    const modal = document.getElementById("modal");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    openModalBtn.onclick = () => {
+        modal.classList.remove("hidden");
+    };
+
+    cancelBtn.onclick = () => {
+        modal.classList.add("hidden");
+    };
+
+    function handleCheckboxGroup(group) {
+        const totalCheckbox = document.getElementById(`${group}-total`);
+        const checkboxes = document.querySelectorAll(`.${group}-read, .${group}-write, .${group}-edit, .${group}-delete`);
+
+        // 전체 선택 체크박스를 클릭했을 때 해당 그룹의 모든 체크박스 제어
+        totalCheckbox.addEventListener('change', function() {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = totalCheckbox.checked;
+            });
+        });
+
+        // 개별 체크박스를 클릭했을 때 그룹 전체 선택 체크박스를 업데이트
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (!checkbox.checked) {
+                    totalCheckbox.checked = false;
+                } else {
+                    if (Array.from(checkboxes).every(cb => cb.checked)) {
+                        totalCheckbox.checked = true;
+                    }
+                }
+            });
+        });
+    }
+
+
+    handleCheckboxGroup('user');
+    handleCheckboxGroup('training');
+    handleCheckboxGroup('student');
+    handleCheckboxGroup('graduate');
+    handleCheckboxGroup('admin');
+    handleCheckboxGroup('site');
+    handleCheckboxGroup('setting');
 
     </script>
 </body>

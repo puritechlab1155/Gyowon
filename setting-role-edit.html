@@ -675,12 +675,13 @@
                         <table class="w-full rounded-[12px] text-center bg-[#Fefefe] drop-shadow ">
                             <thead>
                                 <tr class="text-[18px] h-[60px]">
-                                    <th class="px-2 py-2 font-semibold w-[50%]">카테고리</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">읽기</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">쓰기</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">수정</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]">삭제</th>
-                                    <th class="px-2 py-2 font-semibold w-[10%]"></th>
+                                    <th class="px-2 py-2 font-semibold w-[40%]">카테고리</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#16A34A]">전체</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#2B5BBB]">읽기</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#2B5BBB]">쓰기</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#2B5BBB]">수정</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#2B5BBB]">삭제</th>
+                                    <th class="px-2 py-2 font-semibold w-[10%] text-[#2B5BBB]"></th>
                                 </tr>
                             </thead>
                         </table>
@@ -689,147 +690,175 @@
                         <table id="reportTable" class="table-fixed w-full rounded-[12px] overflow-hidden text-center mt-4 bg-[#FEFEFE]">
                             <tbody>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">회원</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">회원</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="user-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="user-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="user-total" class="text-[16px] leading-[1]">전체</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="user-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="user-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="user-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="user-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="user-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="user-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="user-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="user-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="user-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="user-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="user-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">연수</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">연수</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="traing-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
-                                        <label for="traing-read" class="text-[16px] leading-[1]">읽기</label>
+                                        <input type="checkbox" id="training-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="training-total" class="text-[16px] leading-[1]">전체</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="traing-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
-                                        <label for="traing-write" class="text-[16px] leading-[1]">쓰기</label>
+                                        <input type="checkbox" id="training-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <label for="training-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="traing-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
-                                        <label for="traing-edit" class="text-[16px] leading-[1]">수정</label>
+                                        <input type="checkbox" id="training-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <label for="training-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="traing-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
-                                        <label for="traing-delete" class="text-[16px] leading-[1]">삭제</label>
+                                        <input type="checkbox" id="traing-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <label for="training-edit" class="text-[16px] leading-[1]">수정</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="training-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <label for="training-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">수강자</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">수강자</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="student-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="student-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="student-total" class="text-[16px] leading-[1]">전체</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="student-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="student-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="student-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="student-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="student-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="student-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="student-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="student-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="student-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="student-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="student-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">수료자</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">수료자</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="graduate-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="graduate-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="graduate-total" class="text-[16px] leading-[1]">전체</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="graduate-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="graduate-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="graduate-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="graduate-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="graduate-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="graduate-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="graduate-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="graduate-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="graduate-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="graduate-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="graduate-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">게시판</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">게시판</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="admin-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="admin-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="admin-total" class="text-[16px] leading-[1]">전체</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="admin-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="admin-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="admin-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="admin-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="admin-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="admin-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="admin-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="admin-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="admin-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="admin-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="admin-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px] ">사이트</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px] ">사이트</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="site-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="site-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="site-total" class="text-[16px] leading-[1]">전체</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="site-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="site-read" class="text-[16px] leading-[1]">읽기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="site-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="site-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="site-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="site-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="site-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="site-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="site-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="site-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="site-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
                                     </td>
                                 </tr>
                                 <tr class="bg-[#FEFEFE] h-[80px] border-b">
-                                    <td class="px-2 py-2 w-[50%] font-semibold text-[18px]">설정</td>
+                                    <td class="px-2 py-2 w-[40%] font-semibold text-[18px]">설정</td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="setting-read" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
-                                        <label for="etting-read" class="text-[16px] leading-[1]">읽기</label>
+                                        <input type="checkbox" id="setting-total" class="total-checkbox mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#4CAF50] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#388E3C] checked:border-[#388E3C] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center"/>
+                                        <label for="setting-total" class="text-[16px] leading-[1]">전체</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="setting-write" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="setting-read" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <label for="setting-read" class="text-[16px] leading-[1]">읽기</label>
+                                    </td>
+                                    <td class="px-2 py-2 w-[10%] text-[#727272]">
+                                        <input type="checkbox" id="setting-write" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="setting-write" class="text-[16px] leading-[1]">쓰기</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="setting-edit" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="setting-edit" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="setting-edit" class="text-[16px] leading-[1]">수정</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
-                                        <input type="checkbox" id="setting-delete" class="mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
+                                        <input type="checkbox" id="setting-delete" class="setting-permission mr-2 w-5 h-5 flex-shrink-0 appearance-none border border-[#2B5BBB] rounded-sm bg-[#FEFEFE] relative align-middle checked:bg-[#2B5BBB] checked:border-[#2B5BBB] checked:after:content-['✓'] checked:after:text-white checked:after:absolute checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-[16px] self-center" />
                                         <label for="setting-delete" class="text-[16px] leading-[1]">삭제</label>
                                     </td>
                                     <td class="px-2 py-2 w-[10%] text-[#727272]">
@@ -921,31 +950,6 @@
     </div>
 
 
-    <!-- 삭제 모달 -->
-    <div id="deleteConfirmModal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-[800]">
-        <div class="bg-white rounded-2xl px-6 py-8 w-[360px] max-sm:w-[90%] text-center shadow-lg">
-            <img src="img/delete-confirm.png" alt="삭제확인 아이콘" class="w-[70px] h-[70px] mx-auto mb-4" />
-
-            <h1 class="paperlogy text-[22px] font-medium mb-3">지정서 삭제하기</h1>
-
-            <p class="text-[16px] text-[#727272] mb-6 font-medium leading-relaxed">
-                해당 지정서가 <span class="text-red-500 text-[16px] font-semibold">삭제</span>됩니다.
-                <br /> 계속하시겠습니까?
-            </p>
-
-            <div class="flex justify-between gap-3">
-                <button id="deleteConfirmBtn"
-                    class="bg-[#2B5BBB] text-white flex-1 py-2.5 rounded-md hover:bg-[#1e4bb6] transition">
-                    예
-                </button>
-                <button id="deleteCancelBtn"
-                    class="bg-[#ADADAD] text-white flex-1 py-2.5 rounded-md hover:bg-[#8e8e8e] transition">
-                    취소
-                </button>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -953,77 +957,47 @@
     <script src="js/script.js"></script>
     <script>
 
-        // ✅ 드롭다운 열고 닫기
-        document.querySelectorAll('.dropdown-button').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
-                document.querySelectorAll('.dropdown').forEach(d => d.style.zIndex = '0');
-                if (menu.classList.contains('hidden')) {
-                    dropdown.style.zIndex = '10';
-                }
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.add('hidden');
-                });
-                menu.classList.toggle('hidden');
-            });
-        });
-
-        // ✅ 드롭다운 옵션 클릭 시 텍스트 변경
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.closest('.dropdown');
-                const selectedText = this.textContent;
-                const buttonSpan = dropdown.querySelector('.selected-option');
-
-                buttonSpan.textContent = selectedText;
-
-                const hiddenInput = dropdown.parentElement.querySelector('input[type="hidden"]');
-                if (hiddenInput) {
-                    hiddenInput.value = selectedText;
-                }
-
-                dropdown.querySelector('.dropdown-menu').classList.add('hidden');
-                dropdown.style.zIndex = '0';
-            });
-        });
-
-
-
-        // ✅  삭제모달
         document.addEventListener('DOMContentLoaded', () => {
-            const deleteModal = document.getElementById('deleteConfirmModal');
-            const deleteCancelBtn = document.getElementById('deleteCancelBtn');
-            const deleteConfirmBtn = document.getElementById('deleteConfirmBtn');
-            const deleteButtons = document.querySelectorAll('.deleteButton');
+            const permissionCategories = [
+                'user', 'training', 'student', 'graduate', 'admin', 'site', 'setting'
+            ];
 
-            let targetButton = null;
+            permissionCategories.forEach(category => {
+                const totalCheckbox = document.getElementById(`${category}-total`);
+                const permissionCheckboxes = [
+                    document.getElementById(`${category}-read`),
+                    document.getElementById(`${category}-write`),
+                    document.getElementById(`${category}-edit`),
+                    document.getElementById(`${category}-delete`)
+                ].filter(Boolean); // Filter out any nulls if an ID doesn't exist
 
-            deleteButtons.forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    targetButton = e.currentTarget;
-                    deleteModal.classList.remove('hidden');
-                    document.body.style.overflow = "hidden";
-                });
-            });
+                // Function to update the total checkbox based on individual checkboxes
+                const updateTotalCheckbox = () => {
+                    const allChecked = permissionCheckboxes.every(cb => cb.checked);
+                    totalCheckbox.checked = allChecked;
+                };
 
-            deleteCancelBtn.addEventListener('click', () => {
-                deleteModal.classList.add('hidden');
-                document.body.style.overflow = "";
-                targetButton = null;
-            });
-
-            deleteConfirmBtn.addEventListener('click', () => {
-                deleteModal.classList.add('hidden');
-                if (targetButton) {
-                    console.log('삭제 확인!', targetButton);
-                    // 예시로 해당 행 삭제: targetButton.closest('tr')?.remove();
+                // Event listener for the 'total' checkbox
+                if (totalCheckbox) {
+                    totalCheckbox.addEventListener('change', () => {
+                        const isChecked = totalCheckbox.checked;
+                        permissionCheckboxes.forEach(cb => {
+                            cb.checked = isChecked;
+                        });
+                    });
                 }
-                targetButton = null;
+
+                // Event listeners for individual permission checkboxes
+                permissionCheckboxes.forEach(cb => {
+                    if (cb) {
+                        cb.addEventListener('change', updateTotalCheckbox);
+                    }
+                });
+
+                // Initial check for each category on page load
+                updateTotalCheckbox();
             });
         });
-
     </script>
 </body>
 
