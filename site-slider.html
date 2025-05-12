@@ -30,16 +30,19 @@
                     </div>
 
                     <!-- 오른쪽 영역 -->
-                    <div class="flex justify-between items-center w-full max-md:justify-end pl-2 pl-2">
+                    <div class="flex justify-between items-center w-full">
+                        <div class="flex items-center"> 
+                            <h1 class="font-normal paperlogy text-[#2B5BBB] max-md:font-normal rounded-lg px-2 h1-title max-md:px-0 max-sm:text-[20px] max-sm:tracking-tighter">슬라이드 관리</h1>
+                        </div>
                         <!-- pc전용 배너 -->
-                        <div class="relative flex items-center max-xl:w-[330px] w-[590px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between">
+                        <div class="relative flex items-center max-lg:justify-end max-xl:w-[300px] max-2xl:w-[460px] w-[530px] h-10 border border-[2px] border-gray-200 rounded-xl bg-white banner-border max-md:hidden px-3 justify-between ">
                             <!-- pc전용 문구 변화 -->
                             <div class="flex-1 overflow-hidden z-[700]">
-                                <div class="w-full h-full flex items-center banner-container pl-1 max-xl:pl-0 ">
+                                <div class="w-full h-full flex items-center banner-container ">
                                     
                                     <!-- 1. 최근댄스화 주문 -->
                                     <div class="w-full banner-text text-sm font-semibold opacity-100 transition-opacity duration-500">
-                                        <div class="shoes grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                        <div class="shoes grid [grid-template-columns:31%_26%_31%_12%] max-xl:[grid-template-columns:24%_38%_39%_0%]"> 
                                             <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>댄스화 주문</span> 
                                             <span class="product-name text-sm text-[#2B5BBB] font-semibold">연습화 240</span> 
@@ -48,7 +51,7 @@
                                     </div>
                                     <!-- 2. 최근 수강입금자 문구 -->
                                     <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="deposit grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]"> 
+                                        <div class="deposit grid [grid-template-columns:31%_26%_31%_12%] max-xl:[grid-template-columns:24%_38%_39%_0%]"> 
                                             <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             <span class="text-sm font-semibold"><span class="text-sm font-semibold max-xl:hidden">최근 </span>수강 입금<span class="text-sm font-semibold max-lg:hidden">자</span></span> 
                                             <span class="class-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">라틴2종 파티대비A </span> 
@@ -57,7 +60,7 @@
                                     </div>
                                     <!-- 3. 신규 가입자 문구 -->
                                     <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="membership grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_34%_43%_0%]">  
+                                        <div class="membership grid [grid-template-columns:31%_26%_31%_12%] max-xl:[grid-template-columns:24%_38%_39%_0%]">  
                                             <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             <span class="text-sm font-semibold">신규 가입자</span> 
                                             <span class="membership-type text-sm text-[#2B5BBB] font-semibold">교원</span> 
@@ -66,7 +69,7 @@
                                     </div>
                                     <!-- 4. 최근 게시된 공지 -->
                                     <div class="w-full banner-text text-sm font-semibold opacity-0 transition-opacity duration-500 hidden">
-                                        <div class="notice grid [grid-template-columns:28%_22%_28%_12%] max-xl:[grid-template-columns:23%_22%_55%_0%]">  
+                                        <div class="notice grid [grid-template-columns:31%_26%_31%_12%] max-xl:[grid-template-columns:24%_38%_39%_0%]">  
                                             <span class="date text-sm font-semibold">25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span></span> 
                                             <span class="text-sm font-semibold">최근 공지<span class="text-sm font-semibold max-xl:hidden max-xl:hidden">사항</span></span> 
                                             <span class="notice-name text-sm text-[#2B5BBB] font-semibold truncate overflow-hidden whitespace-nowrap">홈페이지 리뉴얼 관련 안내</span> 
@@ -80,11 +83,11 @@
                             <div class="relative flex-shrink-0">
                                 <button id="dropdown-toggle" class="text-[13px] text-gray-400 pr-2 max-xl:pr-0">▼</button>
                                 
-                                <ul id="dropdown-menu" class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[330px] w-[590px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
+                                <ul id="dropdown-menu" class="absolute right-[-14px] max-xl:top-[32px] w-[100%] max-xl:w-[300px] max-2xl:w-[460px] w-[530px] bg-white hidden z-10 xl:mt-1 bg-white border border-[2px] border-gray-200 rounded-xl shadow-lg">
                                 <!-- 공통 스타일: grid 4col -->
                                 <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
-                                    <a href="#">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                    <a href="admin-shoes.html">
+                                        <div class="grid [grid-template-columns:30%_25%_30%_15%] max-xl:[grid-template-columns:22%_38%_40%_0%]">
                                             <span class="date text-sm font-semibold col-span-1 whitespace-nowrap ">
                                                 25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
                                             </span>
@@ -97,7 +100,7 @@
                             
                                 <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
                                     <a href="student-pay.html">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                        <div class="grid [grid-template-columns:30%_25%_30%_15%] max-xl:[grid-template-columns:22%_38%_40%_0%]">
                                             <span class="date text-sm font-semibold col-span-1 whitespace-nowrap">
                                                 25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
                                             </span>
@@ -110,7 +113,7 @@
                             
                                 <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer sm:px-4">
                                     <a href="user.html">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                        <div class="grid [grid-template-columns:30%_25%_30%_15%] max-xl:[grid-template-columns:22%_38%_40%_0%]">
                                             <span class="date text-sm font-semibold whitespace-nowrap">
                                                 25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
                                             </span>
@@ -122,8 +125,8 @@
                                 </li>
                             
                                 <li class="px-6 py-2 hover:bg-[#E7F0FD] cursor-pointer hover:rounded-b-lg sm:px-4">
-                                    <a href="#">
-                                        <div class="grid [grid-template-columns:27%_22%_27%_20%] max-xl:[grid-template-columns:22%_33%_40%_0%]">
+                                    <a href="admin-notice.html">
+                                        <div class="grid [grid-template-columns:30%_25%_30%_15%] max-xl:[grid-template-columns:22%_38%_40%_0%]">
                                         <span class="date text-sm font-semibold whitespace-nowrap">
                                             25.01.06 <span class="time text-sm font-semibold max-xl:hidden">| 00:03:19</span>
                                         </span>
@@ -137,22 +140,22 @@
                         </div>
                         <!-- 오른쪽 버튼 -->
                         <div id="right-button" class="flex space-x-4 pr-8 max-lg:pr-4 max-lg:space-x-2 ">
-                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition md:block hidden">
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-white bg-[#2B5BBB] rounded-lg hover:bg-[#1E4799] transition lg:block hidden">
                                 로그아웃
                             </a>
                             <a href="#" id="goBackButton"
-                                class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                                class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all lg:block hidden">
                                 뒤로가기
                             </a>
-                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all md:block hidden">
+                            <a href="#" class="text-sm max-lg:px-3 px-5 py-2.5 text-[#292929] bg-[#F5F5F5] rounded-lg hover:bg-[#ECECEC] transition-all lg:block hidden">
                                 홈페이지로 가기
                             </a>
-                            <a href="#" class="md:hidden block">
+                            <a href="#" class="lg:hidden block">
                                 <svg width="24" class="w-7 h-7"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="로그아웃">
                                     <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#292929"/>
                                 </svg>
                             </a>
-                            <a href="#" class="md:hidden block">
+                            <a href="#" class="lg:hidden block">
                                 <svg width="24" class="w-7 h-7" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="홈페이지">
                                     <path d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM4 21V9L12 3L20 9V21H13V15H11V21H4Z" fill="#292929"/>
                                 </svg>
@@ -170,7 +173,7 @@
                     
                     <!-- 여기부터 모바일배너 아이템 시작 -->
                     <div class="shoes banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">   
-                        <a href="#" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
+                        <a href="admin-shoes.html" class="text-sm"><!-- 댄스화 주문/조회관리 페이지 이동 -->
                             <span class="date text-white text-sm">25.01.06</span> <span class="text-white text-sm pl-1"> 댄스화 주문 | </span><span class="product-name text-white text-sm">연습화 240</span> <span class="user-name text-white text-sm pl-1">홍길동</span> 
                         </a>
                     </div>
@@ -185,7 +188,7 @@
                         </a>
                     </div>
                     <div class="notice banner-item text-white flex-shrink-0 w-full truncate overflow-hidden whitespace-nowrap">
-                        <a href="#" class="text-sm"> <!-- 공지사항 페이지 이동 -->
+                        <a href="admin-notice.html" class="text-sm"> <!-- 공지사항 페이지 이동 -->
                             <span class="date text-white text-sm pl-1">25.04.05</span><span class="text-white text-sm pl-1">최근 공지사항</span> | <span class="notice-name text-white text-sm">홈페이지 리뉴얼 안내</span> 
                         </a>
                     </div>
@@ -324,7 +327,7 @@
                     </li>
                     <li>
                         <a href="training-before-2020-01.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리(~2020)</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">연수관리 (~2020)</a>
                     </li>
                 </ul>
             </li>
@@ -345,7 +348,7 @@
                             <path d="M17.5 11.5L19 13L22 9" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        수강자 관리
+                        수강자
                     </span>
                     <img src="img/dropDown.png" alt="Arrow"
                         class="subIcon w-4 h-4 ml-2 transform transition-transform duration-300" />
@@ -355,7 +358,7 @@
                     class="subUl bg-[#F9F9F9] px-2 mt-0 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <li>
                         <a href="student-pay.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강자입금관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">수강자 입금관리</a>
                     </li>
                     <li>
                         <a href="student-record.html"
@@ -507,7 +510,7 @@
                     </li>
                     <li>
                         <a href="admin-shoes.html"
-                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문 / 조회 관리</a>
+                            class="block px-8 py-3 rounded-lg text-[#727272] text-sm hover:bg-[#EDF3FF] focus:text-[#1E4799]">댄스화 주문관리</a>
                     </li>
                     <li>
                         <a href="admin-joboffer.html"
@@ -637,8 +640,7 @@
 
     <!-- 컨텐츠 영역 -->
     <div id="main-content" class="ml-64 z-[500] max-xl:ml-0 transition-all duration-300 overflow-y-auto min-h-screen max-w-[1520px]">
-        <div class="w-full h-full px-6 max-sm:pt-[70px] pt-[70px] pb-[100px] realtive">
-            <h1 class="mt-[50px] h1-title font-normal paperlogy">슬라이드 관리</h1>
+        <div class="w-full h-full px-6 max-md:pt-[100px] pt-[70px] pb-[100px] realtive">
             <div class="pt-5 pb-5">
                 <div class="max-xl:flex max-xl:flex-col">
                     <div class="w-full gap-2 flex justify-end">
