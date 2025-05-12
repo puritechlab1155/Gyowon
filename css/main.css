@@ -296,28 +296,6 @@ input[type="checkbox"] {
         /* 상단 패딩 제거 */
     }
 
-    /* 명찰 - 원래 높이 유지하되 약간 축소 */
-    .namatag-box-flex {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-        align-items: flex-start !important;
-        gap: 10px !important;
-        transform: scale(0.95) !important;
-        /* 약간 축소 */
-        transform-origin: top center !important;
-    }
-
-    .namatag-box-flex>div {
-        width: 48% !important;
-        page-break-inside: avoid !important;
-        margin-bottom: 10px !important;
-        box-sizing: border-box !important;
-        /* height: auto 제거 - 원래 높이 유지 */
-    }
-
     /* 원래 이수증 폰트 크기 유지하되 여백 조정 */
     .certificate-box h2 {
         margin-top: 60px !important;
