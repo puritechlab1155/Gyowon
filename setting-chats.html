@@ -779,7 +779,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
-                                                    <div> 어제 2025-1학기 서울 직무연수 신청시작되었나요제 2025-1학기 서울 직무연수 신청시작되었나요?제 2025-1학기 서울 직무연수 신청시작되었나요?제 2025-1학기 서울 직무연수 신청시작되었나요?제 2025-1학기 서울 직무연수 신청시작되었나요??</div>
+                                                    <div> 어제 2025-1학기 서울 직무연수 신청시작되었나요?</div>
                                                     <div
                                                         class="absolute text-xs bottom-6 right-[-45px] pt-4 -mb-5 mr-2 text-gray-500">
                                                         11:40
@@ -848,8 +848,8 @@
                                             <div class="flex flex-row items-center">
                                                 <div
                                                     class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                                                    <div class="flex items-center justify-center h-full w-full bg-orange-400 text-white rounded-full">
-                                                        일반
+                                                    <div class="flex text-sm items-center justify-center h-9 w-9 bg-orange-400 text-white rounded-full whitespace-nowrap">
+                                                        일반1
                                                     </div>
                                                 </div>
                                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
@@ -881,12 +881,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="col-start-1 col-end-8 max-lg:col-span-10 p-3 rounded-lg">
+                                        <div class="col-start-1 col-end-8 max-lg:col-span-10 p-3 rounded-lg">
                                             <div class="flex flex-row items-center">
                                                 <div
                                                     class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                                                    <div class="flex items-center justify-center h-full w-full bg-orange-400 text-white rounded-full">
-                                                        일반
+                                                    <div class="flex text-sm items-center justify-center h-9 w-9 bg-orange-400 text-white rounded-full whitespace-nowrap">
+                                                        일반1
                                                     </div>
                                                 </div>
                                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
@@ -904,13 +904,13 @@
                                             <div class="flex flex-row items-center">
                                                 <div
                                                     class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                                                    <div class="flex items-center justify-center h-full w-full bg-purple-400 text-white rounded-full">
+                                                    <div class="flex text-sm items-center justify-center h-9 w-9 bg-purple-400 text-white rounded-full whitespace-nowrap"">
                                                         슈퍼
                                                     </div>
                                                 </div>
                                                 <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
                                                     <div>
-                                                        이번 라틴댄스 진행곡입니다.
+                                                        이번 라틴댄스 업로드 하였습니다.
                                                     </div>
                                                     <div
                                                         class="absolute text-xs bottom-6 right-[-45px] pt-4 -mb-5 mr-2 text-gray-500">
@@ -918,7 +918,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1092,13 +1092,21 @@
         const nextImageBtn = document.getElementById("nextImageBtn");
         const prevImageBtn = document.getElementById("prevImageBtn");
 
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const timeString = `${hours}:${minutes}`;
+        const chatWrapper = document.getElementById("chatWrapper");
+
+        function scrollToBottom() {
+            if (chatWrapper) {
+                chatWrapper.scrollTop = chatWrapper.scrollHeight;
+            }
+        }
 
         function sendMessage(content, type = "text") {
             if (!content || (Array.isArray(content) && content.length === 0)) return;
+
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}`;
 
             const newMessage = document.createElement("div");
             newMessage.className = "col-start-6 col-end-13 p-3 rounded-lg col-start-6 col-end-13 max-lg:col-start-2";
@@ -1123,31 +1131,32 @@
             }
 
             newMessage.innerHTML = `
-            <div class="flex items-center justify-start flex-row-reverse p-3 rounded-lg">
+            <div class="flex items-center justify-start flex-row-reverse col-start-6 col-end-13 max-lg:col-start-2">
                 <div class="flex items-center justify-center h-10 w-10 rounded-full bg-white flex-shrink-0">
                     <div class="flex items-center justify-center h-full w-full bg-blue-400 text-white rounded-full">나</div>
                 </div>
                 <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl break-words">
                     ${inner}
-                </div>
-                <div class="absolute text-xs bottom-6 left-[-35px] pt-4 -mb-5 mr-2 text-gray-500">
-                    ${timeString}
+                    <div class="absolute text-xs bottom-6 left-[-35px] pt-4 -mb-5 mr-2 text-gray-500">
+                        ${timeString}
+                    </div>
                 </div>
             </div>
         `;
+
 
             chatContainer.appendChild(newMessage);
             input.value = "";
 
             // 새로 추가된 이미지에 미리보기 이벤트 추가
             newMessage.querySelectorAll(".previewable-image").forEach(img => {
-            img.addEventListener("click", () => {
-                modalImage.src = img.dataset.src;
-                downloadImageBtn.href = img.dataset.src;
-                downloadImageBtn.download = img.dataset.name;
-                imageModal.classList.remove("hidden");
-                imageModal.classList.add("flex");
-            });
+                img.addEventListener("click", () => {
+                    modalImage.src = img.dataset.src;
+                    downloadImageBtn.href = img.dataset.src;
+                    downloadImageBtn.download = img.dataset.name;
+                    imageModal.classList.remove("hidden");
+                    imageModal.classList.add("flex");
+                });
             });
         }
 
@@ -1248,6 +1257,11 @@
         function sendMessage(content, type = "text") {
             if (!content || (Array.isArray(content) && content.length === 0)) return;
 
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}`;
+
             const newMessage = document.createElement("div");
             newMessage.className = "col-start-6 col-end-13 p-3 rounded-lg col-start-6 col-end-13 max-lg:col-start-2";
             let inner = "";
@@ -1271,18 +1285,17 @@
             }
 
             newMessage.innerHTML = `
-            <div class="flex items-center justify-start flex-row-reverse col-start-6 col-end-13 max-lg:col-start-2">
-                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-white flex-shrink-0">
-                <div class="flex items-center justify-center h-full w-full bg-blue-400 text-white rounded-full">나</div>
+                <div class="flex items-center justify-start flex-row-reverse col-start-6 col-end-13 max-lg:col-start-2">
+                    <div class="flex items-center justify-center h-10 w-10 rounded-full bg-white flex-shrink-0">
+                        <div class="flex items-center justify-center h-full w-full bg-blue-400 text-white rounded-full">나</div>
+                    </div>
+                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl break-words">
+                        ${inner}
+                        <div class="absolute text-xs bottom-6 left-[-35px] pt-4 -mb-5 mr-2 text-gray-500">
+                            ${timeString}
+                        </div>
+                    </div>
                 </div>
-                <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl break-words">
-                ${inner}
-                </div>
-                <div
-                    class="absolute text-xs bottom-6 left-[-35px] pt-4 -mb-5 mr-2 text-gray-500">
-                    ${timeString}
-                </div>
-            </div>
             `;
 
             chatContainer.appendChild(newMessage);
@@ -1290,17 +1303,27 @@
 
             // 이미지 모달 이벤트 연결
             const previewImgs = newMessage.querySelectorAll(".previewable-image");
-            previewImgs.forEach((img, i) => {
-            img.addEventListener("click", () => {
-                showPreviewModal(previewImgs, i);
-            });
-            });
-            const chatWrapper = document.getElementById("chatWrapper");
-            if (chatWrapper) {
-                chatWrapper.scrollTop = chatWrapper.scrollHeight;
-            }
-        }
+                previewImgs.forEach((img, i) => {
+                    img.addEventListener("click", () => {
+                        showPreviewModal(previewImgs, i);
+                    });
 
+                    // ✅ 이미지 로딩 후 스크롤 이동
+                    img.addEventListener("load", () => {
+                        scrollToBottom();
+                    });
+                });
+                // 텍스트 또는 일반 파일인 경우엔 바로 스크롤
+                if (type === "text" || previewImgs.length === 0) {
+                    scrollToBottom();
+                }
+            }
+
+            window.addEventListener("DOMContentLoaded", () => {
+                if (chatWrapper) {
+                    chatWrapper.scrollTop = chatWrapper.scrollHeight;
+                }
+            });
 
 
 
